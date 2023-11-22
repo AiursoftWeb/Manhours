@@ -23,9 +23,10 @@ public class BadgeController : ControllerBase
     public async Task<IActionResult>
         GitLabRepo([FromRoute] string repo) // sample value: gitlab.aiursoft.cn/anduin/flyclass
     {
-        var hours = await _cacheService.RunWithCache($"gitlab-{repo}", async () =>
+        var formattedLink = new GitLabLink(repo);
+        var hours = await _cacheService.RunWithCache(
+            $"gitlab-{formattedLink.Server}-{formattedLink.Group}-{formattedLink.Project}", async () =>
         {
-            var formattedLink = new GitLabLink(repo);
             var commits = await formattedLink.GetCommits().ToListAsync();
             var commitTimes = commits.Select(t => t.CommittedDate).ToList();
             var workTime = _workTimeService.CalculateWorkTime(commitTimes);

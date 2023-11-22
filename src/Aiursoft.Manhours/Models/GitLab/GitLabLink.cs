@@ -15,9 +15,9 @@ public class GitLabLink
             throw new ArgumentException("Invalid GitLab repository URL!");
         }
 
-        Server = $"https://{url.Host}";
-        Group = path[1];
-        Project = path[2];
+        Server = $"https://{url.Host.ToLower()}";
+        Group = path[1].ToLower();
+        Project = path[2].ToLower();
     }
 
     public string Server { get; }

@@ -4,7 +4,6 @@ namespace Aiursoft.ManHours.Models.GitLab;
 
 public class GitLabProject
 {
-
     [JsonPropertyName("id")]
     public required int Id { get; init; }
     

@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace Aiursoft.ManHours.Models.GitLab;
+﻿namespace Aiursoft.ManHours.Models.GitLab;
 
 public class GitLabLink
 {
@@ -26,14 +24,14 @@ public class GitLabLink
     public string Group { get; }
     public string Project { get; }
 
-    public async Task<bool> IsGroupProject()
+    private async Task<bool> IsGroupProject()
     {
         var http = new HttpClient();
         var response = await http.GetFromJsonAsync<GitLabGroup[]>(Server + $"/api/v4/groups?search={Group}");
         return response != null && response.Any();
     }
 
-    public async Task<int> GetGroupId()
+    private async Task<int> GetGroupId()
     {
         var http = new HttpClient();
         if (await IsGroupProject())
@@ -50,7 +48,7 @@ public class GitLabLink
         }
     }
 
-    public async Task<GitLabProject> GetProjectDetails()
+    private async Task<GitLabProject> GetProjectDetails()
     {
         var http = new HttpClient();
         var group = await GetGroupId();
@@ -99,11 +97,4 @@ public class GitLabLink
             page++;
         }
     }
-}
-
-public class GitLabCommit
-{
-    [JsonPropertyName("committed_date")]
-    // ReSharper disable once UnusedAutoPropertyAccessor.Global
-    public DateTime CommittedDate { get; init; }
 }

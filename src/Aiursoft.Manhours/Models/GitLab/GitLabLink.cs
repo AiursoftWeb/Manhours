@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Aiursoft.ManHours;
+namespace Aiursoft.ManHours.Models.GitLab;
 
 public class GitLabLink
 {

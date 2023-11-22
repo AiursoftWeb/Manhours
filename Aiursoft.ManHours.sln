@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2D9A9B8B-7B9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aiursoft.ManHours", "src\Aiursoft.Manhours\Aiursoft.ManHours.csproj", "{24FFA180-AC0C-44D0-9E00-88D4DA79D08F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4EB4E01E-6A31-4962-8BAF-E8591FA4E3FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aiursoft.ManHours.Tests", "tests\Aiursoft.ManHours.Tests.csproj", "{2717C469-6FBF-48D0-A45D-758085A559EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +21,16 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{24FFA180-AC0C-44D0-9E00-88D4DA79D08F} = {2D9A9B8B-7B97-446F-9A06-649F63C897F1}
+		{2717C469-6FBF-48D0-A45D-758085A559EC} = {4EB4E01E-6A31-4962-8BAF-E8591FA4E3FD}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{24FFA180-AC0C-44D0-9E00-88D4DA79D08F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{24FFA180-AC0C-44D0-9E00-88D4DA79D08F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24FFA180-AC0C-44D0-9E00-88D4DA79D08F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24FFA180-AC0C-44D0-9E00-88D4DA79D08F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2717C469-6FBF-48D0-A45D-758085A559EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2717C469-6FBF-48D0-A45D-758085A559EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2717C469-6FBF-48D0-A45D-758085A559EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2717C469-6FBF-48D0-A45D-758085A559EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

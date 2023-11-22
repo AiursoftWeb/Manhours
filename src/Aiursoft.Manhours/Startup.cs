@@ -14,7 +14,7 @@ public class Startup : IWebStartup
             .AddApplicationPart(Assembly.GetExecutingAssembly());
 
         services.AddTaskCanon();
-        services.AddScannedDependencies();
+        services.AddLibraryDependencies();
     }
 
     public void Configure(WebApplication app)

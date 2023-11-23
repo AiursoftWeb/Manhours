@@ -6,7 +6,7 @@ namespace Aiursoft.ManHours.Models;
 public class Badge
 {
     [JsonPropertyName("schemaVersion")]
-    public string SchemaVersion { get; } = "1.0";
+    public int SchemaVersion { get; } = 1;
     
     [JsonPropertyName("label")]
     public required string Label { get; init; }

@@ -50,8 +50,8 @@ public class BadgeController : ControllerBase
         return File(badge.Draw(), "image/svg+xml");
     }
     
-    [Route("shield/gitlab/{**repo}")]
-    public async Task<IActionResult> ShieldGitLabRepo([FromRoute] string repo) // sample value: shield/gitlab/gitlab.aiursoft.cn/anduin/flyclass
+    [Route("shields/gitlab/{**repo}")]
+    public async Task<IActionResult> ShieldsGitLabRepo([FromRoute] string repo) // sample value: shield/gitlab/gitlab.aiursoft.cn/anduin/flyclass
     {
         var formattedLink = new GitLabLink(repo);
         var hours = await _cacheService.RunWithCache(
@@ -65,7 +65,6 @@ public class BadgeController : ControllerBase
 
         var badge = new Badge
         {
-            
             Label = "man-hours",
             Message = $"{(int)hours}",
             Color =

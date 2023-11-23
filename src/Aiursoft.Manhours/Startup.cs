@@ -10,7 +10,7 @@ public class Startup : IWebStartup
     public void ConfigureServices(IConfiguration configuration, IWebHostEnvironment environment, IServiceCollection services)
     {
         services
-            .AddControllers()
+            .AddControllersWithViews()
             .AddApplicationPart(Assembly.GetExecutingAssembly());
 
         services.AddTaskCanon();

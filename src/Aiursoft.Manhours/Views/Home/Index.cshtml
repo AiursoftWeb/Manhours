@@ -97,6 +97,13 @@
                 cloneUrl = cloneUrl.substring(8);
             }
             
+            if (gitServerType === "github") {
+                // Remove github.com/
+                if (cloneUrl.startsWith("github.com/")) {
+                    cloneUrl = cloneUrl.substring("github.com/".length);
+                }
+            }
+            
             let imgLink;
             if (directMode) {
                 cloneUrl += ".svg";

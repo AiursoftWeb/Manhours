@@ -14,6 +14,15 @@ When skimming a new repository, I'm always curious how much time went into creat
 * GitHub (Working in progress)
 * Gitea (Working in progress)
 
+## Refactor plan
+
+[//]: # (TODO)
+To use native local git repo to calculate the commit time instead of GitHub API:
+
+```bash
+git --no-pager log --pretty=format:'%cd'
+```
+
 ## Run locally
 
 Requirements about how to run

@@ -1,11 +1,20 @@
 ﻿using System.Text;
+using System.Text.Json.Serialization;
 
 namespace Aiursoft.ManHours.Models;
 
 public class Badge
 {
+    [JsonPropertyName("schemaVersion")]
+    public string SchemaVersion { get; } = "1.0";
+    
+    [JsonPropertyName("label")]
     public required string Label { get; init; }
+    
+    [JsonPropertyName("message")]
     public required string Message { get; init; }
+    
+    [JsonPropertyName("color")]
     public required string Color { get; init; }
 
     public byte[] Draw()

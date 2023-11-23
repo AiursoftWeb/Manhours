@@ -20,6 +20,7 @@ When skimming a new repository, I'm always curious how much time went into creat
 To use native local git repo to calculate the commit time instead of GitHub API:
 
 ```bash
+git clone --filter=tree:0 https://github.com/EdiWang/Moonglade.git
 git --no-pager log --pretty=format:'%cd'
 ```
 

@@ -1,7 +1,7 @@
 using Aiursoft.Canon;
+using Aiursoft.GitRunner;
+using Aiursoft.GitRunner.Models;
 using Aiursoft.ManHours.Models;
-using Aiursoft.ManHours.Models.GitHub;
-using Aiursoft.ManHours.Models.GitLab;
 using Aiursoft.ManHours.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,37 +9,79 @@ namespace Aiursoft.ManHours.Controllers;
 
 public class BadgeController : ControllerBase
 {
+    private readonly WorkspaceManager _workspaceManager;
     private readonly CacheService _cacheService;
     private readonly WorkTimeService _workTimeService;
+    private static readonly string[] ValidExtensions = { "git", "svg", "json" };
+    private static readonly Dictionary<string, SemaphoreSlim > _lockers = new();
+    private readonly string _workspaceFolder;
 
     public BadgeController(
+        WorkspaceManager workspaceManager,
         CacheService cacheService,
         WorkTimeService workTimeService)
     {
+        _workspaceManager = workspaceManager;
         _cacheService = cacheService;
         _workTimeService = workTimeService;
+        _workspaceFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+            "ManHoursWorkspace");
     }
 
-    [Route("gitlab/{**repo}")]
-    public async Task<IActionResult> GitLabRepo([FromRoute] string repo) 
-    // sample value: gitlab/gitlab.aiursoft.cn/anduin/flyclass.svg
-    // sample value: gitlab/gitlab.aiursoft.cn/anduin/flyclass.json
+    [Route("r/{**repo}")]
+    public async Task<IActionResult> GitLabRepo([FromRoute] string repo)
+    // sample value: gitlab.aiursoft.cn/anduin/flyclass.git
+    // sample value: gitlab.aiursoft.cn/anduin/flyclass.svg
+    // sample value: gitlab.aiursoft.cn/anduin/flyclass.json
     {
         var extension = repo.Split('.').LastOrDefault();
-        if (string.IsNullOrEmpty(extension))
+        if (string.IsNullOrWhiteSpace(extension) || !ValidExtensions.Contains(extension.ToLower()))
         {
             return NotFound();
         }
-        
-        var repoWithoutExtension = repo.Substring(0, repo.Length - extension.Length - 1);
-        var formattedLink = new GitLabLink(repoWithoutExtension);
+
+        if (repo.StartsWith("https://"))
+        {
+            repo = repo["https://".Length..];
+        }
+
+        var repoWithoutExtension =
+            repo.Substring(0, repo.Length - extension.Length - 1); // gitlab.aiursoft.cn/anduin/flyclass
         var hours = await _cacheService.RunWithCache(
-            $"gitlab-{formattedLink.Server}-{formattedLink.Group}-{formattedLink.Project}", async () =>
+            $"git-{repoWithoutExtension}", async () =>
             {
-                var commits = await formattedLink.GetCommits().ToListAsync();
-                var commitTimes = commits.Select(t => t.CommittedDate).ToList();
-                var workTime = _workTimeService.CalculateWorkTime(commitTimes);
-                return workTime.TotalHours;
+                // var locker = _lockers.GetOrAdd(repoWithoutExtension, new object());
+                SemaphoreSlim? locker;
+                if (_lockers.TryGetValue(repoWithoutExtension, out var l))
+                {
+                    locker = l;
+                }
+                else
+                {
+                    locker = new SemaphoreSlim(1, 1);
+                    _lockers.Add(repoWithoutExtension, locker);
+                }
+
+                await locker.WaitAsync();
+                try
+                {
+                    var repoLocalPath = repoWithoutExtension.Replace('/', Path.DirectorySeparatorChar);
+                    var workPath = Path.Combine(_workspaceFolder, repoLocalPath);
+                    if (!Directory.Exists(workPath))
+                    {
+                        Directory.CreateDirectory(workPath);
+                    }
+
+                    await _workspaceManager.ResetRepo(workPath, null, $"https://{repoWithoutExtension}.git",
+                        CloneMode.OnlyCommits);
+                    var commits = await _workspaceManager.GetCommitTimes(workPath);
+                    var workTime = _workTimeService.CalculateWorkTime(commits.ToList());
+                    return workTime.TotalHours;
+                }
+                finally
+                {
+                    locker.Release();
+                }
             }, cachedMinutes: r => r < 100 ? TimeSpan.FromMinutes(10) : TimeSpan.FromMinutes(100));
 
         var badge = new Badge
@@ -57,59 +99,7 @@ public class BadgeController : ControllerBase
         //#fe7d37 Orange
         //#dfb317 Yellow
         //#4c1 Green
-        if (extension == "svg")
-        {
-            return File(badge.Draw(), "image/svg+xml");
-        }
-        else if (extension == "json")
-        {
-            return Ok(badge);
-        }
-        else
-        {
-            return NotFound();
-        }
-    }
-    
-    
-    [Route("github/{**repo}")]
-    public async Task<IActionResult> GitHubRepo([FromRoute] string repo) 
-    // sample value: github/microsoft/vscode.json
-    // sample value: github/microsoft/vscode.svg
-    {
-        var extension = repo.Split('.').LastOrDefault();
-        if (string.IsNullOrEmpty(extension))
-        {
-            return NotFound();
-        }
-        
-        var repoWithoutExtension = repo.Substring(0, repo.Length - extension.Length - 1);
-        var formattedLink = new GitHubLink(repoWithoutExtension);
-        var hours = await _cacheService.RunWithCache(
-            $"github-{formattedLink.Group}-{formattedLink.Project}", async () =>
-            {
-                var commits = await formattedLink.GetCommits().ToListAsync();
-                var commitTimes = commits.Select(t => t.Commit.Committer.Date).ToList();
-                var workTime = _workTimeService.CalculateWorkTime(commitTimes);
-                return workTime.TotalHours;
-            }, cachedMinutes: r => r < 100 ? TimeSpan.FromMinutes(10) : TimeSpan.FromMinutes(100));
-
-        var badge = new Badge
-        {
-            Label = "man-hours",
-            Message = $"{(int)hours}",
-            Color =
-                hours < 10 ? "e05d44" :
-                hours < 30 ? "fe7d37" :
-                hours < 90 ? "dfb317" :
-                "4c1"
-        };
-
-        //#e05d44 Red
-        //#fe7d37 Orange
-        //#dfb317 Yellow
-        //#4c1 Green
-        if (extension == "svg")
+        if (extension == "svg" || extension == "git")
         {
             return File(badge.Draw(), "image/svg+xml");
         }

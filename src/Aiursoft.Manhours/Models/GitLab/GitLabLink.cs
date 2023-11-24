@@ -12,7 +12,7 @@ public class GitLabLink
         var path = url.AbsolutePath.Split('/');
         if (path.Length != 3)
         {
-            throw new ArgumentException("Invalid GitLab repository URL!");
+            throw new ArgumentException("Invalid repository URL!");
         }
 
         Server = $"https://{url.Host.ToLower()}";

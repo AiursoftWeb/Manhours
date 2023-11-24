@@ -18,14 +18,6 @@
 
 <main role="main" class="container">
     <form method="post" class="mt-5">
-        <div class="form-group">
-            <label for="git">Git Server Type</label>
-            <select class="form-control" id="git" name="git">
-                <option value="gitlab">GitLab</option>
-                <option value="github">GitHub</option>
-            </select>
-        </div>
-        
         <div class="form-group mt-3">
             <label for="cloneUrl">HTTP Clone URL</label>
             <input type="text" class="form-control" id="cloneUrl" name="cloneUrl" placeholder="https://gitlab.aiursoft.cn/aiursoft/Manhours.git">
@@ -76,7 +68,6 @@
             const html = result.find("textarea").eq(1);
             
             // Get Input
-            const gitServerType = $("#git").val();
             const directMode = $("#directMode").is(":checked");
             let cloneUrl = $("#cloneUrl").val();
             // Clean up
@@ -97,21 +88,14 @@
                 cloneUrl = cloneUrl.substring(8);
             }
             
-            if (gitServerType === "github") {
-                // Remove github.com/
-                if (cloneUrl.startsWith("github.com/")) {
-                    cloneUrl = cloneUrl.substring("github.com/".length);
-                }
-            }
-            
             let imgLink;
             if (directMode) {
                 cloneUrl += ".svg";
-                imgLink = "@(Context.Request.Scheme)://@(Context.Request.Host)/" + gitServerType + "/" + cloneUrl;
+                imgLink = "@(Context.Request.Scheme)://@(Context.Request.Host)/" + "r/" + cloneUrl;
             } else {
                 cloneUrl += ".json";
                 cloneUrl = encodeURIComponent(cloneUrl);
-                imgLink = "https://img.shields.io/endpoint?url=@(Context.Request.Scheme)%3A%2F%2F@(Context.Request.Host)%2F" + gitServerType + "%2F" + cloneUrl;
+                imgLink = "https://img.shields.io/endpoint?url=@(Context.Request.Scheme)%3A%2F%2F@(Context.Request.Host)%2F" + "r" + "%2F" + cloneUrl;
             }
 
             const markdownVal = "![Man hours](" + imgLink + ")";

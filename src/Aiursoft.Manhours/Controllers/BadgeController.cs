@@ -9,6 +9,7 @@ namespace Aiursoft.ManHours.Controllers;
 
 public class BadgeController : ControllerBase
 {
+    private readonly ILogger<BadgeController> _logger;
     private readonly WorkspaceManager _workspaceManager;
     private readonly CacheService _cacheService;
     private readonly WorkTimeService _workTimeService;
@@ -17,10 +18,12 @@ public class BadgeController : ControllerBase
     private readonly string _workspaceFolder;
 
     public BadgeController(
+        ILogger<BadgeController> logger,
         WorkspaceManager workspaceManager,
         CacheService cacheService,
         WorkTimeService workTimeService)
     {
+        _logger = logger;
         _workspaceManager = workspaceManager;
         _cacheService = cacheService;
         _workTimeService = workTimeService;
@@ -47,6 +50,8 @@ public class BadgeController : ControllerBase
 
         var repoWithoutExtension =
             repo[..(repo.Length - extension.Length - 1)].ToLower().Trim(); // gitlab.aiursoft.cn/anduin/flyclass
+        
+        _logger.LogInformation($"Requesting repo: {repoWithoutExtension}");
         var hours = await _cacheService.RunWithCache(
             $"git-{repoWithoutExtension}", async () =>
             {
@@ -54,14 +59,17 @@ public class BadgeController : ControllerBase
                 SemaphoreSlim? locker;
                 if (_lockers.TryGetValue(repoWithoutExtension, out var l))
                 {
+                    _logger.LogInformation($"Found locker for repo: {repoWithoutExtension}");
                     locker = l;
                 }
                 else
                 {
+                    _logger.LogInformation($"Create locker for repo: {repoWithoutExtension}");
                     locker = new SemaphoreSlim(1, 1);
                     _lockers.Add(repoWithoutExtension, locker);
                 }
 
+                _logger.LogInformation($"Waiting for locker for repo: {repoWithoutExtension}");
                 await locker.WaitAsync();
                 try
                 {
@@ -69,17 +77,24 @@ public class BadgeController : ControllerBase
                     var workPath = Path.Combine(_workspaceFolder, repoLocalPath);
                     if (!Directory.Exists(workPath))
                     {
+                        _logger.LogInformation($"Create folder for repo: {repoWithoutExtension}");
                         Directory.CreateDirectory(workPath);
                     }
 
+                    _logger.LogInformation($"Resetting repo: {repoWithoutExtension}");
                     await _workspaceManager.ResetRepo(workPath, null, $"https://{repoWithoutExtension}.git",
-                        CloneMode.Bare);
+                        CloneMode.BareWithOnlyCommits);
+                    
+                    _logger.LogInformation($"Getting commits for repo: {repoWithoutExtension}");
                     var commits = await _workspaceManager.GetCommitTimes(workPath);
+                    
+                    _logger.LogInformation($"Calculating work time for repo: {repoWithoutExtension}");
                     var workTime = _workTimeService.CalculateWorkTime(commits.ToList());
                     return workTime.TotalHours;
                 }
                 finally
                 {
+                    _logger.LogInformation($"Release locker for repo: {repoWithoutExtension}");
                     locker.Release();
                 }
             }, cachedMinutes: r => r < 100 ? TimeSpan.FromMinutes(10) : TimeSpan.FromMinutes(100));

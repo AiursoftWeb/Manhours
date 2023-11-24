@@ -39,6 +39,7 @@ public class BasicTests
     [DataRow("/r/gitlab.aiursoft.cn/aiursoft/webtools.svg")]
     [DataRow("/r/gitlab.aiursoft.cn/anduin/flyclass.svg")]
     [DataRow("/r/gitlab.aiursoft.cn/anduin/flyclass.json")]
+    [DataRow("/r/github.com/ediwang/moonglade.json")]
     public async Task GetBadge(string url)
     {
         var response = await _http.GetAsync(_endpointUrl + url);

@@ -46,7 +46,7 @@ public class BadgeController : ControllerBase
         }
 
         var repoWithoutExtension =
-            repo.Substring(0, repo.Length - extension.Length - 1); // gitlab.aiursoft.cn/anduin/flyclass
+            repo[..(repo.Length - extension.Length - 1)].ToLower().Trim(); // gitlab.aiursoft.cn/anduin/flyclass
         var hours = await _cacheService.RunWithCache(
             $"git-{repoWithoutExtension}", async () =>
             {
@@ -73,7 +73,7 @@ public class BadgeController : ControllerBase
                     }
 
                     await _workspaceManager.ResetRepo(workPath, null, $"https://{repoWithoutExtension}.git",
-                        CloneMode.OnlyCommits);
+                        CloneMode.Bare);
                     var commits = await _workspaceManager.GetCommitTimes(workPath);
                     var workTime = _workTimeService.CalculateWorkTime(commits.ToList());
                     return workTime.TotalHours;
@@ -88,6 +88,10 @@ public class BadgeController : ControllerBase
         {
             Label = "man-hours",
             Message = $"{(int)hours}",
+            //#e05d44 Red
+            //#fe7d37 Orange
+            //#dfb317 Yellow
+            //#4c1 Green
             Color =
                 hours < 10 ? "e05d44" :
                 hours < 30 ? "fe7d37" :
@@ -95,21 +99,16 @@ public class BadgeController : ControllerBase
                 "4c1"
         };
 
-        //#e05d44 Red
-        //#fe7d37 Orange
-        //#dfb317 Yellow
-        //#4c1 Green
-        if (extension == "svg" || extension == "git")
+        switch (extension)
         {
-            return File(badge.Draw(), "image/svg+xml");
-        }
-        else if (extension == "json")
-        {
-            return Ok(badge);
-        }
-        else
-        {
-            return NotFound();
+
+            case "svg":
+            case "git":
+                return File(badge.Draw(), "image/svg+xml");
+            case "json":
+                return Ok(badge);
+            default:
+                return NotFound();
         }
     }
 }

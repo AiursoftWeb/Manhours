@@ -36,9 +36,9 @@ public class BasicTests
     }
 
     [TestMethod]
-    [DataRow("/gitlab/gitlab.aiursoft.cn/aiursoft/webtools.svg")]
-    [DataRow("/gitlab/gitlab.aiursoft.cn/anduin/flyclass.svg")]
-    [DataRow("/gitlab/gitlab.aiursoft.cn/anduin/flyclass.json")]
+    [DataRow("/r/gitlab.aiursoft.cn/aiursoft/webtools.svg")]
+    [DataRow("/r/gitlab.aiursoft.cn/anduin/flyclass.svg")]
+    [DataRow("/r/gitlab.aiursoft.cn/anduin/flyclass.json")]
     public async Task GetBadge(string url)
     {
         var response = await _http.GetAsync(_endpointUrl + url);
@@ -58,9 +58,9 @@ public class BasicTests
     }
 
     [TestMethod]
-    [DataRow("/gitlab/gitlab.aiursoft.cn/aiursoft/webtools.ssss")]
-    [DataRow("/gitlab/gitlab.aiursoft.cn/anduin/flyclass")]
-    [DataRow("/gitlab/gitlab.aiursoft.cn/anduin")]
+    [DataRow("/r/gitlab.aiursoft.cn/aiursoft/webtools.ssss")]
+    [DataRow("/r/gitlab.aiursoft.cn/anduin/flyclass")]
+    [DataRow("/r/gitlab.aiursoft.cn/anduin")]
     public async Task GetBadgeFailed(string url)
     {
         var response = await _http.GetAsync(_endpointUrl + url);

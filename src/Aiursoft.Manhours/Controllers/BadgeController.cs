@@ -96,18 +96,18 @@ public class BadgeController : ControllerBase
                     var workPath = Path.Combine(_workspaceFolder, repoLocalPath);
                     if (!Directory.Exists(workPath))
                     {
-                        _logger.LogInformation($"Create folder for repo: {repoWithoutExtension}");
+                        _logger.LogInformation($"Create folder for repo: {repoWithoutExtension} on {workPath}");
                         Directory.CreateDirectory(workPath);
                     }
 
-                    _logger.LogInformation($"Resetting repo: {repoWithoutExtension}");
+                    _logger.LogInformation($"Resetting repo: {repoWithoutExtension} on {workPath}");
                     await _workspaceManager.ResetRepo(workPath, null, $"https://{repoWithoutExtension}.git",
                         CloneMode.BareWithOnlyCommits);
                     
-                    _logger.LogInformation($"Getting commits for repo: {repoWithoutExtension}");
+                    _logger.LogInformation($"Getting commits for repo: {repoWithoutExtension} on {workPath}");
                     var commits = await _workspaceManager.GetCommitTimes(workPath);
                     
-                    _logger.LogInformation($"Calculating work time for repo: {repoWithoutExtension}");
+                    _logger.LogInformation($"Calculating work time for repo: {repoWithoutExtension} on {workPath}");
                     var workTime = _workTimeService.CalculateWorkTime(commits.ToList());
                     return workTime.TotalHours;
                 }

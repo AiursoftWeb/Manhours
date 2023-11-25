@@ -40,6 +40,7 @@ public class BadgeController : ControllerBase
         var extension = repo.Split('.').LastOrDefault();
         if (string.IsNullOrWhiteSpace(extension) || !ValidExtensions.Contains(extension.ToLower()))
         {
+            _logger.LogInformation($"Invalid extension: {extension}");
             return NotFound();
         }
 
@@ -55,12 +56,14 @@ public class BadgeController : ControllerBase
         // Don't allow '..'
         if (repo.Contains(".."))
         {
+            _logger.LogInformation($"Invalid repo: {repo}");
             return NotFound();
         }
 
         // At least one Path separator
         if (!repo.Contains('/'))
         {
+            _logger.LogInformation($"Invalid repo: {repo}");
             return NotFound();
         }
 

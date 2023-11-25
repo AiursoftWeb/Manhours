@@ -8,21 +8,13 @@
 
 When skimming a new repository, I'm always curious how much time went into creating it. I built Man Hours to generate and display a shields.io badge for your README with an estimate of how many hours committers have spent working on your files. You can see a sample badge above with the total hours put into this repo.
 
-## Server supports
+## How to use our Manhours server?
 
-* GitLab
-* GitHub (Working in progress)
-* Gitea (Working in progress)
+It's simple.
 
-## Refactor plan
+First copy your repository's HTTPS clone URL. Then visit [https://manhours.aiursoft.cn](https://manhours.aiursoft.cn) and paste your URL into the input box.
 
-[//]: # (TODO)
-To use native local git repo to calculate the commit time instead of GitHub API:
-
-```bash
-git clone --filter=tree:0 https://github.com/EdiWang/Moonglade.git
-git --no-pager log --pretty=format:'%cd'
-```
+Click the button and you'll get a markdown snippet that you can copy and paste into your README.
 
 ## Run locally
 

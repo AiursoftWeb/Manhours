@@ -93,7 +93,7 @@ public class BadgeController : ControllerBase
                 try
                 {
                     var repoLocalPath = repoWithoutExtension.Replace('/', Path.DirectorySeparatorChar);
-                    var workPath = Path.Combine(_workspaceFolder, repoLocalPath);
+                    var workPath = Path.GetFullPath(Path.Combine(_workspaceFolder, repoLocalPath));
                     if (!Directory.Exists(workPath))
                     {
                         _logger.LogInformation($"Create folder for repo: {repoWithoutExtension} on {workPath}");

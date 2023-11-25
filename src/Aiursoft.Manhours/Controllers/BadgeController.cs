@@ -43,9 +43,25 @@ public class BadgeController : ControllerBase
             return NotFound();
         }
 
+        // Trim path splitters
+        repo = repo.Replace('\\', '/').Trim('/');
+
+        // Trim HTTPS
         if (repo.StartsWith("https://"))
         {
             repo = repo["https://".Length..];
+        }
+
+        // Don't allow '..'
+        if (repo.Contains(".."))
+        {
+            return NotFound();
+        }
+
+        // At least one Path separator
+        if (!repo.Contains('/'))
+        {
+            return NotFound();
         }
 
         var repoWithoutExtension =

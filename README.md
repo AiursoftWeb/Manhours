@@ -4,7 +4,7 @@
 [![Pipeline stat](https://gitlab.aiursoft.cn/aiursoft/ManHours/badges/master/pipeline.svg)](https://gitlab.aiursoft.cn/aiursoft/ManHours/-/pipelines)
 [![Test Coverage](https://gitlab.aiursoft.cn/aiursoft/ManHours/badges/master/coverage.svg)](https://gitlab.aiursoft.cn/aiursoft/ManHours/-/pipelines)
 [![ManHours](https://manhours.aiursoft.cn/r/gitlab.aiursoft.cn/aiursoft/ManHours.svg)](https://gitlab.aiursoft.cn/aiursoft/ManHours/-/commits/master?ref_type=heads)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fmanhours.aiursoft.cn%2Fr%2Fgitlab.aiursoft.cn%2Faiursoft%2Fmanhours.svg)](https://manhours.aiursoft.cn/r/gitlab.aiursoft.cn/manhours.svg)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fmanhours.aiursoft.cn)](https://manhours.aiursoft.cn/)
 
 When skimming a new repository, I'm always curious how much time went into creating it. I built Man Hours to generate and display a shields.io badge for your README with an estimate of how many hours committers have spent working on your files. You can see a sample badge above with the total hours put into this repo.
 

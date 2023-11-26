@@ -116,7 +116,7 @@ public class BadgeController : ControllerBase
                     _logger.LogInformation($"Release locker for repo: {repoWithoutExtension}");
                     locker.Release();
                 }
-            }, cachedMinutes: r => r < 100 ? TimeSpan.FromMinutes(10) : TimeSpan.FromMinutes(100));
+            }, cachedMinutes: r => r < 100 ? TimeSpan.FromMinutes(10) : TimeSpan.FromHours(10));
 
         var badge = new Badge
         {

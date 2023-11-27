@@ -4,6 +4,7 @@ using Aiursoft.GitRunner.Models;
 using Aiursoft.ManHours.Models;
 using Aiursoft.ManHours.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Concurrent;
 
 namespace Aiursoft.ManHours.Controllers;
 
@@ -14,7 +15,7 @@ public class BadgeController : ControllerBase
     private readonly CacheService _cacheService;
     private readonly WorkTimeService _workTimeService;
     private static readonly string[] ValidExtensions = { "git", "svg", "json" };
-    private static readonly Dictionary<string, SemaphoreSlim > Lockers = new();
+    private static readonly ConcurrentDictionary<string, SemaphoreSlim > Lockers = new();
     private readonly string _workspaceFolder;
 
     public BadgeController(
@@ -71,20 +72,7 @@ public class BadgeController : ControllerBase
         var hours = await _cacheService.RunWithCache(
             $"git-{repoWithoutExtension}", async () =>
             {
-                // var locker = _lockers.GetOrAdd(repoWithoutExtension, new object());
-                SemaphoreSlim? locker;
-                if (Lockers.TryGetValue(repoWithoutExtension, out var l))
-                {
-                    _logger.LogInformation($"Found locker for repo: {repoWithoutExtension}");
-                    locker = l;
-                }
-                else
-                {
-                    _logger.LogInformation($"Create locker for repo: {repoWithoutExtension}");
-                    locker = new SemaphoreSlim(1, 1);
-                    Lockers.Add(repoWithoutExtension, locker);
-                }
-
+                var locker = Lockers.GetOrAdd(repoWithoutExtension, _ => new SemaphoreSlim(1, 1));
                 _logger.LogInformation($"Waiting for locker for repo: {repoWithoutExtension}");
                 await locker.WaitAsync();
                 try

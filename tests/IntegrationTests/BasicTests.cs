@@ -36,10 +36,18 @@ public class BasicTests
     }
 
     [TestMethod]
+    public async Task TestGetHome()
+    {
+        var response = await _http.GetAsync(_endpointUrl);
+        response.EnsureSuccessStatusCode(); // Status Code 200-299
+    }
+
+    [TestMethod]
     [DataRow("/r/gitlab.aiursoft.cn/aiursoft/webtools.svg")]
     [DataRow("/r/gitlab.aiursoft.cn/anduin/flyclass.svg")]
     [DataRow("/r/gitlab.aiursoft.cn/anduin/flyclass.json")]
     [DataRow("/r/github.com/ediwang/moonglade.json")]
+    [DataRow("/r/https://github.com/ediwang/moonglade.json")]
     public async Task GetBadge(string url)
     {
         var response = await _http.GetAsync(_endpointUrl + url);
@@ -62,6 +70,8 @@ public class BasicTests
     [DataRow("/r/gitlab.aiursoft.cn/aiursoft/webtools.ssss")]
     [DataRow("/r/gitlab.aiursoft.cn/anduin/flyclass")]
     [DataRow("/r/gitlab.aiursoft.cn/anduin")]
+    [DataRow("/r/gitlab.aiursoft.cn")]
+    [DataRow("/r/gitlab.aiursoft.cn/anduin/../aaaa")]
     public async Task GetBadgeFailed(string url)
     {
         var response = await _http.GetAsync(_endpointUrl + url);

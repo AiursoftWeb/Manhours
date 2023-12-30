@@ -33,7 +33,7 @@ public class BadgeController : ControllerBase
     }
 
     [Route("r/{**repo}")]
-    public async Task<IActionResult> GitLabRepo([FromRoute] string repo)
+    public async Task<IActionResult> RenderRepo([FromRoute] string repo)
     {
         var extension = repo.Split('.').LastOrDefault();
         if (string.IsNullOrWhiteSpace(extension) || !ValidExtensions.Contains(extension.ToLower()))

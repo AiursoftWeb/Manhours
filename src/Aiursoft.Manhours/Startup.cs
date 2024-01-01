@@ -19,6 +19,7 @@ public class Startup : IWebStartup
 
     public void Configure(WebApplication app)
     {
+        app.UseStaticFiles();
         app.UseRouting();
         app.MapDefaultControllerRoute();
     }

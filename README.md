@@ -16,6 +16,24 @@ First copy your repository's HTTPS clone URL. Then visit [https://manhours.aiurs
 
 Click the button and you'll get a markdown snippet that you can copy and paste into your README.
 
+## Run in Ubuntu
+
+The following script will install\update this app on your Ubuntu server. Supports Ubuntu 22.04.
+
+On your Ubuntu server, run the following command:
+
+```bash
+curl -sL https://gitlab.aiursoft.cn/aiursoft/manhours/-/raw/master/install.sh | sudo bash
+```
+
+Of course it is suggested that append a custom port number to the command:
+
+```bash
+curl -sL https://gitlab.aiursoft.cn/aiursoft/manhours/-/raw/master/install.sh | sudo bash -s 8080
+```
+
+It will install the app as a systemd service, and start it automatically. Binary files will be located at `/opt/apps`. Service files will be located at `/etc/systemd/system`.
+
 ## Run locally
 
 Requirements about how to run

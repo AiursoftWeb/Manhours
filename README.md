@@ -8,13 +8,9 @@
 
 When skimming a new repository, I'm always curious how much time went into creating it. I built Man Hours to generate and display a shields.io badge for your README with an estimate of how many hours committers have spent working on your files. You can see a sample badge above with the total hours put into this repo.
 
-## How to use our Manhours server?
+## Try
 
-It's simple.
-
-First copy your repository's HTTPS clone URL. Then visit [https://manhours.aiursoft.cn](https://manhours.aiursoft.cn) and paste your URL into the input box.
-
-Click the button and you'll get a markdown snippet that you can copy and paste into your README.
+Try a running ManHours [here](https://manhours.aiursoft.cn).
 
 ## Run in Ubuntu
 

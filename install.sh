@@ -2,7 +2,7 @@ aiur() { arg="$( cut -d ' ' -f 2- <<< "$@" )" && curl -sL https://gitlab.aiursof
 
 app_name="manhours"
 repo_path="https://gitlab.aiursoft.cn/aiursoft/manhours"
-proj_path="src/Aiursoft.Manhours/Aiursoft.Manhours.csproj"
+proj_path="src/Aiursoft.Manhours/Aiursoft.ManHours.csproj"
 
 get_dll_name()
 {

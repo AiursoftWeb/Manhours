@@ -5,6 +5,7 @@
 [![Test Coverage](https://gitlab.aiursoft.cn/aiursoft/ManHours/badges/master/coverage.svg)](https://gitlab.aiursoft.cn/aiursoft/ManHours/-/pipelines)
 [![ManHours](https://manhours.aiursoft.cn/r/gitlab.aiursoft.cn/aiursoft/ManHours.svg)](https://gitlab.aiursoft.cn/aiursoft/ManHours/-/commits/master?ref_type=heads)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fmanhours.aiursoft.cn)](https://manhours.aiursoft.cn/)
+[![Docker](https://img.shields.io/badge/docker-latest-blue?logo=docker)](https://hub.aiursoft.cn/#!/taglist/aiursoft/manhours)
 
 When skimming a new repository, I'm always curious how much time went into creating it. I built Man Hours to generate and display a shields.io badge for your README with an estimate of how many hours committers have spent working on your files. You can see a sample badge above with the total hours put into this repo.
 
@@ -30,18 +31,44 @@ curl -sL https://gitlab.aiursoft.cn/aiursoft/manhours/-/raw/master/install.sh | 
 
 It will install the app as a systemd service, and start it automatically. Binary files will be located at `/opt/apps`. Service files will be located at `/etc/systemd/system`.
 
-## Run locally
+## Run manually
 
 Requirements about how to run
 
-1. [.NET 7 SDK](http://dot.net/)
-2. Execute `dotnet run` to run the app
-3. Use your browser to view [http://localhost:5000](http://localhost:5000)
+1. Install [.NET 7 SDK](http://dot.net/) and [Node.js](https://nodejs.org/).
+2. Execute `npm install` at `wwwroot` folder to install the dependencies.
+3. Execute `dotnet run` to run the app.
+4. Use your browser to view [http://localhost:5000](http://localhost:5000).
 
 ## Run in Microsoft Visual Studio
 
 1. Open the `.sln` file in the project path.
-2. Press `F5`.
+2. Press `F5` to run the app.
+
+## Run in Docker
+
+First, install Docker [here](https://docs.docker.com/get-docker/).
+
+Then run the following commands in a Linux shell:
+
+```bash
+image=hub.aiursoft.cn/aiursoft/manhours
+appName=manhours
+docker pull $image
+docker run -d --name $appName --restart unless-stopped -p 5000:5000 -v /var/www/$appName:/data $image
+```
+
+That will start a web server at `http://localhost:5000` and you can test the app.
+
+The docker image has the following context:
+
+| Properties  | Value                            |
+|-------------|----------------------------------|
+| Image       | hub.aiursoft.cn/aiursoft/manhours|
+| Ports       | 5000                             |
+| Binary path | /app                             |
+| Data path   | /data                            |
+| Config path | /data/appsettings.json           |
 
 ## How to contribute
 

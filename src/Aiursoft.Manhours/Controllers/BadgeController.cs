@@ -19,6 +19,7 @@ public class BadgeController : ControllerBase
     private readonly string _workspaceFolder;
 
     public BadgeController(
+        IConfiguration configuration,
         ILogger<BadgeController> logger,
         WorkspaceManager workspaceManager,
         CacheService cacheService,
@@ -28,8 +29,7 @@ public class BadgeController : ControllerBase
         _workspaceManager = workspaceManager;
         _cacheService = cacheService;
         _workTimeService = workTimeService;
-        _workspaceFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-            "ManHoursWorkspace");
+        _workspaceFolder = configuration["Storage:Path"]!;
     }
 
     [Route("r/{**repo}")]

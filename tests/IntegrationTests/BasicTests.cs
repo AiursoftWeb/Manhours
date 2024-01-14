@@ -1,4 +1,6 @@
 ﻿using Aiursoft.CSTools.Tools;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.Extensions.Hosting;
 using static Aiursoft.WebTools.Extends;
@@ -31,6 +33,11 @@ public class BasicTests
     public async Task CleanServer()
     {
         if (_server == null) return;
+        var storagePath = _server.Services.GetRequiredService<IConfiguration>()["Storage:Path"];
+        if (Directory.Exists(storagePath))
+        {
+            FolderDeleter.DeleteByForce(storagePath);
+        }
         await _server.StopAsync();
         _server.Dispose();
     }

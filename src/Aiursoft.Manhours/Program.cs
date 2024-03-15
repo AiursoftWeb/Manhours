@@ -7,7 +7,7 @@ public class Program
 {
     public static async Task Main(string[] args)
     {
-        var app = WebTools.Extends.App<Startup>(args);
+        var app = await WebTools.Extends.AppAsync<Startup>(args);
         await app.RunAsync();
     }
 }

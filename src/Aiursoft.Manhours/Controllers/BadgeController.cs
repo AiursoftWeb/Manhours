@@ -5,6 +5,7 @@ using Aiursoft.ManHours.Models;
 using Aiursoft.ManHours.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Concurrent;
+using Aiursoft.CSTools.Tools;
 
 namespace Aiursoft.ManHours.Controllers;
 
@@ -15,7 +16,7 @@ public class BadgeController : ControllerBase
     private readonly CacheService _cacheService;
     private readonly WorkTimeService _workTimeService;
     private static readonly string[] ValidExtensions = { "git", "svg", "json" };
-    private static readonly ConcurrentDictionary<string, SemaphoreSlim > Lockers = new();
+    private static readonly ConcurrentDictionary<string, SemaphoreSlim> Lockers = new();
     private readonly string _workspaceFolder;
 
     public BadgeController(
@@ -67,7 +68,7 @@ public class BadgeController : ControllerBase
 
         var repoWithoutExtension =
             repo[..(repo.Length - extension.Length - 1)].ToLower().Trim();
-        
+
         _logger.LogInformation($"Requesting repo: {repoWithoutExtension}");
         var hours = await _cacheService.RunWithCache(
             $"git-{repoWithoutExtension}", async () =>
@@ -85,16 +86,7 @@ public class BadgeController : ControllerBase
                         Directory.CreateDirectory(workPath);
                     }
 
-                    _logger.LogInformation($"Resetting repo: {repoWithoutExtension} on {workPath}");
-                    await _workspaceManager.ResetRepo(workPath, null, $"https://{repoWithoutExtension}.git",
-                        CloneMode.BareWithOnlyCommits);
-                    
-                    _logger.LogInformation($"Getting commits for repo: {repoWithoutExtension} on {workPath}");
-                    var commits = await _workspaceManager.GetCommitTimes(workPath);
-                    
-                    _logger.LogInformation($"Calculating work time for repo: {repoWithoutExtension} on {workPath}");
-                    var workTime = _workTimeService.CalculateWorkTime(commits.ToList());
-                    return workTime.TotalHours;
+                    return await GetWorkHoursFromGitPath(repoWithoutExtension, workPath);
                 }
                 finally
                 {
@@ -127,6 +119,36 @@ public class BadgeController : ControllerBase
                 return Ok(badge);
             default:
                 return NotFound();
+        }
+    }
+
+    private async Task<double> GetWorkHoursFromGitPath(string repoWithoutExtension, string workPath,
+        bool autoCleanIfError = true)
+    {
+        try
+        {
+            _logger.LogInformation($"Resetting repo: {repoWithoutExtension} on {workPath}");
+            await _workspaceManager.ResetRepo(workPath, null, $"https://{repoWithoutExtension}.git",
+                CloneMode.BareWithOnlyCommits);
+
+            _logger.LogInformation($"Getting commits for repo: {repoWithoutExtension} on {workPath}");
+            var commits = await _workspaceManager.GetCommitTimes(workPath);
+
+            _logger.LogInformation($"Calculating work time for repo: {repoWithoutExtension} on {workPath}");
+            var workTime = _workTimeService.CalculateWorkTime(commits.ToList());
+            return workTime.TotalHours;
+        }
+        catch (Exception e)
+        {
+            if (autoCleanIfError)
+            {
+                _logger.LogError(e, $"Error on repo: {repoWithoutExtension} on {workPath}");
+                _logger.LogInformation($"Cleaning repo: {repoWithoutExtension} on {workPath}");
+                FolderDeleter.DeleteByForce(workPath, keepFolder: true);
+                return await GetWorkHoursFromGitPath(repoWithoutExtension, workPath, false);
+            }
+
+            throw;
         }
     }
 }

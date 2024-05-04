@@ -30,10 +30,10 @@
             </div>
 
             <label for="markdown" class="mt-3">Markdown</label>
-            <textarea class="form-control" rows="3" readonly></textarea>
+            <textarea id="markdown" class="form-control" rows="3" readonly></textarea>
 
             <label for="html" class="mt-3">HTML</label>
-            <textarea class="form-control" rows="3" readonly></textarea>
+            <textarea id="html" class="form-control" rows="3" readonly></textarea>
         </div>
     </form>
 </main>
@@ -47,9 +47,8 @@
                 // Prepare
                 const result = document.getElementById("result");
                 const previewImg = result.querySelector("#preview-img");
-                const textareas = result.querySelectorAll("textarea");
-                const markdown = textareas[0];
-                const html = textareas[1];
+                const markdown = document.getElementById("markdown");
+                const html = document.getElementById("html");
 
                 // Get Input
                 const directMode = document.getElementById("directMode").checked;

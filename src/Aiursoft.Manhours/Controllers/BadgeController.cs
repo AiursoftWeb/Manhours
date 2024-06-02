@@ -109,6 +109,9 @@ public class BadgeController : ControllerBase
                 hours < 90 ? "dfb317" :
                 "4c1"
         };
+        
+        //Access-Control-Allow-Origin:
+        Response.Headers.Append("Access-Control-Allow-Origin", "*");
 
         switch (extension)
         {

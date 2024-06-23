@@ -11,6 +11,8 @@ ManHours is a tool to generate a badge for your repository.
 
 When skimming a new repository, I'm always curious how much time went into creating it. I built Man Hours to generate and display a shields.io badge for your README with an estimate of how many hours committers have spent working on your files. You can see a sample badge above with the total hours put into this repo.
 
+![overview](./screenshot.png)
+
 ## Try
 
 Try a running ManHours [here](https://manhours.aiursoft.cn).

@@ -9,29 +9,17 @@ using Aiursoft.CSTools.Tools;
 
 namespace Aiursoft.ManHours.Controllers;
 
-public class BadgeController : ControllerBase
+public class BadgeController(
+    IConfiguration configuration,
+    ILogger<BadgeController> logger,
+    WorkspaceManager workspaceManager,
+    CacheService cacheService,
+    WorkTimeService workTimeService)
+    : ControllerBase
 {
-    private readonly ILogger<BadgeController> _logger;
-    private readonly WorkspaceManager _workspaceManager;
-    private readonly CacheService _cacheService;
-    private readonly WorkTimeService _workTimeService;
-    private static readonly string[] ValidExtensions = { "git", "svg", "json" };
+    private static readonly string[] ValidExtensions = ["git", "svg", "json"];
     private static readonly ConcurrentDictionary<string, SemaphoreSlim> Lockers = new();
-    private readonly string _workspaceFolder;
-
-    public BadgeController(
-        IConfiguration configuration,
-        ILogger<BadgeController> logger,
-        WorkspaceManager workspaceManager,
-        CacheService cacheService,
-        WorkTimeService workTimeService)
-    {
-        _logger = logger;
-        _workspaceManager = workspaceManager;
-        _cacheService = cacheService;
-        _workTimeService = workTimeService;
-        _workspaceFolder = configuration["Storage:Path"]!;
-    }
+    private readonly string _workspaceFolder = configuration["Storage:Path"]!;
 
     [Route("r/{**repo}")]
     public async Task<IActionResult> RenderRepo([FromRoute] string repo)
@@ -39,7 +27,7 @@ public class BadgeController : ControllerBase
         var extension = repo.Split('.').LastOrDefault();
         if (string.IsNullOrWhiteSpace(extension) || !ValidExtensions.Contains(extension.ToLower()))
         {
-            _logger.LogInformation($"Invalid extension: {extension}");
+            logger.LogInformation($"Invalid extension: {extension}");
             return NotFound();
         }
 
@@ -55,26 +43,26 @@ public class BadgeController : ControllerBase
         // Don't allow '..'
         if (repo.Contains(".."))
         {
-            _logger.LogInformation($"Invalid repo: {repo}");
+            logger.LogInformation($"Invalid repo: {repo}");
             return NotFound();
         }
 
         // At least one Path separator
         if (!repo.Contains('/'))
         {
-            _logger.LogInformation($"Invalid repo: {repo}");
+            logger.LogInformation($"Invalid repo: {repo}");
             return NotFound();
         }
 
         var repoWithoutExtension =
             repo[..(repo.Length - extension.Length - 1)].ToLower().Trim();
 
-        _logger.LogInformation($"Requesting repo: {repoWithoutExtension}");
-        var hours = await _cacheService.RunWithCache(
+        logger.LogInformation($"Requesting repo: {repoWithoutExtension}");
+        var hours = await cacheService.RunWithCache(
             $"git-{repoWithoutExtension}", async () =>
             {
                 var locker = Lockers.GetOrAdd(repoWithoutExtension, _ => new SemaphoreSlim(1, 1));
-                _logger.LogInformation($"Waiting for locker for repo: {repoWithoutExtension}");
+                logger.LogInformation($"Waiting for locker for repo: {repoWithoutExtension}");
                 await locker.WaitAsync();
                 try
                 {
@@ -82,7 +70,7 @@ public class BadgeController : ControllerBase
                     var workPath = Path.GetFullPath(Path.Combine(_workspaceFolder, repoLocalPath));
                     if (!Directory.Exists(workPath))
                     {
-                        _logger.LogInformation($"Create folder for repo: {repoWithoutExtension} on {workPath}");
+                        logger.LogInformation($"Create folder for repo: {repoWithoutExtension} on {workPath}");
                         Directory.CreateDirectory(workPath);
                     }
 
@@ -90,10 +78,10 @@ public class BadgeController : ControllerBase
                 }
                 finally
                 {
-                    _logger.LogInformation($"Release locker for repo: {repoWithoutExtension}");
+                    logger.LogInformation($"Release locker for repo: {repoWithoutExtension}");
                     locker.Release();
                 }
-            }, cachedMinutes: manHours => TimeSpan.FromMinutes((int)manHours)); // For 1 man hour, cache 1 minute.
+            }, cachedMinutes: manHours => TimeSpan.FromMinutes((int)manHours)); // For 1 manhour, cache 1 minute.
 
         var badge = new Badge
         {
@@ -130,23 +118,23 @@ public class BadgeController : ControllerBase
     {
         try
         {
-            _logger.LogInformation($"Resetting repo: {repoWithoutExtension} on {workPath}");
-            await _workspaceManager.ResetRepo(workPath, null, $"https://{repoWithoutExtension}.git",
+            logger.LogInformation($"Resetting repo: {repoWithoutExtension} on {workPath}");
+            await workspaceManager.ResetRepo(workPath, null, $"https://{repoWithoutExtension}.git",
                 CloneMode.BareWithOnlyCommits);
 
-            _logger.LogInformation($"Getting commits for repo: {repoWithoutExtension} on {workPath}");
-            var commits = await _workspaceManager.GetCommitTimes(workPath);
+            logger.LogInformation($"Getting commits for repo: {repoWithoutExtension} on {workPath}");
+            var commits = await workspaceManager.GetCommitTimes(workPath);
 
-            _logger.LogInformation($"Calculating work time for repo: {repoWithoutExtension} on {workPath}");
-            var workTime = _workTimeService.CalculateWorkTime(commits.ToList());
+            logger.LogInformation($"Calculating work time for repo: {repoWithoutExtension} on {workPath}");
+            var workTime = workTimeService.CalculateWorkTime(commits.ToList());
             return workTime.TotalHours;
         }
         catch (Exception e)
         {
             if (autoCleanIfError)
             {
-                _logger.LogError(e, $"Error on repo: {repoWithoutExtension} on {workPath}");
-                _logger.LogInformation($"Cleaning repo: {repoWithoutExtension} on {workPath}");
+                logger.LogError(e, $"Error on repo: {repoWithoutExtension} on {workPath}");
+                logger.LogInformation($"Cleaning repo: {repoWithoutExtension} on {workPath}");
                 FolderDeleter.DeleteByForce(workPath, keepFolder: true);
                 return await GetWorkHoursFromGitPath(repoWithoutExtension, workPath, false);
             }

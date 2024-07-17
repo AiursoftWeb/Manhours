@@ -5,47 +5,70 @@
 </style>
 
 
-<main role="main" class="container">
-    <form method="post" class="mt-5">
-        <div class="form-group mt-3">
-            <label for="cloneUrl">
-                <i class="fa-brands fa-git-alt"></i>
-                HTTP Clone URL
-            </label>
-            <input type="text" class="form-control" id="cloneUrl" name="cloneUrl"
-                placeholder="https://gitlab.aiursoft.cn/aiursoft/Manhours.git">
-        </div>
+<h1 class="h3 mb-3">Manhours</h1>
 
-        <div class="form-check mt-3">
-            <input class="form-check-input" type="checkbox" value="" id="directMode" name="directMode">
-            <label class="form-check-label" for="directMode">
-                Direct mode (Without proxy from img.shields.io)
-            </label>
-        </div>
-
-        <button type="submit" class="btn btn-primary mt-3">Generate</button>
-
-        <div class="mt-3 hidden" id="result">
-            <label for="preview">Preview</label>
-            <div class="form-group" id="preview">
-                <img alt="Man hours icon" id="preview-img"
-                    src="https://img.shields.io/endpoint?url=https%3A%2F%2Fmanhours.aiursoft.cn%2Fgitlab%2Fgitlab.aiursoft.cn%2Faiursoft%2Fmanhours.json" />
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title">Badge Generator</h5>
+                <h6 class="card-subtitle text-muted">Enter the clone url of your git repository to generate a badge for your project.</h6>
             </div>
+            <div class="card-body">
+                <form method="post" id="manhours-form">
+                    <div class="form-group">
+                        <label for="cloneUrl">
+                            <i class="fa-brands fa-git-alt"></i>
+                            HTTP Clone URL
+                        </label>
+                        <input type="text" class="form-control" id="cloneUrl" name="cloneUrl"
+                               placeholder="https://gitlab.aiursoft.cn/aiursoft/Manhours.git">
+                    </div>
 
-            <label for="markdown" class="mt-3">Markdown</label>
-            <textarea id="markdown" class="form-control" rows="3" readonly></textarea>
+                    <div class="form-check mt-3">
+                        <input class="form-check-input" type="checkbox" value="" id="directMode" name="directMode">
+                        <label class="form-check-label" for="directMode">
+                            Direct mode (Without proxy from img.shields.io)
+                        </label>
+                    </div>
 
-            <label for="html" class="mt-3">HTML</label>
-            <textarea id="html" class="form-control" rows="3" readonly></textarea>
+                    <button type="submit" class="btn btn-primary mt-3">Generate</button>
+
+                    <div class="mt-3 hidden" id="result">
+                        <label for="preview">Preview</label>
+                        <div class="form-group" id="preview">
+                            <img alt="Man hours icon" id="preview-img"
+                                 src="https://img.shields.io/endpoint?url=https%3A%2F%2Fmanhours.aiursoft.cn%2Fgitlab%2Fgitlab.aiursoft.cn%2Faiursoft%2Fmanhours.json" />
+                        </div>
+
+                        <label for="markdown" class="mt-3">Markdown</label>
+                        <textarea id="markdown" class="form-control" rows="3" readonly></textarea>
+
+                        <label for="html" class="mt-3">HTML</label>
+                        <textarea id="html" class="form-control" rows="3" readonly></textarea>
+                    </div>
+                </form>
+            </div>
         </div>
-    </form>
-</main>
+    </div>
+</div>
 
 @section Scripts {
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            document.querySelector("form").addEventListener("submit", function (e) {
+            const form = document.getElementById("manhours-form");
+            const reset = function () {
+                const result = document.getElementById("result");
+                result.classList.add("hidden");
+                const previewImg = result.querySelector("#preview-img");
+                previewImg.src = "";
+            };
+            
+            form.addEventListener("submit", function (e) {
                 e.preventDefault();
+                
+                // Reset
+                reset();
 
                 // Prepare
                 const result = document.getElementById("result");

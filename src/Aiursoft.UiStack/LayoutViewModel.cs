@@ -36,7 +36,7 @@ public class LayoutViewModel
 {
     public required string PageTitle { get; init; }
     public required string AppName { get; init; }
-    public required string Description { get; init; }
+    public string? Description { get; init; }
     public string? CanonicalUrl { get; set; }
     
     public UiTheme Theme { get; set; } = UiTheme.Dark;

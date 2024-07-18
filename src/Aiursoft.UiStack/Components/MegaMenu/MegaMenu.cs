@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
+namespace Aiursoft.UiStack.Components.MegaMenu;
 
 public class MegaMenu : ViewComponent
 {

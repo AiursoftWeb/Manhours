@@ -1,4 +1,4 @@
-namespace Aiursoft.UiStack;
+namespace Aiursoft.UiStack.Layout;
 
 public enum UiTheme
 {
@@ -32,7 +32,7 @@ public enum UiSidebarBehavior
     Compact
 }
 
-public class LayoutViewModel
+public class UiStackLayoutViewModel
 {
     public required string PageTitle { get; init; }
     public required string AppName { get; init; }

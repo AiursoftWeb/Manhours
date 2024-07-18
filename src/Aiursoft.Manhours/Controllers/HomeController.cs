@@ -12,7 +12,7 @@ public class HomeController : Controller
         {
             PageTitle = "Badge Generator",
             AppName = "ManHours",
-            Theme = UiTheme.Light,
+            Theme = UiTheme.Dark,
             SidebarTheme = UiSidebarTheme.Dark
         };
         return this.UiStackView(model);

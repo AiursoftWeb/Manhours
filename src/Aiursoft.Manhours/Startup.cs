@@ -2,6 +2,7 @@
 using Aiursoft.Canon;
 using Aiursoft.Scanner;
 using Aiursoft.WebTools.Abstractions.Models;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace Aiursoft.ManHours;
 
@@ -12,7 +13,10 @@ public class Startup : IWebStartup
         services
             .AddControllersWithViews()
             .AddApplicationPart(Assembly.GetExecutingAssembly());
-
+        services.Configure<RazorViewEngineOptions>(options =>
+        {
+            options.ViewLocationFormats.Add("/Views/Shared/_Layout.cshtml");
+        });
         services.AddTaskCanon();
         services.AddLibraryDependencies();
     }

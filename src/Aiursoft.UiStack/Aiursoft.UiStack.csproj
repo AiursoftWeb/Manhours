@@ -23,6 +23,9 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
   <ItemGroup>
-    <AdditionalFiles Include="Components\MegaMenu\Default.cshtml" />
+    <Folder Include="Views\Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="Views\Shared\Components\MegaMenu\Default.cshtml" />
   </ItemGroup>
 </Project>

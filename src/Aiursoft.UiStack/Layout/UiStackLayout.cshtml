@@ -1,4 +1,8 @@
 @model Aiursoft.UiStack.Layout.UiStackLayoutViewModel
+@{
+    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+    @addTagHelper *, Aiursoft.UiStack
+}
 <!DOCTYPE html>
 <html lang="en"
       data-bs-theme="@Model.Theme.ToString().ToLower()"

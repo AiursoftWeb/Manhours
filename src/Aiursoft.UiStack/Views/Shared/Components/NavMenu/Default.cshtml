@@ -1,0 +1,60 @@
+@using Aiursoft.UiStack.Views.Shared.Components.NavMenu
+@model Aiursoft.UiStack.Views.Shared.Components.NavMenu.NavMenuViewModel
+
+@* Left Navbar *@
+<ul class="sidebar-nav">
+@foreach (var group in Model.Groups)
+{
+    <li class="sidebar-header">
+        @group.Name
+    </li>
+    @foreach (var sidebar in group.Items)
+    {
+        var activeClass = sidebar.IsActive ? "active" : "";
+        if (sidebar is CascadedSideBarItem cascade)
+        {
+            <li class="sidebar-item @activeClass">
+                <a data-bs-target="#@cascade.UniqueId" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                    <i class="align-middle" data-lucide="@sidebar.LucideIcon"></i>
+                    <span class="align-middle">@sidebar.Text</span>
+                    @if (sidebar.Decoration != null)
+                    {
+                        <span class="badge badge-sidebar-@sidebar.Decoration.ColorClass">@sidebar.Decoration.Text</span>
+                    }
+                </a>
+                @{
+                    var showClass = sidebar.IsActive ? "show" : "";
+                }
+                <ul id="@cascade.UniqueId" class="sidebar-dropdown list-unstyled collapse @showClass" data-bs-parent="#sidebar">
+                    @foreach (var link in cascade.Links)
+                    {
+                        var linkActiveClass = link.IsActive ? "active" : "";
+                        <li class="sidebar-item @linkActiveClass">
+                            <a class="sidebar-link" href="@link.Href">
+                                @link.Text
+                                @if (link.Decoration != null)
+                                {
+                                    <span class="badge badge-sidebar-@link.Decoration.ColorClass">@link.Decoration.Text</span>
+                                }
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </li>
+        }
+        else if (sidebar is LinkSideBarItem link)
+        {
+            <li class="sidebar-item @activeClass">
+                <a class="sidebar-link" href="@link.Href">
+                    <i class="align-middle" data-lucide="@sidebar.LucideIcon"></i>
+                    <span class="align-middle">@sidebar.Text</span>
+                    @if (sidebar.Decoration != null)
+                    {
+                        <span class="badge badge-sidebar-@sidebar.Decoration.ColorClass">@sidebar.Decoration.Text</span>
+                    }
+                </a>
+            </li>
+        }
+    }
+}
+</ul>

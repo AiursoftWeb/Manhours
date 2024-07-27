@@ -2,6 +2,7 @@
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
+using Aiursoft.UiStack.Views.Shared.Components.NavMenu;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Aiursoft.ManHours.Controllers;
@@ -45,6 +46,118 @@ public class HomeController : Controller
                         }
                     ]
                 }
+            },
+            NavMenu = new NavMenuViewModel
+            {
+                Groups = 
+                [
+                    new NavGroup
+                    {
+                        Name = "Navigation",
+                        Items = 
+                        [
+                            new CascadedSideBarItem
+                            {
+                                UniqueId = "dashboards",
+                                Text = "Dashboards",
+                                IsActive = false,
+                                LucideIcon = "sliders",
+                                Decoration = new Decoration
+                                {
+                                    Text = "5",
+                                    ColorClass = "primary"
+                                },
+                                Links =
+                                [
+                                    new CascadedLink
+                                    {
+                                        Href = "#",
+                                        Text = "Default"
+                                    },
+                                    new CascadedLink
+                                    {
+                                        Href = "#",
+                                        Text = "Analytics"
+                                    },
+                                    new CascadedLink
+                                    {
+                                        Href = "#",
+                                        Text = "SaaS"
+                                    },
+                                    new CascadedLink
+                                    {
+                                        Href = "#",
+                                        Text = "Social"
+                                    },
+                                    new CascadedLink
+                                    {
+                                        Href = "#",
+                                        Text = "Crypto"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    new NavGroup
+                    {
+                        Name = "Apps",
+                        Items = 
+                        [
+                            new CascadedSideBarItem
+                            {
+                                UniqueId = "ecommerce",
+                                Text = "E-Commerce",
+                                IsActive = true,
+                                LucideIcon = "shopping-bag",
+                                Links = 
+                                [
+                                    new CascadedLink
+                                    {
+                                        Href = "#",
+                                        IsActive = true,
+                                        Text = "Products",
+                                        Decoration = new Decoration
+                                        {
+                                            Text = "New",
+                                            ColorClass = "primary"
+                                        }
+                                    },
+                                    new CascadedLink
+                                    {
+                                        Href = "#",
+                                        Text = "Product Details",
+                                        Decoration = new Decoration
+                                        {
+                                            Text = "New",
+                                            ColorClass = "primary"
+                                        }
+                                    },
+                                    new CascadedLink
+                                    {
+                                        Href = "#",
+                                        Text = "Orders",
+                                        Decoration = new Decoration
+                                        {
+                                            Text = "New",
+                                            ColorClass = "primary"
+                                        }
+                                    },
+                                    new CascadedLink
+                                    {
+                                        Href = "#",
+                                        Text = "Customers",
+                                    }
+                                ]
+                            },
+                            new LinkSideBarItem
+                            {
+                                Text = "Chat",
+                                LucideIcon = "list",
+                                Href = "#"
+                            }
+                        ]
+                    }
+                ]
             },
             FooterMenu = new FooterMenuViewModel
             {

@@ -499,7 +499,10 @@
     </div>
 </form>
 
-<vc:mega-menu></vc:mega-menu>
+@if (Model.TopMenu.MegaMenu != null)
+{
+    <vc:mega-menu model="@Model.TopMenu.MegaMenu"></vc:mega-menu>
+}
 
 <div class="navbar-collapse collapse">
     <ul class="navbar-nav navbar-align">
@@ -694,10 +697,7 @@
 
 <main class="content">
     <div class="container-fluid p-0">
-
         @RenderBody()
-
-
     </div>
 </main>
 

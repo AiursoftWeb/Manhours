@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using Aiursoft.Canon;
+﻿using Aiursoft.Canon;
 using Aiursoft.Scanner;
 using Aiursoft.UiStack;
 using Aiursoft.WebTools.Abstractions.Models;
@@ -12,7 +11,7 @@ public class Startup : IWebStartup
     {
         services
             .AddControllersWithViews()
-            .AddApplicationPart(Assembly.GetExecutingAssembly())
+            .AddApplicationPart(typeof(Startup).Assembly)
             .AddAiursoftUiStack();
 
         services.AddTaskCanon();

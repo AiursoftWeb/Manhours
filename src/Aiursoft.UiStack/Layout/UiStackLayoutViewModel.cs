@@ -1,3 +1,5 @@
+using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
+
 namespace Aiursoft.UiStack.Layout;
 
 public enum UiTheme
@@ -32,6 +34,11 @@ public enum UiSidebarBehavior
     Compact
 }
 
+public class TopMenu
+{
+    public MegaMenuViewModel? MegaMenu { get; init; }
+}
+
 public class UiStackLayoutViewModel
 {
     public required string PageTitle { get; init; }
@@ -44,4 +51,6 @@ public class UiStackLayoutViewModel
     public UiSidebarTheme SidebarTheme { get; set; } = UiSidebarTheme.Dark;
     public UiSidebarPosition SidebarPosition { get; set; } = UiSidebarPosition.Left;
     public UiSidebarBehavior SidebarBehavior { get; set; } = UiSidebarBehavior.Sticky;
+
+    public TopMenu TopMenu { get; init; } = new();
 }

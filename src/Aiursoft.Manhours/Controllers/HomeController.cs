@@ -1,5 +1,6 @@
 ﻿using Aiursoft.UiStack;
 using Aiursoft.UiStack.Layout;
+using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
 using Microsoft.AspNetCore.Mvc;
 
@@ -43,7 +44,18 @@ public class HomeController : Controller
                             ]
                         }
                     ]
-                } 
+                }
+            },
+            FooterMenu = new FooterMenuViewModel
+            {
+                AppBrand = new Link { Text = "ManHours", Href = "https://www.youtube.com/results?search_query=test" },
+                Links =
+                [
+                    new Link { Text = "Home", Href = "/" },
+                    new Link { Text = "Privacy", Href = "/" },
+                    new Link { Text = "About", Href = "/" },
+                    new Link { Text = "Badge", Href = "/" },
+                ]
             }
         };
         return this.UiStackView(model);

@@ -1,3 +1,4 @@
+using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
 
 namespace Aiursoft.UiStack.Layout;
@@ -53,4 +54,6 @@ public class UiStackLayoutViewModel
     public UiSidebarBehavior SidebarBehavior { get; set; } = UiSidebarBehavior.Sticky;
 
     public TopMenu TopMenu { get; init; } = new();
+    
+    public FooterMenuViewModel? FooterMenu { get; init; }
 }

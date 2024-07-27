@@ -1,0 +1,23 @@
+@model Aiursoft.UiStack.Views.Shared.Components.FooterMenu.FooterMenuViewModel
+
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row text-muted">
+            <div class="col-6 text-start">
+                <ul class="list-inline">
+                    @foreach (var link in Model.Links)
+                    {
+                        <li class="list-inline-item">
+                            <a class="text-muted" href="@link.Href">@link.Text</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <div class="col-6 text-end">
+                <p class="mb-0">
+                    &copy; @DateTime.UtcNow.Year - <a href="@Model.AppBrand.Href" class="text-muted">@Model.AppBrand.Text</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

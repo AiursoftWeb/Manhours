@@ -1,6 +1,6 @@
-namespace Aiursoft.UiStack.Views.Shared.Components.NavAdvertisement;
+namespace Aiursoft.UiStack.Views.Shared.Components.SideAdvertisement;
 
-public class NavAdvertisementViewModel
+public class SideAdvertisementViewModel
 {
     public required string Title { get; init; }
     public required string Description { get; init; }

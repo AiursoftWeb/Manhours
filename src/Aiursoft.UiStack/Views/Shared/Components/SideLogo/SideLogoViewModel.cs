@@ -1,6 +1,6 @@
-namespace Aiursoft.UiStack.Views.Shared.Components.NavLogo;
+namespace Aiursoft.UiStack.Views.Shared.Components.SideLogo;
 
-public class NavLogoViewModel
+public class SideLogoViewModel
 {
     public required string LogoUrl { get; init; }
     

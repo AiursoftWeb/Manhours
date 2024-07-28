@@ -1,6 +1,6 @@
-namespace Aiursoft.UiStack.Views.Shared.Components.NavMenu;
+namespace Aiursoft.UiStack.Views.Shared.Components.SideMenu;
 
-public class NavMenuViewModel
+public class SideMenuViewModel
 {
     public required NavGroup[] Groups { get; init; } = [];
 }

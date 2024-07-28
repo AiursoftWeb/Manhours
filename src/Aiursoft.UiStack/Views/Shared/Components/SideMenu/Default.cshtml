@@ -1,7 +1,7 @@
-@using Aiursoft.UiStack.Views.Shared.Components.NavMenu
-@model Aiursoft.UiStack.Views.Shared.Components.NavMenu.NavMenuViewModel
+@using Aiursoft.UiStack.Views.Shared.Components.SideMenu
+@model Aiursoft.UiStack.Views.Shared.Components.SideMenu.SideMenuViewModel
 
-@* Left Navbar *@
+@* Left Sidebar *@
 <ul class="sidebar-nav">
 @foreach (var group in Model.Groups)
 {
@@ -11,10 +11,11 @@
     @foreach (var sidebar in group.Items)
     {
         var activeClass = sidebar.IsActive ? "active" : "";
+        var collapseClass = sidebar.IsActive ? "" : "collapsed";
         if (sidebar is CascadedSideBarItem cascade)
         {
             <li class="sidebar-item @activeClass">
-                <a data-bs-target="#@cascade.UniqueId" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                <a data-bs-target="#@cascade.UniqueId" data-bs-toggle="collapse" class="sidebar-link @collapseClass">
                     <i class="align-middle" data-lucide="@sidebar.LucideIcon"></i>
                     <span class="align-middle">@sidebar.Text</span>
                     @if (sidebar.Decoration != null)

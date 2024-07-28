@@ -2,10 +2,10 @@
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
-using Aiursoft.UiStack.Views.Shared.Components.NavAdvertisement;
-using Aiursoft.UiStack.Views.Shared.Components.Navbar;
-using Aiursoft.UiStack.Views.Shared.Components.NavLogo;
-using Aiursoft.UiStack.Views.Shared.Components.NavMenu;
+using Aiursoft.UiStack.Views.Shared.Components.SideAdvertisement;
+using Aiursoft.UiStack.Views.Shared.Components.Sidebar;
+using Aiursoft.UiStack.Views.Shared.Components.SideLogo;
+using Aiursoft.UiStack.Views.Shared.Components.SideMenu;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Aiursoft.ManHours.Controllers;
@@ -51,15 +51,15 @@ public class HomeController : Controller
                     ]
                 }
             },
-            Navbar = new NavbarViewModel
+            Sidebar = new SidebarViewModel
             {
-                NavLogo = new NavLogoViewModel
+                SideLogo = new SideLogoViewModel
                 {
-                    AppName = "Aiursoft UI Stack2",
+                    AppName = "Aiursoft UI Stack",
                     LogoUrl = "https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/patches/logo/logo.svg",
                     Href = "#"
                 },
-                NavMenu = new NavMenuViewModel
+                SideMenu = new SideMenuViewModel
                 {
                     Groups =
                     [
@@ -158,7 +158,36 @@ public class HomeController : Controller
                                         {
                                             Href = "#",
                                             Text = "Customers",
+                                        },
+                                        new CascadedLink
+                                        {
+                                            Href = "#",
+                                            Text = "Invoice",
+                                        },
+                                        new CascadedLink
+                                        {
+                                            Href = "#",
+                                            Text = "Pricing",
                                         }
+                                    ]
+                                },
+                                new CascadedSideBarItem
+                                {
+                                    UniqueId = "projects",
+                                    Text = "Projects",
+                                    LucideIcon = "layout",
+                                    Links = 
+                                    [
+                                        new CascadedLink
+                                        {
+                                            Href = "#",
+                                            Text = "Overview",
+                                        },
+                                        new CascadedLink
+                                        {
+                                            Href = "#",
+                                            Text = "Details",
+                                        },
                                     ]
                                 },
                                 new LinkSideBarItem
@@ -171,7 +200,7 @@ public class HomeController : Controller
                         }
                     ]
                 },
-                NavAdvertisement = new NavAdvertisementViewModel
+                SideAdvertisement = new SideAdvertisementViewModel
                 {
                     Title = "Download Native App",
                     Description = "Get the best experience with our app.",

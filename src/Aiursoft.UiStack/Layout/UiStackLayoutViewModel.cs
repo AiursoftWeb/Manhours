@@ -1,9 +1,9 @@
 using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
-using Aiursoft.UiStack.Views.Shared.Components.NavAdvertisement;
-using Aiursoft.UiStack.Views.Shared.Components.Navbar;
-using Aiursoft.UiStack.Views.Shared.Components.NavLogo;
-using Aiursoft.UiStack.Views.Shared.Components.NavMenu;
+using Aiursoft.UiStack.Views.Shared.Components.SideAdvertisement;
+using Aiursoft.UiStack.Views.Shared.Components.Sidebar;
+using Aiursoft.UiStack.Views.Shared.Components.SideLogo;
+using Aiursoft.UiStack.Views.Shared.Components.SideMenu;
 
 namespace Aiursoft.UiStack.Layout;
 
@@ -61,5 +61,5 @@ public class UiStackLayoutViewModel
     
     public FooterMenuViewModel? FooterMenu { get; init; }
     
-    public NavbarViewModel? Navbar { get; init; }
+    public SidebarViewModel? Sidebar { get; init; }
 }

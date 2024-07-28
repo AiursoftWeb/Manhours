@@ -55,7 +55,7 @@ public class HomeController : Controller
             {
                 NavLogo = new NavLogoViewModel
                 {
-                    AppName = "Aiursoft UI Stack",
+                    AppName = "Aiursoft UI Stack2",
                     LogoUrl = "https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/patches/logo/logo.svg",
                     Href = "#"
                 },

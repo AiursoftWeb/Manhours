@@ -52,19 +52,10 @@
     <vc:nav-menu model="@Model.NavMenu"></vc:nav-menu>
 }
 
-@* Left bottom conor advertisement *@
-<div class="sidebar-cta">
-    <div class="sidebar-cta-content">
-        <strong class="d-inline-block mb-2">Monthly Sales Report</strong>
-        <div class="mb-3 text-sm">
-            Your monthly sales report is ready for download!
-        </div>
-
-        <div class="d-grid">
-            <a href="https://themes.getbootstrap.com/product/appstack-responsive-admin-template/" class="btn btn-primary" target="_blank">Download</a>
-        </div>
-    </div>
-</div>
+@if (Model.NavAdvertisement != null)
+{
+    <vc:nav-advertisement model="@Model.NavAdvertisement"></vc:nav-advertisement>
+}
 </div>
 </nav>
 

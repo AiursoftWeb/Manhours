@@ -1,5 +1,6 @@
 using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
+using Aiursoft.UiStack.Views.Shared.Components.NavAdvertisement;
 using Aiursoft.UiStack.Views.Shared.Components.NavMenu;
 
 namespace Aiursoft.UiStack.Layout;
@@ -59,4 +60,6 @@ public class UiStackLayoutViewModel
     public FooterMenuViewModel? FooterMenu { get; init; }
     
     public NavMenuViewModel? NavMenu { get; init; }
+    
+    public NavAdvertisementViewModel? NavAdvertisement { get; init; }
 }

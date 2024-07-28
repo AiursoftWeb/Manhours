@@ -2,6 +2,7 @@
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
+using Aiursoft.UiStack.Views.Shared.Components.NavAdvertisement;
 using Aiursoft.UiStack.Views.Shared.Components.NavMenu;
 using Microsoft.AspNetCore.Mvc;
 
@@ -158,6 +159,13 @@ public class HomeController : Controller
                         ]
                     }
                 ]
+            },
+            NavAdvertisement = new NavAdvertisementViewModel
+            {
+                Title  = "Download Native App",
+                Description = "Get the best experience with our app.",
+                Href = "#",
+                ButtonText = "Download"
             },
             FooterMenu = new FooterMenuViewModel
             {

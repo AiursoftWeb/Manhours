@@ -1,9 +1,6 @@
 using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
-using Aiursoft.UiStack.Views.Shared.Components.SideAdvertisement;
 using Aiursoft.UiStack.Views.Shared.Components.Sidebar;
-using Aiursoft.UiStack.Views.Shared.Components.SideLogo;
-using Aiursoft.UiStack.Views.Shared.Components.SideMenu;
 
 namespace Aiursoft.UiStack.Layout;
 

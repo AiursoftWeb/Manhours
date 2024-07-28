@@ -18,6 +18,7 @@ public class HomeController : Controller
             AppName = "ManHours",
             Theme = UiTheme.Dark,
             SidebarTheme = UiSidebarTheme.Dark,
+            Layout = UiLayout.Fluid,
             TopMenu = new TopMenu
             {
                 MegaMenu = new MegaMenuViewModel

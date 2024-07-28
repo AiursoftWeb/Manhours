@@ -33,17 +33,14 @@
 <div class="wrapper">
 <nav id="sidebar" class="sidebar">
 <div class="sidebar-content js-simplebar">
-@* LOGO *@
-<a class="sidebar-brand" href="#">
-    <img src="https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/patches/logo/logo.svg" class="img-fluid" style="height: 24px;margin-right: .15rem;width: 24px;" alt="logo">
-    <span class="align-middle me-3">@Model.AppName</span>
-</a>
-
+@if (Model.NavLogo != null)
+{
+    <vc:nav-logo model="Model.NavLogo"></vc:nav-logo>
+}
 @if (Model.NavMenu != null)
 {
     <vc:nav-menu model="@Model.NavMenu"></vc:nav-menu>
 }
-
 @if (Model.NavAdvertisement != null)
 {
     <vc:nav-advertisement model="@Model.NavAdvertisement"></vc:nav-advertisement>

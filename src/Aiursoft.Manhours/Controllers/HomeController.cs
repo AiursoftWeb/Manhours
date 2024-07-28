@@ -3,6 +3,7 @@ using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
 using Aiursoft.UiStack.Views.Shared.Components.NavAdvertisement;
+using Aiursoft.UiStack.Views.Shared.Components.NavLogo;
 using Aiursoft.UiStack.Views.Shared.Components.NavMenu;
 using Microsoft.AspNetCore.Mvc;
 
@@ -48,6 +49,12 @@ public class HomeController : Controller
                         }
                     ]
                 }
+            },
+            NavLogo = new NavLogoViewModel
+            {
+                AppName = "Aiursoft UI Stack",
+                LogoUrl = "https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/patches/logo/logo.svg",
+                Href = "#"
             },
             NavMenu = new NavMenuViewModel
             {

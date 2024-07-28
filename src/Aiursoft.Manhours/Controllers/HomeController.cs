@@ -3,6 +3,7 @@ using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
 using Aiursoft.UiStack.Views.Shared.Components.NavAdvertisement;
+using Aiursoft.UiStack.Views.Shared.Components.Navbar;
 using Aiursoft.UiStack.Views.Shared.Components.NavLogo;
 using Aiursoft.UiStack.Views.Shared.Components.NavMenu;
 using Microsoft.AspNetCore.Mvc;
@@ -50,130 +51,133 @@ public class HomeController : Controller
                     ]
                 }
             },
-            NavLogo = new NavLogoViewModel
+            Navbar = new NavbarViewModel
             {
-                AppName = "Aiursoft UI Stack",
-                LogoUrl = "https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/patches/logo/logo.svg",
-                Href = "#"
-            },
-            NavMenu = new NavMenuViewModel
-            {
-                Groups = 
-                [
-                    new NavGroup
-                    {
-                        Name = "Navigation",
-                        Items = 
-                        [
-                            new CascadedSideBarItem
-                            {
-                                UniqueId = "dashboards",
-                                Text = "Dashboards",
-                                IsActive = false,
-                                LucideIcon = "sliders",
-                                Decoration = new Decoration
+                NavLogo = new NavLogoViewModel
+                {
+                    AppName = "Aiursoft UI Stack",
+                    LogoUrl = "https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/patches/logo/logo.svg",
+                    Href = "#"
+                },
+                NavMenu = new NavMenuViewModel
+                {
+                    Groups =
+                    [
+                        new NavGroup
+                        {
+                            Name = "Navigation",
+                            Items =
+                            [
+                                new CascadedSideBarItem
                                 {
-                                    Text = "5",
-                                    ColorClass = "primary"
+                                    UniqueId = "dashboards",
+                                    Text = "Dashboards",
+                                    IsActive = false,
+                                    LucideIcon = "sliders",
+                                    Decoration = new Decoration
+                                    {
+                                        Text = "5",
+                                        ColorClass = "primary"
+                                    },
+                                    Links =
+                                    [
+                                        new CascadedLink
+                                        {
+                                            Href = "#",
+                                            Text = "Default"
+                                        },
+                                        new CascadedLink
+                                        {
+                                            Href = "#",
+                                            Text = "Analytics"
+                                        },
+                                        new CascadedLink
+                                        {
+                                            Href = "#",
+                                            Text = "SaaS"
+                                        },
+                                        new CascadedLink
+                                        {
+                                            Href = "#",
+                                            Text = "Social"
+                                        },
+                                        new CascadedLink
+                                        {
+                                            Href = "#",
+                                            Text = "Crypto"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        new NavGroup
+                        {
+                            Name = "Apps",
+                            Items =
+                            [
+                                new CascadedSideBarItem
+                                {
+                                    UniqueId = "ecommerce",
+                                    Text = "E-Commerce",
+                                    IsActive = true,
+                                    LucideIcon = "shopping-bag",
+                                    Links =
+                                    [
+                                        new CascadedLink
+                                        {
+                                            Href = "#",
+                                            IsActive = true,
+                                            Text = "Products",
+                                            Decoration = new Decoration
+                                            {
+                                                Text = "New",
+                                                ColorClass = "primary"
+                                            }
+                                        },
+                                        new CascadedLink
+                                        {
+                                            Href = "#",
+                                            Text = "Product Details",
+                                            Decoration = new Decoration
+                                            {
+                                                Text = "New",
+                                                ColorClass = "primary"
+                                            }
+                                        },
+                                        new CascadedLink
+                                        {
+                                            Href = "#",
+                                            Text = "Orders",
+                                            Decoration = new Decoration
+                                            {
+                                                Text = "New",
+                                                ColorClass = "primary"
+                                            }
+                                        },
+                                        new CascadedLink
+                                        {
+                                            Href = "#",
+                                            Text = "Customers",
+                                        }
+                                    ]
                                 },
-                                Links =
-                                [
-                                    new CascadedLink
-                                    {
-                                        Href = "#",
-                                        Text = "Default"
-                                    },
-                                    new CascadedLink
-                                    {
-                                        Href = "#",
-                                        Text = "Analytics"
-                                    },
-                                    new CascadedLink
-                                    {
-                                        Href = "#",
-                                        Text = "SaaS"
-                                    },
-                                    new CascadedLink
-                                    {
-                                        Href = "#",
-                                        Text = "Social"
-                                    },
-                                    new CascadedLink
-                                    {
-                                        Href = "#",
-                                        Text = "Crypto"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    new NavGroup
-                    {
-                        Name = "Apps",
-                        Items = 
-                        [
-                            new CascadedSideBarItem
-                            {
-                                UniqueId = "ecommerce",
-                                Text = "E-Commerce",
-                                IsActive = true,
-                                LucideIcon = "shopping-bag",
-                                Links = 
-                                [
-                                    new CascadedLink
-                                    {
-                                        Href = "#",
-                                        IsActive = true,
-                                        Text = "Products",
-                                        Decoration = new Decoration
-                                        {
-                                            Text = "New",
-                                            ColorClass = "primary"
-                                        }
-                                    },
-                                    new CascadedLink
-                                    {
-                                        Href = "#",
-                                        Text = "Product Details",
-                                        Decoration = new Decoration
-                                        {
-                                            Text = "New",
-                                            ColorClass = "primary"
-                                        }
-                                    },
-                                    new CascadedLink
-                                    {
-                                        Href = "#",
-                                        Text = "Orders",
-                                        Decoration = new Decoration
-                                        {
-                                            Text = "New",
-                                            ColorClass = "primary"
-                                        }
-                                    },
-                                    new CascadedLink
-                                    {
-                                        Href = "#",
-                                        Text = "Customers",
-                                    }
-                                ]
-                            },
-                            new LinkSideBarItem
-                            {
-                                Text = "Chat",
-                                LucideIcon = "list",
-                                Href = "#"
-                            }
-                        ]
-                    }
-                ]
-            },
-            NavAdvertisement = new NavAdvertisementViewModel
-            {
-                Title  = "Download Native App",
-                Description = "Get the best experience with our app.",
-                Href = "#",
-                ButtonText = "Download"
+                                new LinkSideBarItem
+                                {
+                                    Text = "Chat",
+                                    LucideIcon = "list",
+                                    Href = "#"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                NavAdvertisement = new NavAdvertisementViewModel
+                {
+                    Title = "Download Native App",
+                    Description = "Get the best experience with our app.",
+                    Href = "#",
+                    ButtonText = "Download"
+                },
             },
             FooterMenu = new FooterMenuViewModel
             {

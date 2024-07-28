@@ -1,0 +1,18 @@
+@model Aiursoft.UiStack.Views.Shared.Components.Navbar.NavbarViewModel
+
+<nav id="sidebar" class="sidebar">
+    <div class="sidebar-content js-simplebar">
+        @if (Model.NavLogo != null)
+        {
+            <vc:nav-logo model="Model.NavLogo"></vc:nav-logo>
+        }
+        @if (Model.NavMenu != null)
+        {
+            <vc:nav-menu model="@Model.NavMenu"></vc:nav-menu>
+        }
+        @if (Model.NavAdvertisement != null)
+        {
+            <vc:nav-advertisement model="@Model.NavAdvertisement"></vc:nav-advertisement>
+        }
+    </div>
+</nav>

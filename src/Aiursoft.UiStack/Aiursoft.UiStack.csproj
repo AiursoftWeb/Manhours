@@ -27,7 +27,4 @@
   <ItemGroup>
     <Folder Include="Views\Shared\" />
   </ItemGroup>
-  <ItemGroup>
-    <AdditionalFiles Include="Views\Shared\Components\MegaMenu\Default.cshtml" />
-  </ItemGroup>
 </Project>

@@ -1,5 +1,6 @@
 using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
+using Aiursoft.UiStack.Views.Shared.Components.Navbar;
 using Aiursoft.UiStack.Views.Shared.Components.Sidebar;
 
 namespace Aiursoft.UiStack.Layout;
@@ -36,11 +37,6 @@ public enum UiSidebarBehavior
     Compact
 }
 
-public class TopMenu
-{
-    public MegaMenuViewModel? MegaMenu { get; init; }
-}
-
 public class UiStackLayoutViewModel
 {
     public required string PageTitle { get; init; }
@@ -54,9 +50,9 @@ public class UiStackLayoutViewModel
     public UiSidebarPosition SidebarPosition { get; set; } = UiSidebarPosition.Left;
     public UiSidebarBehavior SidebarBehavior { get; set; } = UiSidebarBehavior.Sticky;
 
-    public TopMenu TopMenu { get; init; } = new();
-    
     public FooterMenuViewModel? FooterMenu { get; init; }
     
     public SidebarViewModel? Sidebar { get; init; }
+    
+    public NavbarViewModel? Navbar { get; init; }
 }

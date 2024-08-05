@@ -2,6 +2,7 @@
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
+using Aiursoft.UiStack.Views.Shared.Components.Navbar;
 using Aiursoft.UiStack.Views.Shared.Components.SideAdvertisement;
 using Aiursoft.UiStack.Views.Shared.Components.Sidebar;
 using Aiursoft.UiStack.Views.Shared.Components.SideLogo;
@@ -21,7 +22,7 @@ public class HomeController : Controller
             Theme = UiTheme.Dark,
             SidebarTheme = UiSidebarTheme.Dark,
             Layout = UiLayout.Fluid,
-            TopMenu = new TopMenu
+            Navbar = new NavbarViewModel
             {
                 MegaMenu = new MegaMenuViewModel
                 {

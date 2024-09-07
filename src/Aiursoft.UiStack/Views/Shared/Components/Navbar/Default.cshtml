@@ -8,15 +8,12 @@
 </a>
 
 @* Search form *@
-<form class="d-none d-sm-inline-block">
-    <div class="input-group input-group-navbar">
-        <input type="text" class="form-control" placeholder="Search projects…" aria-label="Search">
-        <button class="btn" type="button">
-            <i class="align-middle" data-lucide="search"></i>
-        </button>
-    </div>
-</form>
+@if (Model.SearchForm != null)
+{
+    <vc:search-form model="@Model.SearchForm"></vc:search-form>
+}
 
+@* Mega Menu *@
 @if (Model.MegaMenu != null)
 {
     <vc:mega-menu model="@Model.MegaMenu"></vc:mega-menu>

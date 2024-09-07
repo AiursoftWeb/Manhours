@@ -3,6 +3,7 @@ using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
 using Aiursoft.UiStack.Views.Shared.Components.Navbar;
+using Aiursoft.UiStack.Views.Shared.Components.SearchForm;
 using Aiursoft.UiStack.Views.Shared.Components.SideAdvertisement;
 using Aiursoft.UiStack.Views.Shared.Components.Sidebar;
 using Aiursoft.UiStack.Views.Shared.Components.SideLogo;
@@ -24,6 +25,12 @@ public class HomeController : Controller
             Layout = UiLayout.Fluid,
             Navbar = new NavbarViewModel
             {
+                SearchForm = new SearchFormViewModel
+                {
+                    Placeholder = "Search...",
+                    SearchParam = "q",
+                    SearchUrl = "/search"
+                },
                 MegaMenu = new MegaMenuViewModel
                 {
                     MenuName = "My Mega Menu",
@@ -211,7 +218,7 @@ public class HomeController : Controller
             },
             FooterMenu = new FooterMenuViewModel
             {
-                AppBrand = new Link { Text = "ManHours", Href = "https://www.youtube.com/results?search_query=test" },
+                AppBrand = new Link { Text = "ManHours", Href = "/" },
                 Links =
                 [
                     new Link { Text = "Home", Href = "/" },

@@ -71,7 +71,7 @@ public class HomeController : Controller
                     [
                         new Message
                         {
-                            SenderAvatarUrl = "/node_modules/aiur-ui-stack/img/avatars/avatar-2.jpg",
+                            SenderAvatarUrl = "/node_modules/@aiursoft/uistack/dist/img/avatars/avatar-2.jpg",
                             SenderName = "Anduin Xue",
                             LatestMessagePreview = "Hello, world!",
                             ClickableLink = "#",

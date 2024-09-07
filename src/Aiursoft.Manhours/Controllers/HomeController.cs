@@ -65,7 +65,25 @@ public class HomeController : Controller
                         }
                     ]
                 },
-                MessagesDropdown = new MessagesDropdownViewModel(),
+                MessagesDropdown = new MessagesDropdownViewModel
+                {
+                    Messages = 
+                    [
+                        new Message
+                        {
+                            SenderAvatarUrl = "/node_modules/aiur-ui-stack/img/avatars/avatar-2.jpg",
+                            SenderName = "Anduin Xue",
+                            LatestMessagePreview = "Hello, world!",
+                            ClickableLink = "#",
+                            LatestMessageTime = DateTime.Now - TimeSpan.FromMinutes(5)
+                        }
+                    ],
+                    ViewAllLink = new Link
+                    {
+                        Href = "#",
+                        Text = "View all messages"
+                    }
+                },
                 NotificationsDropdown = new NotificationsDropdownViewModel(),
                 LanguagesDropdown = new LanguagesDropdownViewModel(),
                 UserDropdown = new UserDropdownViewModel()

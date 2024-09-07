@@ -5,6 +5,7 @@
   "author": "Anduin Xue",
   "license": "MIT",
   "dependencies": {
+    "@aiursoft/utctime.js": "^1.0.4",
     "aiur-ui-stack": "^1.0.0",
     "jquery-validation": "^1.19.5",
     "jquery-validation-unobtrusive": "^3.2.12"

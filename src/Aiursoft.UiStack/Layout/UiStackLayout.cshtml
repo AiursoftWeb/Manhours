@@ -56,6 +56,10 @@
 </div>
 
 <script src="~/node_modules/aiur-ui-stack/js/app.js"></script>
+<script type="module">
+    import UtcTime from './node_modules/@@aiursoft/utctime.js/dist/esm/utctime.js'
+    new UtcTime({})
+</script>
 <script type="module" src="~/node_modules/jquery-validation/dist/jquery.validate.min.js" defer></script>
 <script type="module" src="~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js" defer></script>
 @(await RenderSectionAsync("scripts", false))

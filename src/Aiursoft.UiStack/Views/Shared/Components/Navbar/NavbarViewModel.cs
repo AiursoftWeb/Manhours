@@ -5,7 +5,6 @@ namespace Aiursoft.UiStack.Views.Shared.Components.Navbar;
 
 public class NavbarViewModel
 {
-    public MegaMenuViewModel? MegaMenu { get; init; }
-    
     public SearchFormViewModel? SearchForm { get; init; }
+    public MegaMenuViewModel? MegaMenu { get; init; }
 }

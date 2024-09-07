@@ -18,11 +18,14 @@ public class HomeController : Controller
     {
         var model = new UiStackLayoutViewModel
         {
+            // General
             PageTitle = "Badge Generator",
             AppName = "ManHours",
             Theme = UiTheme.Dark,
             SidebarTheme = UiSidebarTheme.Dark,
             Layout = UiLayout.Fluid,
+            
+            // Navbar
             Navbar = new NavbarViewModel
             {
                 SearchForm = new SearchFormViewModel
@@ -57,15 +60,17 @@ public class HomeController : Controller
                             ]
                         }
                     ]
-                }
+                },
             },
+            
+            // Sidebar
             Sidebar = new SidebarViewModel
             {
                 SideLogo = new SideLogoViewModel
                 {
                     AppName = "Aiursoft UI Stack",
-                    LogoUrl = "https://gitlab.aiursoft.cn/anduin/anduinos/-/raw/master/src/patches/logo/logo.svg",
-                    Href = "#"
+                    LogoUrl = "https://docs.anduinos.com/Assets/logo.svg",
+                    Href = "/"
                 },
                 SideMenu = new SideMenuViewModel
                 {
@@ -216,6 +221,8 @@ public class HomeController : Controller
                     ButtonText = "Download"
                 },
             },
+            
+            // Footer
             FooterMenu = new FooterMenuViewModel
             {
                 AppBrand = new Link { Text = "ManHours", Href = "/" },
@@ -227,6 +234,7 @@ public class HomeController : Controller
                     new Link { Text = "Badge", Href = "/" },
                 ]
             }
+            
         };
         return this.UiStackView(model);
     }

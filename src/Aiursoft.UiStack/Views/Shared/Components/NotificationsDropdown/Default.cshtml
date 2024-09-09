@@ -3,63 +3,32 @@
     <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
         <div class="position-relative">
             <i class="align-middle text-body" data-lucide="bell-off"></i>
+            <span class="indicator">@Model.Notifications.Count</span>
         </div>
     </a>
     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
         <div class="dropdown-menu-header">
-            4 New Notifications
+            @Model.Notifications.Count New Notifications
         </div>
         <div class="list-group">
-            <a href="#" class="list-group-item">
-                <div class="row g-0 align-items-center">
-                    <div class="col-2">
-                        <i class="text-danger" data-lucide="alert-circle"></i>
+            @foreach (var notification in Model.Notifications)
+            {
+                <a href="#" class="list-group-item">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                            <i class="@notification.IconClass" data-lucide="@notification.Icon"></i>
+                        </div>
+                        <div class="col-10">
+                            <div>@notification.Title</div>
+                            <div class="text-muted small mt-1">@notification.Message</div>
+                            <div class="text-muted small mt-1" data-utc-time="@notification.TriggerTime"></div>
+                        </div>
                     </div>
-                    <div class="col-10">
-                        <div>Update completed</div>
-                        <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
-                        <div class="text-muted small mt-1">2h ago</div>
-                    </div>
-                </div>
-            </a>
-            <a href="#" class="list-group-item">
-                <div class="row g-0 align-items-center">
-                    <div class="col-2">
-                        <i class="text-warning" data-lucide="bell"></i>
-                    </div>
-                    <div class="col-10">
-                        <div>Lorem ipsum</div>
-                        <div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
-                        <div class="text-muted small mt-1">6h ago</div>
-                    </div>
-                </div>
-            </a>
-            <a href="#" class="list-group-item">
-                <div class="row g-0 align-items-center">
-                    <div class="col-2">
-                        <i class="text-primary" data-lucide="home"></i>
-                    </div>
-                    <div class="col-10">
-                        <div>Login from 192.186.1.1</div>
-                        <div class="text-muted small mt-1">8h ago</div>
-                    </div>
-                </div>
-            </a>
-            <a href="#" class="list-group-item">
-                <div class="row g-0 align-items-center">
-                    <div class="col-2">
-                        <i class="text-success" data-lucide="user-plus"></i>
-                    </div>
-                    <div class="col-10">
-                        <div>New connection</div>
-                        <div class="text-muted small mt-1">Anna accepted your request.</div>
-                        <div class="text-muted small mt-1">12h ago</div>
-                    </div>
-                </div>
-            </a>
+                </a>
+            }
         </div>
         <div class="dropdown-menu-footer">
-            <a href="#" class="text-muted">Show all notifications</a>
+            <a href="@Model.ViewAllLink.Href" class="text-muted">@Model.ViewAllLink.Text</a>
         </div>
     </div>
 </li>

@@ -151,7 +151,56 @@ public class HomeController : Controller
                         }
                     ]
                 },
-                UserDropdown = new UserDropdownViewModel()
+                UserDropdown = new UserDropdownViewModel
+                {
+                    UserName = "Anduin Xue",
+                    UserAvatarUrl = "/node_modules/@aiursoft/uistack/dist/img/avatars/avatar.jpg",
+                    IconLinkGroups =
+                    [
+                        new IconLinkGroup
+                        {
+                            Links =
+                            [
+                                new IconLink
+                                {
+                                    Icon = "user",
+                                    Text = "Profile",
+                                    Href = "#"
+                                },
+                                new IconLink
+                                {
+                                    Icon = "pie-chart",
+                                    Text = "Analytics",
+                                    Href = "#"
+                                }
+                            ]
+                        },
+                        new IconLinkGroup
+                        {
+                            Links =
+                            [
+                                new IconLink
+                                {
+                                    Text = "Settings",
+                                    Href = "#",
+                                    Icon = "settings"
+                                },
+                                new IconLink
+                                {
+                                    Text = "Help",
+                                    Href = "#",
+                                    Icon = "help-circle"
+                                },
+                                new IconLink
+                                {
+                                    Text = "Sign out",
+                                    Href = "#",
+                                    Icon = "log-out"
+                                }
+                            ]
+                        }
+                    ]
+                }
             },
 
             // Sidebar

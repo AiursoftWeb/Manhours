@@ -6,15 +6,22 @@
     </a>
 
     <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-        <img src="img/avatars/avatar.jpg" class="img-fluid rounded-circle me-1 mt-n2 mb-n2" alt="Chris Wood" width="40" height="40"/> <span>Chris Wood</span>
+        <img src="@Model.UserAvatarUrl" class="img-fluid rounded-circle me-1 mt-n2 mb-n2" alt="@Model.UserName" width="40" height="40"/> <span>@Model.UserName</span>
     </a>
 
     <div class="dropdown-menu dropdown-menu-end">
-        <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-lucide="user"></i> Profile</a>
-        <a class="dropdown-item" href="#"><i class="align-middle me-1" data-lucide="pie-chart"></i> Analytics</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="pages-settings.html">Settings & Privacy</a>
-        <a class="dropdown-item" href="#">Help</a>
-        <a class="dropdown-item" href="#">Sign out</a>
+        @for (var i = 0; i < Model.IconLinkGroups.Length; i++)
+        {
+            var iconLinkGroup = Model.IconLinkGroups[i];
+            foreach (var link in iconLinkGroup.Links)
+            {
+                <a class="dropdown-item" href="@link.Href"><i class="align-middle me-1" data-lucide="@link.Icon"></i> @link.Text</a>
+            }
+            
+            if (i != Model.IconLinkGroups.Length - 1)
+            {
+                <div class="dropdown-divider"></div>
+            }
+        }
     </div>
 </li>

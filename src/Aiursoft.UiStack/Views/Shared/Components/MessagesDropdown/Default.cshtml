@@ -5,13 +5,13 @@
     <a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
         <div class="position-relative">
             <i class="align-middle text-body" data-lucide="message-circle"></i>
-            <span class="indicator">@Model.Messages.Count</span>
+            <span class="indicator">@Model.Messages.Length</span>
         </div>
     </a>
     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
         <div class="dropdown-menu-header">
             <div class="position-relative">
-                @Model.Messages.Count New Messages
+                @Model.Messages.Length New Messages
             </div>
         </div>
         <div class="list-group">

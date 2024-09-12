@@ -4,7 +4,7 @@ namespace Aiursoft.UiStack.Views.Shared.Components.MessagesDropdown;
 
 public class MessagesDropdownViewModel
 {
-    public IReadOnlyCollection<Message> Messages { get; init; } = [];
+    public Message[] Messages { get; init; } = [];
     
     public required Link ViewAllLink { get; init; }
 }

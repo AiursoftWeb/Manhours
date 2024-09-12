@@ -28,7 +28,7 @@ public class HomeController : Controller
             Theme = UiTheme.Dark,
             SidebarTheme = UiSidebarTheme.Dark,
             Layout = UiLayout.Fluid,
-            
+
             // Navbar
             Navbar = new NavbarViewModel
             {
@@ -67,7 +67,7 @@ public class HomeController : Controller
                 },
                 MessagesDropdown = new MessagesDropdownViewModel
                 {
-                    Messages = 
+                    Messages =
                     [
                         new Message
                         {
@@ -86,7 +86,7 @@ public class HomeController : Controller
                 },
                 NotificationsDropdown = new NotificationsDropdownViewModel
                 {
-                    Notifications = 
+                    Notifications =
                     [
                         new Notification
                         {
@@ -98,7 +98,7 @@ public class HomeController : Controller
                         },
                         new Notification
                         {
-                            Icon="bell",
+                            Icon = "bell",
                             IconClass = "text-primary",
                             Title = "New user",
                             Message = "A new user registered.",
@@ -106,7 +106,7 @@ public class HomeController : Controller
                         },
                         new Notification
                         {
-                            Icon="home",
+                            Icon = "home",
                             IconClass = "text-warning",
                             Title = "New login",
                             Message = "Your account was logged in from a new device.",
@@ -127,10 +127,33 @@ public class HomeController : Controller
                         Text = "View all notifications"
                     }
                 },
-                LanguagesDropdown = new LanguagesDropdownViewModel(),
+                LanguagesDropdown = new LanguagesDropdownViewModel
+                {
+                    SelectedLanguage = new LanguageSelection
+                    {
+                        FlagUrl = "/node_modules/@aiursoft/uistack/dist/img/flags/us.png",
+                        Link = "#",
+                        Name = "English - United States"
+                    },
+                    Languages =
+                    [
+                        new LanguageSelection
+                        {
+                            FlagUrl = "/node_modules/@aiursoft/uistack/dist/img/flags/us.png",
+                            Link = "#",
+                            Name = "English - United States"
+                        },
+                        new LanguageSelection()
+                        {
+                            FlagUrl = "/node_modules/@aiursoft/uistack/dist/img/flags/cn.png",
+                            Link = "#",
+                            Name = "中文 - 简体"
+                        }
+                    ]
+                },
                 UserDropdown = new UserDropdownViewModel()
             },
-            
+
             // Sidebar
             Sidebar = new SidebarViewModel
             {
@@ -257,7 +280,7 @@ public class HomeController : Controller
                                     UniqueId = "projects",
                                     Text = "Projects",
                                     LucideIcon = "layout",
-                                    Links = 
+                                    Links =
                                     [
                                         new CascadedLink
                                         {
@@ -289,7 +312,7 @@ public class HomeController : Controller
                     ButtonText = "Download"
                 },
             },
-            
+
             // Footer
             FooterMenu = new FooterMenuViewModel
             {
@@ -302,7 +325,6 @@ public class HomeController : Controller
                     new Link { Text = "Badge", Href = "/" },
                 ]
             }
-            
         };
         return this.UiStackView(model);
     }

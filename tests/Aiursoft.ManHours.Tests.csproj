@@ -19,6 +19,6 @@
     <PackageReference Include="MSTest.TestFramework" Version="3.7.3" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\Aiursoft.Manhours\Aiursoft.ManHours.csproj" />
+    <ProjectReference Include="..\src\Aiursoft.ManHours\Aiursoft.ManHours.csproj" />
   </ItemGroup>
 </Project>

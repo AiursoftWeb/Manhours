@@ -5,7 +5,7 @@
 [![Test Coverage](https://gitlab.aiursoft.cn/aiursoft/ManHours/badges/master/coverage.svg)](https://gitlab.aiursoft.cn/aiursoft/ManHours/-/pipelines)
 [![ManHours](https://manhours.aiursoft.cn/r/gitlab.aiursoft.cn/aiursoft/ManHours.svg)](https://gitlab.aiursoft.cn/aiursoft/ManHours/-/commits/master?ref_type=heads)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fmanhours.aiursoft.cn)](https://manhours.aiursoft.cn/)
-[![Docker](https://img.shields.io/badge/docker-latest-blue?logo=docker)](https://hub.aiursoft.cn/#!/taglist/aiursoft/manhours)
+[![Docker](https://img.shields.io/docker/pulls/aiursoft/manhours.svg)](https://hub.docker.com/r/aiursoft/manhours)
 
 ManHours is a tool to generate a badge for your repository.
 
@@ -56,7 +56,7 @@ First, install Docker [here](https://docs.docker.com/get-docker/).
 Then run the following commands in a Linux shell:
 
 ```bash
-image=hub.aiursoft.cn/aiursoft/manhours
+image=aiursoft/manhours
 appName=manhours
 sudo docker pull $image
 sudo docker run -d --name $appName --restart unless-stopped -p 5000:5000 -v /var/www/$appName:/data $image
@@ -68,7 +68,7 @@ The docker image has the following context:
 
 | Properties  | Value                            |
 |-------------|----------------------------------|
-| Image       | hub.aiursoft.cn/aiursoft/manhours|
+| Image       | aiursoft/manhours|
 | Ports       | 5000                             |
 | Binary path | /app                             |
 | Data path   | /data                            |

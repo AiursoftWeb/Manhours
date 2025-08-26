@@ -19,7 +19,7 @@ public class BadgeController(
 {
     private static readonly string[] ValidExtensions = ["git", "svg", "json"];
     private static readonly ConcurrentDictionary<string, SemaphoreSlim> Lockers = new();
-    private readonly string _workspaceFolder = configuration["Storage:Path"]!;
+    private readonly string _workspaceFolder = Path.Combine(configuration["Storage:Path"]!, "Repos");
 
     [Route("r/{**repo}")]
     public async Task<IActionResult> RenderRepo([FromRoute] string repo)
@@ -97,7 +97,7 @@ public class BadgeController(
                 hours < 90 ? "dfb317" :
                 "4c1"
         };
-        
+
         //Access-Control-Allow-Origin:
         Response.Headers.Append("Access-Control-Allow-Origin", "*");
 

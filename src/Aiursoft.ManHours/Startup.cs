@@ -1,6 +1,6 @@
 ﻿using Aiursoft.Canon;
 using Aiursoft.Scanner;
-using Aiursoft.UiStack;
+using Aiursoft.UiStack.Layout;
 using Aiursoft.WebTools.Abstractions.Models;
 
 namespace Aiursoft.ManHours;
@@ -12,7 +12,7 @@ public class Startup : IWebStartup
         services
             .AddControllersWithViews()
             .AddApplicationPart(typeof(Startup).Assembly)
-            .AddAiursoftUiStack();
+            .AddApplicationPart(typeof(UiStackLayoutViewModel).Assembly);
 
         services.AddTaskCanon();
         services.AddLibraryDependencies();

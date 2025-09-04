@@ -12,6 +12,6 @@
   <ItemGroup>
     <PackageReference Include="Aiursoft.GitRunner" Version="9.0.23" />
     <PackageReference Include="Aiursoft.Scanner" Version="9.0.9" />
-    <PackageReference Include="Aiursoft.UiStack" Version="9.0.6" />
+    <PackageReference Include="Aiursoft.UiStack" Version="9.0.9" />
   </ItemGroup>
 </Project>

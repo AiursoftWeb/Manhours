@@ -3,8 +3,8 @@
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.aiursoft.com/aiursoft/ManHours/-/blob/master/LICENSE)
 [![Pipeline stat](https://gitlab.aiursoft.com/aiursoft/ManHours/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/ManHours/-/pipelines)
 [![Test Coverage](https://gitlab.aiursoft.com/aiursoft/ManHours/badges/master/coverage.svg)](https://gitlab.aiursoft.com/aiursoft/ManHours/-/pipelines)
-[![ManHours](https://manhours.aiursoft.cn/r/gitlab.aiursoft.com/aiursoft/ManHours.svg)](https://gitlab.aiursoft.com/aiursoft/ManHours/-/commits/master?ref_type=heads)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fmanhours.aiursoft.cn)](https://manhours.aiursoft.cn/)
+[![ManHours](https://manhours.aiursoft.com/r/gitlab.aiursoft.com/aiursoft/ManHours.svg)](https://gitlab.aiursoft.com/aiursoft/ManHours/-/commits/master?ref_type=heads)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fmanhours.aiursoft.com)](https://manhours.aiursoft.com/)
 [![Docker](https://img.shields.io/docker/pulls/aiursoft/manhours.svg)](https://hub.docker.com/r/aiursoft/manhours)
 
 ManHours is a tool to generate a badge for your repository.
@@ -15,7 +15,7 @@ When skimming a new repository, I'm always curious how much time went into creat
 
 ## Try
 
-Try a running ManHours [here](https://manhours.aiursoft.cn).
+Try a running ManHours [here](https://manhours.aiursoft.com).
 
 ## Run in Ubuntu
 

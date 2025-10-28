@@ -26,7 +26,7 @@ public class HomeController : Controller
                 Links =
                 [
                     new Link { Text = "Home", Href = "/" },
-                    new Link { Text = "Aiursoft", Href = "https://www.aiursoft.cn" },
+                    new Link { Text = "Aiursoft", Href = "https://www.aiursoft.com" },
                 ]
             }
         };

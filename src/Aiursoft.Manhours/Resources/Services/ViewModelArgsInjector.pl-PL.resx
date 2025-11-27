@@ -129,5 +129,11 @@
   <data name="Unauthorized" xml:space="preserve">
     <value>Nieautoryzowany</value>
   </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>Roboczogodziny</value>
+  </data>
+  <data name="Manhours Badge Generator" xml:space="preserve">
+    <value>Generator Oznaczeń Roboczogodzin</value>
+  </data>
 
 </root>

@@ -132,5 +132,11 @@
   <data name="Unauthorized" xml:space="preserve">
     <value>Không được ủy quyền</value>
   </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>Giờ công</value>
+  </data>
+  <data name="Manhours Badge Generator" xml:space="preserve">
+    <value>Trình Tạo Huy Hiệu Giờ Công</value>
+  </data>
 
 </root>

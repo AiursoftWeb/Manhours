@@ -132,5 +132,11 @@
   <data name="Error" xml:space="preserve">
     <value>오류</value>
   </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>작업 시간</value>
+  </data>
+  <data name="Manhours Badge Generator" xml:space="preserve">
+    <value>작업 시간 배지 생성기</value>
+  </data>
 
 </root>

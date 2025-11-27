@@ -132,5 +132,11 @@
   <data name="Unauthorized" xml:space="preserve">
     <value>未經授權</value>
   </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>工時</value>
+  </data>
+  <data name="Manhours Badge Generator" xml:space="preserve">
+    <value>工時徽章產生器</value>
+  </data>
 
 </root>

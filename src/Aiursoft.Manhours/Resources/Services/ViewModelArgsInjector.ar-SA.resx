@@ -129,5 +129,11 @@
   <data name="Unauthorized" xml:space="preserve">
     <value>غير مصرح</value>
   </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>ساعات العمل</value>
+  </data>
+  <data name="Manhours Badge Generator" xml:space="preserve">
+    <value>مُوَلِّد شارات ساعات العمل</value>
+  </data>
 
 </root>

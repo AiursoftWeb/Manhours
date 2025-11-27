@@ -129,5 +129,11 @@
   <data name="Unauthorized" xml:space="preserve">
     <value>Yetkisiz</value>
   </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>İş Saati</value>
+  </data>
+  <data name="Manhours Badge Generator" xml:space="preserve">
+    <value>İş Saati Rozet Oluşturucu</value>
+  </data>
 
 </root>

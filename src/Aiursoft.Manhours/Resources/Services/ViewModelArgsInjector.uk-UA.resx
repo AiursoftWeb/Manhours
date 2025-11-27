@@ -129,5 +129,11 @@
   <data name="Error" xml:space="preserve">
     <value>Помилка</value>
   </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>Люди-години</value>
+  </data>
+  <data name="Manhours Badge Generator" xml:space="preserve">
+    <value>Генератор бейджів робочих годин</value>
+  </data>
 
 </root>

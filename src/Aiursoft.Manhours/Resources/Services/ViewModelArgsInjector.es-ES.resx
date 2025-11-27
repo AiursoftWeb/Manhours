@@ -132,5 +132,11 @@
   <data name="Error" xml:space="preserve">
     <value>Error</value>
   </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>Horas de trabajo</value>
+  </data>
+  <data name="Manhours Badge Generator" xml:space="preserve">
+    <value>Generador de Insignias de Horas-Hombre</value>
+  </data>
 
 </root>

@@ -132,5 +132,11 @@
   <data name="Unauthorized" xml:space="preserve">
     <value>Unauthorised</value>
   </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>Man-hours</value>
+  </data>
+  <data name="Manhours Badge Generator" xml:space="preserve">
+    <value>Manhours Badge Generator</value>
+  </data>
 
 </root>

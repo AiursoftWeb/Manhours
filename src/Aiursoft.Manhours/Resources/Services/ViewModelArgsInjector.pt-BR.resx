@@ -129,5 +129,11 @@
   <data name="Error" xml:space="preserve">
     <value>Erro</value>
   </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>Horas-Homem</value>
+  </data>
+  <data name="Manhours Badge Generator" xml:space="preserve">
+    <value>Gerador de Crachá de Horas-Homem</value>
+  </data>
 
 </root>

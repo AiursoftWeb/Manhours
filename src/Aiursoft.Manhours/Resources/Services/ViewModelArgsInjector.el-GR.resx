@@ -129,5 +129,11 @@
   <data name="Unauthorized" xml:space="preserve">
     <value>Μη Εξουσιοδοτημένος</value>
   </data>
+  <data name="Manhours Badge Generator" xml:space="preserve">
+    <value>Δημιουργός Σήματος Ανθρωποωρών</value>
+  </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>Ώρες Εργασίας</value>
+  </data>
 
 </root>

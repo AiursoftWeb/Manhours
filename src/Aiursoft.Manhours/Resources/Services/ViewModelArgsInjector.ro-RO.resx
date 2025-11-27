@@ -129,5 +129,11 @@
   <data name="Unauthorized" xml:space="preserve">
     <value>Neautorizat</value>
   </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>Ore-muncă</value>
+  </data>
+  <data name="Manhours Badge Generator" xml:space="preserve">
+    <value>Generator de Insigne pentru Ore de Muncă</value>
+  </data>
 
 </root>

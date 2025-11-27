@@ -1,4 +1,4 @@
-# Manhours - A sample project
+# Manhours
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.aiursoft.com/aiursoft/manhours/-/blob/master/LICENSE)
 [![Pipeline stat](https://gitlab.aiursoft.com/aiursoft/manhours/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/manhours/-/pipelines)
@@ -7,18 +7,11 @@
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fmanhours.aiursoft.com)](https://manhours.aiursoft.com)
 [![Docker](https://img.shields.io/docker/pulls/aiursoft/manhours.svg)](https://hub.docker.com/r/aiursoft/manhours)
 
-Manhours is a sample project.
+ManHours is a tool to generate a badge for your repository.
+
+When skimming a new repository, I'm always curious how much time went into creating it. I built Man Hours to generate and display a shields.io badge for your README with an estimate of how many hours committers have spent working on your files. You can see a sample badge above with the total hours put into this repo.
 
 ![screenshot](./screenshot.png)
-
-Default user name is `admin@default.com` and default password is `admin123`.
-
-## Projects using Aiursoft Manhours
-
-* [Stathub](https://gitlab.aiursoft.com/aiursoft/stathub)
-* [MarkToHtml](https://gitlab.aiursoft.com/aiursoft/marktohtml)
-* [MusicTools](https://gitlab.aiursoft.com/aiursoft/musictools)
-* [AnduinOS Home](https://gitlab.aiursoft.com/anduin/AnduinOS-Home)
 
 ## Try
 

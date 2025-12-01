@@ -135,5 +135,8 @@
   <data name="Manhours Badge Generator" xml:space="preserve">
     <value>مُوَلِّد شارات ساعات العمل</value>
   </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>مُوَلِّد الشارات</value>
+  </data>
 
 </root>

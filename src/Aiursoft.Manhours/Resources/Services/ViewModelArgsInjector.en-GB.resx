@@ -138,5 +138,8 @@
   <data name="Manhours Badge Generator" xml:space="preserve">
     <value>Manhours Badge Generator</value>
   </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>Badge Generator</value>
+  </data>
 
 </root>

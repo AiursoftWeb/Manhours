@@ -138,5 +138,8 @@
   <data name="Manhours Badge Generator" xml:space="preserve">
     <value>工時徽章生成器</value>
   </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>徽章生成器</value>
+  </data>
 
 </root>

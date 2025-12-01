@@ -138,5 +138,8 @@
   <data name="Manhours Badge Generator" xml:space="preserve">
     <value>작업 시간 배지 생성기</value>
   </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>배지 생성기</value>
+  </data>
 
 </root>

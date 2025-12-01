@@ -138,5 +138,8 @@
   <data name="Manhours Badge Generator" xml:space="preserve">
     <value>Trình Tạo Huy Hiệu Giờ Công</value>
   </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>Trình Tạo Huy Hiệu</value>
+  </data>
 
 </root>

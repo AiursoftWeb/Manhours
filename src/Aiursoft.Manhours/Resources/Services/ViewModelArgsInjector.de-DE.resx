@@ -138,5 +138,8 @@
   <data name="Manhours" xml:space="preserve">
     <value>Arbeitsstunden</value>
   </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>Abzeichen-Generator</value>
+  </data>
 
 </root>

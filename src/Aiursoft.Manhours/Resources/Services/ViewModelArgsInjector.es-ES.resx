@@ -138,5 +138,8 @@
   <data name="Manhours Badge Generator" xml:space="preserve">
     <value>Generador de Insignias de Horas-Hombre</value>
   </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>Generador de Insignias</value>
+  </data>
 
 </root>

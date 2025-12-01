@@ -135,5 +135,8 @@
   <data name="Manhours" xml:space="preserve">
     <value>Ώρες Εργασίας</value>
   </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>Δημιουργός Σημάτων</value>
+  </data>
 
 </root>

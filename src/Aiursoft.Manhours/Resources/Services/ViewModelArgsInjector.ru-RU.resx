@@ -135,5 +135,8 @@
   <data name="Manhours Badge Generator" xml:space="preserve">
     <value>Генератор бейджей учёта рабочего времени</value>
   </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>Генератор бейджей</value>
+  </data>
 
 </root>

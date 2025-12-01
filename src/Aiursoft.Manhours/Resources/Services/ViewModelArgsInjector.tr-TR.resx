@@ -135,5 +135,8 @@
   <data name="Manhours Badge Generator" xml:space="preserve">
     <value>İş Saati Rozet Oluşturucu</value>
   </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>Rozet Oluşturucu</value>
+  </data>
 
 </root>

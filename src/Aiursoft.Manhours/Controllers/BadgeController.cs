@@ -13,8 +13,7 @@ public class BadgeController(
     IConfiguration configuration,
     ILogger<BadgeController> logger,
     WorkspaceManager workspaceManager,
-    CacheService cacheService,
-    WorkTimeService workTimeService)
+    CacheService cacheService)
     : ControllerBase
 {
     private static readonly string[] ValidExtensions = ["git", "svg", "json"];

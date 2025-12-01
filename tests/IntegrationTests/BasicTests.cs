@@ -91,7 +91,7 @@ public class BasicTests
         });
         var registerResponse = await _http.PostAsync("/Account/Register", registerContent);
         Assert.AreEqual(HttpStatusCode.Found, registerResponse.StatusCode);
-        Assert.AreEqual("/Dashboard/Index", registerResponse.Headers.Location?.OriginalString);
+        Assert.AreEqual("/Home/Index", registerResponse.Headers.Location?.OriginalString);
 
         // Step 2: Log off the user and assert a successful redirect.
         var homePageResponse = await _http.GetAsync("/Manage/Index");
@@ -115,10 +115,10 @@ public class BasicTests
         });
         var loginResponse = await _http.PostAsync("/Account/Login", loginContent);
         Assert.AreEqual(HttpStatusCode.Found, loginResponse.StatusCode);
-        Assert.AreEqual("/Dashboard/Index", loginResponse.Headers.Location?.OriginalString);
+        Assert.AreEqual("/Home/Index", loginResponse.Headers.Location?.OriginalString);
 
         // Step 4: Verify the final login state by checking the home page content.
-        var finalHomePageResponse = await _http.GetAsync("/dashboard/index");
+        var finalHomePageResponse = await _http.GetAsync("/home/index");
         finalHomePageResponse.EnsureSuccessStatusCode();
         var finalHtml = await finalHomePageResponse.Content.ReadAsStringAsync();
         Assert.Contains(expectedUserName, finalHtml);
@@ -394,7 +394,7 @@ public class BasicTests
         Assert.AreEqual("/Manage?Message=ChangeProfileSuccess", changeProfileResponse.Headers.Location?.OriginalString);
 
         // Step 5: Visit the home page and verify the new name is displayed.
-        var homePageResponse = await _http.GetAsync("/dashboard/index");
+        var homePageResponse = await _http.GetAsync("/home/index");
         homePageResponse.EnsureSuccessStatusCode();
         var html = await homePageResponse.Content.ReadAsStringAsync();
         Assert.Contains(newUserName, html);

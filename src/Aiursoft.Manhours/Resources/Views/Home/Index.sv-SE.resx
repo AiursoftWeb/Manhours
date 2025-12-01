@@ -216,5 +216,35 @@
   <data name="Start a new project" xml:space="preserve">
     <value>Starta ett nytt projekt</value>
   </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>HTTP-klon-URL</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Förhandsgranska</value>
+  </data>
+  <data name="Man hours icon" xml:space="preserve">
+    <value>Arbetstimmar-ikon</value>
+  </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>Arbetstimmar</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Generera</value>
+  </data>
+  <data name="Direct mode (Without proxy from img.shields.io)" xml:space="preserve">
+    <value>Direktläge (Utan proxy från img.shields.io)</value>
+  </data>
+  <data name="Enter the clone url of your git repository to generate a badge for your project." xml:space="preserve">
+    <value>Ange klon-URL:en för ditt git-förråd för att generera en märkesbild för ditt projekt.</value>
+  </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>Märkesgenerator</value>
+  </data>
+  <data name="Markdown" xml:space="preserve">
+    <value>Markdown</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
 
 </root>

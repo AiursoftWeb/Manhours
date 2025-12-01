@@ -216,5 +216,35 @@
   <data name="Start a new project" xml:space="preserve">
     <value>開始新專案</value>
   </data>
+  <data name="Preview" xml:space="preserve">
+    <value>預覽</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>產生</value>
+  </data>
+  <data name="Man hours icon" xml:space="preserve">
+    <value>工時圖示</value>
+  </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>徽章產生器</value>
+  </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>工時</value>
+  </data>
+  <data name="Enter the clone url of your git repository to generate a badge for your project." xml:space="preserve">
+    <value>輸入您的 git 儲存庫克隆網址，以生成專案徽章。</value>
+  </data>
+  <data name="Direct mode (Without proxy from img.shields.io)" xml:space="preserve">
+    <value>直接模式 (不經由 img.shields.io 代理)</value>
+  </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>HTTP 複製網址</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="Markdown" xml:space="preserve">
+    <value>Markdown</value>
+  </data>
 
 </root>

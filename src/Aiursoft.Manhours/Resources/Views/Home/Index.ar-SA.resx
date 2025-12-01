@@ -216,5 +216,35 @@
   <data name="Start a new project" xml:space="preserve">
     <value>بدء مشروع جديد</value>
   </data>
+  <data name="Generate" xml:space="preserve">
+    <value>إنشاء</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>معاينة</value>
+  </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>رابط استنساخ HTTP</value>
+  </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>ساعات العمل</value>
+  </data>
+  <data name="Man hours icon" xml:space="preserve">
+    <value>أيقونة ساعات العمل</value>
+  </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>مُوَلِّد الشارات</value>
+  </data>
+  <data name="Direct mode (Without proxy from img.shields.io)" xml:space="preserve">
+    <value>الوضع المباشر (بدون وسيط من img.shields.io)</value>
+  </data>
+  <data name="Enter the clone url of your git repository to generate a badge for your project." xml:space="preserve">
+    <value>أدخل رابط استنساخ مستودع Git الخاص بك لإنشاء شارة لمشروعك.</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>لغة ترميز النص الفائق</value>
+  </data>
+  <data name="Markdown" xml:space="preserve">
+    <value>ماركداون</value>
+  </data>
 
 </root>

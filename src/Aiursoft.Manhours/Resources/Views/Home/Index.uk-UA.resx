@@ -216,5 +216,35 @@
   <data name="Start a new project" xml:space="preserve">
     <value>Розпочати новий проєкт</value>
   </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Згенерувати</value>
+  </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>Генератор бейджів</value>
+  </data>
+  <data name="Man hours icon" xml:space="preserve">
+    <value>Значок людино-годин</value>
+  </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>Людогодини</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Попередній перегляд</value>
+  </data>
+  <data name="Enter the clone url of your git repository to generate a badge for your project." xml:space="preserve">
+    <value>Введіть URL-адресу клону вашого git-репозиторію, щоб створити бейдж для вашого проекту.</value>
+  </data>
+  <data name="Markdown" xml:space="preserve">
+    <value>Markdown</value>
+  </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>URL для клонування через HTTP</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="Direct mode (Without proxy from img.shields.io)" xml:space="preserve">
+    <value>Прямий режим (без проксі через img.shields.io)</value>
+  </data>
 
 </root>

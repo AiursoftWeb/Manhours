@@ -216,5 +216,35 @@
   <data name="Start a new project" xml:space="preserve">
     <value>Ξεκινήστε ένα νέο έργο</value>
   </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Δημιουργία</value>
+  </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>URL Κλωνοποίησης HTTP</value>
+  </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>Ώρες Εργασίας</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Προεπισκόπηση</value>
+  </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>Δημιουργός Επιγραφών</value>
+  </data>
+  <data name="Man hours icon" xml:space="preserve">
+    <value>Εικονίδιο ανθρωποωρών</value>
+  </data>
+  <data name="Direct mode (Without proxy from img.shields.io)" xml:space="preserve">
+    <value>Άμεση λειτουργία (Χωρίς διαμεσολάβηση από το img.shields.io)</value>
+  </data>
+  <data name="Enter the clone url of your git repository to generate a badge for your project." xml:space="preserve">
+    <value>Εισάγετε το URL κλώνος του αποθετηρίου git σας για να δημιουργήσετε ένα σήμα για το έργο σας.</value>
+  </data>
+  <data name="Markdown" xml:space="preserve">
+    <value>Markdown</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
 
 </root>

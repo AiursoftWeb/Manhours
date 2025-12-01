@@ -216,5 +216,35 @@
   <data name="Start a new project" xml:space="preserve">
     <value>新規プロジェクトを開始</value>
   </data>
+  <data name="Generate" xml:space="preserve">
+    <value>生成</value>
+  </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>工数</value>
+  </data>
+  <data name="Man hours icon" xml:space="preserve">
+    <value>工数アイコン</value>
+  </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>バッジジェネレーター</value>
+  </data>
+  <data name="Direct mode (Without proxy from img.shields.io)" xml:space="preserve">
+    <value>ダイレクトモード (img.shields.io プロキシなし)</value>
+  </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>HTTPクローンURL</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>プレビュー</value>
+  </data>
+  <data name="Enter the clone url of your git repository to generate a badge for your project." xml:space="preserve">
+    <value>プロジェクトのバッジを生成するには、GitリポジトリのクローンURLを入力してください。</value>
+  </data>
+  <data name="Markdown" xml:space="preserve">
+    <value>Markdown</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
 
 </root>

@@ -216,5 +216,35 @@
   <data name="Start a new project" xml:space="preserve">
     <value>Bắt đầu một dự án mới</value>
   </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>Giờ công</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Xem trước</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Tạo</value>
+  </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>URL Sao chép HTTP</value>
+  </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>Trình Tạo Huy Hiệu</value>
+  </data>
+  <data name="Direct mode (Without proxy from img.shields.io)" xml:space="preserve">
+    <value>Chế độ trực tiếp (Không qua proxy từ img.shields.io)</value>
+  </data>
+  <data name="Man hours icon" xml:space="preserve">
+    <value>Biểu tượng giờ công</value>
+  </data>
+  <data name="Enter the clone url of your git repository to generate a badge for your project." xml:space="preserve">
+    <value>Nhập URL clone của kho lưu trữ git của bạn để tạo huy hiệu cho dự án.</value>
+  </data>
+  <data name="Markdown" xml:space="preserve">
+    <value>Markdown</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
 
 </root>

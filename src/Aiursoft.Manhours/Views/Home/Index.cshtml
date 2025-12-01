@@ -5,15 +5,15 @@
 </style>
 
 <div class="container py-4">
-    <h1 class="h3 mb-3">Manhours</h1>
+    <h1 class="h3 mb-3">@Localizer["Manhours"]</h1>
 
     <div class="row">
         <div class="col-12 col-lg-8">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title mb-0">Badge Generator</h5>
+                    <h5 class="card-title mb-0">@Localizer["Badge Generator"]</h5>
                     <small class="text-muted d-block">
-                        Enter the clone url of your git repository to generate a badge for your project.
+                        @Localizer["Enter the clone url of your git repository to generate a badge for your project."]
                     </small>
                 </div>
                 <div class="card-body">
@@ -21,7 +21,7 @@
                         <div class="mb-3">
                             <label for="cloneUrl" class="form-label">
                                 <i class="fa-brands fa-git-alt"></i>
-                                HTTP Clone URL
+                                @Localizer["HTTP Clone URL"]
                             </label>
                             <input type="text"
                                    class="form-control"
@@ -36,26 +36,26 @@
                                    id="directMode"
                                    name="directMode" />
                             <label class="form-check-label" for="directMode">
-                                Direct mode (Without proxy from img.shields.io)
+                                @Localizer["Direct mode (Without proxy from img.shields.io)"]
                             </label>
                         </div>
 
-                        <button type="submit" class="btn btn-primary mt-3">Generate</button>
+                        <button type="submit" class="btn btn-primary mt-3">@Localizer["Generate"]</button>
 
                         <div class="mt-4 hidden" id="result">
-                            <label for="preview" class="form-label">Preview</label>
+                            <label for="preview" class="form-label">@Localizer["Preview"]</label>
                             <div class="mb-3" id="preview">
                                 <i class="fas fa-spinner fa-spin hidden" id="loading-icon"></i>
-                                <img alt="Man hours icon"
+                                <img alt="@Localizer["Man hours icon"]"
                                      id="preview-img"
                                      class="img-fluid"
                                      src="https://img.shields.io/endpoint?url=https%3A%2F%2Fmanhours.aiursoft.com%2Fgitlab%2Fgitlab.aiursoft.com%2Faiursoft%2Fmanhours.json" />
                             </div>
 
-                            <label for="markdown" class="form-label mt-2">Markdown</label>
+                            <label for="markdown" class="form-label mt-2">@Localizer["Markdown"]</label>
                             <textarea id="markdown" class="form-control" rows="3" readonly></textarea>
 
-                            <label for="html" class="form-label mt-3">HTML</label>
+                            <label for="html" class="form-label mt-3">@Localizer["HTML"]</label>
                             <textarea id="html" class="form-control" rows="3" readonly></textarea>
                         </div>
                     </form>
@@ -88,7 +88,7 @@
                 let cloneUrl = document.getElementById("cloneUrl").value.trim();
 
                 if (!cloneUrl) {
-                    alert("Please input the clone url!");
+                    alert(@Json.Serialize(Localizer["Please input the clone url!"].Value));
                     return;
                 }
 
@@ -110,8 +110,8 @@
                     imgLink = "https://img.shields.io/endpoint?url=@(Context.Request.Scheme)%3A%2F%2F@(Context.Request.Host)%2F" + "r" + "%2F" + cloneUrl;
                 }
 
-                const markdownVal = "![Man hours](" + imgLink + ")";
-                const htmlVal = "<img alt=\"Man hours\" src=\"" + imgLink + "\" />";
+                const markdownVal = `![${@Json.Serialize(Localizer["Man hours"].Value)}](${imgLink})`;
+                const htmlVal = `<img alt="${@Json.Serialize(Localizer["Man hours"].Value)}" src="${imgLink}" />`;
                 markdown.value = markdownVal;
                 html.value = htmlVal;
 

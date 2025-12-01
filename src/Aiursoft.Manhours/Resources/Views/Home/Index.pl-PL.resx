@@ -216,5 +216,35 @@
   <data name="Start a new project" xml:space="preserve">
     <value>Rozpocznij nowy projekt</value>
   </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>Generator odznak</value>
+  </data>
+  <data name="Man hours icon" xml:space="preserve">
+    <value>Ikona roboczogodzin</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Generuj</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Podgląd</value>
+  </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>Roboczogodziny</value>
+  </data>
+  <data name="Direct mode (Without proxy from img.shields.io)" xml:space="preserve">
+    <value>Tryb bezpośredni (Bez pośrednictwa img.shields.io)</value>
+  </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>Adres URL klonowania HTTP</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="Enter the clone url of your git repository to generate a badge for your project." xml:space="preserve">
+    <value>Wprowadź adres URL klonowania swojego repozytorium git, aby wygenerować odznakę dla swojego projektu.</value>
+  </data>
+  <data name="Markdown" xml:space="preserve">
+    <value>Markdown</value>
+  </data>
 
 </root>

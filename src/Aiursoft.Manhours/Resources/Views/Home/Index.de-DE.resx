@@ -216,5 +216,35 @@
   <data name="Start a new project" xml:space="preserve">
     <value>Ein neues Projekt starten</value>
   </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>Abzeichen-Generator</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Generieren</value>
+  </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>Arbeitsstunden</value>
+  </data>
+  <data name="Man hours icon" xml:space="preserve">
+    <value>Manhours-Symbol</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Vorschau</value>
+  </data>
+  <data name="Direct mode (Without proxy from img.shields.io)" xml:space="preserve">
+    <value>Direkter Modus (Ohne Proxy von img.shields.io)</value>
+  </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>HTTP-Klon-URL</value>
+  </data>
+  <data name="Enter the clone url of your git repository to generate a badge for your project." xml:space="preserve">
+    <value>Geben Sie die Clone-URL Ihres Git-Repositorys ein, um ein Badge für Ihr Projekt zu generieren.</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="Markdown" xml:space="preserve">
+    <value>Markdown</value>
+  </data>
 
 </root>

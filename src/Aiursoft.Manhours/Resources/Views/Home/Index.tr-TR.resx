@@ -216,5 +216,35 @@
   <data name="Start a new project" xml:space="preserve">
     <value>Yeni bir proje başlat</value>
   </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Önizleme</value>
+  </data>
+  <data name="Man hours icon" xml:space="preserve">
+    <value>İnsan saati simgesi</value>
+  </data>
+  <data name="Badge Generator" xml:space="preserve">
+    <value>Rozet Oluşturucu</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Oluştur</value>
+  </data>
+  <data name="Manhours" xml:space="preserve">
+    <value>İş Saatleri</value>
+  </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>HTTP Klon URL&apos;si</value>
+  </data>
+  <data name="Enter the clone url of your git repository to generate a badge for your project." xml:space="preserve">
+    <value>Projeniz için bir rozet oluşturmak için git deponuzun klon URL&apos;sini girin.</value>
+  </data>
+  <data name="Direct mode (Without proxy from img.shields.io)" xml:space="preserve">
+    <value>Doğrudan mod (img.shields.io vekil sunucusu olmadan)</value>
+  </data>
+  <data name="Markdown" xml:space="preserve">
+    <value>Markdown</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
 
 </root>

@@ -46,10 +46,12 @@
                             <label for="preview" class="form-label">@Localizer["Preview"]</label>
                             <div class="mb-3" id="preview">
                                 <i class="fas fa-spinner fa-spin hidden" id="loading-icon"></i>
-                                <img alt="@Localizer["Man hours icon"]"
-                                     id="preview-img"
-                                     class="img-fluid"
-                                     src="https://img.shields.io/endpoint?url=https%3A%2F%2Fmanhours.aiursoft.com%2Fgitlab%2Fgitlab.aiursoft.com%2Faiursoft%2Fmanhours.json" />
+                                <a id="preview-link" href="#" target="_blank">
+                                    <img alt="@Localizer["Man hours icon"]"
+                                         id="preview-img"
+                                         class="img-fluid"
+                                         src="https://img.shields.io/endpoint?url=https%3A%2F%2Fmanhours.aiursoft.com%2Fgitlab%2Fgitlab.aiursoft.com%2Faiursoft%2Fmanhours.json" />
+                                </a>
                             </div>
 
                             <label for="markdown" class="form-label mt-2">@Localizer["Markdown"]</label>
@@ -100,20 +102,26 @@
                     cloneUrl = cloneUrl.substring(8);
                 }
 
-                let imgLink;
+                let statsLink = "@(Context.Request.Scheme)://@(Context.Request.Host)/" + "r/" + cloneUrl;
                 if (directMode) {
                     cloneUrl += ".svg";
                     imgLink = "@(Context.Request.Scheme)://@(Context.Request.Host)/" + "r/" + cloneUrl;
+                    statsLink += ".html";
                 } else {
+                    statsLink += ".html";
                     cloneUrl += ".json";
                     cloneUrl = encodeURIComponent(cloneUrl);
                     imgLink = "https://img.shields.io/endpoint?url=@(Context.Request.Scheme)%3A%2F%2F@(Context.Request.Host)%2F" + "r" + "%2F" + cloneUrl;
                 }
 
-                const markdownVal = `![Man hours](${imgLink})`;
-                const htmlVal = `<img alt="Man hours" src="${imgLink}" />`;
+                const markdownVal = `[![Man hours](${imgLink})](${statsLink})`;
+                const htmlVal = `<a href="${statsLink}" target="_blank"><img alt="Man hours" src="${imgLink}" /></a>`;
                 markdown.value = markdownVal;
                 html.value = htmlVal;
+
+                // Update preview link
+                const previewLink = document.getElementById("preview-link");
+                previewLink.href = statsLink;
 
                 // Handle preview
                 const loadingIcon = result.querySelector("#loading-icon");

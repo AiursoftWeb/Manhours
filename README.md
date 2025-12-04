@@ -3,7 +3,7 @@
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.aiursoft.com/aiursoft/manhours/-/blob/master/LICENSE)
 [![Pipeline stat](https://gitlab.aiursoft.com/aiursoft/manhours/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/manhours/-/pipelines)
 [![Test Coverage](https://gitlab.aiursoft.com/aiursoft/manhours/badges/master/coverage.svg)](https://gitlab.aiursoft.com/aiursoft/manhours/-/pipelines)
-[![ManHours](https://manhours.aiursoft.com/r/gitlab.aiursoft.com/aiursoft/manhours.svg)](https://gitlab.aiursoft.com/aiursoft/manhours/-/commits/master?ref_type=heads)
+[![Man hours](https://manhours.aiursoft.com/r/gitlab.aiursoft.com/aiursoft/manhours.svg)](https://manhours.aiursoft.com/r/gitlab.aiursoft.com/aiursoft/manhours.html)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fmanhours.aiursoft.com)](https://manhours.aiursoft.com)
 [![Docker](https://img.shields.io/docker/pulls/aiursoft/manhours.svg)](https://hub.docker.com/r/aiursoft/manhours)
 

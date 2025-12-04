@@ -1,20 +1,20 @@
 ﻿using System.Text;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace Aiursoft.ManHours.Models;
 
 public class Badge
 {
-    [JsonPropertyName("schemaVersion")]
+    [JsonProperty("schemaVersion")]
     public int SchemaVersion { get; } = 1;
 
-    [JsonPropertyName("label")]
+    [JsonProperty("label")]
     public required string Label { get; init; }
 
-    [JsonPropertyName("message")]
+    [JsonProperty("message")]
     public required string Message { get; init; }
 
-    [JsonPropertyName("color")]
+    [JsonProperty("color")]
     public required string Color { get; init; }
 
     [JsonIgnore]

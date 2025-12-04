@@ -1,12 +1,5 @@
-using System.Net;
 using Aiursoft.CSTools.Tools;
-using Aiursoft.DbTools;
-using Aiursoft.Manhours.Entities;
 using static Aiursoft.WebTools.Extends;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Net.Http;
-using System.Threading.Tasks;
-using Aiursoft.Manhours;
 
 namespace Aiursoft.Manhours.Tests.IntegrationTests;
 
@@ -51,12 +44,6 @@ public class RenderPageTests
         var url = "/r/github.com/anduin2017/howtocook.html";
         var response = await _http.GetAsync(url);
         var content = await response.Content.ReadAsStringAsync();
-
-        if (!response.IsSuccessStatusCode)
-        {
-            Console.WriteLine($"Status Code: {response.StatusCode}");
-            Console.WriteLine($"Response Content (first 500 chars): {content.Substring(0, Math.Min(500, content.Length))}");
-        }
 
         response.EnsureSuccessStatusCode();
 

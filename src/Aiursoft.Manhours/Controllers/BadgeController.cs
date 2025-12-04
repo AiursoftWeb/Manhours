@@ -125,10 +125,10 @@ public class BadgeController(
                 CloneMode.BareWithOnlyCommits);
 
             logger.LogInformation("Getting commits for repo: {Repo} on {Path}", repoWithoutExtension, workPath);
-            var commits = await workspaceManager.GetCommitTimes(workPath);
+            var commits = await workspaceManager.GetCommits(workPath);
 
             logger.LogInformation("Calculating work time for repo: {Repo} on {Path}", repoWithoutExtension, workPath);
-            var workTime = WorkTimeService.CalculateWorkTime(commits.ToList());
+            var workTime = WorkTimeService.CalculateWorkTime(commits);
             return workTime.TotalHours;
         }
         catch (Exception e)

@@ -1,33 +1,44 @@
+using Aiursoft.GitRunner.Models;
 using Aiursoft.Scanner.Abstractions;
 
 namespace Aiursoft.ManHours.Services;
 
 public class WorkTimeService : ITransientDependency
 {
-    public static TimeSpan CalculateWorkTime(List<DateTime> commitTimes)
+    public static TimeSpan CalculateWorkTime(IEnumerable<Commit> commits)
     {
-        if (commitTimes.Count == 0)
+        var commitList = commits.ToList();
+        if (commitList.Count == 0)
             return TimeSpan.Zero;
 
-        commitTimes.Sort();
+        var totalWorkTime = TimeSpan.Zero;
+        var groups = commitList.GroupBy(t => t.Email.ToLower().Trim());
 
-        var previousCommitTime = commitTimes[0];
-        var totalWorkTime = TimeSpan.FromMinutes(30);
-        for (var i = 1; i < commitTimes.Count; i++)
+        foreach (var group in groups)
         {
-            var timeBetweenCommits = commitTimes[i] - previousCommitTime;
+            var commitTimes = group.Select(t => t.Time).ToList();
+            commitTimes.Sort();
 
-            if (timeBetweenCommits.TotalMinutes <= 30)
+            var previousCommitTime = commitTimes[0];
+            var currentWorkTime = TimeSpan.FromMinutes(30);
+            for (var i = 1; i < commitTimes.Count; i++)
             {
-                totalWorkTime += timeBetweenCommits;
-            }
-            else
-            {
-                totalWorkTime += TimeSpan.FromMinutes(30);
-            }
+                var timeBetweenCommits = commitTimes[i] - previousCommitTime;
 
-            previousCommitTime = commitTimes[i];
+                if (timeBetweenCommits.TotalMinutes <= 30)
+                {
+                    currentWorkTime += timeBetweenCommits;
+                }
+                else
+                {
+                    currentWorkTime += TimeSpan.FromMinutes(30);
+                }
+
+                previousCommitTime = commitTimes[i];
+            }
+            totalWorkTime += currentWorkTime;
         }
+
         return totalWorkTime;
     }
 }

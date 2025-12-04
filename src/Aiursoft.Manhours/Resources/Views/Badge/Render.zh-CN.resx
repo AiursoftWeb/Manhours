@@ -24,5 +24,8 @@
   <data name="Total Man Hours" xml:space="preserve">
     <value>总工时</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>小时</value>
+  </data>
 
 </root>

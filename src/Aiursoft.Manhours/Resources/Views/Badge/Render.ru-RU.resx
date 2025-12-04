@@ -24,5 +24,8 @@
   <data name="Total Man Hours" xml:space="preserve">
     <value>Всего человеко-часов</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>часов</value>
+  </data>
 
 </root>

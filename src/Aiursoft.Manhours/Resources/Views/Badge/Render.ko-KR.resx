@@ -24,5 +24,8 @@
   <data name="Repository ManHours Statistics" xml:space="preserve">
     <value>저장소 작업 시간 통계</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>시간</value>
+  </data>
 
 </root>

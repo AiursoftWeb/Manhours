@@ -24,5 +24,8 @@
   <data name="Total Man Hours" xml:space="preserve">
     <value>Yhteensä työtunteja</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Tuntia</value>
+  </data>
 
 </root>

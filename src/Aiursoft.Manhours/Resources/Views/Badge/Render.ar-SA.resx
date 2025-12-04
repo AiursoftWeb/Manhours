@@ -24,5 +24,8 @@
   <data name="Total Man Hours" xml:space="preserve">
     <value>إجمالي ساعات العمل</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>ساعات</value>
+  </data>
 
 </root>

@@ -24,5 +24,8 @@
   <data name="Repository ManHours Statistics" xml:space="preserve">
     <value>Στατιστικά Ανθρωποωρών Αποθετηρίου</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Ώρες</value>
+  </data>
 
 </root>

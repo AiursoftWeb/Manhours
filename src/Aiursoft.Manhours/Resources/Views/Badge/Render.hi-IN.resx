@@ -24,5 +24,8 @@
   <data name="Repository ManHours Statistics" xml:space="preserve">
     <value>रिपॉजिटरी मैन-आवर आँकड़े</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>घंटे</value>
+  </data>
 
 </root>

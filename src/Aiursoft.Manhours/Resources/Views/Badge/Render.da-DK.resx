@@ -24,5 +24,8 @@
   <data name="Repository ManHours Statistics" xml:space="preserve">
     <value>Repository Arbejdstimer Statistik</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Timer</value>
+  </data>
 
 </root>

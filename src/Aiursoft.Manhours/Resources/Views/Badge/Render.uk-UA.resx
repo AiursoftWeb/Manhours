@@ -24,5 +24,8 @@
   <data name="Repository ManHours Statistics" xml:space="preserve">
     <value>Статистика людських годин репозиторію</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Годин</value>
+  </data>
 
 </root>

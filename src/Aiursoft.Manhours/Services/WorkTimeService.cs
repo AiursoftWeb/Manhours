@@ -39,12 +39,24 @@ public class WorkTimeService : ITransientDependency
 
                 previousCommitTime = commitTimes[i];
             }
+
+            // Calculate commit count
+            var commitCount = authorCommits.Count;
+
+            // Calculate contribution days (unique UTC dates)
+            var contributionDays = commitTimes
+                .Select(t => t.Date) // Get only the date part (UTC)
+                .Distinct()
+                .Count();
+
             stats.TotalWorkTime += currentWorkTime;
             stats.Contributors.Add(new ContributorStat
             {
                 Name = authorCommits.First().Author, // Use the first name found for this email
                 Email = group.Key,
-                WorkTime = currentWorkTime
+                WorkTime = currentWorkTime,
+                CommitCount = commitCount,
+                ContributionDays = contributionDays
             });
         }
 

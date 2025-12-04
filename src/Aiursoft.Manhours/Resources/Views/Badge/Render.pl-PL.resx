@@ -28,4 +28,11 @@
     <value>Godziny</value>
   </data>
 
+  <data name="Commits" xml:space="preserve">
+    <value>Commity</value>
+  </data>
+  <data name="Active days" xml:space="preserve">
+    <value>Aktywne dni pracy</value>
+  </data>
+
 </root>

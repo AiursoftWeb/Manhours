@@ -28,4 +28,11 @@
     <value>часов</value>
   </data>
 
+  <data name="Commits" xml:space="preserve">
+    <value>Коммиты</value>
+  </data>
+  <data name="Active days" xml:space="preserve">
+    <value>Активные рабочие дни</value>
+  </data>
+
 </root>

@@ -28,4 +28,11 @@
     <value>Tuntia</value>
   </data>
 
+  <data name="Commits" xml:space="preserve">
+    <value>Commitit</value>
+  </data>
+  <data name="Active days" xml:space="preserve">
+    <value>Aktiiviset työpäivät</value>
+  </data>
+
 </root>

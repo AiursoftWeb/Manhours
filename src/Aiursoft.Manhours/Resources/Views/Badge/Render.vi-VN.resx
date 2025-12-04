@@ -28,4 +28,11 @@
     <value>Giờ</value>
   </data>
 
+  <data name="Commits" xml:space="preserve">
+    <value>Commit</value>
+  </data>
+  <data name="Active days" xml:space="preserve">
+    <value>Ngày làm việc tích cực</value>
+  </data>
+
 </root>

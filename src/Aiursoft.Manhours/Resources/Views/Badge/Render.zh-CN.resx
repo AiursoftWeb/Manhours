@@ -27,5 +27,11 @@
   <data name="Hours" xml:space="preserve">
     <value>小时</value>
   </data>
+  <data name="Commits" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="Active days" xml:space="preserve">
+    <value>活跃工作日</value>
+  </data>
 
 </root>

@@ -28,4 +28,11 @@
     <value>Saat</value>
   </data>
 
+  <data name="Commits" xml:space="preserve">
+    <value>Commit</value>
+  </data>
+  <data name="Active days" xml:space="preserve">
+    <value>Aktif çalışma günleri</value>
+  </data>
+
 </root>

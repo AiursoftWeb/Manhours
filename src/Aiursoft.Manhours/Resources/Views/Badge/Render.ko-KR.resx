@@ -28,4 +28,11 @@
     <value>시간</value>
   </data>
 
+  <data name="Commits" xml:space="preserve">
+    <value>커밋</value>
+  </data>
+  <data name="Active days" xml:space="preserve">
+    <value>활동 작업일</value>
+  </data>
+
 </root>

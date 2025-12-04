@@ -28,4 +28,11 @@
     <value>時間</value>
   </data>
 
+  <data name="Commits" xml:space="preserve">
+    <value>コミット</value>
+  </data>
+  <data name="Active days" xml:space="preserve">
+    <value>アクティブな作業日</value>
+  </data>
+
 </root>

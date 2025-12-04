@@ -28,4 +28,11 @@
     <value>Ώρες</value>
   </data>
 
+  <data name="Commits" xml:space="preserve">
+    <value>Υποβολές</value>
+  </data>
+  <data name="Active days" xml:space="preserve">
+    <value>Ενεργές ημέρες εργασίας</value>
+  </data>
+
 </root>

@@ -32,19 +32,23 @@
                     var percentage = totalHours > 0 ? (contributor.WorkTime.TotalHours / totalHours) * 100 : 0;
                     var gravatarUrl = $"https://www.gravatar.com/avatar/{GetMd5Hash(contributor.Email)}?d=identicon";
 
-                    <div class="list-group-item py-3">
-                        <div class="row align-items-center">
-                            <div class="col-auto">
-                                <img src="@gravatarUrl" alt="@contributor.Name" class="rounded-circle shadow-sm" width="64" height="64">
-                            </div>
-                            <div class="col">
-                                <div class="d-flex w-100 justify-content-between align-items-center mb-2">
-                                    <h5 class="mb-0 fw-bold">@contributor.Name</h5>
-                                    <span class="badge bg-light text-dark border">@contributor.WorkTime.TotalHours.ToString("N1") @Localizer["Hours"]</span>
+                        <div class="list-group-item py-3">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <img src="@gravatarUrl" alt="@contributor.Name" class="rounded-circle shadow-sm" width="64" height="64">
                                 </div>
-                                <p class="mb-2 text-muted small">@contributor.Email</p>
-                                <div class="progress" style="height: 10px;">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: @percentage%" aria-valuenow="@percentage" aria-valuemin="0" aria-valuemax="100" title="@percentage.ToString("N1")%"></div>
+                                <div class="col">
+                                    <div class="d-flex w-100 justify-content-between align-items-center mb-2">
+                                        <h5 class="mb-0 fw-bold">@contributor.Name</h5>
+                                        <div class="d-flex gap-2">
+                                            <span class="badge bg-light text-dark border">@contributor.WorkTime.TotalHours.ToString("N1") @Localizer["Hours"]</span>
+                                            <span class="badge bg-info text-white">@contributor.CommitCount @Localizer["Commits"]</span>
+                                            <span class="badge bg-success text-white">@contributor.ContributionDays @Localizer["Active days"]</span>
+                                        </div>
+                                    </div>
+                                    <p class="mb-2 text-muted small">@contributor.Email</p>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: @percentage%" aria-valuenow="@percentage" aria-valuemin="0" aria-valuemax="100" title="@percentage.ToString("N1")%"></div>
                                 </div>
                             </div>
                         </div>

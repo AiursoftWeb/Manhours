@@ -27,5 +27,11 @@
   <data name="Hours" xml:space="preserve">
     <value>Hours</value>
   </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Commits</value>
+  </data>
+  <data name="Active days" xml:space="preserve">
+    <value>Active work days</value>
+  </data>
 
 </root>

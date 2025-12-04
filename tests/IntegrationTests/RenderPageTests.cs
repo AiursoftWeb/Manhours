@@ -50,5 +50,7 @@ public class RenderPageTests
         Assert.Contains("Repository ManHours Statistics", content, "Should contain statistics header");
         Assert.Contains("github.com/anduin2017/howtocook", content, "Should contain repo name");
         Assert.Contains("Total Man Hours", content, "Should contain total hours label");
+        Assert.Contains("Commits", content, "Should contain commits label");
+        Assert.Contains("Active days", content, "Should contain active days label");
     }
 }

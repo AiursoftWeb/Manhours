@@ -28,4 +28,11 @@
     <value>घंटे</value>
   </data>
 
+  <data name="Commits" xml:space="preserve">
+    <value>कमिट्स</value>
+  </data>
+  <data name="Active days" xml:space="preserve">
+    <value>सक्रिय कार्य दिवस</value>
+  </data>
+
 </root>

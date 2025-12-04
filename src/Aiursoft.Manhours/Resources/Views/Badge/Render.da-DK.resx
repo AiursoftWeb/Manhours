@@ -28,4 +28,11 @@
     <value>Timer</value>
   </data>
 
+  <data name="Commits" xml:space="preserve">
+    <value>Commits</value>
+  </data>
+  <data name="Active days" xml:space="preserve">
+    <value>Aktive arbejdsdage</value>
+  </data>
+
 </root>

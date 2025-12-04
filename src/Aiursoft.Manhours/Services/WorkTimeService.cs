@@ -1,22 +1,25 @@
 using Aiursoft.GitRunner.Models;
+using Aiursoft.ManHours.Models;
 using Aiursoft.Scanner.Abstractions;
 
 namespace Aiursoft.ManHours.Services;
 
 public class WorkTimeService : ITransientDependency
 {
-    public static TimeSpan CalculateWorkTime(IEnumerable<Commit> commits)
+    public static RepoStats CalculateWorkTime(IEnumerable<Commit> commits)
     {
         var commitList = commits.ToList();
-        if (commitList.Count == 0)
-            return TimeSpan.Zero;
+        var stats = new RepoStats();
 
-        var totalWorkTime = TimeSpan.Zero;
+        if (commitList.Count == 0)
+            return stats;
+
         var groups = commitList.GroupBy(t => t.Email.ToLower().Trim());
 
         foreach (var group in groups)
         {
-            var commitTimes = group.Select(t => t.Time).ToList();
+            var authorCommits = group.ToList();
+            var commitTimes = authorCommits.Select(t => t.Time).ToList();
             commitTimes.Sort();
 
             var previousCommitTime = commitTimes[0];
@@ -36,9 +39,18 @@ public class WorkTimeService : ITransientDependency
 
                 previousCommitTime = commitTimes[i];
             }
-            totalWorkTime += currentWorkTime;
+            stats.TotalWorkTime += currentWorkTime;
+            stats.Contributors.Add(new ContributorStat
+            {
+                Name = authorCommits.First().Author, // Use the first name found for this email
+                Email = group.Key,
+                WorkTime = currentWorkTime
+            });
         }
 
-        return totalWorkTime;
+        // Sort contributors by work time descending
+        stats.Contributors = stats.Contributors.OrderByDescending(c => c.WorkTime).ToList();
+
+        return stats;
     }
 }

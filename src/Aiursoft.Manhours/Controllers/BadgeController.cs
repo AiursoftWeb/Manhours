@@ -6,6 +6,8 @@ using Aiursoft.ManHours.Models;
 using Aiursoft.ManHours.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Concurrent;
+using Aiursoft.ManHours.Models.BadgeViewModels;
+using Aiursoft.Manhours.Services;
 
 namespace Aiursoft.Manhours.Controllers;
 
@@ -14,9 +16,9 @@ public class BadgeController(
     ILogger<BadgeController> logger,
     WorkspaceManager workspaceManager,
     CacheService cacheService)
-    : ControllerBase
+    : Controller
 {
-    private static readonly string[] ValidExtensions = ["git", "svg", "json"];
+    private static readonly string[] ValidExtensions = ["git", "svg", "json", "html"];
     private static readonly ConcurrentDictionary<string, SemaphoreSlim> Lockers = new();
     private readonly string _workspaceFolder = Path.Combine(configuration["Storage:Path"]!, "Repos");
 
@@ -57,8 +59,8 @@ public class BadgeController(
             repo[..(repo.Length - extension.Length - 1)].ToLower().Trim();
 
         logger.LogInformation("Requesting repo: {Repo}", repoWithoutExtension);
-        var hours = await cacheService.RunWithCache(
-            $"git-{repoWithoutExtension}",
+        var stats = await cacheService.RunWithCache(
+            $"git-stats-{repoWithoutExtension}",
             async () =>
             {
                 var locker = Lockers.GetOrAdd(repoWithoutExtension, _ => new SemaphoreSlim(1, 1));
@@ -82,8 +84,9 @@ public class BadgeController(
                     locker.Release();
                 }
             },
-            cachedMinutes: manHours => TimeSpan.FromMinutes((int)manHours)); // For 1 manhour, cache 1 minute.
+            cachedMinutes: s => TimeSpan.FromMinutes((int)s.TotalWorkTime.TotalHours)); // For 1 manhour, cache 1 minute.
 
+        var hours = stats.TotalWorkTime.TotalHours;
         var badge = new Badge
         {
             Label = "man-hours",
@@ -96,7 +99,8 @@ public class BadgeController(
                 hours < 10 ? "e05d44" :
                 hours < 30 ? "fe7d37" :
                 hours < 90 ? "dfb317" :
-                "4c1"
+                "4c1",
+            Link = $"{Request.Scheme}://{Request.Host}/r/{repoWithoutExtension}.html"
         };
 
         // Access-Control-Allow-Origin:
@@ -106,11 +110,15 @@ public class BadgeController(
         {
             "svg" or "git" => File(badge.Draw(), "image/svg+xml"),
             "json" => Ok(badge),
+            "html" => this.StackView(new RenderRepoViewModel(repoName: repoWithoutExtension)
+            {
+                Stats =  stats
+            },"Render"),
             _ => NotFound()
         };
     }
 
-    private async Task<double> GetWorkHoursFromGitPath(
+    private async Task<RepoStats> GetWorkHoursFromGitPath(
         string repoWithoutExtension,
         string workPath,
         bool autoCleanIfError = true)
@@ -128,8 +136,7 @@ public class BadgeController(
             var commits = await workspaceManager.GetCommits(workPath);
 
             logger.LogInformation("Calculating work time for repo: {Repo} on {Path}", repoWithoutExtension, workPath);
-            var workTime = WorkTimeService.CalculateWorkTime(commits);
-            return workTime.TotalHours;
+            return WorkTimeService.CalculateWorkTime(commits);
         }
         catch (Exception e)
         {

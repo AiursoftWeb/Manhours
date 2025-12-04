@@ -1,0 +1,55 @@
+@model Aiursoft.ManHours.Models.BadgeViewModels.RenderRepoViewModel
+@using System.Security.Cryptography
+@using System.Text
+@functions {
+    public static string GetMd5Hash(string input)
+    {
+        using var md5 = MD5.Create();
+        var inputBytes = Encoding.ASCII.GetBytes(input);
+        var hashBytes = md5.ComputeHash(inputBytes);
+        return Convert.ToHexString(hashBytes).ToLower();
+    }
+}
+@{
+    var totalHours = Model.Stats.TotalWorkTime.TotalHours;
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-header">
+            <h3 class="mb-0">@Localizer["Repository ManHours Statistics"]</h3>
+        </div>
+        <div class="card-body">
+            <div class="text-center mb-5">
+                <h1 class="display-1 fw-bold text-primary">@totalHours.ToString("N1")</h1>
+                <p class="lead text-muted">@Localizer["Total Man Hours"]</p>
+            </div>
+
+            <div class="list-group list-group-flush">
+                @foreach (var contributor in Model.Stats.Contributors)
+                {
+                    var percentage = totalHours > 0 ? (contributor.WorkTime.TotalHours / totalHours) * 100 : 0;
+                    var gravatarUrl = $"https://www.gravatar.com/avatar/{GetMd5Hash(contributor.Email)}?d=identicon";
+
+                    <div class="list-group-item py-3">
+                        <div class="row align-items-center">
+                            <div class="col-auto">
+                                <img src="@gravatarUrl" alt="@contributor.Name" class="rounded-circle shadow-sm" width="64" height="64">
+                            </div>
+                            <div class="col">
+                                <div class="d-flex w-100 justify-content-between align-items-center mb-2">
+                                    <h5 class="mb-0 fw-bold">@contributor.Name</h5>
+                                    <span class="badge bg-light text-dark border">@contributor.WorkTime.TotalHours.ToString("N1") Hours</span>
+                                </div>
+                                <p class="mb-2 text-muted small">@contributor.Email</p>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: @percentage%" aria-valuenow="@percentage" aria-valuemin="0" aria-valuemax="100" title="@percentage.ToString("N1")%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

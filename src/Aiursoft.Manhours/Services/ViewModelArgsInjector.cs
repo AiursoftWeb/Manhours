@@ -94,7 +94,7 @@ public class ViewModelArgsInjector(
         toInject.FooterMenu = new FooterMenuViewModel
         {
             // Manhours 应该翻译成工时
-            AppBrand = new Link { Text = localizer["Manhours"], Href = "https://gitlab.aiursoft.com/aiursoft/template" },
+            AppBrand = new Link { Text = localizer["Manhours"], Href = "https://gitlab.aiursoft.com/aiursoft/manhours" },
             Links =
             [
                 new Link { Text = localizer["Home"], Href = "/" },

@@ -1,0 +1,141 @@
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
+
+<div class="container py-4">
+    <h1 class="h3 mb-3">@Localizer["Manhours"]</h1>
+
+    <div class="row">
+        <div class="col-12 col-lg-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">@Localizer["Badge Generator"]</h5>
+                    <small class="text-muted d-block">
+                        @Localizer["Enter the clone url of your git repository to generate a badge for your project."]
+                    </small>
+                </div>
+                <div class="card-body">
+                    <form method="post" id="manhours-form">
+                        <div class="mb-3">
+                            <label for="cloneUrl" class="form-label">
+                                <i class="fa-brands fa-git-alt"></i>
+                                @Localizer["HTTP Clone URL"]
+                            </label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="cloneUrl"
+                                   name="cloneUrl"
+                                   placeholder="https://gitlab.aiursoft.com/aiursoft/manhours.git" />
+                        </div>
+
+                        <div class="form-check mt-2">
+                            <input class="form-check-input"
+                                   type="checkbox"
+                                   id="directMode"
+                                   name="directMode" />
+                            <label class="form-check-label" for="directMode">
+                                @Localizer["Direct mode (Without proxy from img.shields.io)"]
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mt-3">@Localizer["Generate"]</button>
+
+                        <div class="mt-4 hidden" id="result">
+                            <label for="preview" class="form-label">@Localizer["Preview"]</label>
+                            <div class="mb-3" id="preview">
+                                <i class="fas fa-spinner fa-spin hidden" id="loading-icon"></i>
+                                <a id="preview-link" href="#" target="_blank">
+                                    <img alt="@Localizer["Man hours icon"]"
+                                         id="preview-img"
+                                         class="img-fluid"
+                                         src="https://img.shields.io/endpoint?url=https%3A%2F%2Fmanhours.aiursoft.com%2Fgitlab%2Fgitlab.aiursoft.com%2Faiursoft%2Fmanhours.json" />
+                                </a>
+                            </div>
+
+                            <label for="markdown" class="form-label mt-2">@Localizer["Markdown"]</label>
+                            <textarea id="markdown" class="form-control" rows="3" readonly></textarea>
+
+                            <label for="html" class="form-label mt-3">@Localizer["HTML"]</label>
+                            <textarea id="html" class="form-control" rows="3" readonly></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("manhours-form");
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const markdown = document.getElementById("markdown");
+                const html = document.getElementById("html");
+                const result = document.getElementById("result");
+                const previewImg = result.querySelector("#preview-img");
+
+                // Hide result while generating
+                result.classList.add("hidden");
+                previewImg.src = "";
+
+                // Read user input
+                const directMode = document.getElementById("directMode").checked;
+                let cloneUrl = document.getElementById("cloneUrl").value.trim();
+
+                if (!cloneUrl) {
+                    alert('@Localizer["Please input the clone url!"]');
+                    return;
+                }
+
+                // Normalize URL
+                if (cloneUrl.endsWith(".git")) {
+                    cloneUrl = cloneUrl.substring(0, cloneUrl.length - 4);
+                }
+                if (cloneUrl.startsWith("https://")) {
+                    cloneUrl = cloneUrl.substring(8);
+                }
+
+                let statsLink = "@(Context.Request.Scheme)://@(Context.Request.Host)/" + "r/" + cloneUrl;
+                if (directMode) {
+                    cloneUrl += ".svg";
+                    imgLink = "@(Context.Request.Scheme)://@(Context.Request.Host)/" + "r/" + cloneUrl;
+                    statsLink += ".html";
+                } else {
+                    statsLink += ".html";
+                    cloneUrl += ".json";
+                    cloneUrl = encodeURIComponent(cloneUrl);
+                    imgLink = "https://img.shields.io/endpoint?url=@(Context.Request.Scheme)%3A%2F%2F@(Context.Request.Host)%2F" + "r" + "%2F" + cloneUrl;
+                }
+
+                const markdownVal = `[![Man hours](${imgLink})](${statsLink})`;
+                const htmlVal = `<a href="${statsLink}" target="_blank"><img alt="Man hours" src="${imgLink}" /></a>`;
+                markdown.value = markdownVal;
+                html.value = htmlVal;
+
+                // Update preview link
+                const previewLink = document.getElementById("preview-link");
+                previewLink.href = statsLink;
+
+                // Handle preview
+                const loadingIcon = result.querySelector("#loading-icon");
+                loadingIcon.classList.remove("hidden");
+                previewImg.classList.add("hidden");
+                previewImg.src = imgLink;
+                previewImg.onload = function () {
+                    loadingIcon.classList.add("hidden");
+                    previewImg.classList.remove("hidden");
+                };
+
+                // Show result
+                result.classList.remove("hidden");
+            });
+        });
+    </script>
+}

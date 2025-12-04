@@ -1,47 +1,39 @@
-ARG CSPROJ_PATH="./src/Aiursoft.ManHours"
-ARG PROJ_NAME="Aiursoft.ManHours"
-ARG FRONT_END_PATH="${CSPROJ_PATH}/wwwroot"
+ARG CSPROJ_PATH="./src/Aiursoft.Manhours/"
+ARG PROJ_NAME="Aiursoft.Manhours"
 
 # ============================
-# Prepare node modules
-# ============================
+# Prepare NPM Environment
 FROM hub.aiursoft.com/node:21-alpine AS npm-env
-ARG FRONT_END_PATH
+ARG CSPROJ_PATH
 WORKDIR /src
+COPY . .
 
-# Restore
-COPY ${FRONT_END_PATH}/package*.json .
-RUN npm install --loglevel verbose --force
-
-# Build (no need to build. Static files project)
-# COPY ${FRONT_END_PATH}/ .
-# RUN npm run build --loglevel verbose
+# NPM Build at PGK_JSON_PATH
+RUN npm install --prefix "${CSPROJ_PATH}wwwroot" --loglevel verbose
 
 # ============================
-# Prepare .NET binaries
-# ============================
+# Prepare Building Environment
 FROM hub.aiursoft.com/aiursoft/internalimages/dotnet AS build-env
 ARG CSPROJ_PATH
 ARG PROJ_NAME
 WORKDIR /src
+COPY --from=npm-env /src .
 
 # Build
-COPY . .
-RUN dotnet publish ${CSPROJ_PATH}/${PROJ_NAME}.csproj --configuration Release --no-self-contained --runtime linux-x64 --output /app
+RUN dotnet publish ${CSPROJ_PATH}${PROJ_NAME}.csproj  --configuration Release --no-self-contained --runtime linux-x64 --output /app
+RUN cp -r ${CSPROJ_PATH}/wwwroot/* /app/wwwroot
 
 # ============================
-# Prepare runtime image
-# ============================
+# Prepare Runtime Environment
 FROM hub.aiursoft.com/aiursoft/internalimages/dotnet
 ARG PROJ_NAME
 WORKDIR /app
 COPY --from=build-env /app .
-COPY --from=npm-env /src ./wwwroot
 
 # Edit appsettings.json
-RUN sed -i 's/DataSource=app.db/DataSource=\/data\/app.db/g' appsettings.json && \
-    sed -i 's/\/tmp\/data/\/data/g' appsettings.json && \
-    mkdir -p /data
+RUN sed -i 's/DataSource=app.db/DataSource=\/data\/app.db/g' appsettings.json
+RUN sed -i 's/\/tmp\/data/\/data/g' appsettings.json
+RUN mkdir -p /data
 
 VOLUME /data
 EXPOSE 5000

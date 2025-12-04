@@ -1,6 +1,6 @@
-using Aiursoft.Template.Services.FileStorage;
+using Aiursoft.Manhours.Services.FileStorage;
 
-namespace Aiursoft.Template.Tests;
+namespace Aiursoft.ManHours.Tests;
 
 [TestClass]
 public class FileAccessSecurityTest

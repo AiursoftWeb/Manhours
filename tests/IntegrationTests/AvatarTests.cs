@@ -2,10 +2,11 @@ using System.Net;
 using System.Text.RegularExpressions;
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools;
-using Aiursoft.Template.Entities;
+using Aiursoft.Manhours;
+using Aiursoft.Manhours.Entities;
 using static Aiursoft.WebTools.Extends;
 
-namespace Aiursoft.Template.Tests.IntegrationTests;
+namespace Aiursoft.ManHours.Tests.IntegrationTests;
 
 // JB scanner bug. Not a warning.
 #pragma warning disable CS8602

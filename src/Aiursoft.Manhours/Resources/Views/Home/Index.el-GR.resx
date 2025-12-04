@@ -246,5 +246,11 @@
   <data name="HTML" xml:space="preserve">
     <value>HTML</value>
   </data>
+  <data name="Man hours" xml:space="preserve">
+    <value>Ώρες εργασίας</value>
+  </data>
+  <data name="Please input the clone url!" xml:space="preserve">
+    <value>Παρακαλώ εισάγετε το URL κλωνοποίησης!</value>
+  </data>
 
 </root>

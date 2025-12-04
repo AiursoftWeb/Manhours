@@ -246,5 +246,11 @@
   <data name="Markdown" xml:space="preserve">
     <value>Markdown</value>
   </data>
+  <data name="Man hours" xml:space="preserve">
+    <value>ชั่วโมงการทำงาน</value>
+  </data>
+  <data name="Please input the clone url!" xml:space="preserve">
+    <value>กรุณากรอก URL ของคลังข้อมูล!</value>
+  </data>
 
 </root>

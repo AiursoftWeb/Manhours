@@ -88,7 +88,7 @@
                 let cloneUrl = document.getElementById("cloneUrl").value.trim();
 
                 if (!cloneUrl) {
-                    alert(@Json.Serialize(Localizer["Please input the clone url!"].Value));
+                    alert(@Localizer["Please input the clone url!"]);
                     return;
                 }
 
@@ -110,8 +110,8 @@
                     imgLink = "https://img.shields.io/endpoint?url=@(Context.Request.Scheme)%3A%2F%2F@(Context.Request.Host)%2F" + "r" + "%2F" + cloneUrl;
                 }
 
-                const markdownVal = `![${@Json.Serialize(Localizer["Man hours"].Value)}](${imgLink})`;
-                const htmlVal = `<img alt="${@Json.Serialize(Localizer["Man hours"].Value)}" src="${imgLink}" />`;
+                const markdownVal = `![${@Localizer["Man hours"]}](${imgLink})`;
+                const htmlVal = `<img alt="${@Localizer["Man hours"]}" src="${imgLink}" />`;
                 markdown.value = markdownVal;
                 html.value = htmlVal;
 

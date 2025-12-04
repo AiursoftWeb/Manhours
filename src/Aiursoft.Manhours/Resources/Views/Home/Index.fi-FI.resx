@@ -246,5 +246,11 @@
   <data name="Enter the clone url of your git repository to generate a badge for your project." xml:space="preserve">
     <value>Syötä git-repositoriosi kloonausosoite, jotta voit luoda projektillesi kunniamerkin.</value>
   </data>
+  <data name="Man hours" xml:space="preserve">
+    <value>Työtunnit</value>
+  </data>
+  <data name="Please input the clone url!" xml:space="preserve">
+    <value>Syötä kloonaus-URL!</value>
+  </data>
 
 </root>

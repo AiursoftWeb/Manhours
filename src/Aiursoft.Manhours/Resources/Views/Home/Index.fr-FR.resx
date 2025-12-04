@@ -246,5 +246,11 @@
   <data name="Enter the clone url of your git repository to generate a badge for your project." xml:space="preserve">
     <value>Saisissez l&apos;URL de clonage de votre dépôt git pour générer un badge pour votre projet.</value>
   </data>
+  <data name="Man hours" xml:space="preserve">
+    <value>Heures-homme</value>
+  </data>
+  <data name="Please input the clone url!" xml:space="preserve">
+    <value>Veuillez saisir l&apos;URL de clonage !</value>
+  </data>
 
 </root>

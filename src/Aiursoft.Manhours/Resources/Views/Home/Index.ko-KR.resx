@@ -246,5 +246,11 @@
   <data name="Markdown" xml:space="preserve">
     <value>마크다운</value>
   </data>
+  <data name="Man hours" xml:space="preserve">
+    <value>인력 투입 시간</value>
+  </data>
+  <data name="Please input the clone url!" xml:space="preserve">
+    <value>클론 URL을 입력해 주세요!</value>
+  </data>
 
 </root>

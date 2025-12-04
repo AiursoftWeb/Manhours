@@ -246,5 +246,11 @@
   <data name="HTML" xml:space="preserve">
     <value>HTML</value>
   </data>
+  <data name="Please input the clone url!" xml:space="preserve">
+    <value>Por favor, insira a URL de clone!</value>
+  </data>
+  <data name="Man hours" xml:space="preserve">
+    <value>Horas de trabalho</value>
+  </data>
 
 </root>

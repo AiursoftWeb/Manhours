@@ -246,5 +246,11 @@
   <data name="HTML" xml:space="preserve">
     <value>HTML</value>
   </data>
+  <data name="Man hours" xml:space="preserve">
+    <value>工時</value>
+  </data>
+  <data name="Please input the clone url!" xml:space="preserve">
+    <value>請輸入克隆網址！</value>
+  </data>
 
 </root>

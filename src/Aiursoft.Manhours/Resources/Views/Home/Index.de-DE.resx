@@ -246,5 +246,11 @@
   <data name="Markdown" xml:space="preserve">
     <value>Markdown</value>
   </data>
+  <data name="Man hours" xml:space="preserve">
+    <value>Mannstunden</value>
+  </data>
+  <data name="Please input the clone url!" xml:space="preserve">
+    <value>Bitte geben Sie die Clone-URL ein!</value>
+  </data>
 
 </root>

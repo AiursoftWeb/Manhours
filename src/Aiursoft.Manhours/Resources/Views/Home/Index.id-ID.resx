@@ -246,5 +246,11 @@
   <data name="Direct mode (Without proxy from img.shields.io)" xml:space="preserve">
     <value>Mode langsung (Tanpa proxy dari img.shields.io)</value>
   </data>
+  <data name="Man hours" xml:space="preserve">
+    <value>Jam Kerja</value>
+  </data>
+  <data name="Please input the clone url!" xml:space="preserve">
+    <value>Silakan masukkan URL klon!</value>
+  </data>
 
 </root>

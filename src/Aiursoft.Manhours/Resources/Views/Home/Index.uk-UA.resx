@@ -246,5 +246,11 @@
   <data name="Direct mode (Without proxy from img.shields.io)" xml:space="preserve">
     <value>Прямий режим (без проксі через img.shields.io)</value>
   </data>
+  <data name="Man hours" xml:space="preserve">
+    <value>Людино-години</value>
+  </data>
+  <data name="Please input the clone url!" xml:space="preserve">
+    <value>Будь ласка, введіть URL для клонування!</value>
+  </data>
 
 </root>

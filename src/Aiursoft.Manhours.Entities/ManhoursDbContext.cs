@@ -6,9 +6,13 @@ namespace Aiursoft.Manhours.Entities;
 
 public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbContext<User>(options), ICanMigrate
 {
-    public virtual  Task MigrateAsync(CancellationToken cancellationToken) =>
+    public virtual Task MigrateAsync(CancellationToken cancellationToken) =>
         Database.MigrateAsync(cancellationToken);
 
-    public virtual  Task<bool> CanConnectAsync() =>
+    public virtual Task<bool> CanConnectAsync() =>
         Database.CanConnectAsync();
+
+    public DbSet<Repo> Repos => Set<Repo>();
+    public DbSet<Contributor> Contributors => Set<Contributor>();
+    public DbSet<RepoContribution> RepoContributions => Set<RepoContribution>();
 }

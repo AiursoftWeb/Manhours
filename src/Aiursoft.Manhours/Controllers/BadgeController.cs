@@ -16,7 +16,7 @@ public class BadgeController(
     IConfiguration configuration,
     ILogger<BadgeController> logger,
     WorkspaceManager workspaceManager,
-    CacheService cacheService)
+    RepoService repoService)
     : Controller
 {
     private static readonly Regex RepoNameRegex = new("^[a-zA-Z0-9-._/]+$", RegexOptions.Compiled);
@@ -68,14 +68,27 @@ public class BadgeController(
             repo[..(repo.Length - extension.Length - 1)].ToLower().Trim();
 
         logger.LogInformation("Requesting repo: {Repo}", repoWithoutExtension);
-        var stats = await cacheService.RunWithCache(
-            $"git-stats-{repoWithoutExtension}",
-            async () =>
+        var repoUrl = $"https://{repoWithoutExtension}.git";
+        RepoStats stats;
+
+        var cachedRepo = await repoService.GetCachedRepoAsync(repoUrl);
+        if (cachedRepo != null)
+        {
+            stats = repoService.ConvertToRepoStats(cachedRepo);
+        }
+        else
+        {
+            var locker = Lockers.GetOrAdd(repoWithoutExtension, _ => new SemaphoreSlim(1, 1));
+            logger.LogInformation("Waiting for locker for repo: {Repo}", repoWithoutExtension);
+            await locker.WaitAsync();
+            try
             {
-                var locker = Lockers.GetOrAdd(repoWithoutExtension, _ => new SemaphoreSlim(1, 1));
-                logger.LogInformation("Waiting for locker for repo: {Repo}", repoWithoutExtension);
-                await locker.WaitAsync();
-                try
+                cachedRepo = await repoService.GetCachedRepoAsync(repoUrl);
+                if (cachedRepo != null)
+                {
+                    stats = repoService.ConvertToRepoStats(cachedRepo);
+                }
+                else
                 {
                     var repoLocalPath = repoWithoutExtension.Replace('/', Path.DirectorySeparatorChar);
                     var workPath = Path.GetFullPath(Path.Combine(_workspaceFolder, repoLocalPath));
@@ -85,15 +98,16 @@ public class BadgeController(
                         Directory.CreateDirectory(workPath);
                     }
 
-                    return await GetWorkHoursFromGitPath(repoWithoutExtension, workPath);
+                    stats = await GetWorkHoursFromGitPath(repoWithoutExtension, workPath);
+                    await repoService.UpdateRepoStatsAsync(repoUrl, stats);
                 }
-                finally
-                {
-                    logger.LogInformation("Release locker for repo: {Repo}", repoWithoutExtension);
-                    locker.Release();
-                }
-            },
-            cachedMinutes: s => TimeSpan.FromMinutes((int)s.TotalWorkTime.TotalHours)); // For 1 manhour, cache 1 minute.
+            }
+            finally
+            {
+                logger.LogInformation("Release locker for repo: {Repo}", repoWithoutExtension);
+                locker.Release();
+            }
+        }
 
         var hours = stats.TotalWorkTime.TotalHours;
         var badge = new Badge

@@ -60,5 +60,8 @@
   <data name="Hours" xml:space="preserve">
     <value>시간</value>
   </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>프로필 상세 정보</value>
+  </data>
 
 </root>

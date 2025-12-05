@@ -60,5 +60,8 @@
   <data name="Hours" xml:space="preserve">
     <value>小时</value>
   </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>个人资料详情</value>
+  </data>
 
 </root>

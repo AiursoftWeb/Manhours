@@ -60,5 +60,8 @@
   <data name="Hours" xml:space="preserve">
     <value>Tunnit</value>
   </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Profiilin tiedot</value>
+  </data>
 
 </root>

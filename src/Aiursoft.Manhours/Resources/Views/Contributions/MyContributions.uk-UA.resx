@@ -60,5 +60,8 @@
   <data name="Hours" xml:space="preserve">
     <value>Години</value>
   </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Деталі профілю</value>
+  </data>
 
 </root>

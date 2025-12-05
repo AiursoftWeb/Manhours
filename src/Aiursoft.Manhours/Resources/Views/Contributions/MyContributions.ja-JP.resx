@@ -60,5 +60,8 @@
   <data name="Hours" xml:space="preserve">
     <value>時間</value>
   </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>プロフィール詳細</value>
+  </data>
 
 </root>

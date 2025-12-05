@@ -60,5 +60,8 @@
   <data name="Hours" xml:space="preserve">
     <value>Jam</value>
   </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Detail Profil</value>
+  </data>
 
 </root>

@@ -1,78 +1,129 @@
 @model Aiursoft.Manhours.Models.ContributionsViewModels.MyContributionsViewModel
-
 @{
     ViewData["Title"] = Localizer["My Contributions"];
 }
 
-<div class="container py-4">
+<div class="container-fluid p-0">
+
     <h1 class="h3 mb-3">@Localizer["My Contributions"]</h1>
 
-    <div class="row mb-4">
-        <div class="col-md-4">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h5 class="card-title">@Localizer["Total Work Hours"]</h5>
-                    <p class="card-text display-4">@Model.TotalWorkHours.ToString("F1")</p>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-xxl-4 d-flex">
+            <div class="card flex-fill">
+                <div class="card-body py-4">
+                    <div class="d-flex align-items-start">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-2">@Model.TotalWorkHours.ToString("F1")</h3>
+                            <p class="mb-2">@Localizer["Total Work Hours"]</p>
+                        </div>
+                        <div class="d-inline-block ms-3">
+                            <div class="stat">
+                                <i class="fas fa-clock align-middle text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h5 class="card-title">@Localizer["Total Commits"]</h5>
-                    <p class="card-text display-4">@Model.TotalCommits</p>
+        <div class="col-12 col-sm-6 col-xxl-4 d-flex">
+            <div class="card flex-fill">
+                <div class="card-body py-4">
+                    <div class="d-flex align-items-start">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-2">@Model.TotalCommits</h3>
+                            <p class="mb-2">@Localizer["Total Commits"]</p>
+                        </div>
+                        <div class="d-inline-block ms-3">
+                            <div class="stat">
+                                <i class="fas fa-code-branch align-middle text-success"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h5 class="card-title">@Localizer["Active Days"]</h5>
-                    <p class="card-text display-4">@Model.TotalActiveDays</p>
+        <div class="col-12 col-sm-6 col-xxl-4 d-flex">
+            <div class="card flex-fill">
+                <div class="card-body py-4">
+                    <div class="d-flex align-items-start">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-2">@Model.TotalActiveDays</h3>
+                            <p class="mb-2">@Localizer["Active Days"]</p>
+                        </div>
+                        <div class="d-inline-block ms-3">
+                            <div class="stat">
+                                <i class="fas fa-calendar-check align-middle text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="card">
-        <div class="card-header">
-            <h5 class="card-title mb-0">@Localizer["Contributed Repositories"]</h5>
-        </div>
-        <div class="card-body">
-            @if (Model.Contributions.Any())
-            {
-                <div class="table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>@Localizer["Repository"]</th>
-                                <th>@Localizer["Work Hours"]</th>
-                                <th>@Localizer["Commits"]</th>
-                                <th>@Localizer["Active Days"]</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var contribution in Model.Contributions)
-                            {
-                                <tr>
-                                    <td>
-                                        <a href="@contribution.Repo?.Url" target="_blank">
-                                            @contribution.Repo?.Name
-                                        </a>
-                                    </td>
-                                    <td>@contribution.TotalWorkHours.ToString("F1")</td>
-                                    <td>@contribution.CommitCount</td>
-                                    <td>@contribution.ActiveDays</td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
+    <div class="row">
+        <div class="col-12 d-flex">
+            <div class="card flex-fill">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">@Localizer["Contributed Repositories"]</h5>
                 </div>
-            }
-            else
-            {
-                <p class="text-muted">@Localizer["No contributions found yet. Start coding!"]</p>
-            }
+                @if (Model.Contributions.Any())
+                {
+                    <div class="table-responsive">
+                        <table class="table table-hover my-0">
+                            <thead>
+                                <tr>
+                                    <th>@Localizer["Repository"]</th>
+                                    <th class="d-none d-xl-table-cell">@Localizer["Work Hours"]</th>
+                                    <th class="d-none d-xl-table-cell">@Localizer["Commits"]</th>
+                                    <th>@Localizer["Active Days"]</th>
+                                    <th class="d-none d-md-table-cell text-end">@Localizer["Action"]</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var contribution in Model.Contributions)
+                                {
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0">
+                                                    <div class="bg-body-tertiary rounded-2">
+                                                        <i class="fa-brands fa-git-alt p-2 fs-4"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 ms-3">
+                                                    <strong>@contribution.Repo?.Name</strong>
+                                                    <div class="text-muted">
+                                                        @contribution.Repo?.Url
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="d-none d-xl-table-cell">
+                                            @contribution.TotalWorkHours.ToString("F1")
+                                        </td>
+                                        <td class="d-none d-xl-table-cell">
+                                            @contribution.CommitCount
+                                        </td>
+                                        <td>
+                                            <span class="badge bg-success">@contribution.ActiveDays @Localizer["Days"]</span>
+                                        </td>
+                                        <td class="d-none d-md-table-cell text-end">
+                                            <a href="@contribution.Repo?.Url" target="_blank" class="btn btn-light">@Localizer["View"]</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+                else
+                {
+                    <div class="card-body">
+                        <p class="text-muted">@Localizer["No contributions found yet. Start coding!"]</p>
+                    </div>
+                }
+            </div>
         </div>
     </div>
 </div>

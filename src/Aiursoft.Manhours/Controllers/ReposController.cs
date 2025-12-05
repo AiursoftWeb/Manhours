@@ -22,10 +22,13 @@ public class ReposController(
         CascadedLinksOrder = 1,
         LinkText = "Top Repos",
         LinkOrder = 3)]
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index([FromQuery] int page = 1)
     {
         var user = await userManager.GetUserAsync(User);
         var userEmail = user?.Email;
+
+        const int pageSize = 20;
+        page = Math.Max(1, page); // Ensure page is at least 1
 
         var repos = await dbContext.Repos
             .AsNoTracking()
@@ -33,7 +36,7 @@ public class ReposController(
             .ThenInclude(c => c.Contributor)
             .ToListAsync();
 
-        var repoModels = repos.Select(r =>
+        var allRepoModels = repos.Select(r =>
         {
             var topContribution = r.Contributions.MaxBy(c => c.TotalWorkHours);
             return new RepoDisplayModel
@@ -52,10 +55,16 @@ public class ReposController(
         .OrderByDescending(r => r.TotalWorkHours)
         .ToList();
 
+        var totalRepos = allRepoModels.Count;
+        var pagedRepos = allRepoModels
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToList();
+
         var myTopRepos = new List<RepoDisplayModel>();
         if (!string.IsNullOrEmpty(userEmail))
         {
-            myTopRepos = repoModels
+            myTopRepos = allRepoModels
                 .Where(r => r.ContributedByMe)
                 .Take(3)
                 .ToList();
@@ -63,8 +72,11 @@ public class ReposController(
 
         var model = new TopReposViewModel
         {
-            AllRepos = repoModels,
-            MyTopRepos = myTopRepos
+            AllRepos = pagedRepos,
+            MyTopRepos = myTopRepos,
+            CurrentPage = page,
+            PageSize = pageSize,
+            TotalRepos = totalRepos
         };
 
         return this.StackView(model);

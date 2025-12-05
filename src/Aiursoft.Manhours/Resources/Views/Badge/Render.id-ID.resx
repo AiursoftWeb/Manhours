@@ -57,5 +57,20 @@
   <data name="Average Hours" xml:space="preserve">
     <value>Rata-rata Jam</value>
   </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Sebelumnya</value>
+  </data>
+  <data name="contributors" xml:space="preserve">
+    <value>Kontributor</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Berikutnya</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Menampilkan</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>dari</value>
+  </data>
 
 </root>

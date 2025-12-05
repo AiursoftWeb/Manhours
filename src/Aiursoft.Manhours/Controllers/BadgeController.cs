@@ -18,7 +18,7 @@ public class BadgeController(
     private static readonly string[] ValidExtensions = ["git", "svg", "json", "html"];
 
     [Route("r/{**repo}")]
-    public async Task<IActionResult> RenderRepo([FromRoute] string repo)
+    public async Task<IActionResult> RenderRepo([FromRoute] string repo, [FromQuery] int page = 1)
     {
         var extension = repo.Split('.').LastOrDefault();
         if (string.IsNullOrWhiteSpace(extension) || !ValidExtensions.Contains(extension.ToLower()))
@@ -95,11 +95,29 @@ public class BadgeController(
         else if (lowerExtension == "html")
         {
             var user = await userManager.GetUserAsync(User);
-            stats.Contributors = stats.Contributors.OrderByDescending(c => c.WorkTime).ToList();
+
+            // Sort all contributors
+            var allContributors = stats.Contributors.OrderByDescending(c => c.WorkTime).ToList();
+            var totalContributors = allContributors.Count;
+
+            // Pagination
+            const int pageSize = 50;
+            page = Math.Max(1, page);
+            var pagedContributors = allContributors
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            // Update stats with paged contributors
+            stats.Contributors = pagedContributors;
+
             return this.StackView(new RenderRepoViewModel(repoWithoutExtension)
             {
                 Stats = stats,
-                CurrentUserEmail = user?.Email
+                CurrentUserEmail = user?.Email,
+                CurrentPage = page,
+                PageSize = pageSize,
+                TotalContributors = totalContributors
             }, "Render");
         }
         else

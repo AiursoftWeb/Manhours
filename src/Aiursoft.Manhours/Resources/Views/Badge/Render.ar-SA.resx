@@ -57,5 +57,20 @@
   <data name="Details" xml:space="preserve">
     <value>التفاصيل</value>
   </data>
+  <data name="of" xml:space="preserve">
+    <value>من</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>التالي</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="contributors" xml:space="preserve">
+    <value>المساهمون</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>السابق</value>
+  </data>
 
 </root>

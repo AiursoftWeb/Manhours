@@ -57,5 +57,20 @@
   <data name="Repository Stats" xml:space="preserve">
     <value>Statistici Depozit</value>
   </data>
+  <data name="Next" xml:space="preserve">
+    <value>Următorul</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>din</value>
+  </data>
+  <data name="contributors" xml:space="preserve">
+    <value>contribuitori</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Se afișează</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Anterior</value>
+  </data>
 
 </root>

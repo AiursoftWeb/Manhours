@@ -57,5 +57,20 @@
   <data name="Repository Stats" xml:space="preserve">
     <value>สถิติของที่เก็บ</value>
   </data>
+  <data name="Showing" xml:space="preserve">
+    <value>กำลังแสดง</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>ของ</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>ถัดไป</value>
+  </data>
+  <data name="contributors" xml:space="preserve">
+    <value>ผู้มีส่วนร่วม</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>ก่อนหน้า</value>
+  </data>
 
 </root>

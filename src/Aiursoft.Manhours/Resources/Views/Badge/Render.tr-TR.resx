@@ -57,5 +57,20 @@
   <data name="Average Hours" xml:space="preserve">
     <value>Ortalama Saatler</value>
   </data>
+  <data name="of" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Gösteriliyor</value>
+  </data>
+  <data name="contributors" xml:space="preserve">
+    <value>Katkıda Bulunanlar</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Sonraki</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Önceki</value>
+  </data>
 
 </root>

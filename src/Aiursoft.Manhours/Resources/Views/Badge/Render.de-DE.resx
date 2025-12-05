@@ -57,5 +57,20 @@
   <data name="Total Hours" xml:space="preserve">
     <value>Gesamtstunden</value>
   </data>
+  <data name="of" xml:space="preserve">
+    <value>von</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Anzeigen</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Zurück</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Weiter</value>
+  </data>
+  <data name="contributors" xml:space="preserve">
+    <value>Mitwirkende</value>
+  </data>
 
 </root>

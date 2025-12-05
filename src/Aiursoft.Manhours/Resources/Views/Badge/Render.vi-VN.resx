@@ -57,5 +57,20 @@
   <data name="Repository Stats" xml:space="preserve">
     <value>Thống kê Kho lưu trữ</value>
   </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Trước</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>trong số</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Tiếp theo</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Đang hiển thị</value>
+  </data>
+  <data name="contributors" xml:space="preserve">
+    <value>Người đóng góp</value>
+  </data>
 
 </root>

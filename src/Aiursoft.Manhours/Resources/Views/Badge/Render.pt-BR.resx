@@ -57,5 +57,20 @@
   <data name="My Stats" xml:space="preserve">
     <value>Minhas Estatísticas</value>
   </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Anterior</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Próxima</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Exibindo</value>
+  </data>
+  <data name="contributors" xml:space="preserve">
+    <value>Colaboradores</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>de</value>
+  </data>
 
 </root>

@@ -57,5 +57,20 @@
   <data name="Std Dev" xml:space="preserve">
     <value>Odchylenie standardowe</value>
   </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Wyświetlanie</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>z</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Następna</value>
+  </data>
+  <data name="contributors" xml:space="preserve">
+    <value>Współtwórcy</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Poprzednia</value>
+  </data>
 
 </root>

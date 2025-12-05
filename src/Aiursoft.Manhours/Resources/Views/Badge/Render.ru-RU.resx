@@ -57,5 +57,20 @@
   <data name="Average Hours" xml:space="preserve">
     <value>Среднее количество часов</value>
   </data>
+  <data name="contributors" xml:space="preserve">
+    <value>Участники</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Предыдущая</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>из</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Далее</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Показано</value>
+  </data>
 
 </root>

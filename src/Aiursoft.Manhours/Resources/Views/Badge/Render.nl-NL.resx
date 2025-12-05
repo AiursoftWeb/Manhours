@@ -57,5 +57,20 @@
   <data name="Repository Stats" xml:space="preserve">
     <value>Repositorystatistieken</value>
   </data>
+  <data name="contributors" xml:space="preserve">
+    <value>bijdragers</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Toont</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>van</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Vorige</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Volgende</value>
+  </data>
 
 </root>

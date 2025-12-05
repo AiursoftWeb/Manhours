@@ -51,5 +51,20 @@
   <data name="Top #1" xml:space="preserve">
     <value>Najlepszy #1</value>
   </data>
+  <data name="Next" xml:space="preserve">
+    <value>Następna</value>
+  </data>
+  <data name="repositories" xml:space="preserve">
+    <value>repozytoria</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Wyświetlanie</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>z</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Poprzednia</value>
+  </data>
 
 </root>

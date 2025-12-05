@@ -1,10 +1,12 @@
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools.Switchable;
 using Aiursoft.Scanner;
+using Aiursoft.Manhours.BackgroundJobs;
 using Aiursoft.Manhours.Configuration;
 using Aiursoft.WebTools.Abstractions.Models;
 using Aiursoft.Manhours.InMemory;
 using Aiursoft.Manhours.MySql;
+using Aiursoft.Manhours.Services;
 using Aiursoft.Manhours.Services.Authentication;
 using Aiursoft.Manhours.Sqlite;
 using Aiursoft.UiStack.Layout;
@@ -25,7 +27,7 @@ public class Startup : IWebStartup
         // Relational database
         var (connectionString, dbType, allowCache) = configuration.GetDbSettings();
         services.AddSwitchableRelationalDatabase(
-            dbType: EntryExtends.IsInUnitTests() ? "InMemory": dbType,
+            dbType: EntryExtends.IsInUnitTests() ? "InMemory" : dbType,
             connectionString: connectionString,
             supportedDbs:
             [
@@ -38,7 +40,8 @@ public class Startup : IWebStartup
         services.AddTemplateAuth(configuration);
 
         // Services
-        services.AddMemoryCache();
+        services.AddSingleton<IHostedService, UpdateRepoStatsJob>();
+        services.AddScoped<RepoService>();
         services.AddHttpClient();
         services.AddAssemblyDependencies(typeof(Startup).Assembly);
         services.AddSingleton<NavigationState<Startup>>();

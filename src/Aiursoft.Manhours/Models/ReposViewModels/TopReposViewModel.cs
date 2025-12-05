@@ -10,6 +10,7 @@ public class RepoDisplayModel
     public int ContributorCount { get; set; }
     public string? TopContributorEmail { get; set; }
     public string? TopContributorName { get; set; }
+    public Guid? TopContributorId { get; set; }
     public bool ContributedByMe { get; set; }
 
     public string StatsUrl

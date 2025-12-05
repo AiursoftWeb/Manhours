@@ -48,5 +48,8 @@
   <data name="Total Hours" xml:space="preserve">
     <value>总工时</value>
   </data>
+  <data name="Top #1" xml:space="preserve">
+    <value>榜首</value>
+  </data>
 
 </root>

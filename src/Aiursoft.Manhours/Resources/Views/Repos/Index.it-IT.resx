@@ -48,5 +48,8 @@
   <data name="Total Hours" xml:space="preserve">
     <value>Ore Totali</value>
   </data>
+  <data name="Top #1" xml:space="preserve">
+    <value>Primo #1</value>
+  </data>
 
 </root>

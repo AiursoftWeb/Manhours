@@ -2,8 +2,6 @@ using Aiursoft.Manhours.Entities;
 using Aiursoft.Manhours.Models.ReposViewModels;
 using Aiursoft.Manhours.Services;
 using Aiursoft.UiStack.Navigation;
-using Aiursoft.WebTools.Attributes;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -46,6 +44,7 @@ public class ReposController(
                 ContributorCount = r.Contributions.Count(),
                 TopContributorEmail = topContribution?.Contributor?.Email,
                 TopContributorName = topContribution?.Contributor?.Name,
+                TopContributorId = topContribution?.Contributor?.Id,
                 ContributedByMe = !string.IsNullOrEmpty(userEmail) &&
                                   r.Contributions.Any(c => string.Equals(c.Contributor?.Email, userEmail, StringComparison.OrdinalIgnoreCase))
             };

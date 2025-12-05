@@ -1,15 +1,9 @@
-using Aiursoft.Canon;
-using Aiursoft.CSTools.Tools;
-using Aiursoft.GitRunner;
-using Aiursoft.GitRunner.Models;
 using Aiursoft.ManHours.Models;
-using Aiursoft.ManHours.Services;
 using Aiursoft.Manhours.Entities;
 using Aiursoft.ManHours.Models.BadgeViewModels;
 using Aiursoft.Manhours.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Concurrent;
 using System.Text.RegularExpressions;
 
 namespace Aiursoft.Manhours.Controllers;

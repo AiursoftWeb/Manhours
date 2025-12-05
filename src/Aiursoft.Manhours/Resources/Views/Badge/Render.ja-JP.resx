@@ -30,7 +30,7 @@
   <data name="Commits" xml:space="preserve">
     <value>コミット</value>
   </data>
-  <data name="Active days" xml:space="preserve">
+  <data name="Active days deleted" xml:space="preserve">
     <value>アクティブな作業日</value>
   </data>
   <data name="Repository Stats" xml:space="preserve">

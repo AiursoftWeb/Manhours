@@ -30,7 +30,7 @@
   <data name="Commits" xml:space="preserve">
     <value>提交</value>
   </data>
-  <data name="Active days" xml:space="preserve">
+  <data name="Active days deleted" xml:space="preserve">
     <value>活跃工作日</value>
   </data>
   <data name="Average Hours" xml:space="preserve">

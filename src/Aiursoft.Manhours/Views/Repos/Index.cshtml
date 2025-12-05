@@ -5,7 +5,7 @@
     public static string GetMd5Hash(string input)
     {
         using var md5 = MD5.Create();
-        var inputBytes = Encoding.ASCII.GetBytes(input ?? string.Empty);
+        var inputBytes = Encoding.ASCII.GetBytes(input);
         var hashBytes = md5.ComputeHash(inputBytes);
         return Convert.ToHexString(hashBytes).ToLower();
     }
@@ -66,12 +66,27 @@
                             @if (!string.IsNullOrEmpty(repo.TopContributorEmail))
                             {
                                 <div class="me-3 text-center">
-                                    <img src="@($"https://www.gravatar.com/avatar/{GetMd5Hash(repo.TopContributorEmail)}?d=identicon")"
-                                         alt="@repo.TopContributorName"
-                                         class="rounded-circle shadow-sm"
-                                         width="48" height="48"
-                                         data-bs-toggle="tooltip"
-                                         title="@Localizer["Top Contributor"]: @repo.TopContributorName">
+                                    @if (repo.TopContributorId.HasValue)
+                                    {
+                                        <a href="/contributions/id/@repo.TopContributorId">
+                                            <img src="@($"https://www.gravatar.com/avatar/{GetMd5Hash(repo.TopContributorEmail)}?d=identicon")"
+                                                 alt="@repo.TopContributorName"
+                                                 class="rounded-circle shadow-sm"
+                                                 width="48" height="48"
+                                                 data-bs-toggle="tooltip"
+                                                 title="@Localizer["Top Contributor"]: @repo.TopContributorName">
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <img src="@($"https://www.gravatar.com/avatar/{GetMd5Hash(repo.TopContributorEmail)}?d=identicon")"
+                                             alt="@repo.TopContributorName"
+                                             class="rounded-circle shadow-sm"
+                                             width="48" height="48"
+                                             data-bs-toggle="tooltip"
+                                             title="@Localizer["Top Contributor"]: @repo.TopContributorName">
+                                    }
+                                    <div class="small text-muted mt-1" style="font-size: 0.7rem;">@Localizer["Top #1"]</div>
                                 </div>
                             }
                             else

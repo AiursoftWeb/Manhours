@@ -48,5 +48,8 @@
   <data name="Total Hours" xml:space="preserve">
     <value>Toplam Saat</value>
   </data>
+  <data name="Top #1" xml:space="preserve">
+    <value>En İyi #1</value>
+  </data>
 
 </root>

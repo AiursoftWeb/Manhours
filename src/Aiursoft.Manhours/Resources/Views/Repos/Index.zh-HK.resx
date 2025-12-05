@@ -48,5 +48,8 @@
   <data name="Contributors" xml:space="preserve">
     <value>貢獻者</value>
   </data>
+  <data name="Top #1" xml:space="preserve">
+    <value>榜首</value>
+  </data>
 
 </root>

@@ -30,7 +30,7 @@
   <data name="Commits" xml:space="preserve">
     <value>Commit-uri</value>
   </data>
-  <data name="Active days" xml:space="preserve">
+  <data name="Active days deleted" xml:space="preserve">
     <value>Zile de lucru active</value>
   </data>
   <data name="Total Hours" xml:space="preserve">

@@ -156,6 +156,8 @@ public class RepoService(
                 }
             }
 
+            contributorStat.Id = contributor.Id;
+
             var contribution = repo.Contributions.FirstOrDefault(c => c.ContributorId == contributor.Id);
             if (contribution == null)
             {
@@ -183,6 +185,7 @@ public class RepoService(
             TotalWorkTime = TimeSpan.FromHours(repo.Contributions.Sum(c => c.TotalWorkHours)),
             Contributors = repo.Contributions.Select(c => new ContributorStat
             {
+                Id = c.Contributor?.Id,
                 Name = c.Contributor?.Name ?? "Unknown",
                 Email = c.Contributor?.Email ?? "Unknown",
                 WorkTime = TimeSpan.FromHours(c.TotalWorkHours),

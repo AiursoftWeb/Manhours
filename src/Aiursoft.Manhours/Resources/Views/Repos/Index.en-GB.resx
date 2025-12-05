@@ -48,5 +48,8 @@
   <data name="Total Hours" xml:space="preserve">
     <value>Total Hours</value>
   </data>
+  <data name="Top #1" xml:space="preserve">
+    <value>Top #1</value>
+  </data>
 
 </root>

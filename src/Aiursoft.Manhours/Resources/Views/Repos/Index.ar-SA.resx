@@ -48,5 +48,8 @@
   <data name="Contributors" xml:space="preserve">
     <value>المساهمون</value>
   </data>
+  <data name="Top #1" xml:space="preserve">
+    <value>الأول</value>
+  </data>
 
 </root>

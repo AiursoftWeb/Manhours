@@ -48,5 +48,8 @@
   <data name="Top Contributor" xml:space="preserve">
     <value>शीर्ष योगदानकर्ता</value>
   </data>
+  <data name="Top #1" xml:space="preserve">
+    <value>शीर्ष #1</value>
+  </data>
 
 </root>

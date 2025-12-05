@@ -48,5 +48,8 @@
   <data name="Contributors" xml:space="preserve">
     <value>Kontributor</value>
   </data>
+  <data name="Top #1" xml:space="preserve">
+    <value>Teratas #1</value>
+  </data>
 
 </root>

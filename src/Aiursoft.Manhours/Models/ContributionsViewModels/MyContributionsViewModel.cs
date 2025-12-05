@@ -7,10 +7,10 @@ public class MyContributionsViewModel : UiStackLayoutViewModel
 {
     public MyContributionsViewModel()
     {
-        PageTitle = "My Contributions";
+        PageTitle = "Contributions";
     }
 
-    public string Email { get; set; } = string.Empty;
+    public string ContributorName { get; set; } = "My";
     public double TotalWorkHours { get; set; }
     public int TotalCommits { get; set; }
     public int TotalActiveDays { get; set; }

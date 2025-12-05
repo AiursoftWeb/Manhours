@@ -48,5 +48,8 @@
   <data name="Contributors" xml:space="preserve">
     <value>Συνεισφέροντες</value>
   </data>
+  <data name="Top #1" xml:space="preserve">
+    <value>Κορυφαίος #1</value>
+  </data>
 
 </root>

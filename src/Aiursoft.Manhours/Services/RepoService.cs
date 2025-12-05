@@ -2,13 +2,91 @@ using Aiursoft.Manhours.Entities;
 using Aiursoft.ManHours.Models;
 using Aiursoft.Scanner.Abstractions;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Concurrent;
+using Aiursoft.GitRunner;
+using Aiursoft.GitRunner.Models;
+using Aiursoft.CSTools.Tools;
+using Aiursoft.ManHours.Services;
 
 namespace Aiursoft.Manhours.Services;
 
 public class RepoService(
     TemplateDbContext dbContext,
-    ILogger<RepoService> logger) : IScopedDependency
+    ILogger<RepoService> logger,
+    WorkspaceManager workspaceManager,
+    IConfiguration configuration) : IScopedDependency
 {
+    private static readonly ConcurrentDictionary<string, SemaphoreSlim> Lockers = new();
+    private readonly string _workspaceFolder = Path.Combine(configuration["Storage:Path"]!, "Repos");
+
+    public async Task<RepoStats> GetRepoStatsAsync(string repoName, string repoUrl)
+    {
+        var cachedRepo = await GetCachedRepoAsync(repoUrl);
+        if (cachedRepo != null)
+        {
+            return ConvertToRepoStats(cachedRepo);
+        }
+
+        var locker = Lockers.GetOrAdd(repoName, _ => new SemaphoreSlim(1, 1));
+        logger.LogInformation("Waiting for locker for repo: {Repo}", repoName);
+        await locker.WaitAsync();
+        try
+        {
+            cachedRepo = await GetCachedRepoAsync(repoUrl);
+            if (cachedRepo != null)
+            {
+                return ConvertToRepoStats(cachedRepo);
+            }
+
+            var repoLocalPath = repoName.Replace('/', Path.DirectorySeparatorChar);
+            var workPath = Path.GetFullPath(Path.Combine(_workspaceFolder, repoLocalPath));
+            if (!Directory.Exists(workPath))
+            {
+                logger.LogInformation("Create folder for repo: {Repo} on {Path}", repoName, workPath);
+                Directory.CreateDirectory(workPath);
+            }
+
+            var stats = await GetWorkHoursFromGitPath(repoName, repoUrl, workPath);
+            await UpdateRepoStatsAsync(repoUrl, stats);
+            return stats;
+        }
+        finally
+        {
+            logger.LogInformation("Release locker for repo: {Repo}", repoName);
+            locker.Release();
+        }
+    }
+
+    private async Task<RepoStats> GetWorkHoursFromGitPath(
+        string repoName,
+        string repoUrl,
+        string workPath,
+        bool autoCleanIfError = true)
+    {
+        try
+        {
+            logger.LogInformation("Resetting repo: {Repo} on {Path}", repoName, workPath);
+            await workspaceManager.ResetRepo(
+                workPath,
+                null,
+                repoUrl,
+                CloneMode.BareWithOnlyCommits);
+
+            logger.LogInformation("Getting commits for repo: {Repo} on {Path}", repoName, workPath);
+            var commits = await workspaceManager.GetCommits(workPath);
+
+            logger.LogInformation("Calculating work time for repo: {Repo} on {Path}", repoName, workPath);
+            return WorkTimeService.CalculateWorkTime(commits);
+        }
+        catch (Exception e)
+        {
+            if (!autoCleanIfError) throw;
+            logger.LogError(e, "Error on repo: {Repo} on {Path}", repoName, workPath);
+            logger.LogInformation("Cleaning repo: {Repo} on {Path}", repoName, workPath);
+            FolderDeleter.DeleteByForce(workPath, keepFolder: true);
+            return await GetWorkHoursFromGitPath(repoName, repoUrl, workPath, false);
+        }
+    }
     public async Task<Repo?> GetCachedRepoAsync(string repoUrl)
     {
         var repo = await dbContext.Repos

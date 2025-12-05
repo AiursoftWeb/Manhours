@@ -13,17 +13,12 @@ using System.Text.RegularExpressions;
 namespace Aiursoft.Manhours.Controllers;
 
 public class BadgeController(
-    IConfiguration configuration,
     ILogger<BadgeController> logger,
-    WorkspaceManager workspaceManager,
     RepoService repoService)
     : Controller
 {
     private static readonly Regex RepoNameRegex = new("^[a-zA-Z0-9-._/]+$", RegexOptions.Compiled);
-
     private static readonly string[] ValidExtensions = ["git", "svg", "json", "html"];
-    private static readonly ConcurrentDictionary<string, SemaphoreSlim> Lockers = new();
-    private readonly string _workspaceFolder = Path.Combine(configuration["Storage:Path"]!, "Repos");
 
     [Route("r/{**repo}")]
     public async Task<IActionResult> RenderRepo([FromRoute] string repo)
@@ -69,45 +64,7 @@ public class BadgeController(
 
         logger.LogInformation("Requesting repo: {Repo}", repoWithoutExtension);
         var repoUrl = $"https://{repoWithoutExtension}.git";
-        RepoStats stats;
-
-        var cachedRepo = await repoService.GetCachedRepoAsync(repoUrl);
-        if (cachedRepo != null)
-        {
-            stats = repoService.ConvertToRepoStats(cachedRepo);
-        }
-        else
-        {
-            var locker = Lockers.GetOrAdd(repoWithoutExtension, _ => new SemaphoreSlim(1, 1));
-            logger.LogInformation("Waiting for locker for repo: {Repo}", repoWithoutExtension);
-            await locker.WaitAsync();
-            try
-            {
-                cachedRepo = await repoService.GetCachedRepoAsync(repoUrl);
-                if (cachedRepo != null)
-                {
-                    stats = repoService.ConvertToRepoStats(cachedRepo);
-                }
-                else
-                {
-                    var repoLocalPath = repoWithoutExtension.Replace('/', Path.DirectorySeparatorChar);
-                    var workPath = Path.GetFullPath(Path.Combine(_workspaceFolder, repoLocalPath));
-                    if (!Directory.Exists(workPath))
-                    {
-                        logger.LogInformation("Create folder for repo: {Repo} on {Path}", repoWithoutExtension, workPath);
-                        Directory.CreateDirectory(workPath);
-                    }
-
-                    stats = await GetWorkHoursFromGitPath(repoWithoutExtension, workPath);
-                    await repoService.UpdateRepoStatsAsync(repoUrl, stats);
-                }
-            }
-            finally
-            {
-                logger.LogInformation("Release locker for repo: {Repo}", repoWithoutExtension);
-                locker.Release();
-            }
-        }
+        var stats = await repoService.GetRepoStatsAsync(repoWithoutExtension, repoUrl);
 
         var hours = stats.TotalWorkTime.TotalHours;
         var badge = new Badge
@@ -141,36 +98,7 @@ public class BadgeController(
         };
     }
 
-    private async Task<RepoStats> GetWorkHoursFromGitPath(
-        string repoWithoutExtension,
-        string workPath,
-        bool autoCleanIfError = true)
-    {
-        try
-        {
-            logger.LogInformation("Resetting repo: {Repo} on {Path}", repoWithoutExtension, workPath);
-            await workspaceManager.ResetRepo(
-                workPath,
-                null,
-                $"https://{repoWithoutExtension}.git",
-                CloneMode.BareWithOnlyCommits);
 
-            logger.LogInformation("Getting commits for repo: {Repo} on {Path}", repoWithoutExtension, workPath);
-            var commits = await workspaceManager.GetCommits(workPath);
-
-            logger.LogInformation("Calculating work time for repo: {Repo} on {Path}", repoWithoutExtension, workPath);
-            return WorkTimeService.CalculateWorkTime(commits);
-        }
-        catch (Exception e)
-        {
-            if (!autoCleanIfError) throw;
-            logger.LogError(e, "Error on repo: {Repo} on {Path}", repoWithoutExtension, workPath);
-            logger.LogInformation("Cleaning repo: {Repo} on {Path}", repoWithoutExtension, workPath);
-            FolderDeleter.DeleteByForce(workPath, keepFolder: true);
-            return await GetWorkHoursFromGitPath(repoWithoutExtension, workPath, false);
-
-        }
-    }
 }
 
 

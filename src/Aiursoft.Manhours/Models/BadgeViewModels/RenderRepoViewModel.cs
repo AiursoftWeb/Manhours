@@ -10,4 +10,5 @@ public class RenderRepoViewModel : UiStackLayoutViewModel
     }
 
     public required RepoStats Stats { get; init; }
+    public string? CurrentUserEmail { get; set; }
 }

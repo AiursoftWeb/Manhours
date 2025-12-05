@@ -12,48 +12,84 @@
 }
 @{
     var totalHours = Model.Stats.TotalWorkTime.TotalHours;
+    var currentUserStat = Model.Stats.Contributors.FirstOrDefault(c => string.Equals(c.Email, Model.CurrentUserEmail, StringComparison.OrdinalIgnoreCase));
+    var currentUserRank = Model.Stats.Contributors.IndexOf(currentUserStat) + 1;
 }
 
-<div class="container mt-5">
-    <div class="card shadow-sm">
-        <div class="card-header">
-            <h3 class="mb-0">@Model.PageTitle</h3>
-            <small class="text-muted">@Localizer["Repository ManHours Statistics"]</small>
-        </div>
-        <div class="card-body">
-            <div class="text-center mb-5">
-                <h1 class="display-1 fw-bold text-primary">@totalHours.ToString("N1")</h1>
-                <p class="lead text-muted">@Localizer["Total Man Hours"]</p>
+<div class="container-fluid p-0">
+
+    <h1 class="h3 mb-3">@Model.PageTitle</h1>
+
+    <div class="row">
+        @if (currentUserStat != null)
+        {
+            <div class="col-md-4 col-xl-3">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">@Localizer["My Stats"]</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="@($"https://www.gravatar.com/avatar/{GetMd5Hash(currentUserStat.Email)}?d=identicon")" alt="@currentUserStat.Name" class="img-fluid rounded-circle mb-2" width="128" height="128" />
+                        <h5 class="card-title mb-0">@currentUserStat.Name</h5>
+                        <div class="text-muted mb-2">@currentUserStat.Email</div>
+
+                        <div>
+                            <span class="badge bg-primary">#@currentUserRank</span>
+                        </div>
+                    </div>
+                    <hr class="my-0" />
+                    <div class="card-body">
+                        <h5 class="h6 card-title">@Localizer["Details"]</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-1"><span class="fas fa-clock fa-fw me-1"></span> @currentUserStat.WorkTime.TotalHours.ToString("N1") @Localizer["Hours"]</li>
+                            <li class="mb-1"><span class="fas fa-code-branch fa-fw me-1"></span> @currentUserStat.CommitCount @Localizer["Commits"]</li>
+                            <li class="mb-1"><span class="fas fa-calendar-check fa-fw me-1"></span> @currentUserStat.ContributionDays @Localizer["Active Days"]</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        }
 
-            <div class="list-group list-group-flush">
-                @foreach (var contributor in Model.Stats.Contributors)
-                {
-                    var percentage = totalHours > 0 ? (contributor.WorkTime.TotalHours / totalHours) * 100 : 0;
-                    var gravatarUrl = $"https://www.gravatar.com/avatar/{GetMd5Hash(contributor.Email)}?d=identicon";
+        <div class="@(currentUserStat != null ? "col-md-8 col-xl-9" : "col-12")">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">@Localizer["Contributors"]</h5>
+                </div>
+                <div class="card-body h-100">
+                    @foreach (var contributor in Model.Stats.Contributors)
+                    {
+                        var percentage = totalHours > 0 ? (contributor.WorkTime.TotalHours / totalHours) * 100 : 0;
+                        var gravatarUrl = $"https://www.gravatar.com/avatar/{GetMd5Hash(contributor.Email)}?d=identicon";
+                        var rank = Model.Stats.Contributors.IndexOf(contributor) + 1;
 
-                        <div class="list-group-item py-3">
-                            <div class="row align-items-center">
-                                <div class="col-auto">
-                                    <img src="@gravatarUrl" alt="@contributor.Name" class="rounded-circle shadow-sm" width="64" height="64">
-                                </div>
-                                <div class="col">
-                                    <div class="d-flex w-100 justify-content-between align-items-center mb-2">
-                                        <h5 class="mb-0 fw-bold">@contributor.Name</h5>
-                                        <div class="d-flex gap-2">
-                                            <span class="badge bg-light text-dark border">@contributor.WorkTime.TotalHours.ToString("N1") @Localizer["Hours"]</span>
-                                            <span class="badge bg-info text-white">@contributor.CommitCount @Localizer["Commits"]</span>
-                                            <span class="badge bg-success text-white">@contributor.ContributionDays @Localizer["Active days"]</span>
-                                        </div>
+                        <div class="d-flex align-items-start">
+                            <img src="@gravatarUrl" width="36" height="36" class="rounded-circle me-2" alt="@contributor.Name">
+                            <div class="flex-grow-1">
+                                <small class="float-end text-muted">#@rank</small>
+                                <strong>@contributor.Name</strong>
+                                <br />
+                                <small class="text-muted">@contributor.Email</small>
+
+                                <div class="row mt-2">
+                                    <div class="col-md-4">
+                                        <span class="text-muted">@Localizer["Hours"]:</span> @contributor.WorkTime.TotalHours.ToString("N1")
                                     </div>
-                                    <p class="mb-2 text-muted small">@contributor.Email</p>
-                                    <div class="progress" style="height: 10px;">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: @percentage%" aria-valuenow="@percentage" aria-valuemin="0" aria-valuemax="100" title="@percentage.ToString("N1")%"></div>
+                                    <div class="col-md-4">
+                                        <span class="text-muted">@Localizer["Commits"]:</span> @contributor.CommitCount
+                                    </div>
+                                    <div class="col-md-4">
+                                        <span class="text-muted">@Localizer["Active Days"]:</span> @contributor.ContributionDays
+                                    </div>
+                                </div>
+
+                                <div class="progress progress-sm mt-2">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: @percentage%" aria-valuenow="@percentage" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                }
+                        <hr />
+                    }
+                </div>
             </div>
         </div>
     </div>

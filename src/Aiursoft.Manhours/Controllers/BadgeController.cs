@@ -4,17 +4,20 @@ using Aiursoft.GitRunner;
 using Aiursoft.GitRunner.Models;
 using Aiursoft.ManHours.Models;
 using Aiursoft.ManHours.Services;
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Concurrent;
+using Aiursoft.Manhours.Entities;
 using Aiursoft.ManHours.Models.BadgeViewModels;
 using Aiursoft.Manhours.Services;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Concurrent;
 using System.Text.RegularExpressions;
 
 namespace Aiursoft.Manhours.Controllers;
 
 public class BadgeController(
     ILogger<BadgeController> logger,
-    RepoService repoService)
+    RepoService repoService,
+    UserManager<User> userManager)
     : Controller
 {
     private static readonly Regex RepoNameRegex = new("^[a-zA-Z0-9-._/]+$", RegexOptions.Compiled);
@@ -86,19 +89,28 @@ public class BadgeController(
         // Access-Control-Allow-Origin:
         Response.Headers.Append("Access-Control-Allow-Origin", "*");
 
-        return extension.ToLower() switch
+        var lowerExtension = extension.ToLower();
+        if (lowerExtension == "svg" || lowerExtension == "git")
         {
-            "svg" or "git" => File(badge.Draw(), "image/svg+xml"),
-            "json" => Ok(badge),
-            "html" => this.StackView(new RenderRepoViewModel(repoName: repoWithoutExtension)
+            return File(badge.Draw(), "image/svg+xml");
+        }
+        else if (lowerExtension == "json")
+        {
+            return Ok(badge);
+        }
+        else if (lowerExtension == "html")
+        {
+            var user = await userManager.GetUserAsync(User);
+            stats.Contributors = stats.Contributors.OrderByDescending(c => c.WorkTime).ToList();
+            return this.StackView(new RenderRepoViewModel(repoWithoutExtension)
             {
-                Stats = stats
-            }, "Render"),
-            _ => NotFound()
-        };
+                Stats = stats,
+                CurrentUserEmail = user?.Email
+            }, "Render");
+        }
+        else
+        {
+            return NotFound();
+        }
     }
-
-
 }
-
-

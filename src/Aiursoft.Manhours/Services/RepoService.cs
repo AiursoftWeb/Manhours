@@ -7,6 +7,7 @@ using Aiursoft.GitRunner;
 using Aiursoft.GitRunner.Models;
 using Aiursoft.CSTools.Tools;
 using Aiursoft.ManHours.Services;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace Aiursoft.Manhours.Services;
 
@@ -14,7 +15,8 @@ public class RepoService(
     TemplateDbContext dbContext,
     ILogger<RepoService> logger,
     WorkspaceManager workspaceManager,
-    IConfiguration configuration) : IScopedDependency
+    IConfiguration configuration,
+    IMemoryCache cache) : IScopedDependency
 {
     private static readonly ConcurrentDictionary<string, SemaphoreSlim> Lockers = new();
     private readonly string _workspaceFolder = Path.Combine(configuration["Storage:Path"]!, "Repos");
@@ -124,11 +126,27 @@ public class RepoService(
 
     public async Task<RepoStats> GetRepoStatsInRangeAsync(string repoName, string repoUrl, DateTime startDate, DateTime endDate)
     {
+        // Create a cache key based on repo URL and date range
+        var cacheKey = $"RepoStats_{repoUrl}_{startDate:yyyyMMdd}_{endDate:yyyyMMdd}";
+
+        // Try to get from cache first
+        if (cache.TryGetValue<RepoStats>(cacheKey, out var cachedStats))
+        {
+            logger.LogInformation("Using cached stats for repo: {Repo} from {Start} to {End}", repoName, startDate, endDate);
+            return cachedStats!;
+        }
+
         var locker = Lockers.GetOrAdd(repoName, _ => new SemaphoreSlim(1, 1));
         logger.LogInformation("Waiting for locker for repo: {Repo}", repoName);
         await locker.WaitAsync();
         try
         {
+            // Double-check cache after acquiring lock
+            if (cache.TryGetValue(cacheKey, out cachedStats))
+            {
+                return cachedStats!;
+            }
+
             var repoLocalPath = repoName.Replace('/', Path.DirectorySeparatorChar);
             var workPath = Path.GetFullPath(Path.Combine(_workspaceFolder, repoLocalPath));
             if (!Directory.Exists(workPath))
@@ -137,7 +155,17 @@ public class RepoService(
                 Directory.CreateDirectory(workPath);
             }
 
-            return await GetWorkHoursFromGitPathInRange(repoName, repoUrl, workPath, startDate, endDate);
+            var stats = await GetWorkHoursFromGitPathInRange(repoName, repoUrl, workPath, startDate, endDate);
+
+            // Cache the result for 1 hour
+            var cacheOptions = new MemoryCacheEntryOptions()
+                .SetAbsoluteExpiration(TimeSpan.FromHours(1))
+                .SetSize(1); // Assuming each entry has a size of 1
+
+            cache.Set(cacheKey, stats, cacheOptions);
+            logger.LogInformation("Cached stats for repo: {Repo} from {Start} to {End}", repoName, startDate, endDate);
+
+            return stats;
         }
         finally
         {

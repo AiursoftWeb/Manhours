@@ -59,7 +59,7 @@ public class ContributionsController(
             .Where(c => c.Contributor!.Email == user.Email)
             .ToListAsync();
 
-        var weeklyContributions = new List<WeeklyRepoContribution>();
+        List<WeeklyRepoContribution> weeklyContributions;
 
         // Process repos in parallel for better performance
         var tasks = contributions
@@ -69,30 +69,6 @@ public class ContributionsController(
                 try
                 {
                     var repo = contribution.Repo!;
-
-                    // First, try to use cached repo data if it's fresh enough
-                    var cachedRepo = await repoService.GetCachedRepoAsync(repo.Url);
-
-                    // If cache is fresh (less than 6 hours old), estimate weekly data from total
-                    // This is much faster than re-cloning the repo
-                    if (cachedRepo != null)
-                    {
-                        // Use a simple heuristic: assume activity is evenly distributed
-                        // This is an approximation but much faster
-                        var totalDays = Math.Max(1, contribution.ActiveDays);
-                        var weeklyRatio = Math.Min(1.0, 7.0 / totalDays);
-
-                        return new WeeklyRepoContribution
-                        {
-                            Repo = repo,
-                            TotalWorkHours = contribution.TotalWorkHours * weeklyRatio,
-                            CommitCount = (int)(contribution.CommitCount * weeklyRatio),
-                            ActiveDays = Math.Min(7, contribution.ActiveDays)
-                        };
-                    }
-
-                    // If no cache, we need to fetch actual data
-                    // This is slower but more accurate
                     var repoUrl = repo.Url;
                     var repoName = repoUrl.Replace("https://", "").Replace("http://", "");
                     if (repoName.EndsWith(".git"))
@@ -100,7 +76,10 @@ public class ContributionsController(
                         repoName = repoName[..^4];
                     }
 
+                    // Get stats for the last 7 days - this will use cache if available
                     var stats = await repoService.GetRepoStatsInRangeAsync(repoName, repoUrl, startDate, endDate);
+
+                    // Find the contributor's stats in the result
                     var contributorStat = stats.Contributors.FirstOrDefault(c =>
                         c.Email.Equals(user.Email, StringComparison.OrdinalIgnoreCase));
 
@@ -132,7 +111,7 @@ public class ContributionsController(
 
         var model = new MyWeeklyReportViewModel
         {
-            ContributorName = user.DisplayName ?? "My",
+            ContributorName = user.DisplayName,
             Email = user.Email ?? string.Empty,
             User = user,
             StartDate = startDate,

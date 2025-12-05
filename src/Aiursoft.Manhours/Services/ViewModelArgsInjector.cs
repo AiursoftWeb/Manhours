@@ -68,6 +68,7 @@ public class ViewModelArgsInjector(
         _ = localizer["My Contributions"];
         _ = localizer["Top Repos"];
         _ = localizer["Contributions"];
+        _ = localizer["My Weekly Report"];
     }
 
     public void InjectSimple(

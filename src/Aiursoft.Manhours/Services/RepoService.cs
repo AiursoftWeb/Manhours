@@ -87,6 +87,65 @@ public class RepoService(
             return await GetWorkHoursFromGitPath(repoName, repoUrl, workPath, false);
         }
     }
+
+    private async Task<RepoStats> GetWorkHoursFromGitPathInRange(
+        string repoName,
+        string repoUrl,
+        string workPath,
+        DateTime startDate,
+        DateTime endDate,
+        bool autoCleanIfError = true)
+    {
+        try
+        {
+            logger.LogInformation("Resetting repo: {Repo} on {Path}", repoName, workPath);
+            await workspaceManager.ResetRepo(
+                workPath,
+                null,
+                repoUrl,
+                CloneMode.BareWithOnlyCommits);
+
+            logger.LogInformation("Getting commits for repo: {Repo} on {Path}", repoName, workPath);
+            var commits = await workspaceManager.GetCommits(workPath);
+
+            logger.LogInformation("Calculating work time for repo: {Repo} on {Path} in range {Start} to {End}",
+                repoName, workPath, startDate, endDate);
+            return WorkTimeService.CalculateWorkTimeInRange(commits, startDate, endDate);
+        }
+        catch (Exception e)
+        {
+            if (!autoCleanIfError) throw;
+            logger.LogError(e, "Error on repo: {Repo} on {Path}", repoName, workPath);
+            logger.LogInformation("Cleaning repo: {Repo} on {Path}", repoName, workPath);
+            FolderDeleter.DeleteByForce(workPath, keepFolder: true);
+            return await GetWorkHoursFromGitPathInRange(repoName, repoUrl, workPath, startDate, endDate, false);
+        }
+    }
+
+    public async Task<RepoStats> GetRepoStatsInRangeAsync(string repoName, string repoUrl, DateTime startDate, DateTime endDate)
+    {
+        var locker = Lockers.GetOrAdd(repoName, _ => new SemaphoreSlim(1, 1));
+        logger.LogInformation("Waiting for locker for repo: {Repo}", repoName);
+        await locker.WaitAsync();
+        try
+        {
+            var repoLocalPath = repoName.Replace('/', Path.DirectorySeparatorChar);
+            var workPath = Path.GetFullPath(Path.Combine(_workspaceFolder, repoLocalPath));
+            if (!Directory.Exists(workPath))
+            {
+                logger.LogInformation("Create folder for repo: {Repo} on {Path}", repoName, workPath);
+                Directory.CreateDirectory(workPath);
+            }
+
+            return await GetWorkHoursFromGitPathInRange(repoName, repoUrl, workPath, startDate, endDate);
+        }
+        finally
+        {
+            logger.LogInformation("Release locker for repo: {Repo}", repoName);
+            locker.Release();
+        }
+    }
+
     public async Task<Repo?> GetCachedRepoAsync(string repoUrl)
     {
         var repo = await dbContext.Repos
@@ -195,3 +254,4 @@ public class RepoService(
         };
     }
 }
+

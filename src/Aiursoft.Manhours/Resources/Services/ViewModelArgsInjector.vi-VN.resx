@@ -150,5 +150,8 @@
   <data name="Contributions" xml:space="preserve">
     <value>Đóng góp</value>
   </data>
+  <data name="My Weekly Report" xml:space="preserve">
+    <value>Báo cáo tuần của tôi</value>
+  </data>
 
 </root>

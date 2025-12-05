@@ -147,5 +147,8 @@
   <data name="Contributions" xml:space="preserve">
     <value>Bidrag</value>
   </data>
+  <data name="My Weekly Report" xml:space="preserve">
+    <value>Min veckorapport</value>
+  </data>
 
 </root>

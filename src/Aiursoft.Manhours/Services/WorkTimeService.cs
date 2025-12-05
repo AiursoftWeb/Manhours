@@ -65,4 +65,12 @@ public class WorkTimeService : ITransientDependency
 
         return stats;
     }
+
+    public static RepoStats CalculateWorkTimeInRange(IEnumerable<Commit> commits, DateTime startDate, DateTime endDate)
+    {
+        // Filter commits within the date range
+        var filteredCommits = commits.Where(c => c.Time >= startDate && c.Time <= endDate);
+        return CalculateWorkTime(filteredCommits);
+    }
 }
+

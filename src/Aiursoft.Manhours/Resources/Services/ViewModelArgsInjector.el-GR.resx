@@ -147,5 +147,8 @@
   <data name="Contributions" xml:space="preserve">
     <value>Συνεισφορές</value>
   </data>
+  <data name="My Weekly Report" xml:space="preserve">
+    <value>Η Εβδομαδιαία Μου Αναφορά</value>
+  </data>
 
 </root>

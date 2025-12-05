@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="From" xml:space="preserve">
+    <value>Od</value>
+  </data>
+  <data name="Last 7 Days" xml:space="preserve">
+    <value>Ostatnie 7 dni</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Łączna liczba commitów</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>Do</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>Aktywne Dni</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Szczegóły profilu</value>
+  </data>
+  <data name="Report Period" xml:space="preserve">
+    <value>Okres raportowania</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Łączna liczba godzin pracy</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>Repozytorium</value>
+  </data>
+  <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
+    <value>Wkład w repozytoria (ostatnie 7 dni)</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Godziny pracy</value>
+  </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Zatwierdzenia</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Akcja</value>
+  </data>
+  <data name="All Contributions" xml:space="preserve">
+    <value>Wszystkie Wkłady</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>Wyświetl repozytorium</value>
+  </data>
+  <data name="No contributions found in the last 7 days." xml:space="preserve">
+    <value>Nie znaleziono żadnych wkładów w ciągu ostatnich 7 dni.</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Dni</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Godziny</value>
+  </data>
+
+</root>

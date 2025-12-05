@@ -147,5 +147,8 @@
   <data name="Contributions" xml:space="preserve">
     <value>Contribuições</value>
   </data>
+  <data name="My Weekly Report" xml:space="preserve">
+    <value>O Meu Relatório Semanal</value>
+  </data>
 
 </root>

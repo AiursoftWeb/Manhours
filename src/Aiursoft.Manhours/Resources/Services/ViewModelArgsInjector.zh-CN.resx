@@ -150,5 +150,8 @@
   <data name="Contributions" xml:space="preserve">
     <value>贡献</value>
   </data>
+  <data name="My Weekly Report" xml:space="preserve">
+    <value>我的周报</value>
+  </data>
 
 </root>

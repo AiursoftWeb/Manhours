@@ -1,0 +1,230 @@
+@model Aiursoft.Manhours.Models.ContributionsViewModels.MyWeeklyReportViewModel
+@using Aiursoft.Manhours.Services.FileStorage
+@using Aiursoft.WebTools
+@inject StorageService StorageService
+@{
+    var maxHours = Model.Contributions.Any() ? Model.Contributions.Max(c => c.TotalWorkHours) : 1;
+
+    string GetMd5Hash(string input)
+    {
+        using var md5 = System.Security.Cryptography.MD5.Create();
+        var inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+        var hashBytes = md5.ComputeHash(inputBytes);
+        return Convert.ToHexString(hashBytes).ToLower();
+    }
+}
+
+<div class="row">
+
+    <h1 class="h3 mb-3">@ViewData["Title"]</h1>
+
+    <div class="col-md-2">
+        <div class="card mb-3">
+            <div class="card-header">
+                <h5 class="card-title mb-0">@Localizer["Profile Details"]</h5>
+            </div>
+            <div class="card-body text-center">
+                @if (Model.User != null)
+                {
+                    <a href="@StorageService.RelativePathToInternetUrl(Model.User.AvatarRelativePath)" target="_blank"
+                       rel="noopener noreferrer">
+                        <img
+                            src="@StorageService.RelativePathToInternetUrl(Model.User.AvatarRelativePath)?w=256&square=true"
+                            alt="@Model.User.DisplayName" class="img-fluid rounded-circle mb-2" width="128"
+                            height="128"/>
+                    </a>
+                    <h5 class="card-title mb-0">@Model.User.DisplayName</h5>
+                    <div class="text-muted mb-2">@Model.User.Email</div>
+                }
+                else
+                {
+                    <img src="@($"https://www.gravatar.com/avatar/{GetMd5Hash(Model.Email)}?d=identicon")"
+                         alt="@Model.ContributorName" class="img-fluid rounded-circle mb-2" width="128" height="128"/>
+                    <h5 class="card-title mb-0">@Model.ContributorName</h5>
+                    <div class="text-muted mb-2">@Model.Email</div>
+                }
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">@Localizer["Report Period"]</h5>
+            </div>
+            <div class="card-body">
+                <div class="text-muted small">
+                    <i class="fas fa-calendar-alt me-1"></i>
+                    @Localizer["From"]: <label data-utc-time="@Model.StartDate.ToHtmlDateTime()"></label>
+                </div>
+                <div class="text-muted small mt-1">
+                    <i class="fas fa-calendar-check me-1"></i>
+                    @Localizer["To"]: <label data-utc-time="@Model.EndDate.ToHtmlDateTime()"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-10">
+
+        <div class="row">
+            <div class="col-12 col-sm-6 col-xxl-4 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-body py-4">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-grow-1">
+                                <h3 class="mb-2">@Model.TotalWorkHours.ToString("F1")</h3>
+                                <p class="mb-2">@Localizer["Total Work Hours"]</p>
+                                <div class="mb-0">
+                                    <span class="badge badge-primary-light">
+                                        @Localizer["Last 7 Days"]
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="d-inline-block ms-3">
+                                <div class="stat">
+                                    <i class="fas fa-clock align-middle text-primary"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xxl-4 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-body py-4">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-grow-1">
+                                <h3 class="mb-2">@Model.TotalCommits</h3>
+                                <p class="mb-2">@Localizer["Total Commits"]</p>
+                                <div class="mb-0">
+                                    <span class="badge badge-success-light">
+                                        @Localizer["Last 7 Days"]
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="d-inline-block ms-3">
+                                <div class="stat">
+                                    <i class="fas fa-code-branch align-middle text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xxl-4 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-body py-4">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-grow-1">
+                                <h3 class="mb-2">@Model.TotalActiveDays</h3>
+                                <p class="mb-2">@Localizer["Active Days"]</p>
+                                <div class="mb-0">
+                                    <span class="badge badge-warning-light">
+                                        @Localizer["Last 7 Days"]
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="d-inline-block ms-3">
+                                <div class="stat">
+                                    <i class="fas fa-calendar-check align-middle text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-12 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">@Localizer["Repository Contributions (Last 7 Days)"]</h5>
+                    </div>
+                    @if (Model.Contributions.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover my-0">
+                                <thead>
+                                <tr>
+                                    <th>@Localizer["Repository"]</th>
+                                    <th class="d-none d-xl-table-cell">@Localizer["Work Hours"]</th>
+                                    <th class="d-none d-xl-table-cell">@Localizer["Commits"]</th>
+                                    <th>@Localizer["Active Days"]</th>
+                                    <th class="d-none d-md-table-cell text-end">@Localizer["Action"]</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach (var contribution in Model.Contributions)
+                                {
+                                    var rawUrl = contribution.Repo?.Url ?? string.Empty;
+                                    var statsUrl = "#";
+                                    var percentage = maxHours > 0 ? (contribution.TotalWorkHours / maxHours) * 100 : 0;
+
+                                    if (!string.IsNullOrEmpty(rawUrl))
+                                    {
+                                        var cleanUrl = rawUrl.Replace("https://", "").Replace("http://", "");
+                                        if (cleanUrl.EndsWith(".git"))
+                                        {
+                                            cleanUrl = cleanUrl[..^4];
+                                        }
+
+                                        statsUrl = $"/r/{cleanUrl}.html";
+                                    }
+
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0">
+                                                    <div class="bg-body-tertiary rounded-2">
+                                                        <i class="fa-brands fa-git-alt p-2 fs-4"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 ms-3">
+                                                    <strong>@contribution.Repo?.Name</strong>
+                                                    <div class="text-muted">
+                                                        @contribution.Repo?.Url
+                                                    </div>
+                                                    <div class="progress progress-sm mt-2" style="height: 4px;"
+                                                         data-bs-toggle="tooltip"
+                                                         title="@contribution.TotalWorkHours.ToString("F1") @Localizer["Hours"]">
+                                                        <div class="progress-bar bg-primary" role="progressbar"
+                                                             style="width: @percentage%" aria-valuenow="@percentage"
+                                                             aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="d-none d-xl-table-cell">
+                                            @contribution.TotalWorkHours.ToString("F1")
+                                        </td>
+                                        <td class="d-none d-xl-table-cell">
+                                            @contribution.CommitCount
+                                        </td>
+                                        <td>
+                                            <span
+                                                class="badge bg-success">@contribution.ActiveDays @Localizer["Days"]</span>
+                                        </td>
+                                        <td class="d-none d-md-table-cell text-end">
+                                            <a href="@statsUrl"
+                                               class="btn btn-light">@Localizer["All Contributions"]</a>
+                                            <a href="@contribution.Repo?.Url" target="_blank"
+                                               class="btn btn-light">@Localizer["View Repo"]</a>
+                                        </td>
+                                    </tr>
+                                }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="card-body">
+                            <p class="text-muted">@Localizer["No contributions found in the last 7 days."]</p>
+                        </div>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

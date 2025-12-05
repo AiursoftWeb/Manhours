@@ -27,12 +27,35 @@
   <data name="Hours" xml:space="preserve">
     <value>Jam</value>
   </data>
-
   <data name="Commits" xml:space="preserve">
     <value>Commit</value>
   </data>
   <data name="Active days" xml:space="preserve">
     <value>Hari kerja aktif</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Total Jam</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Rincian</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>Hari Aktif</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Kontributor</value>
+  </data>
+  <data name="My Stats" xml:space="preserve">
+    <value>Statistik Saya</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>Statistik Repositori</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>Simpangan Baku</value>
+  </data>
+  <data name="Average Hours" xml:space="preserve">
+    <value>Rata-rata Jam</value>
   </data>
 
 </root>

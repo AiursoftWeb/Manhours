@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Total Work Hours" xml:space="preserve">
+    <value>Общее количество рабочих часов</value>
+  </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Мои вклады</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Часы работы</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Всего коммитов</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>Репозиторий</value>
+  </data>
+  <data name="Contributed Repositories" xml:space="preserve">
+    <value>Репозитории с вкладом</value>
+  </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Коммиты</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>Активные дни</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>дней</value>
+  </data>
+  <data name="All Contributions" xml:space="preserve">
+    <value>Все вклады</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Действие</value>
+  </data>
+  <data name="No contributions found yet. Start coding!" xml:space="preserve">
+    <value>Пока нет вкладов. Начните программировать!</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>Посмотреть репозиторий</value>
+  </data>
+
+</root>

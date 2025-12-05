@@ -138,5 +138,11 @@
   <data name="Badge Generator" xml:space="preserve">
     <value>बैज जनरेटर</value>
   </data>
+  <data name="Top Repos" xml:space="preserve">
+    <value>शीर्ष रिपॉजिटरीज़</value>
+  </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>मेरा योगदान</value>
+  </data>
 
 </root>

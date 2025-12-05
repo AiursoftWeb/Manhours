@@ -27,12 +27,35 @@
   <data name="Hours" xml:space="preserve">
     <value>Giờ</value>
   </data>
-
   <data name="Commits" xml:space="preserve">
     <value>Commit</value>
   </data>
   <data name="Active days" xml:space="preserve">
     <value>Ngày làm việc tích cực</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Người đóng góp</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Tổng Số Giờ</value>
+  </data>
+  <data name="Average Hours" xml:space="preserve">
+    <value>Số Giờ Trung Bình</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>Độ lệch chuẩn</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>Ngày Hoạt Động</value>
+  </data>
+  <data name="My Stats" xml:space="preserve">
+    <value>Thống kê của tôi</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>Thống kê Kho lưu trữ</value>
   </data>
 
 </root>

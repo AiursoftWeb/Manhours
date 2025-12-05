@@ -27,12 +27,35 @@
   <data name="Hours" xml:space="preserve">
     <value>Horas</value>
   </data>
-
   <data name="Commits" xml:space="preserve">
     <value>Commits</value>
   </data>
   <data name="Active days" xml:space="preserve">
     <value>Dias de trabalho ativos</value>
+  </data>
+  <data name="Average Hours" xml:space="preserve">
+    <value>Horas Médias</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Colaboradores</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>Desvio Padrão</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>Estatísticas do Repositório</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Horas Totais</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detalhes</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>Dias Ativos</value>
+  </data>
+  <data name="My Stats" xml:space="preserve">
+    <value>Minhas Estatísticas</value>
   </data>
 
 </root>

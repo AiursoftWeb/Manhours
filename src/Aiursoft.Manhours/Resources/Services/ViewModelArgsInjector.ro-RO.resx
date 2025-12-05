@@ -138,5 +138,11 @@
   <data name="Badge Generator" xml:space="preserve">
     <value>Generator de Insigne</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Contribuțiile mele</value>
+  </data>
+  <data name="Top Repos" xml:space="preserve">
+    <value>Cele mai populare depozite</value>
+  </data>
 
 </root>

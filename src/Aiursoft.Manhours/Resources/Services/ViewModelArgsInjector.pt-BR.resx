@@ -138,5 +138,11 @@
   <data name="Badge Generator" xml:space="preserve">
     <value>Gerador de Emblemas</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Minhas Contribuições</value>
+  </data>
+  <data name="Top Repos" xml:space="preserve">
+    <value>Repositórios Mais Populares</value>
+  </data>
 
 </root>

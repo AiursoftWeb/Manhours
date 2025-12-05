@@ -138,5 +138,11 @@
   <data name="Badge Generator" xml:space="preserve">
     <value>Δημιουργός Σημάτων</value>
   </data>
+  <data name="Top Repos" xml:space="preserve">
+    <value>Κορυφαία Repos</value>
+  </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Οι Συνεισφορές Μου</value>
+  </data>
 
 </root>

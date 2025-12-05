@@ -1,0 +1,128 @@
+@model Aiursoft.Manhours.Models.ReposViewModels.TopReposViewModel
+@using System.Security.Cryptography
+@using System.Text
+@functions {
+    public static string GetMd5Hash(string input)
+    {
+        using var md5 = MD5.Create();
+        var inputBytes = Encoding.ASCII.GetBytes(input ?? string.Empty);
+        var hashBytes = md5.ComputeHash(inputBytes);
+        return Convert.ToHexString(hashBytes).ToLower();
+    }
+}
+@{
+    ViewData["Title"] = Localizer["Top Repos"];
+    var maxHours = Model.AllRepos.Any() ? Model.AllRepos.Max(r => r.TotalWorkHours) : 1;
+}
+
+<div class="container-fluid p-0">
+
+    <h1 class="h3 mb-3">@Localizer["Top Repositories"]</h1>
+
+    <div class="row">
+        @if (Model.MyTopRepos.Any())
+        {
+            <div class="col-md-4 col-xl-3">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">@Localizer["My Top Participated"]</h5>
+                    </div>
+                    <div class="card-body">
+                        @foreach (var repo in Model.MyTopRepos)
+                        {
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="flex-grow-1">
+                                    <h5 class="mb-1">
+                                        <a href="@repo.StatsUrl" class="text-reset">@repo.Name</a>
+                                    </h5>
+                                    <div class="text-muted small">
+                                        <i class="fas fa-clock me-1"></i> @repo.TotalWorkHours.ToString("N1") @Localizer["Hours"]
+                                    </div>
+                                </div>
+                                <span class="badge bg-success ms-2">@Localizer["Active"]</span>
+                            </div>
+                            @if (repo != Model.MyTopRepos.Last())
+                            {
+                                <hr class="my-2" />
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="@(Model.MyTopRepos.Any() ? "col-md-8 col-xl-9" : "col-12")">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">@Localizer["All Repositories"]</h5>
+                </div>
+                <div class="card-body h-100">
+                    @foreach (var repo in Model.AllRepos)
+                    {
+                        var percentage = maxHours > 0 ? (repo.TotalWorkHours / maxHours) * 100 : 0;
+                        var rank = Model.AllRepos.IndexOf(repo) + 1;
+
+                        <div class="d-flex align-items-start">
+                            @if (!string.IsNullOrEmpty(repo.TopContributorEmail))
+                            {
+                                <div class="me-3 text-center">
+                                    <img src="@($"https://www.gravatar.com/avatar/{GetMd5Hash(repo.TopContributorEmail)}?d=identicon")"
+                                         alt="@repo.TopContributorName"
+                                         class="rounded-circle shadow-sm"
+                                         width="48" height="48"
+                                         data-bs-toggle="tooltip"
+                                         title="@Localizer["Top Contributor"]: @repo.TopContributorName">
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="me-3 text-center">
+                                    <div class="bg-body-tertiary rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                                        <i class="fas fa-git-alt text-muted fs-4"></i>
+                                    </div>
+                                </div>
+                            }
+
+                            <div class="flex-grow-1">
+                                <div class="float-end">
+                                    <small class="text-muted me-2">#@rank</small>
+                                    <a href="@repo.Url" target="_blank" class="btn btn-sm btn-light">
+                                        <i class="fas fa-code-branch"></i> @Localizer["Git"]
+                                    </a>
+                                </div>
+
+                                <h5 class="mb-1">
+                                    <a href="@repo.StatsUrl" class="text-decoration-none text-dark fw-bold">@repo.Name</a>
+                                    @if (repo.ContributedByMe)
+                                    {
+                                        <span class="badge bg-primary ms-2">
+                                            <i class="fas fa-check-circle me-1"></i> @Localizer["Contributed!"]
+                                        </span>
+                                    }
+                                </h5>
+                                <div class="text-muted small mb-2">@repo.Url</div>
+
+                                <div class="row mb-2">
+                                    <div class="col-auto">
+                                        <span class="text-muted">@Localizer["Total Hours"]:</span> <strong>@repo.TotalWorkHours.ToString("N1")</strong>
+                                    </div>
+                                    <div class="col-auto">
+                                        <span class="text-muted">@Localizer["Contributors"]:</span> <strong>@repo.ContributorCount</strong>
+                                    </div>
+                                </div>
+
+                                <div class="progress progress-sm">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: @percentage%" aria-valuenow="@percentage" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        @if (repo != Model.AllRepos.Last())
+                        {
+                            <hr />
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

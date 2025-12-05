@@ -138,5 +138,11 @@
   <data name="Badge Generator" xml:space="preserve">
     <value>Merkkigeneraattori</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Omat panokseni</value>
+  </data>
+  <data name="Top Repos" xml:space="preserve">
+    <value>Parhaat arkistot</value>
+  </data>
 
 </root>

@@ -138,5 +138,11 @@
   <data name="Badge Generator" xml:space="preserve">
     <value>Генератор бейджей</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Мои вклады</value>
+  </data>
+  <data name="Top Repos" xml:space="preserve">
+    <value>Лучшие репозитории</value>
+  </data>
 
 </root>

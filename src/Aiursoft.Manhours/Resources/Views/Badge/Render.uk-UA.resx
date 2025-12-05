@@ -27,12 +27,35 @@
   <data name="Hours" xml:space="preserve">
     <value>Годин</value>
   </data>
-
   <data name="Commits" xml:space="preserve">
     <value>Коміти</value>
   </data>
   <data name="Active days" xml:space="preserve">
     <value>Активні робочі дні</value>
+  </data>
+  <data name="My Stats" xml:space="preserve">
+    <value>Моя статистика</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Учасники</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>Активні дні</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>Статистика репозиторію</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Деталі</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>Середнє квадратичне відхилення</value>
+  </data>
+  <data name="Average Hours" xml:space="preserve">
+    <value>Середня кількість годин</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Загальна кількість годин</value>
   </data>
 
 </root>

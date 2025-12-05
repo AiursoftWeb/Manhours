@@ -27,12 +27,35 @@
   <data name="Hours" xml:space="preserve">
     <value>Ore</value>
   </data>
-
   <data name="Commits" xml:space="preserve">
     <value>Commit-uri</value>
   </data>
   <data name="Active days" xml:space="preserve">
     <value>Zile de lucru active</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Total Ore</value>
+  </data>
+  <data name="Average Hours" xml:space="preserve">
+    <value>Ore medii</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detalii</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Contribuitori</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>Zile Active</value>
+  </data>
+  <data name="My Stats" xml:space="preserve">
+    <value>Statisticile mele</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>Deviație Standard</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>Statistici Depozit</value>
   </data>
 
 </root>

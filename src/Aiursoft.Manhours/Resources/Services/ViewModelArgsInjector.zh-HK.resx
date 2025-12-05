@@ -141,5 +141,11 @@
   <data name="Badge Generator" xml:space="preserve">
     <value>徽章生成器</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>我的貢獻</value>
+  </data>
+  <data name="Top Repos" xml:space="preserve">
+    <value>熱門儲存庫</value>
+  </data>
 
 </root>

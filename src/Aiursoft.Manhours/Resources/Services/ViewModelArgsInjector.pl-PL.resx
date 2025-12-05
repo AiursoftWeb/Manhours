@@ -138,5 +138,11 @@
   <data name="Badge Generator" xml:space="preserve">
     <value>Generator odznak</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Moje Wkłady</value>
+  </data>
+  <data name="Top Repos" xml:space="preserve">
+    <value>Najlepsze repozytoria</value>
+  </data>
 
 </root>

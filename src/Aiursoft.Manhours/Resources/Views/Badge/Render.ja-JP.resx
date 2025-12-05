@@ -27,12 +27,35 @@
   <data name="Hours" xml:space="preserve">
     <value>時間</value>
   </data>
-
   <data name="Commits" xml:space="preserve">
     <value>コミット</value>
   </data>
   <data name="Active days" xml:space="preserve">
     <value>アクティブな作業日</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>リポジトリ統計</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>詳細</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>活動日数</value>
+  </data>
+  <data name="Average Hours" xml:space="preserve">
+    <value>平均時間</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>総時間</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>貢献者</value>
+  </data>
+  <data name="My Stats" xml:space="preserve">
+    <value>私の統計</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>標準偏差</value>
   </data>
 
 </root>

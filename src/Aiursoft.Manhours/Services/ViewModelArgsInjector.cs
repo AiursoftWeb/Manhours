@@ -66,6 +66,7 @@ public class ViewModelArgsInjector(
         _ = localizer["Error"];
         _ = localizer["Badge Generator"];
         _ = localizer["My Contributions"];
+        _ = localizer["Top Repos"];
     }
 
     public void InjectSimple(

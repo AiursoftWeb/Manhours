@@ -138,5 +138,11 @@
   <data name="Badge Generator" xml:space="preserve">
     <value>Gerador de Distintivos</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>As Minhas Contribuições</value>
+  </data>
+  <data name="Top Repos" xml:space="preserve">
+    <value>Repositórios Principais</value>
+  </data>
 
 </root>

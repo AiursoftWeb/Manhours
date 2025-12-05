@@ -33,5 +33,29 @@
   <data name="Active days" xml:space="preserve">
     <value>Active work days</value>
   </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Total Hours</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>Repository Statistics</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>Standard Deviation</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>Days Active</value>
+  </data>
+  <data name="My Stats" xml:space="preserve">
+    <value>My Statistics</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Contributors</value>
+  </data>
+  <data name="Average Hours" xml:space="preserve">
+    <value>Average Hours</value>
+  </data>
 
 </root>

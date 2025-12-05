@@ -141,5 +141,11 @@
   <data name="Badge Generator" xml:space="preserve">
     <value>배지 생성기</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>내 기여</value>
+  </data>
+  <data name="Top Repos" xml:space="preserve">
+    <value>인기 저장소</value>
+  </data>
 
 </root>

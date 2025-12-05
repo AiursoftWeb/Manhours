@@ -27,12 +27,35 @@
   <data name="Hours" xml:space="preserve">
     <value>Timer</value>
   </data>
-
   <data name="Commits" xml:space="preserve">
     <value>Commits</value>
   </data>
   <data name="Active days" xml:space="preserve">
     <value>Aktive arbejdsdage</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detaljer</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Bidragydere</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>Std.afv.</value>
+  </data>
+  <data name="My Stats" xml:space="preserve">
+    <value>Mine statistikker</value>
+  </data>
+  <data name="Average Hours" xml:space="preserve">
+    <value>Gennemsnitlige timer</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>Repository-statistik</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Samlede timer</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>Aktive dage</value>
   </data>
 
 </root>

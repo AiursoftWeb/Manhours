@@ -27,12 +27,35 @@
   <data name="Hours" xml:space="preserve">
     <value>ชั่วโมง</value>
   </data>
-
   <data name="Commits" xml:space="preserve">
     <value>คอมมิต</value>
   </data>
   <data name="Active days" xml:space="preserve">
     <value>วันทำงานที่ใช้งาน</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>รายละเอียด</value>
+  </data>
+  <data name="My Stats" xml:space="preserve">
+    <value>สถิติของฉัน</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>ผู้มีส่วนร่วม</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>วันที่มีการทำงาน</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>ชั่วโมงรวม</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>ส่วนเบี่ยงเบนมาตรฐาน</value>
+  </data>
+  <data name="Average Hours" xml:space="preserve">
+    <value>ชั่วโมงเฉลี่ย</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>สถิติของที่เก็บ</value>
   </data>
 
 </root>

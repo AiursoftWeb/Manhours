@@ -27,12 +27,35 @@
   <data name="Hours" xml:space="preserve">
     <value>小時</value>
   </data>
-
   <data name="Commits" xml:space="preserve">
     <value>提交</value>
   </data>
   <data name="Active days" xml:space="preserve">
     <value>活躍工作日</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>總時數</value>
+  </data>
+  <data name="My Stats" xml:space="preserve">
+    <value>我的統計資料</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>標準差</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>貢獻者</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>活躍天數</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>詳細資料</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>儲存庫統計</value>
+  </data>
+  <data name="Average Hours" xml:space="preserve">
+    <value>平均時數</value>
   </data>
 
 </root>

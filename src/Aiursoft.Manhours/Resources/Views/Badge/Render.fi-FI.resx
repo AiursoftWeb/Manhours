@@ -27,12 +27,35 @@
   <data name="Hours" xml:space="preserve">
     <value>Tuntia</value>
   </data>
-
   <data name="Commits" xml:space="preserve">
     <value>Commitit</value>
   </data>
   <data name="Active days" xml:space="preserve">
     <value>Aktiiviset työpäivät</value>
+  </data>
+  <data name="My Stats" xml:space="preserve">
+    <value>Omat tilastoni</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Yhteensä tunteja</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>Aktiiviset päivät</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Avustajat</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>Tietovaraston tilastot</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>Keskihajonta</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Yksityiskohdat</value>
+  </data>
+  <data name="Average Hours" xml:space="preserve">
+    <value>Keskimääräiset tunnit</value>
   </data>
 
 </root>

@@ -138,5 +138,11 @@
   <data name="Badge Generator" xml:space="preserve">
     <value>Mærkegenerator</value>
   </data>
+  <data name="Top Repos" xml:space="preserve">
+    <value>Top Repos</value>
+  </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Mine Bidrag</value>
+  </data>
 
 </root>

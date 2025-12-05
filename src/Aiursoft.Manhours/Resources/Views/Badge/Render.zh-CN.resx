@@ -33,5 +33,29 @@
   <data name="Active days" xml:space="preserve">
     <value>活跃工作日</value>
   </data>
+  <data name="Average Hours" xml:space="preserve">
+    <value>平均工时</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>详情</value>
+  </data>
+  <data name="My Stats" xml:space="preserve">
+    <value>我的统计</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>标准差</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>仓库统计</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>贡献者</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>总工时</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>活跃天数</value>
+  </data>
 
 </root>

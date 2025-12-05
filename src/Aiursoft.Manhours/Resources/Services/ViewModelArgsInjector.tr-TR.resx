@@ -138,5 +138,11 @@
   <data name="Badge Generator" xml:space="preserve">
     <value>Rozet Oluşturucu</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Katkılarım</value>
+  </data>
+  <data name="Top Repos" xml:space="preserve">
+    <value>En Popüler Repolar</value>
+  </data>
 
 </root>

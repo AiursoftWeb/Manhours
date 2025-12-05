@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="My Contributions" xml:space="preserve">
+    <value>Mine Bidrag</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>Repository</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Arbejdstimer</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>Aktive dage</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Samlede Commits</value>
+  </data>
+  <data name="Contributed Repositories" xml:space="preserve">
+    <value>Bidragne Repositories</value>
+  </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Indsendelser</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Samlede arbejdstimer</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Handling</value>
+  </data>
+  <data name="All Contributions" xml:space="preserve">
+    <value>Alle Bidrag</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Dage</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>Se Repo</value>
+  </data>
+  <data name="No contributions found yet. Start coding!" xml:space="preserve">
+    <value>Ingen bidrag fundet endnu. Begynd at kode!</value>
+  </data>
+
+</root>

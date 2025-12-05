@@ -138,5 +138,11 @@
   <data name="Badge Generator" xml:space="preserve">
     <value>مُوَلِّد الشارات</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>مساهماتي</value>
+  </data>
+  <data name="Top Repos" xml:space="preserve">
+    <value>أعلى المستودعات</value>
+  </data>
 
 </root>

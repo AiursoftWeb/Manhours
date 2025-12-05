@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Concurrent;
 using Aiursoft.ManHours.Models.BadgeViewModels;
 using Aiursoft.Manhours.Services;
+using System.Text.RegularExpressions;
 
 namespace Aiursoft.Manhours.Controllers;
 
@@ -18,6 +19,8 @@ public class BadgeController(
     CacheService cacheService)
     : Controller
 {
+    private static readonly Regex RepoNameRegex = new("^[a-zA-Z0-9-._/]+$", RegexOptions.Compiled);
+
     private static readonly string[] ValidExtensions = ["git", "svg", "json", "html"];
     private static readonly ConcurrentDictionary<string, SemaphoreSlim> Lockers = new();
     private readonly string _workspaceFolder = Path.Combine(configuration["Storage:Path"]!, "Repos");
@@ -53,6 +56,12 @@ public class BadgeController(
         {
             logger.LogInformation("Invalid repo (no path separator): {Repo}", repo);
             return NotFound();
+        }
+
+        if (!RepoNameRegex.IsMatch(repo))
+        {
+            logger.LogWarning("Invalid repo characters: {Repo}", repo);
+            return BadRequest("Invalid characters in repo name.");
         }
 
         var repoWithoutExtension =
@@ -112,8 +121,8 @@ public class BadgeController(
             "json" => Ok(badge),
             "html" => this.StackView(new RenderRepoViewModel(repoName: repoWithoutExtension)
             {
-                Stats =  stats
-            },"Render"),
+                Stats = stats
+            }, "Render"),
             _ => NotFound()
         };
     }

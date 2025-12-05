@@ -18,13 +18,13 @@ public class ContributionsController(
     [Authorize]
     [Route("mycontributions")]
     [RenderInNavBar(
-        NavGroupName = "Home",
-        NavGroupOrder = 1,
-        CascadedLinksGroupName = "Home",
-        CascadedLinksIcon = "home",
+        NavGroupName = "Settings",
+        NavGroupOrder = 9998,
+        CascadedLinksGroupName = "Personal",
+        CascadedLinksIcon = "user-circle",
         CascadedLinksOrder = 1,
         LinkText = "My Contributions",
-        LinkOrder = 2)]
+        LinkOrder = 0)]
     public async Task<IActionResult> MyContributions()
     {
         var user = await userManager.GetUserAsync(User);
@@ -36,13 +36,13 @@ public class ContributionsController(
     [Authorize]
     [Route("myweeklyreport")]
     [RenderInNavBar(
-        NavGroupName = "Home",
-        NavGroupOrder = 1,
-        CascadedLinksGroupName = "Home",
-        CascadedLinksIcon = "home",
+        NavGroupName = "Settings",
+        NavGroupOrder = 9998,
+        CascadedLinksGroupName = "Personal",
+        CascadedLinksIcon = "user-circle",
         CascadedLinksOrder = 1,
         LinkText = "My Weekly Report",
-        LinkOrder = 3)]
+        LinkOrder = 1)]
     public async Task<IActionResult> MyWeeklyReport()
     {
         var user = await userManager.GetUserAsync(User);

@@ -57,5 +57,8 @@
   <data name="View Repo" xml:space="preserve">
     <value>Посмотреть репозиторий</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Часы</value>
+  </data>
 
 </root>

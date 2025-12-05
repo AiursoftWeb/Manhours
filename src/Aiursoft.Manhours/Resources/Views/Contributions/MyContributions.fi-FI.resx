@@ -57,5 +57,8 @@
   <data name="No contributions found yet. Start coding!" xml:space="preserve">
     <value>Ei vielä löytynyt mitään panoksia. Aloita koodaaminen!</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Tunnit</value>
+  </data>
 
 </root>

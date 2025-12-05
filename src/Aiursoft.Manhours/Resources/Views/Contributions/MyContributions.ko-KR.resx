@@ -57,5 +57,8 @@
   <data name="All Contributions" xml:space="preserve">
     <value>전체 기여</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>시간</value>
+  </data>
 
 </root>

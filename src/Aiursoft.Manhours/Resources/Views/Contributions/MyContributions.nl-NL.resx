@@ -57,5 +57,8 @@
   <data name="No contributions found yet. Start coding!" xml:space="preserve">
     <value>Nog geen bijdragen gevonden. Begin met programmeren!</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Uren</value>
+  </data>
 
 </root>

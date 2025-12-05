@@ -57,5 +57,8 @@
   <data name="All Contributions" xml:space="preserve">
     <value>Tüm Katkılar</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Saat</value>
+  </data>
 
 </root>

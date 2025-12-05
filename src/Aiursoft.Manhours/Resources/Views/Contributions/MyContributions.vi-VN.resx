@@ -57,5 +57,8 @@
   <data name="All Contributions" xml:space="preserve">
     <value>Tất cả Đóng góp</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Giờ</value>
+  </data>
 
 </root>

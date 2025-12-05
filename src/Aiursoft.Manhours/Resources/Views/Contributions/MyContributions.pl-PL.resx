@@ -57,5 +57,8 @@
   <data name="All Contributions" xml:space="preserve">
     <value>Wszystkie Wkłady</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Godziny</value>
+  </data>
 
 </root>

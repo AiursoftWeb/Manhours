@@ -57,5 +57,8 @@
   <data name="No contributions found yet. Start coding!" xml:space="preserve">
     <value>Δεν βρέθηκαν ακόμη συνεισφορές. Ξεκινήστε να προγραμματίζετε!</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Ώρες</value>
+  </data>
 
 </root>

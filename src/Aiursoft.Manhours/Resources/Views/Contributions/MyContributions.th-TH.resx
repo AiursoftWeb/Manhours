@@ -57,5 +57,8 @@
   <data name="Commits" xml:space="preserve">
     <value>คอมมิต</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>ชั่วโมง</value>
+  </data>
 
 </root>

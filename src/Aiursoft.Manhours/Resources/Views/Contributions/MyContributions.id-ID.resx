@@ -57,5 +57,8 @@
   <data name="No contributions found yet. Start coding!" xml:space="preserve">
     <value>Belum ada kontribusi yang ditemukan. Mulai ngoding!</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Jam</value>
+  </data>
 
 </root>

@@ -54,9 +54,13 @@ public class ContributionsController(
             .OrderByDescending(c => c.TotalWorkHours)
             .ToListAsync();
 
+        var user = await userManager.FindByEmailAsync(email ?? string.Empty);
+
         var model = new MyContributionsViewModel
         {
             ContributorName = name,
+            Email = email ?? string.Empty,
+            User = user,
             TotalWorkHours = contributions.Sum(c => c.TotalWorkHours),
             TotalCommits = contributions.Sum(c => c.CommitCount),
             TotalActiveDays = contributions.Sum(c => c.ActiveDays),

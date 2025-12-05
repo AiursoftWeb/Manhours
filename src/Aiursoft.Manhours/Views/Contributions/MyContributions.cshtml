@@ -83,6 +83,17 @@
                             <tbody>
                                 @foreach (var contribution in Model.Contributions)
                                 {
+                                    var rawUrl = contribution.Repo?.Url ?? string.Empty;
+                                    var statsUrl = "#";
+                                    if (!string.IsNullOrEmpty(rawUrl))
+                                    {
+                                        var cleanUrl = rawUrl.Replace("https://", "").Replace("http://", "");
+                                        if (cleanUrl.EndsWith(".git"))
+                                        {
+                                            cleanUrl = cleanUrl[..^4];
+                                        }
+                                        statsUrl = $"/r/{cleanUrl}.html";
+                                    }
                                     <tr>
                                         <td>
                                             <div class="d-flex">
@@ -109,7 +120,8 @@
                                             <span class="badge bg-success">@contribution.ActiveDays @Localizer["Days"]</span>
                                         </td>
                                         <td class="d-none d-md-table-cell text-end">
-                                            <a href="@contribution.Repo?.Url" target="_blank" class="btn btn-light">@Localizer["View"]</a>
+                                            <a href="@statsUrl" target="_blank" class="btn btn-light">@Localizer["All Contributions"]</a>
+                                            <a href="@contribution.Repo?.Url" target="_blank" class="btn btn-light">@Localizer["View Repo"]</a>
                                         </td>
                                     </tr>
                                 }

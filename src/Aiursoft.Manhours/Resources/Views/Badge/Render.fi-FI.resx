@@ -57,5 +57,17 @@
   <data name="Average Hours" xml:space="preserve">
     <value>Keskimääräiset tunnit</value>
   </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Edellinen</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Seuraava</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Näytetään</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>of</value>
+  </data>
 
 </root>

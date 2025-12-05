@@ -57,5 +57,17 @@
   <data name="Repository Stats" xml:space="preserve">
     <value>रिपॉजिटरी आँकड़े</value>
   </data>
+  <data name="of" xml:space="preserve">
+    <value>का</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>अगला</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>पिछला</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>दिखा रहा है</value>
+  </data>
 
 </root>

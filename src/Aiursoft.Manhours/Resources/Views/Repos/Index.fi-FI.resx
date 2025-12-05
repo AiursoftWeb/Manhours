@@ -51,5 +51,20 @@
   <data name="Top #1" xml:space="preserve">
     <value>Paras #1</value>
   </data>
+  <data name="of" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Seuraava</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Edellinen</value>
+  </data>
+  <data name="repositories" xml:space="preserve">
+    <value>tietovarastot</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Näytetään</value>
+  </data>
 
 </root>

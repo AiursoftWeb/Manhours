@@ -51,5 +51,20 @@
   <data name="Top #1" xml:space="preserve">
     <value>Κορυφαίος #1</value>
   </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Προηγούμενο</value>
+  </data>
+  <data name="repositories" xml:space="preserve">
+    <value>αποθετήρια</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Εμφάνιση</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Επόμενο</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>από</value>
+  </data>
 
 </root>

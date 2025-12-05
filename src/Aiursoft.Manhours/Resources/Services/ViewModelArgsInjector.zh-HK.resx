@@ -147,5 +147,8 @@
   <data name="Top Repos" xml:space="preserve">
     <value>熱門儲存庫</value>
   </data>
+  <data name="Contributions" xml:space="preserve">
+    <value>貢獻</value>
+  </data>
 
 </root>

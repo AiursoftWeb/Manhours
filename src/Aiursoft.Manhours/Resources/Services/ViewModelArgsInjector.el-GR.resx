@@ -144,5 +144,8 @@
   <data name="My Contributions" xml:space="preserve">
     <value>Οι Συνεισφορές Μου</value>
   </data>
+  <data name="Contributions" xml:space="preserve">
+    <value>Συνεισφορές</value>
+  </data>
 
 </root>

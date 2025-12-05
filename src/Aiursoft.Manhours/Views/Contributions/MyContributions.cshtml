@@ -2,7 +2,6 @@
 @using Aiursoft.Manhours.Services.FileStorage
 @inject StorageService StorageService
 @{
-    ViewData["Title"] = Model.ContributorName == "My" ? Localizer["My Contributions"] : Localizer["{0}'s Contributions", Model.ContributorName];
     var maxHours = Model.Contributions.Any() ? Model.Contributions.Max(c => c.TotalWorkHours) : 1;
 
     string GetMd5Hash(string input)

@@ -147,5 +147,8 @@
   <data name="Top Repos" xml:space="preserve">
     <value>Kho lưu trữ hàng đầu</value>
   </data>
+  <data name="Contributions" xml:space="preserve">
+    <value>Đóng góp</value>
+  </data>
 
 </root>

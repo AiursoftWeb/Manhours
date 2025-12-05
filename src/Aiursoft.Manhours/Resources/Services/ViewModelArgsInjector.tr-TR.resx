@@ -144,5 +144,8 @@
   <data name="Top Repos" xml:space="preserve">
     <value>En Popüler Repolar</value>
   </data>
+  <data name="Contributions" xml:space="preserve">
+    <value>Katkılar</value>
+  </data>
 
 </root>

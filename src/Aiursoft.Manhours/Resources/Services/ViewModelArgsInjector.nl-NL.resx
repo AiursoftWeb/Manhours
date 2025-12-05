@@ -144,5 +144,8 @@
   <data name="My Contributions" xml:space="preserve">
     <value>Mijn Bijdragen</value>
   </data>
+  <data name="Contributions" xml:space="preserve">
+    <value>Bijdragen</value>
+  </data>
 
 </root>

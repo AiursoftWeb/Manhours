@@ -144,5 +144,8 @@
   <data name="Top Repos" xml:space="preserve">
     <value>Parhaat arkistot</value>
   </data>
+  <data name="Contributions" xml:space="preserve">
+    <value>Panokset</value>
+  </data>
 
 </root>

@@ -144,5 +144,8 @@
   <data name="Top Repos" xml:space="preserve">
     <value>Najlepsze repozytoria</value>
   </data>
+  <data name="Contributions" xml:space="preserve">
+    <value>Wkłady</value>
+  </data>
 
 </root>

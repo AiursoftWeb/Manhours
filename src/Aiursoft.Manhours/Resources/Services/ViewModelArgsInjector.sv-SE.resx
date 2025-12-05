@@ -144,5 +144,8 @@
   <data name="Top Repos" xml:space="preserve">
     <value>Toppförråd</value>
   </data>
+  <data name="Contributions" xml:space="preserve">
+    <value>Bidrag</value>
+  </data>
 
 </root>

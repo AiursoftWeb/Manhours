@@ -147,5 +147,8 @@
   <data name="Top Repos" xml:space="preserve">
     <value>인기 저장소</value>
   </data>
+  <data name="Contributions" xml:space="preserve">
+    <value>기여</value>
+  </data>
 
 </root>

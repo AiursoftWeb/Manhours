@@ -11,7 +11,6 @@
     }
 }
 @{
-    ViewData["Title"] = Localizer["Top Repos"];
     var maxHours = Model.AllRepos.Any() ? Model.AllRepos.Max(r => r.TotalWorkHours) : 1;
 }
 

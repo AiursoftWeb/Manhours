@@ -147,5 +147,8 @@
   <data name="Top Repos" xml:space="preserve">
     <value>トップリポジトリ</value>
   </data>
+  <data name="Contributions" xml:space="preserve">
+    <value>貢献</value>
+  </data>
 
 </root>

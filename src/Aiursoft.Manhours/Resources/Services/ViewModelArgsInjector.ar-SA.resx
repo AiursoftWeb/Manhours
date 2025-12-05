@@ -144,5 +144,8 @@
   <data name="Top Repos" xml:space="preserve">
     <value>أعلى المستودعات</value>
   </data>
+  <data name="Contributions" xml:space="preserve">
+    <value>المساهمات</value>
+  </data>
 
 </root>

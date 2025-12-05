@@ -144,5 +144,8 @@
   <data name="Top Repos" xml:space="preserve">
     <value>Лучшие репозитории</value>
   </data>
+  <data name="Contributions" xml:space="preserve">
+    <value>Вклады</value>
+  </data>
 
 </root>

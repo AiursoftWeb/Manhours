@@ -147,5 +147,8 @@
   <data name="Top Repos" xml:space="preserve">
     <value>Repositorios Principales</value>
   </data>
+  <data name="Contributions" xml:space="preserve">
+    <value>Aportaciones</value>
+  </data>
 
 </root>

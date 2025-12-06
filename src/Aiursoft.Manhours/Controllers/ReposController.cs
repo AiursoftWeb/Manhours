@@ -64,8 +64,12 @@ public class ReposController(
         var myTopRepos = new List<RepoDisplayModel>();
         if (!string.IsNullOrEmpty(userEmail))
         {
-            myTopRepos = allRepoModels
+            var myContributedRepos = allRepoModels
                 .Where(r => r.ContributedByMe)
+                .ToList();
+
+            // Deduplicate forked/mirrored repositories
+            myTopRepos = RepoDeduplicationService.Deduplicate(myContributedRepos)
                 .Take(20)
                 .ToList();
         }

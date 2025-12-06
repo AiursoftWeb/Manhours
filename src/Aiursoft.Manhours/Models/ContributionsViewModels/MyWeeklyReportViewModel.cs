@@ -1,6 +1,5 @@
 using Aiursoft.Manhours.Entities;
 using Aiursoft.UiStack.Layout;
-using System.Linq;
 
 namespace Aiursoft.Manhours.Models.ContributionsViewModels;
 

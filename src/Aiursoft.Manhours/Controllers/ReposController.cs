@@ -64,14 +64,23 @@ public class ReposController(
         var myTopRepos = new List<RepoDisplayModel>();
         if (!string.IsNullOrEmpty(userEmail))
         {
-            var myContributedRepos = allRepoModels
-                .Where(r => r.ContributedByMe)
-                .ToList();
+            // Get user's contributions directly from database
+            var myContributions = await dbContext.RepoContributions
+                .AsNoTracking()
+                .Include(c => c.Repo)
+                .Where(c => c.Contributor!.Email == userEmail)
+                .OrderByDescending(c => c.TotalWorkHours)
+                .ToListAsync();
 
-            // Deduplicate forked/mirrored repositories
-            myTopRepos = RepoDeduplicationService.Deduplicate(myContributedRepos)
+            // Deduplicate forked/mirrored repositories using existing method
+            var deduplicatedContributions = RepoDeduplicationService.Deduplicate(myContributions);
+
+            // Convert to RepoDisplayModel
+            myTopRepos = deduplicatedContributions
                 .Take(20)
-                .ToList();
+                .Select(c => allRepoModels.FirstOrDefault(r => r.Url == c.Repo!.Url))
+                .Where(r => r != null)
+                .ToList()!;
         }
 
         var model = new TopReposViewModel

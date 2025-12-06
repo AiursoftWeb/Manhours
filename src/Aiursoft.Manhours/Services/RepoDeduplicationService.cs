@@ -1,6 +1,5 @@
 using Aiursoft.Manhours.Entities;
 using Aiursoft.Manhours.Models.ContributionsViewModels;
-using Aiursoft.Manhours.Models.ReposViewModels;
 
 namespace Aiursoft.Manhours.Services;
 
@@ -117,45 +116,5 @@ public static class RepoDeduplicationService
         // Get the last part of the path (repo name)
         var parts = normalized.Split('/');
         return parts.Length > 0 ? parts[^1].ToLowerInvariant() : string.Empty;
-    }
-
-    /// <summary>
-    /// Deduplicates RepoDisplayModels by removing forked/mirrored repositories.
-    /// Keeps the one with more contributors when duplicates are found.
-    /// </summary>
-    /// <param name="repos">List of repo display models to deduplicate</param>
-    /// <returns>Deduplicated list of repo display models</returns>
-    public static List<RepoDisplayModel> Deduplicate(IEnumerable<RepoDisplayModel> repos)
-    {
-        var reposList = repos.ToList();
-        var result = new List<RepoDisplayModel>();
-
-        foreach (var repo in reposList.OrderByDescending(r => r.ContributorCount))
-        {
-            var repoName = GetRepoName(repo.Url);
-
-            // Check if we already have a repo with this name
-            var existingIndex = result.FindIndex(r => GetRepoName(r.Url) == repoName);
-
-            if (existingIndex >= 0)
-            {
-                var existing = result[existingIndex];
-
-                // Check if this is a potential duplicate (contributor count difference <= 2)
-                if (Math.Abs(repo.ContributorCount - existing.ContributorCount) > 2)
-                {
-                    // Different repos with same name, keep both
-                    result.Add(repo);
-                }
-                // Otherwise skip this duplicate (already have the better one)
-            }
-            else
-            {
-                // New repo, add it
-                result.Add(repo);
-            }
-        }
-
-        return result;
     }
 }

@@ -27,7 +27,7 @@ public class MyWeeklyReportViewModel : UiStackLayoutViewModel
         TotalWorkHours,
         TotalCommits / 2.0,
         TotalActiveDays * 0.8
-    }.Min());
+    }.Max());
 }
 
 public class WeeklyRepoContribution

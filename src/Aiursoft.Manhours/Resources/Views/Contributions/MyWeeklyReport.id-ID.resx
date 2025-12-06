@@ -81,5 +81,44 @@
   <data name="Diligence Score" xml:space="preserve">
     <value>Skor Kerajinan</value>
   </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Repositori tidak dilacak?</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>Beban kerja ringan minggu ini. Apa bos tidak memberikan tugas?</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Tambahkan repositori sekarang</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>Beban kerja yang baik. Sepertinya Anda bekerja keras untuk cita-cita dan tujuan Anda.</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>Pekerjaan Anda minggu ini baru saja dimulai. Bagaimana liburan Anda? Sudah siap untuk coding?</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>Beban kerja sedang. Sepertinya Anda berada dalam suasana kerja yang bagus.</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>Andalan. Sangat aktif. Beban kerja solid. Tidak perlu melakukan sebanyak itu.</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>Banyak sekali pekerjaan. Meningkatkan diri, tapi ingat untuk beristirahat.</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>Legendaris! Produktivitas Anda luar biasa tinggi.</value>
+  </data>
+  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
+    <value>Sangat lelah. Istirahat segera. Hampir mencapai batas atas tekanan kerja normal. Berhenti bekerja!</value>
+  </data>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>Tak terpahami. Istirahatlah, serius.</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>Anda adalah mesin coding! Dedikasi yang luar biasa.</value>
+  </data>
+  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996? Hampir bekerja tanpa henti. Akan mengurangi kreativitas. Melebihi batas tekanan normal. Berhenti bekerja!</value>
+  </data>
 
 </root>

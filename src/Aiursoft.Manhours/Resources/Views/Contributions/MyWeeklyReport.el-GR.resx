@@ -81,5 +81,44 @@
   <data name="Diligence Score" xml:space="preserve">
     <value>Βαθμός Επιμέλειας</value>
   </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Προσθήκη αποθετηρίου τώρα</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Αποθετήριο δεν παρακολουθείται;</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>Μέτριο φόρτο εργασίας. Φαίνεται ότι είστε σε εξαιρετικό εργασιακό περιβάλλον.</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>Αρκετή δουλειά. Βελτιώνεσαι, αλλά θυμήσου να ξεκουραστείς.</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>Καλό φόρτο εργασίας. Φαίνεται πως δουλεύεις σκληρά για τα ιδανικά και τους στόχους σου.</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>Ελαφριά φόρτωση εργασίας αυτή την εβδομάδα. Δεν σου ανέθεσε εργασίες ο προϊστάμενος;</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>Στήριγμα. Πολύ δραστήριος. Σταθερό φόρτο εργασίας. Δεν χρειάζεται να κάνεις τόσα πολλά.</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>Η δουλειά σου αυτή την εβδομάδα μόλις ξεκίνησε. Πώς ήταν οι διακοπές σου; Είσαι έτοιμος να προγραμματίσεις;</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>Είσαι μια μηχανή προγραμματισμού! Απίστευτη αφοσίωση.</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>Θρυλικό! Η παραγωγικότητά σου είναι εκτός των γραφημάτων.</value>
+  </data>
+  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996; Σχεδόν αδιάκοπη εργασία. Θα μειώσει τη δημιουργικότητα. Υπερβαίνει το φυσιολογικό όριο πίεσης. Σταματήστε να εργάζεστε!</value>
+  </data>
+  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
+    <value>Πολύ κουρασμένος. Ξεκουραστείτε αμέσως. Σχεδόν το ανώτατο όριο της φυσιολογικής πίεσης εργασίας. Σταματήστε να εργάζεστε!</value>
+  </data>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>Πέρα από κάθε κατανόηση. Κάνε ένα διάλειμμα, στα αλήθεια.</value>
+  </data>
 
 </root>

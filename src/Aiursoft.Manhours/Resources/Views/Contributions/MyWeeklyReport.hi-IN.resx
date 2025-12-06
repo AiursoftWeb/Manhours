@@ -81,5 +81,44 @@
   <data name="Diligence Score" xml:space="preserve">
     <value>परिश्रम स्कोर</value>
   </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>अभी रिपॉजिटरी जोड़ें</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>रिपॉजिटरी ट्रैक नहीं की गई?</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>मध्यम कार्यभार। लगता है आप एक बेहतरीन कार्य वातावरण में हैं।</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>मुख्य आधार। बहुत सक्रिय। ठोस कार्यभार। इतना करने की आवश्यकता नहीं है।</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>आपका इस सप्ताह का कार्य अभी शुरू हुआ है। आपकी छुट्टियाँ कैसी रहीं? क्या आप कोड करने के लिए तैयार हैं?</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>काफी काम है। खुद को सुधार रहे हैं, लेकिन आराम करना याद रखें।</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>इस सप्ताह का काम आसान है। क्या बॉस ने आपको कोई कार्य नहीं दिया?</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>अच्छा कार्यभार। लगता है आप अपने आदर्शों और लक्ष्यों के लिए कड़ी मेहनत कर रहे हैं।</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>आप एक कोडिंग मशीन हैं! अविश्वसनीय समर्पण।</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>अद्भुत! आपकी उत्पादकता चार्ट से बाहर है।</value>
+  </data>
+  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996? लगभग बिना रुके काम करना। रचनात्मकता कम कर देगा। सामान्य दबाव सीमा से अधिक। काम करना बंद करो!</value>
+  </data>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>समझ से परे। असली में, एक ब्रेक लो।</value>
+  </data>
+  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
+    <value>बहुत थक गए हैं। तुरंत आराम करें। सामान्य कार्य दबाव की लगभग ऊपरी सीमा है। काम करना बंद कर दें!</value>
+  </data>
 
 </root>

@@ -81,5 +81,44 @@
   <data name="Diligence Score" xml:space="preserve">
     <value>Бал старанності</value>
   </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Додати репозиторій зараз</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Репозиторій не відстежується?</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>Легке навантаження цього тижня. Бос не дав вам завдань?</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>Помірне навантаження. Схоже, ви працюєте у чудовій атмосфері.</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>Гарне навантаження. Схоже, ви наполегливо працюєте заради своїх ідеалів та цілей.</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>Ваша робота цього тижня щойно почалася. Як пройшла ваша відпустка? Ви готові кодити?</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>Досить багато роботи. Вдосконалюєш себе, але пам&apos;ятай про відпочинок.</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>Основа команди. Дуже активний. Надійне навантаження. Не потрібно робити так багато.</value>
+  </data>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>За межами розуміння. Зробіть перерву, серйозно.</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>Ти справжня кодувальна машина! Неймовірна відданість.</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>Легендарно! Ваша продуктивність зашкалює.</value>
+  </data>
+  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996? Практично безперервна робота. Знижує креативність. Перевищує нормальну межу навантаження. Припиніть працювати!</value>
+  </data>
+  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
+    <value>Дуже втомився. Відпочинь негайно. Майже верхня межа нормального робочого тиску. Припини працювати!</value>
+  </data>
 
 </root>

@@ -63,5 +63,11 @@
   <data name="Profile Details" xml:space="preserve">
     <value>รายละเอียดโปรไฟล์</value>
   </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>เพิ่ม repository ตอนนี้</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>ยังไม่ได้ติดตาม Repository?</value>
+  </data>
 
 </root>

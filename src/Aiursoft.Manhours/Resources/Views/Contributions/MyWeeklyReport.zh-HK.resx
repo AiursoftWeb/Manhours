@@ -81,5 +81,44 @@
   <data name="Diligence Score" xml:space="preserve">
     <value>勤力分數</value>
   </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>立即新增儲存庫</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>今個星期工作量輕鬆。老細冇派工作俾你咩？</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>工作量唔少。提升緊自己，但都要記住休息。</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>未追蹤倉庫？</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>工作量適中。睇嚟你嘅工作環境幾好。</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>工作量唔錯。睇嚟你為咗理想同目標都好努力。</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>主力。非常活躍。工作量紮實。毋須做咁多。</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>你今個禮拜嘅工作先啱啱開始。放假放成點？準備好寫code未？</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>你係一部編碼機器！難以置信嘅投入。</value>
+  </data>
+  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996？幾乎無間斷工作。會降低創造力。超出正常壓力上限。停止工作！</value>
+  </data>
+  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
+    <value>好攰。即刻休息。差唔多到正常工作壓力嘅上限。停手唔好做嘢！</value>
+  </data>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>難以理解。真係要休息下喇。</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>傳奇！你嘅生產力爆燈。</value>
+  </data>
 
 </root>

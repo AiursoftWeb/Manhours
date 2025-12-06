@@ -81,14 +81,13 @@
   <data name="Computing..." xml:space="preserve">
     <value>计算中...</value>
   </data>
-
   <data name="Diligence Score" xml:space="preserve">
     <value>勤劳程度分</value>
   </data>
   <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
     <value>您本周工作刚刚开始。您的假期休息的怎么样？还有编码状态吗？</value>
   </data>
-  <data name="Easy workload this week. Didn't the boss assign you tasks?" xml:space="preserve">
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
     <value>您本周工作量轻松，老板没给你安排活吗？</value>
   </data>
   <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
@@ -117,6 +116,12 @@
   </data>
   <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
     <value>无法理解。真的，去休息一下吧。</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>立即添加仓库</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>仓库未被跟踪？</value>
   </data>
 
 </root>

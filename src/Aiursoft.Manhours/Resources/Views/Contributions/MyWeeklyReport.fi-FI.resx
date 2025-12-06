@@ -81,5 +81,44 @@
   <data name="Diligence Score" xml:space="preserve">
     <value>Ahkeruuspistemäärä</value>
   </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Lisää arkisto nyt</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Repositorya ei seurata?</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>Kohtalainen työmäärä. Vaikuttaa siltä, että olet loistavassa työilmapiirissä.</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>Työsi tällä viikolla on vasta alkanut. Miten lomasi sujui? Oletko valmis koodaamaan?</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>Hyvä työmäärä. Vaikuttaa siltä, että työskentelet ahkerasti ihanteidesi ja tavoitteidesi puolesta.</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>Kevyt työmäärä tällä viikolla. Eikö pomo antanut sinulle tehtäviä?</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>Melkein liikaa töitä. Kehität itseäsi, mutta muista levätä.</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>Selkäranka. Erittäin aktiivinen. Vankka työmäärä. Ei tarvitse tehdä niin paljon.</value>
+  </data>
+  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996? Melkein työskentelet tauotta. Vähentää luovuutta. Ylittää normaalin paineen rajan. Lopeta työskentely!</value>
+  </data>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>Ymmärryksen ulottumattomissa. Ota todellakin tauko.</value>
+  </data>
+  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
+    <value>Erittäin väsynyt. Lepää heti. Melkein normaalin työpainon yläraja. Lopeta työskentely!</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>Legendaarista! Tuottavuutesi on täysin poikkeuksellista.</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>Olet koodauskone! Uskomaton omistautuminen.</value>
+  </data>
 
 </root>

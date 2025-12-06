@@ -81,5 +81,44 @@
   <data name="Diligence Score" xml:space="preserve">
     <value>Điểm Chăm Chỉ</value>
   </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Thêm kho lưu trữ ngay</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Kho lưu trữ chưa được theo dõi?</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>Khá nhiều việc đấy. Đang cải thiện bản thân, nhưng nhớ nghỉ ngơi nhé.</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>Khối lượng công việc nhẹ nhàng tuần này. Sếp không giao nhiệm vụ cho bạn à?</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>Khối lượng công việc vừa phải. Có vẻ như bạn đang có một môi trường làm việc tuyệt vời.</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>Trụ cột. Rất năng động. Khối lượng công việc vững chắc. Không cần làm nhiều đến thế.</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>Công việc của bạn tuần này vừa mới bắt đầu. Kỳ nghỉ của bạn thế nào? Bạn đã sẵn sàng để code chưa?</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>Khối lượng công việc tốt. Có vẻ như bạn đang làm việc chăm chỉ cho lý tưởng và mục tiêu của mình.</value>
+  </data>
+  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
+    <value>Rất mệt mỏi. Nghỉ ngơi ngay lập tức. Gần như đạt đến giới hạn trên của áp lực công việc bình thường. Ngừng làm việc!</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>Huyền thoại! Năng suất của bạn vượt xa mọi kỳ vọng.</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>Bạn là một cỗ máy viết code! Sự cống hiến thật đáng kinh ngạc.</value>
+  </data>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>Không thể hiểu nổi. Nghỉ ngơi đi, thật đấy.</value>
+  </data>
+  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996? Làm việc gần như không ngừng nghỉ. Sẽ làm giảm sự sáng tạo. Vượt quá giới hạn áp lực bình thường. Ngừng làm việc!</value>
+  </data>
 
 </root>

@@ -81,5 +81,44 @@
   <data name="Diligence Score" xml:space="preserve">
     <value>คะแนนความขยัน</value>
   </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>งานค่อนข้างเยอะนะ กำลังพัฒนาตัวเอง แต่จำไว้ว่าต้องพักผ่อนด้วย</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>เพิ่ม repository ตอนนี้</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>ไม่พบการติดตาม Repository?</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>ปริมาณงานปานกลาง ดูเหมือนว่าคุณอยู่ในบรรยากาศการทำงานที่ดีเยี่ยม</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>งานเบาๆ สัปดาห์นี้ หัวหน้าไม่ได้มอบหมายงานให้เหรอ?</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>ปริมาณงานที่ดี ดูเหมือนว่าคุณกำลังทำงานหนักเพื่ออุดมการณ์และเป้าหมายของคุณ</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>เป็นกำลังหลัก ทำงานอย่างกระตือรือร้น มีปริมาณงานที่หนักแน่น ไม่จำเป็นต้องทำมากขนาดนั้น</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>งานของคุณในสัปดาห์นี้เพิ่งเริ่มต้น คุณไปพักร้อนมาดีไหม? พร้อมที่จะเขียนโค้ดแล้วหรือยัง?</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>คุณเป็นเครื่องจักรเขียนโค้ด! ความทุ่มเทที่น่าเหลือเชื่อ</value>
+  </data>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>เกินความเข้าใจ พักผ่อนเถอะ จริงๆ</value>
+  </data>
+  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996? ทำงานแทบไม่หยุดพัก จะลดทอนความคิดสร้างสรรค์ เกินขีดจำกัดความกดดันปกติ หยุดทำงานได้แล้ว!</value>
+  </data>
+  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
+    <value>เหนื่อยมาก พักผ่อนทันที ใกล้ถึงขีดจำกัดความกดดันในการทำงานปกติแล้ว หยุดทำงานได้แล้ว!</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>ตำนาน! ผลงานของคุณเหนือชั้นเกินบรรยาย</value>
+  </data>
 
 </root>

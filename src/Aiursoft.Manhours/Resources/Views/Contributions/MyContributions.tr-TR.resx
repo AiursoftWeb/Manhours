@@ -63,5 +63,11 @@
   <data name="Profile Details" xml:space="preserve">
     <value>Profil Detayları</value>
   </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Depo ekle</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Depo izlenmiyor mu?</value>
+  </data>
 
 </root>

@@ -63,5 +63,11 @@
   <data name="Profile Details" xml:space="preserve">
     <value>个人资料详情</value>
   </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>仓库未跟踪？</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>立即添加仓库</value>
+  </data>
 
 </root>

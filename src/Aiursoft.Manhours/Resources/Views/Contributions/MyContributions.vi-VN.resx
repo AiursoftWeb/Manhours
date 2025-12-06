@@ -63,5 +63,11 @@
   <data name="Profile Details" xml:space="preserve">
     <value>Chi tiết Hồ sơ</value>
   </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Thêm kho lưu trữ ngay</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Kho lưu trữ chưa được theo dõi?</value>
+  </data>
 
 </root>

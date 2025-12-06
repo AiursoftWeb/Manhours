@@ -81,5 +81,44 @@
   <data name="Diligence Score" xml:space="preserve">
     <value>근면 점수</value>
   </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>지금 저장소 추가</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>저장소가 추적되지 않나요?</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>이번 주 업무량이 적네요. 상사가 업무를 할당하지 않았나요?</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>일이 꽤 많네요. 자기 계발도 좋지만, 휴식도 잊지 마세요.</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>중추. 매우 활발함. 탄탄한 업무량. 그렇게 많이 할 필요는 없어요.</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>적당한 업무량입니다. 좋은 업무 환경에 계신 것 같네요.</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>이번 주 업무가 막 시작되었습니다. 휴가는 어떠셨나요? 코딩할 준비가 되셨나요?</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>좋은 작업량입니다. 당신의 이상과 목표를 위해 열심히 일하고 계신 것 같습니다.</value>
+  </data>
+  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
+    <value>매우 피곤합니다. 즉시 휴식하세요. 정상적인 업무 압력의 상한선에 거의 도달했습니다. 일을 멈추세요!</value>
+  </data>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>이해할 수 없습니다. 진짜로 휴식을 취하세요.</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>전설적이에요! 당신의 생산성이 정말 굉장해요.</value>
+  </data>
+  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996? 거의 쉬지 않고 일하는 건가요? 창의성이 떨어질 수 있습니다. 정상적인 업무 압력 한계를 초과했습니다. 일을 멈추세요!</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>당신은 코딩 머신이에요! 믿을 수 없는 헌신이네요.</value>
+  </data>
 
 </root>

@@ -81,5 +81,44 @@
   <data name="Diligence Score" xml:space="preserve">
     <value>勤奮指數</value>
   </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>工作量不少。提升自己的同時，也別忘了休息。</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>立即新增儲存庫</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>尚未追蹤的儲存庫？</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>這週工作量很輕鬆。老闆沒給你派任務嗎？</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>工作量適中。看來你處在一個很棒的工作氛圍中。</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>工作量不錯。看來你正為了理想與目標而努力。</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>您這週的工作才剛開始。假期過得如何？準備好寫程式了嗎？</value>
+  </data>
+  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996？幾乎不間斷工作。會降低創造力。超出正常壓力極限。停止工作！</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>你簡直是台寫程式機器！這份投入令人難以置信。</value>
+  </data>
+  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
+    <value>非常疲憊。請立即休息。已接近正常工作壓力的上限。停止工作！</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>主力成員。非常活躍。工作量紮實。不必如此操勞。</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>傳奇！你的生產力已經突破天際。</value>
+  </data>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>難以理解。真的該休息了。</value>
+  </data>
 
 </root>

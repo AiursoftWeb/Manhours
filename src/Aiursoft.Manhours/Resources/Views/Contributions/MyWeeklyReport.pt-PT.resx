@@ -81,5 +81,44 @@
   <data name="Diligence Score" xml:space="preserve">
     <value>Pontuação de Diligência</value>
   </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Adicionar repositório agora</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Repositório não monitorado?</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>Pilar. Muito ativo. Carga de trabalho sólida. Não é preciso fazer tanto.</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>Carga de trabalho leve esta semana. O chefe não te atribuiu tarefas?</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>Bastante trabalho. A melhorar-se, mas lembre-se de descansar.</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>Bom volume de trabalho. Parece que estás a trabalhar arduamente pelos teus ideais e objetivos.</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>Carga de trabalho moderada. Parece que estás num ótimo ambiente de trabalho.</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>O teu trabalho esta semana acabou de começar. Como foi a tua folga? Estás pronto para programar?</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>És uma máquina de programar! Dedicação inacreditável.</value>
+  </data>
+  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996? Quase a trabalhar sem parar. Vai reduzir a criatividade. Excede o limite normal de pressão. Pare de trabalhar!</value>
+  </data>
+  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
+    <value>Muito cansado. Descanse imediatamente. Quase no limite superior da pressão de trabalho normal. Pare de trabalhar!</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>Lendário! A tua produtividade está fora de série.</value>
+  </data>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>Incompreensível. Tira mesmo uma pausa.</value>
+  </data>
 
 </root>

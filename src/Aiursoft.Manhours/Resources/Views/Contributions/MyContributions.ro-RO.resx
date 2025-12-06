@@ -63,5 +63,11 @@
   <data name="Profile Details" xml:space="preserve">
     <value>Detalii Profil</value>
   </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Adaugă depozit acum</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Depozitarul nu este urmărit?</value>
+  </data>
 
 </root>

@@ -81,5 +81,44 @@
   <data name="Diligence Score" xml:space="preserve">
     <value>Çalışkanlık Puanı</value>
   </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Depo ekle</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>Orta düzeyde iş yükü. Harika bir çalışma ortamında gibisin.</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>Bu hafta iş yükü hafif. Patron sana görev vermedi mi?</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Depo izlenmiyor mu?</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>İyi iş yükü. Görünüşe göre idealleriniz ve hedefleriniz için sıkı çalışıyorsunuz.</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>Bu haftaki işiniz yeni başladı. Tatiliniz nasıldı? Kodlamaya hazır mısınız?</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>Oldukça fazla iş var. Kendini geliştiriyorsun, ama dinlenmeyi de unutma.</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>Temel direk. Çok aktif. Sağlam iş yükü. Bu kadar çok yapmaya gerek yok.</value>
+  </data>
+  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
+    <value>Çok yorgun. Hemen dinlen. Normal iş baskısının neredeyse üst sınırı. Çalışmayı bırak!</value>
+  </data>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>Akıl almaz. Gerçekten ara ver.</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>Efsanevi! Üretkenliğiniz grafiklerin dışında.</value>
+  </data>
+  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996? Neredeyse durmadan çalışıyorsun. Yaratıcılığı azaltır. Normal baskı sınırını aşıyor. Çalışmayı bırak!</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>Sen bir kodlama makinesisin! İnanılmaz bir adanmışlık.</value>
+  </data>
 
 </root>

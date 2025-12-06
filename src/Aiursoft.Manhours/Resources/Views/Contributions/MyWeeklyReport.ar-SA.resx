@@ -81,5 +81,44 @@
   <data name="Diligence Score" xml:space="preserve">
     <value>درجة الاجتهاد</value>
   </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>المستودع غير مُتتبع؟</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>عبء العمل خفيف هذا الأسبوع. ألم يكلفك المدير بمهام؟</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>أضف مستودعًا الآن</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>عبء عمل جيد. يبدو أنك تعمل بجد من أجل مُثُلك وأهدافك.</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>كمية لا بأس بها من العمل. أنت تطور نفسك، لكن تذكر أن تأخذ قسطًا من الراحة.</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>عبء عمل معتدل. يبدو أنك في بيئة عمل رائعة.</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>بدأ عملك هذا الأسبوع للتو. كيف كانت إجازتك؟ هل أنت مستعد للبرمجة؟</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>عمود فقري. نشط جدًا. عبء عمل متين. لا حاجة للقيام بالكثير.</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>أسطوري! إنتاجيتك تتجاوز كل التوقعات.</value>
+  </data>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>لا يمكن استيعابها. خذ استراحة، بجدية.</value>
+  </data>
+  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996؟ العمل تقريبًا دون توقف. سيقلل من الإبداع. يتجاوز الحد الطبيعي للضغط. توقف عن العمل!</value>
+  </data>
+  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
+    <value>مُتعب جداً. استرح فوراً. تقريباً الحد الأعلى للضغط الطبيعي في العمل. توقف عن العمل!</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>أنت آلة برمجة! تفانٍ لا يُصدق.</value>
+  </data>
 
 </root>

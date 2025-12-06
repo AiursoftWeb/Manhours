@@ -132,6 +132,9 @@ public class ContributionsController(
             }
         }
 
+        // Deduplicate forked/mirrored repositories
+        weeklyContributions = RepoDeduplicationService.Deduplicate(weeklyContributions);
+
         weeklyContributions = weeklyContributions
             .OrderByDescending(r => r.TotalWorkHours)
             .ToList();
@@ -173,6 +176,9 @@ public class ContributionsController(
             .Where(c => c.Contributor!.Email == email)
             .OrderByDescending(c => c.TotalWorkHours)
             .ToListAsync();
+
+        // Deduplicate forked/mirrored repositories
+        contributions = RepoDeduplicationService.Deduplicate(contributions);
 
         var user = await userManager.FindByEmailAsync(email ?? string.Empty);
 

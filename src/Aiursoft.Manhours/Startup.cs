@@ -11,6 +11,7 @@ using Aiursoft.Manhours.Services.Authentication;
 using Aiursoft.Manhours.Sqlite;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Navigation;
+using Aiursoft.Manhours.Services.Background;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -41,6 +42,8 @@ public class Startup : IWebStartup
 
         // Services
         services.AddSingleton<IHostedService, UpdateRepoStatsJob>();
+        services.AddSingleton<IBackgroundTaskQueue, BackgroundTaskQueue>();
+        services.AddHostedService<RepoUpdateWorker>();
         services.AddScoped<RepoService>();
         services.AddHttpClient();
         services.AddAssemblyDependencies(typeof(Startup).Assembly);

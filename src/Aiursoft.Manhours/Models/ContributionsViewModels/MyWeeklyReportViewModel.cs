@@ -19,6 +19,7 @@ public class MyWeeklyReportViewModel : UiStackLayoutViewModel
     public int TotalCommits { get; set; }
     public int TotalActiveDays { get; set; }
     public List<WeeklyRepoContribution> Contributions { get; set; } = new();
+    public bool Loading { get; set; }
 }
 
 public class WeeklyRepoContribution

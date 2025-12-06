@@ -72,5 +72,11 @@
   <data name="No contributions found in the last 7 days." xml:space="preserve">
     <value>Δεν βρέθηκαν συνεισφορές τις τελευταίες 7 ημέρες.</value>
   </data>
+  <data name="Computing..." xml:space="preserve">
+    <value>Υπολογισμός...</value>
+  </data>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>Υπολογίζουμε τις εβδομαδιαίες σας στατιστικές από τα αποθετήρια. Αυτό μπορεί να πάρει μερικά δευτερόλεπτα.</value>
+  </data>
 
 </root>

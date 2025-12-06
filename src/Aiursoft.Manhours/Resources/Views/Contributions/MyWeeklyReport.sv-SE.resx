@@ -72,5 +72,11 @@
   <data name="No contributions found in the last 7 days." xml:space="preserve">
     <value>Inga bidrag hittades under de senaste 7 dagarna.</value>
   </data>
+  <data name="Computing..." xml:space="preserve">
+    <value>Beräknar...</value>
+  </data>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>Vi beräknar dina veckostatistik från databaserna. Detta kan ta några sekunder.</value>
+  </data>
 
 </root>

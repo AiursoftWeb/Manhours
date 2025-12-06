@@ -72,5 +72,11 @@
   <data name="No contributions found in the last 7 days." xml:space="preserve">
     <value>Son 7 gün içinde herhangi bir katkı bulunamadı.</value>
   </data>
+  <data name="Computing..." xml:space="preserve">
+    <value>Hesaplanıyor...</value>
+  </data>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>Depolarınızdan haftalık istatistikleriniz hesaplanıyor. Bu birkaç saniye sürebilir.</value>
+  </data>
 
 </root>

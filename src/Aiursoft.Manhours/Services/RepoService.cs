@@ -124,6 +124,12 @@ public class RepoService(
         }
     }
 
+    public bool TryGetCachedStats(string repoUrl, DateTime startDate, DateTime endDate, out RepoStats? stats)
+    {
+        var cacheKey = $"RepoStats_{repoUrl}_{startDate:yyyyMMdd}_{endDate:yyyyMMdd}";
+        return cache.TryGetValue(cacheKey, out stats);
+    }
+
     public async Task<RepoStats> GetRepoStatsInRangeAsync(string repoName, string repoUrl, DateTime startDate, DateTime endDate)
     {
         // Create a cache key based on repo URL and date range

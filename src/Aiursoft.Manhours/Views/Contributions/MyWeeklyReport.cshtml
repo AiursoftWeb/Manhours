@@ -63,6 +63,19 @@
         </div>
     </div>
     <div class="col-md-10">
+        @if (Model.Loading)
+        {
+            <div class="alert alert-info alert-dismissible mb-3" role="alert" id="loading-badge">
+                <div class="alert-message d-flex align-items-center">
+                    <div class="spinner-border spinner-border-sm me-2" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div>
+                        <strong>@Localizer["Computing..."]</strong> @Localizer["We are calculating your weekly statistics from the repositories. This might take a few seconds."]
+                    </div>
+                </div>
+            </div>
+        }
 
         <div class="row">
             <div class="col-12 col-sm-6 col-xxl-4 d-flex">
@@ -228,3 +241,25 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        if ("@Model.Loading" === "True") {
+            async function poll() {
+                try {
+                    const response = await fetch('/contributions/weekly-report-status');
+                    const data = await response.json();
+                    if (!data.loading) {
+                        window.location.reload();
+                    } else {
+                        poll();
+                    }
+                } catch (e) {
+                    console.error(e);
+                    setTimeout(poll, 2000);
+                }
+            }
+            poll();
+        }
+    });
+</script>

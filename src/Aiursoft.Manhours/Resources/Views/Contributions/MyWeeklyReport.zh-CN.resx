@@ -18,7 +18,7 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-  <data name="My Weekly Report" xml:space="preserve">
+      <data name="My Weekly Report" xml:space="preserve">
     <value>我的周报</value>
   </data>
   <data name="Profile Details" xml:space="preserve">
@@ -74,6 +74,12 @@
   </data>
   <data name="No contributions found in the last 7 days." xml:space="preserve">
     <value>最近7天内未找到贡献记录。</value>
+  </data>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>我们正在从代码仓库计算您的每周统计数据。这可能需要几秒钟。</value>
+  </data>
+  <data name="Computing..." xml:space="preserve">
+    <value>计算中...</value>
   </data>
 
 </root>

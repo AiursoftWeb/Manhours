@@ -72,5 +72,11 @@
   <data name="No contributions found in the last 7 days." xml:space="preserve">
     <value>過去7日內未找到任何貢獻記錄。</value>
   </data>
+  <data name="Computing..." xml:space="preserve">
+    <value>計算中...</value>
+  </data>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>我哋正喺度從倉庫計算你嘅每週統計數據。呢個過程可能需要幾秒鐘。</value>
+  </data>
 
 </root>

@@ -72,5 +72,11 @@
   <data name="No contributions found in the last 7 days." xml:space="preserve">
     <value>Nu s-au găsit contribuții în ultimele 7 zile.</value>
   </data>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>Calculăm statisticile tale săptămânale din depozite. Acest lucru ar putea dura câteva secunde.</value>
+  </data>
+  <data name="Computing..." xml:space="preserve">
+    <value>Se calculează...</value>
+  </data>
 
 </root>

@@ -13,7 +13,8 @@ namespace Aiursoft.Manhours.Controllers;
 public class ContributionsController(
     UserManager<User> userManager,
     TemplateDbContext dbContext,
-    RepoService repoService) : Controller
+    RepoService repoService,
+    Services.Background.IBackgroundTaskQueue backgroundQueue) : Controller
 {
     [Authorize]
     [Route("mycontributions")]
@@ -48,6 +49,34 @@ public class ContributionsController(
         var user = await userManager.GetUserAsync(User);
         if (user == null) return NotFound();
 
+        var (model, loading) = await BuildWeeklyReportViewModel(user);
+        model.Loading = loading;
+
+        return this.StackView(model, "MyWeeklyReport");
+    }
+
+    [Route("weekly-report-status")]
+    public async Task<IActionResult> WeeklyReportStatus()
+    {
+        var user = await userManager.GetUserAsync(User);
+        if (user == null) return NotFound();
+
+        // Simple long polling: wait up to 10 seconds for completion
+        for (var i = 0; i < 20; i++)
+        {
+            var (_, loading) = await BuildWeeklyReportViewModel(user);
+            if (!loading)
+            {
+                return Json(new { loading = false });
+            }
+            await Task.Delay(500);
+        }
+
+        return Json(new { loading = true });
+    }
+
+    private async Task<(MyWeeklyReportViewModel, bool)> BuildWeeklyReportViewModel(User user)
+    {
         var endDate = DateTime.UtcNow;
         var startDate = endDate.AddDays(-7);
 
@@ -59,55 +88,53 @@ public class ContributionsController(
             .Where(c => c.Contributor!.Email == user.Email)
             .ToListAsync();
 
-        List<WeeklyRepoContribution> weeklyContributions;
+        var weeklyContributions = new List<WeeklyRepoContribution>();
+        var loading = false;
 
-        // Process repos in parallel for better performance
-        var tasks = contributions
-            .Where(c => c.Repo != null)
-            .Select(async contribution =>
+        foreach (var contribution in contributions)
+        {
+            if (contribution.Repo == null) continue;
+            var repo = contribution.Repo;
+            var repoUrl = repo.Url;
+            var repoName = repoUrl.Replace("https://", "").Replace("http://", "");
+            if (repoName.EndsWith(".git"))
             {
-                try
+                repoName = repoName[..^4];
+            }
+
+            if (repoService.TryGetCachedStats(repoUrl, startDate, endDate, out var stats))
+            {
+                // Find the contributor's stats in the result
+                var contributorStat = stats?.Contributors.FirstOrDefault(c =>
+                    c.Email.Equals(user.Email, StringComparison.OrdinalIgnoreCase));
+
+                if (contributorStat != null && contributorStat.WorkTime.TotalHours > 0)
                 {
-                    var repo = contribution.Repo!;
-                    var repoUrl = repo.Url;
-                    var repoName = repoUrl.Replace("https://", "").Replace("http://", "");
-                    if (repoName.EndsWith(".git"))
+                    weeklyContributions.Add(new WeeklyRepoContribution
                     {
-                        repoName = repoName[..^4];
-                    }
-
-                    // Get stats for the last 7 days - this will use cache if available
-                    var stats = await repoService.GetRepoStatsInRangeAsync(repoName, repoUrl, startDate, endDate);
-
-                    // Find the contributor's stats in the result
-                    var contributorStat = stats.Contributors.FirstOrDefault(c =>
-                        c.Email.Equals(user.Email, StringComparison.OrdinalIgnoreCase));
-
-                    if (contributorStat != null && contributorStat.WorkTime.TotalHours > 0)
-                    {
-                        return new WeeklyRepoContribution
-                        {
-                            Repo = repo,
-                            TotalWorkHours = contributorStat.WorkTime.TotalHours,
-                            CommitCount = contributorStat.CommitCount,
-                            ActiveDays = contributorStat.ContributionDays
-                        };
-                    }
-
-                    return null;
+                        Repo = repo,
+                        TotalWorkHours = contributorStat.WorkTime.TotalHours,
+                        CommitCount = contributorStat.CommitCount,
+                        ActiveDays = contributorStat.ContributionDays
+                    });
                 }
-                catch
+            }
+            else
+            {
+                loading = true;
+                await backgroundQueue.QueueBackgroundWorkItemAsync(new Services.Background.RepoUpdateTask
                 {
-                    // Skip repos that fail to load
-                    return null;
-                }
-            });
+                    RepoName = repoName,
+                    RepoUrl = repoUrl,
+                    StartDate = startDate,
+                    EndDate = endDate
+                });
+            }
+        }
 
-        var results = await Task.WhenAll(tasks);
-        weeklyContributions = results
-            .Where(r => r != null && r.TotalWorkHours > 0)
-            .OrderByDescending(r => r!.TotalWorkHours)
-            .ToList()!;
+        weeklyContributions = weeklyContributions
+            .OrderByDescending(r => r.TotalWorkHours)
+            .ToList();
 
         var model = new MyWeeklyReportViewModel
         {
@@ -122,7 +149,7 @@ public class ContributionsController(
             Contributions = weeklyContributions
         };
 
-        return this.StackView(model, "MyWeeklyReport");
+        return (model, loading);
     }
 
     [Route("id/{id}")]

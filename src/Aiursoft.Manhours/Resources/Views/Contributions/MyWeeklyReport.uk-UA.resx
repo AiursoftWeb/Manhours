@@ -72,5 +72,11 @@
   <data name="No contributions found in the last 7 days." xml:space="preserve">
     <value>За останні 7 днів внесків не знайдено.</value>
   </data>
+  <data name="Computing..." xml:space="preserve">
+    <value>Обчислення...</value>
+  </data>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>Ми обчислюємо ваші тижневі статистичні дані з репозиторіїв. Це може зайняти кілька секунд.</value>
+  </data>
 
 </root>

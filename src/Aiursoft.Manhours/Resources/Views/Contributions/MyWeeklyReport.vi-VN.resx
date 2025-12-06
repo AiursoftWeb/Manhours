@@ -72,5 +72,11 @@
   <data name="No contributions found in the last 7 days." xml:space="preserve">
     <value>Không tìm thấy đóng góp nào trong 7 ngày qua.</value>
   </data>
+  <data name="Computing..." xml:space="preserve">
+    <value>Đang tính toán...</value>
+  </data>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>Chúng tôi đang tính toán thống kê hàng tuần của bạn từ các kho lưu trữ. Việc này có thể mất vài giây.</value>
+  </data>
 
 </root>

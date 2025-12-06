@@ -1,5 +1,4 @@
 using System.Net;
-using System.Net.Http;
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools;
 using Aiursoft.Manhours.Entities;
@@ -233,7 +232,6 @@ public class HomeAndErrorControllerTests
         {
             // HttpClient cannot parse URLs starting with ///
             // This is expected and acceptable - it's a client limitation not a server issue
-            Assert.IsTrue(true);
         }
     }
 }

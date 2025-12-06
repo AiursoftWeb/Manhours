@@ -60,7 +60,6 @@ public static class RepoDeduplicationService
     {
         var contributionsList = contributions.ToList();
         var result = new List<WeeklyRepoContribution>();
-        var processedRepoNames = new HashSet<string>();
 
         foreach (var contribution in contributionsList.OrderByDescending(c => c.CommitCount))
         {
@@ -74,17 +73,12 @@ public static class RepoDeduplicationService
                 var existing = result[existingIndex];
 
                 // Check if this is a potential duplicate (commit count difference <= 2)
-                if (Math.Abs(contribution.CommitCount - existing.CommitCount) <= 2)
-                {
-                    // Keep the one with more commits (current one due to ordering)
-                    // Already have the better one in result, skip this duplicate
-                    continue;
-                }
-                else
+                if (Math.Abs(contribution.CommitCount - existing.CommitCount) > 2)
                 {
                     // Different repos with same name, keep both
                     result.Add(contribution);
                 }
+                // Otherwise skip this duplicate (already have the better one)
             }
             else
             {

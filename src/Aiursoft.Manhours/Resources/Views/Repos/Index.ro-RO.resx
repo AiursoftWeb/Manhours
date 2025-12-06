@@ -66,5 +66,17 @@
   <data name="of" xml:space="preserve">
     <value>din</value>
   </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Sortate după totalul orelor de lucru ale depozitului</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Cele mai active depozite la care am contribuit</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Adaugă depozit acum</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Depozitul nu este urmărit?</value>
+  </data>
 
 </root>

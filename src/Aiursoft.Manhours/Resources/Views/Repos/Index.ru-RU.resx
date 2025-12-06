@@ -66,5 +66,17 @@
   <data name="Next" xml:space="preserve">
     <value>Далее</value>
   </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Мои самые активные репозитории, в которых я участвую</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Отсортировано по общему количеству рабочих часов репозитория</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Репозиторий не отслеживается?</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Добавить репозиторий сейчас</value>
+  </data>
 
 </root>

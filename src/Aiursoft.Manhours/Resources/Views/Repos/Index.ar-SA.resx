@@ -66,5 +66,20 @@
   <data name="repositories" xml:space="preserve">
     <value>المستودعات</value>
   </data>
+  <data name="Top 20" xml:space="preserve">
+    <value>أفضل ٢٠</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>مستودعاتي الأعلى تعاونًا في العمل الجاد</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>مرتبة حسب إجمالي ساعات العمل للمستودع</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>المستودع غير مُتتبع؟</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>أضف مستودعًا الآن</value>
+  </data>
 
 </root>

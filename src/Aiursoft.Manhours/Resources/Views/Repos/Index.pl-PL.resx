@@ -66,5 +66,17 @@
   <data name="Previous" xml:space="preserve">
     <value>Poprzednia</value>
   </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Posortowane według całkowitej liczby godzin pracy w repozytorium</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Moje najlepsze repozytoria, w których ciężko pracowałem we współpracy</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Dodaj repozytorium teraz</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Repozytorium nie jest śledzone?</value>
+  </data>
 
 </root>

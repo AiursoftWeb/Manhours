@@ -66,5 +66,17 @@
   <data name="repositories" xml:space="preserve">
     <value>kho lưu trữ</value>
   </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Các kho lưu trữ tôi đã cộng tác chăm chỉ nhất</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Sắp xếp theo tổng số giờ làm việc của kho lưu trữ</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Thêm kho lưu trữ ngay</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Kho lưu trữ chưa được theo dõi?</value>
+  </data>
 
 </root>

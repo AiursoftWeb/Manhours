@@ -66,5 +66,17 @@
   <data name="Showing" xml:space="preserve">
     <value>显示</value>
   </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>我贡献最多的协作仓库</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>按仓库总工时排序</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>立即添加仓库</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>仓库未被跟踪？</value>
+  </data>
 
 </root>

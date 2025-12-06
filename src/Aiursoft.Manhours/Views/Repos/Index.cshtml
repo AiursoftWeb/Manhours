@@ -24,7 +24,8 @@
             <div class="col-md-4 col-xl-3">
                 <div class="card mb-3">
                     <div class="card-header">
-                        <h5 class="card-title mb-0">@Localizer["My Top Participated"]</h5>
+                        <h5 class="card-title mb-0">@Localizer["My top hard-working collaborated repositories"]</h5>
+                        <small class="text-muted">@Localizer["Sorted by repository total work hours"]</small>
                     </div>
                     <div class="card-body">
                         @foreach (var repo in Model.MyTopRepos)
@@ -46,6 +47,15 @@
                             }
                         }
                     </div>
+                </div>
+
+                <div class="text-center mt-3">
+                    <label class="form-label">
+                        @Localizer["Repository not tracked?"]
+                    </label>
+                    <a href="@Url.Action("Index", "Home")" class="btn btn-primary">
+                        <i class="fas fa-plus-circle me-2"></i>@Localizer["Add repository now"]
+                    </a>
                 </div>
             </div>
         }

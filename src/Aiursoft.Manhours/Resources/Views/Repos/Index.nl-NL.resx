@@ -66,5 +66,20 @@
   <data name="Next" xml:space="preserve">
     <value>Volgende</value>
   </data>
+  <data name="Top 20" xml:space="preserve">
+    <value>Top 20</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Mijn top hardwerkende samenwerkingsrepositories</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Gesorteerd op totale werkuren per repository</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Repository nu toevoegen</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Repository niet gevolgd?</value>
+  </data>
 
 </root>

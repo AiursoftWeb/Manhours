@@ -66,5 +66,17 @@
   <data name="Showing" xml:space="preserve">
     <value>Menampilkan</value>
   </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Repositori tidak dilacak?</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Tambahkan repositori sekarang</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Repositori kolaborasi saya yang paling rajin</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Diurutkan berdasarkan total jam kerja repositori</value>
+  </data>
 
 </root>

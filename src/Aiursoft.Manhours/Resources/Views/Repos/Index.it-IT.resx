@@ -66,5 +66,17 @@
   <data name="repositories" xml:space="preserve">
     <value>repository</value>
   </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>I miei repository collaborativi più attivi</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Ordinati per ore totali di lavoro del repository</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Repository non tracciato?</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Aggiungi repository ora</value>
+  </data>
 
 </root>

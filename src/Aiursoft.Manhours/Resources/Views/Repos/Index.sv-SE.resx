@@ -66,5 +66,17 @@
   <data name="Next" xml:space="preserve">
     <value>Nästa</value>
   </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Mina främsta hårt arbetande samarbetsprojekt</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Sorterat efter totalt antal arbetstimmar för repository</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Repository inte spårad?</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Lägg till arkiv nu</value>
+  </data>
 
 </root>

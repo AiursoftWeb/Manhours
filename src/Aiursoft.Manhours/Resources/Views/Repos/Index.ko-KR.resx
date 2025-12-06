@@ -66,5 +66,17 @@
   <data name="Showing" xml:space="preserve">
     <value>표시 중</value>
   </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>내가 가장 열심히 협업한 저장소</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>저장소 총 작업 시간 기준 정렬</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>저장소 추가하기</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>저장소가 추적되지 않나요?</value>
+  </data>
 
 </root>

@@ -66,5 +66,17 @@
   <data name="Previous" xml:space="preserve">
     <value>Forrige</value>
   </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Mine mest arbejdsomme samarbejdsrepositorier</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Sorteret efter repositorys samlede arbejdstimer</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Tilføj repository nu</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Repository ikke sporet?</value>
+  </data>
 
 </root>

@@ -66,5 +66,17 @@
   <data name="Showing" xml:space="preserve">
     <value>Affichage</value>
   </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Mes dépôts collaboratifs les plus actifs</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Trié par nombre total d&apos;heures de travail du dépôt</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Ajouter un dépôt maintenant</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Dépôt non suivi ?</value>
+  </data>
 
 </root>

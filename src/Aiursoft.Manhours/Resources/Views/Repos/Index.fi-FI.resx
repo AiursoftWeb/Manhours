@@ -66,5 +66,17 @@
   <data name="Showing" xml:space="preserve">
     <value>Näytetään</value>
   </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Lisää arkisto nyt</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Lajiteltu repositoryn kokonaistyötuntien mukaan</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Omat parhaat ahkerasti yhteistyössä olevat arkistoni</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Repository ei ole seurannassa?</value>
+  </data>
 
 </root>

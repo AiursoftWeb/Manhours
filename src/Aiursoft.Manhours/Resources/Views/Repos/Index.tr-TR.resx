@@ -66,5 +66,17 @@
   <data name="Previous" xml:space="preserve">
     <value>Önceki</value>
   </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>En çok çalıştığım işbirlikli depolarım</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Depo toplam çalışma saatine göre sıralandı</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Depo ekle</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Depo izlenmiyor mu?</value>
+  </data>
 
 </root>

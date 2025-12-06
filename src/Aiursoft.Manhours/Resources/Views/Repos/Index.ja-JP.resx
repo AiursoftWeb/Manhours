@@ -66,5 +66,17 @@
   <data name="Showing" xml:space="preserve">
     <value>表示中</value>
   </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>私が最も貢献したリポジトリ</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>リポジトリの総作業時間でソート</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>リポジトリを追加</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>リポジトリが追跡されていませんか？</value>
+  </data>
 
 </root>

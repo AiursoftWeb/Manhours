@@ -66,7 +66,7 @@ public class ReposController(
         {
             myTopRepos = allRepoModels
                 .Where(r => r.ContributedByMe)
-                .Take(3)
+                .Take(20)
                 .ToList();
         }
 

@@ -66,5 +66,17 @@
   <data name="repositories" xml:space="preserve">
     <value>ที่เก็บโค้ด</value>
   </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>คลังรหัสที่ฉันร่วมงานด้วยและขยันที่สุด</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>เรียงตามชั่วโมงการทำงานทั้งหมดของ repository</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>ยังไม่ได้ติดตาม Repository?</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>เพิ่ม repository ตอนนี้</value>
+  </data>
 
 </root>

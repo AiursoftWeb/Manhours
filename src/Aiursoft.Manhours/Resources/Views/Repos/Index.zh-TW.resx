@@ -66,5 +66,17 @@
   <data name="Previous" xml:space="preserve">
     <value>上一頁</value>
   </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>我最努力協作的儲存庫</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>依儲存庫總工作時數排序</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>找不到儲存庫？</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>立即新增儲存庫</value>
+  </data>
 
 </root>

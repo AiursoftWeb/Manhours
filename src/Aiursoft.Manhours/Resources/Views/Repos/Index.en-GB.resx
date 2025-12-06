@@ -66,5 +66,17 @@
   <data name="Showing" xml:space="preserve">
     <value>Displaying</value>
   </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>My top hard-working collaborated repositories</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Sorted by total repository work hours</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Add repository now</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Repository not being tracked?</value>
+  </data>
 
 </root>

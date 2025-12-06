@@ -66,5 +66,17 @@
   <data name="of" xml:space="preserve">
     <value>από</value>
   </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Αποθετήριο δεν παρακολουθείται;</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Προσθήκη αποθετηρίου τώρα</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Ταξινομημένα ανά συνολικές ώρες εργασίας αποθετηρίου</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Οι κορυφαίες συνεργαζόμενες αποθετήριά μου με την μεγαλύτερη εργασία</value>
+  </data>
 
 </root>

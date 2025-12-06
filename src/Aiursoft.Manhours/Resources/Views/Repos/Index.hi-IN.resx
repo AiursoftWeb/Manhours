@@ -66,5 +66,17 @@
   <data name="Previous" xml:space="preserve">
     <value>पिछला</value>
   </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>अब रिपॉजिटरी जोड़ें</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>मेरे शीर्ष परिश्रमी सहयोगिता वाले रिपॉजिटरी</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>रिपॉजिटरी की कुल कार्य घंटों के आधार पर क्रमबद्ध</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>रिपॉजिटरी ट्रैक नहीं की गई?</value>
+  </data>
 
 </root>

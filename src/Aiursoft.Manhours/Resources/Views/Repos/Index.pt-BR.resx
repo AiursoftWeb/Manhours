@@ -66,5 +66,20 @@
   <data name="of" xml:space="preserve">
     <value>de</value>
   </data>
+  <data name="Top 20" xml:space="preserve">
+    <value>Top 20</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Meus repositórios colaborativos mais ativos</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Ordenado pelo total de horas trabalhadas no repositório</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Adicionar repositório agora</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Repositório não rastreado?</value>
+  </data>
 
 </root>

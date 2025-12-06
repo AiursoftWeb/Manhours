@@ -82,4 +82,41 @@
     <value>计算中...</value>
   </data>
 
+  <data name="Diligence Score" xml:space="preserve">
+    <value>勤劳程度分</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>您本周工作刚刚开始。您的假期休息的怎么样？还有编码状态吗？</value>
+  </data>
+  <data name="Easy workload this week. Didn't the boss assign you tasks?" xml:space="preserve">
+    <value>您本周工作量轻松，老板没给你安排活吗？</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>您本周工作量适中，感觉你在一个非常优秀的工作氛围里。</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>您本周工作量不错，感觉你正在为了自己的理想和目标努力。</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>您本周工作量不少了，感觉你正在为了自己的理想和目标努力，但也要注意休息。</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>您怕不是公司的中流砥柱，一个人活跃这么狠，工作量相当扎实了，不用干那么多。</value>
+  </data>
+  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
+    <value>您已经非常劳累了，应该立刻去休息。这几乎是一个正常工作的压力上限。不要再工作了！</value>
+  </data>
+  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>您的公司是996工作制吗？您几乎在连轴工作。这种工作负荷会严重降低你的创意！这几乎已经超过了一个正常工作的压力上限。不要再工作了！</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>你是写代码的机器吗！不可思议的投入。</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>传说级！你的生产力爆表了。</value>
+  </data>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>无法理解。真的，去休息一下吧。</value>
+  </data>
+
 </root>

@@ -12,6 +12,66 @@
         var hashBytes = md5.ComputeHash(inputBytes);
         return Convert.ToHexString(hashBytes).ToLower();
     }
+
+    var diligenceScore = Model.DiligenceScore;
+    string diligenceMessageKey;
+    string badgeClass = "badge-primary-light";
+
+    if (diligenceScore < 10)
+    {
+        diligenceMessageKey = "Your work this week has just started. How was your vacation? Are you ready to code?";
+        badgeClass="badge-info-light";
+    }
+    else if (diligenceScore < 20)
+    {
+        diligenceMessageKey = "Easy workload this week. Didn't the boss assign you tasks?";
+        badgeClass="badge-success-light";
+    }
+    else if (diligenceScore < 30)
+    {
+        diligenceMessageKey = "Moderate workload. Seems like you are in a great working atmosphere.";
+        badgeClass="badge-success-light";
+    }
+    else if (diligenceScore < 40)
+    {
+        diligenceMessageKey = "Good workload. Seems like you are working hard for your ideals and goals.";
+        badgeClass="badge-success-light";
+    }
+    else if (diligenceScore < 50)
+    {
+        diligenceMessageKey = "Quite a bit of work. Improving yourself, but remember to rest.";
+        badgeClass="badge-warning-light";
+    }
+    else if (diligenceScore < 60)
+    {
+        diligenceMessageKey = "Mainstay. Very active. Solid workload. No need to do so much.";
+        badgeClass="badge-warning-light";
+    }
+    else if (diligenceScore < 70)
+    {
+        diligenceMessageKey = "Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!";
+        badgeClass="badge-danger-light";
+    }
+    else if (diligenceScore < 80)
+    {
+        diligenceMessageKey = "996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!";
+        badgeClass="badge-danger-light";
+    }
+    else if (diligenceScore < 90)
+    {
+        diligenceMessageKey = "You are a coding machine! Unbelievable dedication.";
+        badgeClass="badge-danger-light";
+    }
+    else if (diligenceScore < 100)
+    {
+        diligenceMessageKey = "Legendary! Your productivity is off the charts.";
+        badgeClass="badge-danger-light";
+    }
+    else
+    {
+        diligenceMessageKey = "Beyond comprehension. Take a break, for real.";
+        badgeClass="badge-danger-light";
+    }
 }
 
 <div class="row">
@@ -78,7 +138,7 @@
         }
 
         <div class="row">
-            <div class="col-12 col-sm-6 col-xxl-4 d-flex">
+            <div class="col-12 col-sm-6 col-xxl-3 d-flex">
                 <div class="card flex-fill">
                     <div class="card-body py-4">
                         <div class="d-flex align-items-start">
@@ -100,7 +160,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-xxl-4 d-flex">
+            <div class="col-12 col-sm-6 col-xxl-3 d-flex">
                 <div class="card flex-fill">
                     <div class="card-body py-4">
                         <div class="d-flex align-items-start">
@@ -122,7 +182,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-xxl-4 d-flex">
+            <div class="col-12 col-sm-6 col-xxl-3 d-flex">
                 <div class="card flex-fill">
                     <div class="card-body py-4">
                         <div class="d-flex align-items-start">
@@ -138,6 +198,28 @@
                             <div class="d-inline-block ms-3">
                                 <div class="stat">
                                     <i class="fas fa-calendar-check align-middle text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xxl-3 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-body py-4">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-grow-1">
+                                <h3 class="mb-2">@diligenceScore</h3>
+                                <p class="mb-2">@Localizer["Diligence Score"]</p>
+                                <div class="mb-0">
+                                    <span class="badge @badgeClass text-wrap" style="line-height: 1.5;">
+                                        @Localizer[diligenceMessageKey]
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="d-inline-block ms-3">
+                                <div class="stat">
+                                    <i class="fas fa-fire align-middle text-danger"></i>
                                 </div>
                             </div>
                         </div>

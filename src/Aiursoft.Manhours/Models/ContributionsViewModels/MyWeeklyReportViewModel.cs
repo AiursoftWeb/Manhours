@@ -1,5 +1,6 @@
 using Aiursoft.Manhours.Entities;
 using Aiursoft.UiStack.Layout;
+using System.Linq;
 
 namespace Aiursoft.Manhours.Models.ContributionsViewModels;
 
@@ -20,6 +21,13 @@ public class MyWeeklyReportViewModel : UiStackLayoutViewModel
     public int TotalActiveDays { get; set; }
     public List<WeeklyRepoContribution> Contributions { get; set; } = new();
     public bool Loading { get; set; }
+
+    public int DiligenceScore => (int)Math.Floor(new[]
+    {
+        TotalWorkHours,
+        TotalCommits / 2.0,
+        TotalActiveDays * 0.8
+    }.Min());
 }
 
 public class WeeklyRepoContribution

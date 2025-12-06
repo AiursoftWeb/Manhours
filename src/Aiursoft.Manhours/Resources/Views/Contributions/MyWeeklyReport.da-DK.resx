@@ -78,5 +78,8 @@
   <data name="Computing..." xml:space="preserve">
     <value>Beregner...</value>
   </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>Flittighedsscore</value>
+  </data>
 
 </root>

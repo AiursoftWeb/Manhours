@@ -81,5 +81,8 @@
   <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
     <value>We are calculating your weekly statistics from the repositories. This may take a few seconds.</value>
   </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>Diligence Score</value>
+  </data>
 
 </root>

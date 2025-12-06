@@ -78,5 +78,8 @@
   <data name="Computing..." xml:space="preserve">
     <value>計算中...</value>
   </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>勤勉スコア</value>
+  </data>
 
 </root>

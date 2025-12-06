@@ -78,5 +78,8 @@
   <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
     <value>हम रिपॉजिटरीज़ से आपके साप्ताहिक आँकड़ों की गणना कर रहे हैं। इसमें कुछ सेकंड लग सकते हैं।</value>
   </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>परिश्रम स्कोर</value>
+  </data>
 
 </root>

@@ -78,5 +78,8 @@
   <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
     <value>Stiamo calcolando le tue statistiche settimanali dai repository. Potrebbe richiedere alcuni secondi.</value>
   </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>Punteggio Diligenza</value>
+  </data>
 
 </root>

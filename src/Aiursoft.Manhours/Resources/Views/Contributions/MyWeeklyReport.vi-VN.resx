@@ -78,5 +78,8 @@
   <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
     <value>Chúng tôi đang tính toán thống kê hàng tuần của bạn từ các kho lưu trữ. Việc này có thể mất vài giây.</value>
   </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>Điểm Chăm Chỉ</value>
+  </data>
 
 </root>

@@ -78,5 +78,8 @@
   <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
     <value>Depolarınızdan haftalık istatistikleriniz hesaplanıyor. Bu birkaç saniye sürebilir.</value>
   </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>Çalışkanlık Puanı</value>
+  </data>
 
 </root>

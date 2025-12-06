@@ -78,5 +78,8 @@
   <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
     <value>我哋正喺度從倉庫計算你嘅每週統計數據。呢個過程可能需要幾秒鐘。</value>
   </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>勤力分數</value>
+  </data>
 
 </root>

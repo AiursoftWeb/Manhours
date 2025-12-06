@@ -78,5 +78,8 @@
   <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
     <value>Υπολογίζουμε τις εβδομαδιαίες σας στατιστικές από τα αποθετήρια. Αυτό μπορεί να πάρει μερικά δευτερόλεπτα.</value>
   </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>Βαθμός Επιμέλειας</value>
+  </data>
 
 </root>

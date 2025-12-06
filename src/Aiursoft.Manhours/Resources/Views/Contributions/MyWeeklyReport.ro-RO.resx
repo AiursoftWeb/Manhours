@@ -78,5 +78,8 @@
   <data name="Computing..." xml:space="preserve">
     <value>Se calculează...</value>
   </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>Scor Diligență</value>
+  </data>
 
 </root>

@@ -78,5 +78,8 @@
   <data name="Computing..." xml:space="preserve">
     <value>계산 중...</value>
   </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>근면 점수</value>
+  </data>
 
 </root>

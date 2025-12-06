@@ -78,5 +78,8 @@
   <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
     <value>Laskemme viikkotilastoja arkistoistasi. Tämä saattaa kestää muutaman sekunnin.</value>
   </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>Ahkeruuspistemäärä</value>
+  </data>
 
 </root>

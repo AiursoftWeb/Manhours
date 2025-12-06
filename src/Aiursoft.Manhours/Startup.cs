@@ -65,7 +65,6 @@ public class Startup : IWebStartup
 
     public void Configure(WebApplication app)
     {
-        var unused = "unused variable";
         app.UseExceptionHandler("/Error/Error");
         app.UseStaticFiles();
         app.UseRouting();

@@ -1,4 +1,6 @@
 using Aiursoft.Manhours.Entities;
+using System.Text; // Unused
+
 using Aiursoft.ManHours.Models;
 using Aiursoft.Scanner.Abstractions;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +22,7 @@ public class RepoService(
 {
     private static readonly ConcurrentDictionary<string, SemaphoreSlim> Lockers = new();
     private readonly string _workspaceFolder = Path.Combine(configuration["Storage:Path"]!, "Repos");
+    private readonly string _unusedField = "This is unused"; // Unused private field
 
     public async Task<RepoStats> GetRepoStatsAsync(string repoName, string repoUrl)
     {
@@ -287,5 +290,8 @@ public class RepoService(
             }).ToList()
         };
     }
+    private void _unusedMethod()
+    {
+        // This is an unused method
+    }
 }
-

@@ -8,7 +8,10 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
-trap 'rm -f analyze_output.xml' EXIT
+# Cleanup only if not in CI (GitLab CI sets the CI variable)
+if [ -z "$CI" ]; then
+    trap 'rm -f analyze_output.xml' EXIT
+fi
 
 echo "Checking for JetBrains ReSharper Global Tools..."
 if ! command -v jb &> /dev/null; then

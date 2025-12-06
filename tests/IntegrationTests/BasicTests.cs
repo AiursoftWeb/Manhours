@@ -1,11 +1,12 @@
 using System.Net;
+using System.Net.Http;
 using System.Text.RegularExpressions;
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools;
 using Aiursoft.Manhours.Entities;
 using static Aiursoft.WebTools.Extends;
 
-[assembly:DoNotParallelize]
+[assembly: DoNotParallelize]
 
 namespace Aiursoft.Manhours.Tests.IntegrationTests;
 
@@ -22,7 +23,8 @@ public class BasicTests
         var handler = new HttpClientHandler
         {
             CookieContainer = cookieContainer,
-            AllowAutoRedirect = false
+            AllowAutoRedirect = false,
+            AutomaticDecompression = DecompressionMethods.All
         };
         _port = Network.GetAvailablePort();
         _http = new HttpClient(handler)

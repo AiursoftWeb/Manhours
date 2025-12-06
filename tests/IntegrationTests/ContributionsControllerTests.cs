@@ -1,4 +1,5 @@
 using System.Net;
+using System.Net.Http;
 using System.Text.RegularExpressions;
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools;
@@ -21,7 +22,8 @@ public class ContributionsControllerTests
         var handler = new HttpClientHandler
         {
             CookieContainer = cookieContainer,
-            AllowAutoRedirect = false
+            AllowAutoRedirect = false,
+            AutomaticDecompression = DecompressionMethods.All
         };
         _port = Network.GetAvailablePort();
         _http = new HttpClient(handler)
@@ -217,7 +219,7 @@ public class ContributionsControllerTests
 
         // Should contain work hours information (even if it's 0)
         Assert.IsNotNull(html);
-        Assert.IsGreaterThan(html.Length, 0);
+        Assert.IsGreaterThan(0, html.Length);
     }
 
     [TestMethod]
@@ -235,7 +237,7 @@ public class ContributionsControllerTests
 
         // Should contain statistics
         Assert.IsNotNull(html);
-        Assert.IsGreaterThan(html.Length, 0);
+        Assert.IsGreaterThan(0, html.Length);
     }
 
     [TestMethod]

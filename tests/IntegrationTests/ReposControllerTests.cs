@@ -1,4 +1,5 @@
 using System.Net;
+using System.Net.Http;
 using System.Text.RegularExpressions;
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools;
@@ -20,7 +21,8 @@ public class ReposControllerTests
         var handler = new HttpClientHandler
         {
             CookieContainer = cookieContainer,
-            AllowAutoRedirect = false
+            AllowAutoRedirect = false,
+            AutomaticDecompression = DecompressionMethods.All
         };
         _port = Network.GetAvailablePort();
         _http = new HttpClient(handler)
@@ -147,7 +149,7 @@ public class ReposControllerTests
 
         // Should contain repository display information
         Assert.IsNotNull(html);
-        Assert.IsGreaterThan(html.Length, 0);
+        Assert.IsGreaterThan(0, html.Length);
     }
 
     [TestMethod]

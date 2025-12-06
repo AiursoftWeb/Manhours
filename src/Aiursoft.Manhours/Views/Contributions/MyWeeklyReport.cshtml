@@ -14,64 +14,6 @@
     }
 
     var diligenceScore = Model.DiligenceScore;
-    string diligenceMessageKey;
-    string badgeClass = "badge-primary-light";
-
-    if (diligenceScore < 10)
-    {
-        diligenceMessageKey = "Your work this week has just started. How was your vacation? Are you ready to code?";
-        badgeClass="bg-info text-dark";
-    }
-    else if (diligenceScore < 20)
-    {
-        diligenceMessageKey = "Easy workload this week. Didn't the boss assign you tasks?";
-        badgeClass="bg-success";
-    }
-    else if (diligenceScore < 30)
-    {
-        diligenceMessageKey = "Moderate workload. Seems like you are in a great working atmosphere.";
-        badgeClass="bg-success";
-    }
-    else if (diligenceScore < 40)
-    {
-        diligenceMessageKey = "Good workload. Seems like you are working hard for your ideals and goals.";
-        badgeClass="bg-success";
-    }
-    else if (diligenceScore < 50)
-    {
-        diligenceMessageKey = "Quite a bit of work. Improving yourself, but remember to rest.";
-        badgeClass="bg-warning text-dark";
-    }
-    else if (diligenceScore < 60)
-    {
-        diligenceMessageKey = "Mainstay. Very active. Solid workload. No need to do so much.";
-        badgeClass="bg-warning text-dark";
-    }
-    else if (diligenceScore < 70)
-    {
-        diligenceMessageKey = "Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!";
-        badgeClass="bg-danger";
-    }
-    else if (diligenceScore < 80)
-    {
-        diligenceMessageKey = "996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!";
-        badgeClass="bg-danger";
-    }
-    else if (diligenceScore < 90)
-    {
-        diligenceMessageKey = "You are a coding machine! Unbelievable dedication.";
-        badgeClass="bg-danger";
-    }
-    else if (diligenceScore < 100)
-    {
-        diligenceMessageKey = "Legendary! Your productivity is off the charts.";
-        badgeClass="bg-danger";
-    }
-    else
-    {
-        diligenceMessageKey = "Beyond comprehension. Take a break, for real.";
-        badgeClass="bg-danger";
-    }
 }
 
 <div class="row">
@@ -146,7 +88,7 @@
                                 <h3 class="mb-2">@Model.TotalWorkHours.ToString("F1")</h3>
                                 <p class="mb-2">@Localizer["Total Work Hours"]</p>
                                 <div class="mb-0">
-                                    <span class="badge badge-primary-light">
+                                    <span class="badge bg-primary text-dark">
                                         @Localizer["Last 7 Days"]
                                     </span>
                                 </div>
@@ -168,7 +110,7 @@
                                 <h3 class="mb-2">@Model.TotalCommits</h3>
                                 <p class="mb-2">@Localizer["Total Commits"]</p>
                                 <div class="mb-0">
-                                    <span class="badge badge-success-light">
+                                    <span class="badge bg-success text-dark">
                                         @Localizer["Last 7 Days"]
                                     </span>
                                 </div>
@@ -190,7 +132,7 @@
                                 <h3 class="mb-2">@Model.TotalActiveDays</h3>
                                 <p class="mb-2">@Localizer["Active Days"]</p>
                                 <div class="mb-0">
-                                    <span class="badge badge-warning-light">
+                                    <span class="badge bg-warning text-dark">
                                         @Localizer["Last 7 Days"]
                                     </span>
                                 </div>
@@ -212,9 +154,72 @@
                                 <h3 class="mb-2">@diligenceScore</h3>
                                 <p class="mb-2">@Localizer["Diligence Score"]</p>
                                 <div class="mb-0">
-                                    <span class="badge @badgeClass text-wrap" style="line-height: 1.5;">
-                                        @Localizer[diligenceMessageKey]
-                                    </span>
+                                    @if (diligenceScore < 10)
+                                    {
+                                        <span class="badge bg-info text-dark text-wrap" style="line-height: 1.5;">
+                                            @Localizer["Your work this week has just started. How was your vacation? Are you ready to code?"]
+                                        </span>
+                                    }
+                                    else if (diligenceScore < 20)
+                                    {
+                                        <span class="badge bg-success text-wrap" style="line-height: 1.5;">
+                                            @Localizer["Easy workload this week. Didn't the boss assign you tasks?"]
+                                        </span>
+                                    }
+                                    else if (diligenceScore < 30)
+                                    {
+                                        <span class="badge bg-success text-wrap" style="line-height: 1.5;">
+                                            @Localizer["Moderate workload. Seems like you are in a great working atmosphere."]
+                                        </span>
+                                    }
+                                    else if (diligenceScore < 40)
+                                    {
+                                        <span class="badge bg-success text-wrap" style="line-height: 1.5;">
+                                            @Localizer["Good workload. Seems like you are working hard for your ideals and goals."]
+                                        </span>
+                                    }
+                                    else if (diligenceScore < 50)
+                                    {
+                                        <span class="badge bg-warning text-dark text-wrap" style="line-height: 1.5;">
+                                            @Localizer["Quite a bit of work. Improving yourself, but remember to rest."]
+                                        </span>
+                                    }
+                                    else if (diligenceScore < 60)
+                                    {
+                                        <span class="badge bg-warning text-dark text-wrap" style="line-height: 1.5;">
+                                            @Localizer["Mainstay. Very active. Solid workload. No need to do so much."]
+                                        </span>
+                                    }
+                                    else if (diligenceScore < 70)
+                                    {
+                                        <span class="badge bg-danger text-wrap" style="line-height: 1.5;">
+                                            @Localizer["Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!"]
+                                        </span>
+                                    }
+                                    else if (diligenceScore < 80)
+                                    {
+                                        <span class="badge bg-danger text-wrap" style="line-height: 1.5;">
+                                            @Localizer["996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!"]
+                                        </span>
+                                    }
+                                    else if (diligenceScore < 90)
+                                    {
+                                        <span class="badge bg-danger text-wrap" style="line-height: 1.5;">
+                                            @Localizer["You are a coding machine! Unbelievable dedication."]
+                                        </span>
+                                    }
+                                    else if (diligenceScore < 100)
+                                    {
+                                        <span class="badge bg-danger text-wrap" style="line-height: 1.5;">
+                                            @Localizer["Legendary! Your productivity is off the charts."]
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger text-wrap" style="line-height: 1.5;">
+                                            @Localizer["Beyond comprehension. Take a break, for real."]
+                                        </span>
+                                    }
                                 </div>
                             </div>
                             <div class="d-inline-block ms-3">

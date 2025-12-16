@@ -3,6 +3,7 @@ using Aiursoft.ManHours.Models;
 using Aiursoft.Scanner.Abstractions;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Concurrent;
+using Aiursoft.Canon;
 using Aiursoft.GitRunner;
 using Aiursoft.GitRunner.Models;
 using Aiursoft.CSTools.Tools;
@@ -12,6 +13,7 @@ using Microsoft.Extensions.Caching.Memory;
 namespace Aiursoft.Manhours.Services;
 
 public class RepoService(
+    RetryEngine retryEngine,
     TemplateDbContext dbContext,
     ILogger<RepoService> logger,
     WorkspaceManager workspaceManager,
@@ -69,11 +71,14 @@ public class RepoService(
         try
         {
             logger.LogInformation("Resetting repo: {Repo} on {Path}", repoName, workPath);
-            await workspaceManager.ResetRepo(
-                workPath,
-                null,
-                repoUrl,
-                CloneMode.BareWithOnlyCommits);
+            await retryEngine.RunWithRetry(async _ =>
+            {
+                await workspaceManager.ResetRepo(
+                    workPath,
+                    null,
+                    repoUrl,
+                    CloneMode.BareWithOnlyCommits);
+            }, attempts: 5);
 
             logger.LogInformation("Getting commits for repo: {Repo} on {Path}", repoName, workPath);
             var commits = await workspaceManager.GetCommits(workPath);
@@ -102,11 +107,14 @@ public class RepoService(
         try
         {
             logger.LogInformation("Resetting repo: {Repo} on {Path}", repoName, workPath);
-            await workspaceManager.ResetRepo(
-                workPath,
-                null,
-                repoUrl,
-                CloneMode.BareWithOnlyCommits);
+            await retryEngine.RunWithRetry(async _ =>
+            {
+                await workspaceManager.ResetRepo(
+                    workPath,
+                    null,
+                    repoUrl,
+                    CloneMode.BareWithOnlyCommits);
+            }, attempts: 5);
 
             logger.LogInformation("Getting commits for repo: {Repo} on {Path}", repoName, workPath);
             var commits = await workspaceManager.GetCommits(workPath);

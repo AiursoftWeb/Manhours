@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using Newtonsoft.Json;
 
-namespace Aiursoft.ManHours.Models;
+namespace Aiursoft.Manhours.Models;
 
 public class Badge
 {

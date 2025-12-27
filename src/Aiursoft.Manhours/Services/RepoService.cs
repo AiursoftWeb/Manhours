@@ -1,5 +1,4 @@
 using Aiursoft.Manhours.Entities;
-using Aiursoft.ManHours.Models;
 using Aiursoft.Scanner.Abstractions;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Concurrent;
@@ -7,7 +6,7 @@ using Aiursoft.Canon;
 using Aiursoft.GitRunner;
 using Aiursoft.GitRunner.Models;
 using Aiursoft.CSTools.Tools;
-using Aiursoft.ManHours.Services;
+using Aiursoft.Manhours.Models;
 using Microsoft.Extensions.Caching.Memory;
 
 namespace Aiursoft.Manhours.Services;

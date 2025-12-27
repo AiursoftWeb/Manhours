@@ -1,6 +1,6 @@
 using Aiursoft.Manhours.Services.FileStorage;
 
-namespace Aiursoft.ManHours.Tests;
+namespace Aiursoft.Manhours.Tests;
 
 [TestClass]
 public class FileAccessSecurityTest

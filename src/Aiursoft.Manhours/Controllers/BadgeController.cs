@@ -1,10 +1,10 @@
-using Aiursoft.ManHours.Models;
 using Aiursoft.Manhours.Entities;
-using Aiursoft.ManHours.Models.BadgeViewModels;
 using Aiursoft.Manhours.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.RegularExpressions;
+using Aiursoft.Manhours.Models;
+using Aiursoft.Manhours.Models.BadgeViewModels;
 
 namespace Aiursoft.Manhours.Controllers;
 

@@ -1,4 +1,4 @@
-namespace Aiursoft.ManHours.Models;
+namespace Aiursoft.Manhours.Models;
 
 public class ContributorStat
 {

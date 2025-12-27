@@ -1,8 +1,8 @@
 using Aiursoft.GitRunner.Models;
-using Aiursoft.ManHours.Models;
+using Aiursoft.Manhours.Models;
 using Aiursoft.Scanner.Abstractions;
 
-namespace Aiursoft.ManHours.Services;
+namespace Aiursoft.Manhours.Services;
 
 public class WorkTimeService : ITransientDependency
 {

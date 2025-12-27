@@ -1,6 +1,6 @@
 using Aiursoft.UiStack.Layout;
 
-namespace Aiursoft.ManHours.Models.BadgeViewModels;
+namespace Aiursoft.Manhours.Models.BadgeViewModels;
 
 public class RenderRepoViewModel : UiStackLayoutViewModel
 {

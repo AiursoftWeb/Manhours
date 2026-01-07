@@ -18,56 +18,56 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="My Contributions" xml:space="preserve">
-    <value>Kontribusi Saya</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Komit</value>
-  </data>
-  <data name="Repository" xml:space="preserve">
-    <value>Repositori</value>
-  </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>Total Komit</value>
+      <data name="Action" xml:space="preserve">
+    <value>Tindakan</value>
   </data>
   <data name="Active Days" xml:space="preserve">
     <value>Hari Aktif</value>
   </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Jam Kerja</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>Total Jam Kerja</value>
-  </data>
-  <data name="Contributed Repositories" xml:space="preserve">
-    <value>Repositori yang Dikontribusikan</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Lihat Repo</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Tambahkan repositori sekarang</value>
   </data>
   <data name="All Contributions" xml:space="preserve">
     <value>Semua Kontribusi</value>
   </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Komit</value>
+  </data>
+  <data name="Contributed Repositories" xml:space="preserve">
+    <value>Repositori yang Dikontribusikan</value>
+  </data>
   <data name="Days" xml:space="preserve">
     <value>Hari</value>
-  </data>
-  <data name="Action" xml:space="preserve">
-    <value>Tindakan</value>
-  </data>
-  <data name="No contributions found yet. Start coding!" xml:space="preserve">
-    <value>Belum ada kontribusi yang ditemukan. Mulai ngoding!</value>
   </data>
   <data name="Hours" xml:space="preserve">
     <value>Jam</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Kontribusi Saya</value>
+  </data>
+  <data name="No contributions found yet. Start coding!" xml:space="preserve">
+    <value>Belum ada kontribusi yang ditemukan. Mulai ngoding!</value>
+  </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Detail Profil</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Tambahkan repositori sekarang</value>
+  <data name="Repository" xml:space="preserve">
+    <value>Repositori</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Repositori tidak dilacak?</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Total Komit</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Total Jam Kerja</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>Lihat Repo</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Jam Kerja</value>
   </data>
 
 </root>

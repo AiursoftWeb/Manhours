@@ -18,23 +18,44 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Work Hours" xml:space="preserve">
-    <value>Ώρες Εργασίας</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Commits</value>
-  </data>
-  <data name="Repository" xml:space="preserve">
-    <value>Αποθετήριο</value>
-  </data>
-  <data name="My Contributions" xml:space="preserve">
-    <value>Οι Συνεισφορές Μου</value>
+      <data name="Action" xml:space="preserve">
+    <value>Ενέργεια</value>
   </data>
   <data name="Active Days" xml:space="preserve">
     <value>Ενεργές Ημέρες</value>
   </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Προσθήκη αποθετηρίου τώρα</value>
+  </data>
+  <data name="All Contributions" xml:space="preserve">
+    <value>Όλες οι Συνεισφορές</value>
+  </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Commits</value>
+  </data>
   <data name="Contributed Repositories" xml:space="preserve">
     <value>Συνεισφερόμενες Αποθετήρια</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Ημέρες</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Ώρες</value>
+  </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Οι Συνεισφορές Μου</value>
+  </data>
+  <data name="No contributions found yet. Start coding!" xml:space="preserve">
+    <value>Δεν βρέθηκαν ακόμη συνεισφορές. Ξεκινήστε να προγραμματίζετε!</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Στοιχεία Προφίλ</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>Αποθετήριο</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Αποθετήριο δεν παρακολουθείται;</value>
   </data>
   <data name="Total Commits" xml:space="preserve">
     <value>Συνολικές Επιτροπές</value>
@@ -42,32 +63,11 @@
   <data name="Total Work Hours" xml:space="preserve">
     <value>Συνολικές Ώρες Εργασίας</value>
   </data>
-  <data name="Action" xml:space="preserve">
-    <value>Ενέργεια</value>
-  </data>
-  <data name="Days" xml:space="preserve">
-    <value>Ημέρες</value>
-  </data>
-  <data name="All Contributions" xml:space="preserve">
-    <value>Όλες οι Συνεισφορές</value>
-  </data>
   <data name="View Repo" xml:space="preserve">
     <value>Προβολή Αποθετηρίου</value>
   </data>
-  <data name="No contributions found yet. Start coding!" xml:space="preserve">
-    <value>Δεν βρέθηκαν ακόμη συνεισφορές. Ξεκινήστε να προγραμματίζετε!</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Ώρες</value>
-  </data>
-  <data name="Profile Details" xml:space="preserve">
-    <value>Στοιχεία Προφίλ</value>
-  </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Προσθήκη αποθετηρίου τώρα</value>
-  </data>
-  <data name="Repository not tracked?" xml:space="preserve">
-    <value>Αποθετήριο δεν παρακολουθείται;</value>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Ώρες Εργασίας</value>
   </data>
 
 </root>

@@ -18,56 +18,56 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Commits" xml:space="preserve">
-    <value>Lần commit</value>
-  </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>Tổng số commit</value>
+      <data name="Action" xml:space="preserve">
+    <value>Hành động</value>
   </data>
   <data name="Active Days" xml:space="preserve">
     <value>Ngày hoạt động</value>
   </data>
-  <data name="Repository" xml:space="preserve">
-    <value>Kho lưu trữ</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Giờ Làm Việc</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>Tổng Giờ Làm Việc</value>
-  </data>
-  <data name="My Contributions" xml:space="preserve">
-    <value>Đóng góp của tôi</value>
-  </data>
-  <data name="Contributed Repositories" xml:space="preserve">
-    <value>Kho lưu trữ đã đóng góp</value>
-  </data>
-  <data name="Action" xml:space="preserve">
-    <value>Hành động</value>
-  </data>
-  <data name="Days" xml:space="preserve">
-    <value>Ngày</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Xem Kho</value>
-  </data>
-  <data name="No contributions found yet. Start coding!" xml:space="preserve">
-    <value>Chưa có đóng góp nào được tìm thấy. Hãy bắt đầu lập trình!</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Thêm kho lưu trữ ngay</value>
   </data>
   <data name="All Contributions" xml:space="preserve">
     <value>Tất cả Đóng góp</value>
   </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Lần commit</value>
+  </data>
+  <data name="Contributed Repositories" xml:space="preserve">
+    <value>Kho lưu trữ đã đóng góp</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Ngày</value>
+  </data>
   <data name="Hours" xml:space="preserve">
     <value>Giờ</value>
+  </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Đóng góp của tôi</value>
+  </data>
+  <data name="No contributions found yet. Start coding!" xml:space="preserve">
+    <value>Chưa có đóng góp nào được tìm thấy. Hãy bắt đầu lập trình!</value>
   </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Chi tiết Hồ sơ</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Thêm kho lưu trữ ngay</value>
+  <data name="Repository" xml:space="preserve">
+    <value>Kho lưu trữ</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Kho lưu trữ chưa được theo dõi?</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Tổng số commit</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Tổng Giờ Làm Việc</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>Xem Kho</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Giờ Làm Việc</value>
   </data>
 
 </root>

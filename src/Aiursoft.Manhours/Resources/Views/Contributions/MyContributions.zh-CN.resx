@@ -18,56 +18,56 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Contributed Repositories" xml:space="preserve">
-    <value>贡献的仓库</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>总工作时长</value>
+      <data name="Action" xml:space="preserve">
+    <value>操作</value>
   </data>
   <data name="Active Days" xml:space="preserve">
     <value>活跃天数</value>
   </data>
-  <data name="Commits" xml:space="preserve">
-    <value>提交次数</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>工作时长</value>
-  </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>总提交数</value>
-  </data>
-  <data name="Repository" xml:space="preserve">
-    <value>仓库</value>
-  </data>
-  <data name="My Contributions" xml:space="preserve">
-    <value>我的贡献</value>
-  </data>
-  <data name="Action" xml:space="preserve">
-    <value>操作</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>立即添加仓库</value>
   </data>
   <data name="All Contributions" xml:space="preserve">
     <value>所有贡献</value>
   </data>
+  <data name="Commits" xml:space="preserve">
+    <value>提交次数</value>
+  </data>
+  <data name="Contributed Repositories" xml:space="preserve">
+    <value>贡献的仓库</value>
+  </data>
   <data name="Days" xml:space="preserve">
     <value>天</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>查看仓库</value>
-  </data>
-  <data name="No contributions found yet. Start coding!" xml:space="preserve">
-    <value>尚未找到贡献记录。开始编码吧！</value>
   </data>
   <data name="Hours" xml:space="preserve">
     <value>小时</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>我的贡献</value>
+  </data>
+  <data name="No contributions found yet. Start coding!" xml:space="preserve">
+    <value>尚未找到贡献记录。开始编码吧！</value>
+  </data>
   <data name="Profile Details" xml:space="preserve">
     <value>个人资料详情</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>仓库</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>仓库未跟踪？</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>立即添加仓库</value>
+  <data name="Total Commits" xml:space="preserve">
+    <value>总提交数</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>总工作时长</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>查看仓库</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>工作时长</value>
   </data>
 
 </root>

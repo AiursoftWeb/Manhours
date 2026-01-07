@@ -18,59 +18,59 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Total Man Hours" xml:space="preserve">
-    <value>Samlede mandetimer</value>
-  </data>
-  <data name="Repository ManHours Statistics" xml:space="preserve">
-    <value>Repository Arbejdstimer Statistik</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Timer</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Commits</value>
+      <data name="Active Days" xml:space="preserve">
+    <value>Aktive dage</value>
   </data>
   <data name="Active days deleted" xml:space="preserve">
     <value>Aktive arbejdsdage</value>
   </data>
-  <data name="Details" xml:space="preserve">
-    <value>Detaljer</value>
+  <data name="Average Hours" xml:space="preserve">
+    <value>Gennemsnitlige timer</value>
+  </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Commits</value>
   </data>
   <data name="Contributors" xml:space="preserve">
     <value>Bidragydere</value>
   </data>
-  <data name="Std Dev" xml:space="preserve">
-    <value>Std.afv.</value>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>bidragydere</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detaljer</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Timer</value>
   </data>
   <data name="My Stats" xml:space="preserve">
     <value>Mine statistikker</value>
   </data>
-  <data name="Average Hours" xml:space="preserve">
-    <value>Gennemsnitlige timer</value>
+  <data name="Next" xml:space="preserve">
+    <value>Næste</value>
   </data>
-  <data name="Repository Stats" xml:space="preserve">
-    <value>Repository-statistik</value>
-  </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>Samlede timer</value>
-  </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>Aktive dage</value>
+  <data name="of" xml:space="preserve">
+    <value>af</value>
   </data>
   <data name="Previous" xml:space="preserve">
     <value>Forrige</value>
   </data>
+  <data name="Repository ManHours Statistics" xml:space="preserve">
+    <value>Repository Arbejdstimer Statistik</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>Repository-statistik</value>
+  </data>
   <data name="Showing" xml:space="preserve">
     <value>Viser</value>
   </data>
-  <data name="Next" xml:space="preserve">
-    <value>Næste</value>
+  <data name="Std Dev" xml:space="preserve">
+    <value>Std.afv.</value>
   </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>bidragydere</value>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Samlede timer</value>
   </data>
-  <data name="of" xml:space="preserve">
-    <value>af</value>
+  <data name="Total Man Hours" xml:space="preserve">
+    <value>Samlede mandetimer</value>
   </data>
 
 </root>

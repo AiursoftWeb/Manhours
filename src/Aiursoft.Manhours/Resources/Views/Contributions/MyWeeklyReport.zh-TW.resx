@@ -18,107 +18,107 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="From" xml:space="preserve">
-    <value>自</value>
-  </data>
-  <data name="Last 7 Days" xml:space="preserve">
-    <value>過去 7 天</value>
-  </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>活躍天數</value>
-  </data>
-  <data name="Report Period" xml:space="preserve">
-    <value>報告期間</value>
-  </data>
-  <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
-    <value>儲存庫貢獻（最近7天）</value>
-  </data>
-  <data name="Repository" xml:space="preserve">
-    <value>儲存庫</value>
-  </data>
-  <data name="Profile Details" xml:space="preserve">
-    <value>個人檔案詳細資料</value>
-  </data>
-  <data name="To" xml:space="preserve">
-    <value>至</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>工時</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>總工作時數</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>提交次數</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>小時</value>
+      <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996？幾乎不間斷工作。會降低創造力。超出正常壓力極限。停止工作！</value>
   </data>
   <data name="Action" xml:space="preserve">
     <value>操作</value>
   </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>總提交次數</value>
-  </data>
-  <data name="All Contributions" xml:space="preserve">
-    <value>所有貢獻</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>檢視儲存庫</value>
-  </data>
-  <data name="Days" xml:space="preserve">
-    <value>天數</value>
-  </data>
-  <data name="No contributions found in the last 7 days." xml:space="preserve">
-    <value>在過去7天內未找到任何貢獻記錄。</value>
-  </data>
-  <data name="Computing..." xml:space="preserve">
-    <value>計算中...</value>
-  </data>
-  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
-    <value>我們正在從儲存庫計算您的每週統計數據。這可能需要幾秒鐘。</value>
-  </data>
-  <data name="Diligence Score" xml:space="preserve">
-    <value>勤奮指數</value>
-  </data>
-  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
-    <value>工作量不少。提升自己的同時，也別忘了休息。</value>
+  <data name="Active Days" xml:space="preserve">
+    <value>活躍天數</value>
   </data>
   <data name="Add repository now" xml:space="preserve">
     <value>立即新增儲存庫</value>
   </data>
-  <data name="Repository not tracked?" xml:space="preserve">
-    <value>尚未追蹤的儲存庫？</value>
+  <data name="All Contributions" xml:space="preserve">
+    <value>所有貢獻</value>
+  </data>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>難以理解。真的該休息了。</value>
+  </data>
+  <data name="Commits" xml:space="preserve">
+    <value>提交次數</value>
+  </data>
+  <data name="Computing..." xml:space="preserve">
+    <value>計算中...</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>天數</value>
+  </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>勤奮指數</value>
   </data>
   <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
     <value>這週工作量很輕鬆。老闆沒給你派任務嗎？</value>
   </data>
-  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
-    <value>工作量適中。看來你處在一個很棒的工作氛圍中。</value>
+  <data name="From" xml:space="preserve">
+    <value>自</value>
   </data>
   <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
     <value>工作量不錯。看來你正為了理想與目標而努力。</value>
   </data>
-  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
-    <value>您這週的工作才剛開始。假期過得如何？準備好寫程式了嗎？</value>
+  <data name="Hours" xml:space="preserve">
+    <value>小時</value>
   </data>
-  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
-    <value>996？幾乎不間斷工作。會降低創造力。超出正常壓力極限。停止工作！</value>
-  </data>
-  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
-    <value>你簡直是台寫程式機器！這份投入令人難以置信。</value>
-  </data>
-  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
-    <value>非常疲憊。請立即休息。已接近正常工作壓力的上限。停止工作！</value>
-  </data>
-  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
-    <value>主力成員。非常活躍。工作量紮實。不必如此操勞。</value>
+  <data name="Last 7 Days" xml:space="preserve">
+    <value>過去 7 天</value>
   </data>
   <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
     <value>傳奇！你的生產力已經突破天際。</value>
   </data>
-  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
-    <value>難以理解。真的該休息了。</value>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>主力成員。非常活躍。工作量紮實。不必如此操勞。</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>工作量適中。看來你處在一個很棒的工作氛圍中。</value>
+  </data>
+  <data name="No contributions found in the last 7 days." xml:space="preserve">
+    <value>在過去7天內未找到任何貢獻記錄。</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>個人檔案詳細資料</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>工作量不少。提升自己的同時，也別忘了休息。</value>
+  </data>
+  <data name="Report Period" xml:space="preserve">
+    <value>報告期間</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>儲存庫</value>
+  </data>
+  <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
+    <value>儲存庫貢獻（最近7天）</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>尚未追蹤的儲存庫？</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>至</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>總提交次數</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>總工作時數</value>
+  </data>
+  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
+    <value>非常疲憊。請立即休息。已接近正常工作壓力的上限。停止工作！</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>檢視儲存庫</value>
+  </data>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>我們正在從儲存庫計算您的每週統計數據。這可能需要幾秒鐘。</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>工時</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>你簡直是台寫程式機器！這份投入令人難以置信。</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>您這週的工作才剛開始。假期過得如何？準備好寫程式了嗎？</value>
   </data>
 
 </root>

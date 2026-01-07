@@ -18,56 +18,56 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Commits" xml:space="preserve">
-    <value>Incheckningar</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Arbetstimmar</value>
-  </data>
-  <data name="My Contributions" xml:space="preserve">
-    <value>Mina bidrag</value>
+      <data name="Action" xml:space="preserve">
+    <value>Åtgärd</value>
   </data>
   <data name="Active Days" xml:space="preserve">
     <value>Aktiva dagar</value>
   </data>
-  <data name="Repository" xml:space="preserve">
-    <value>Förråd</value>
-  </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>Totalt antal incheckningar</value>
-  </data>
-  <data name="Action" xml:space="preserve">
-    <value>Åtgärd</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Visa repo</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Lägg till arkiv nu</value>
   </data>
   <data name="All Contributions" xml:space="preserve">
     <value>Alla bidrag</value>
   </data>
-  <data name="Days" xml:space="preserve">
-    <value>Dagar</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>Totala arbetstimmar</value>
+  <data name="Commits" xml:space="preserve">
+    <value>Incheckningar</value>
   </data>
   <data name="Contributed Repositories" xml:space="preserve">
     <value>Bidragsgivna arkiv</value>
   </data>
-  <data name="No contributions found yet. Start coding!" xml:space="preserve">
-    <value>Inga bidrag hittades ännu. Börja koda!</value>
+  <data name="Days" xml:space="preserve">
+    <value>Dagar</value>
   </data>
   <data name="Hours" xml:space="preserve">
     <value>Timmar</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Mina bidrag</value>
+  </data>
+  <data name="No contributions found yet. Start coding!" xml:space="preserve">
+    <value>Inga bidrag hittades ännu. Börja koda!</value>
+  </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Profildetaljer</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>Förråd</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Repository inte spårad?</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Lägg till arkiv nu</value>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Totalt antal incheckningar</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Totala arbetstimmar</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>Visa repo</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Arbetstimmar</value>
   </data>
 
 </root>

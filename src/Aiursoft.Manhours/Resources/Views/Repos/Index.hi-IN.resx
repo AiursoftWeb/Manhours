@@ -18,65 +18,65 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Git" xml:space="preserve">
+      <data name="Active" xml:space="preserve">
+    <value>सक्रिय</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>अब रिपॉजिटरी जोड़ें</value>
+  </data>
+  <data name="All Repositories" xml:space="preserve">
+    <value>सभी रिपॉजिटरीज़</value>
+  </data>
+  <data name="Contributed!" xml:space="preserve">
+    <value>योगदान दिया!</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>योगदानकर्ता</value>
+  </data>
+  <data name="Git" xml:space="preserve">
     <value>Git</value>
   </data>
   <data name="Hours" xml:space="preserve">
     <value>घंटे</value>
   </data>
-  <data name="Active" xml:space="preserve">
-    <value>सक्रिय</value>
-  </data>
-  <data name="Contributed!" xml:space="preserve">
-    <value>योगदान दिया!</value>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>मेरे शीर्ष परिश्रमी सहयोगिता वाले रिपॉजिटरी</value>
   </data>
   <data name="My Top Participated" xml:space="preserve">
     <value>मेरे शीर्ष भागीदारी वाले</value>
   </data>
-  <data name="All Repositories" xml:space="preserve">
-    <value>सभी रिपॉजिटरीज़</value>
-  </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>कुल घंटे</value>
-  </data>
-  <data name="Contributors" xml:space="preserve">
-    <value>योगदानकर्ता</value>
-  </data>
-  <data name="Top Repositories" xml:space="preserve">
-    <value>शीर्ष रिपॉजिटरीज़</value>
-  </data>
-  <data name="Top Contributor" xml:space="preserve">
-    <value>शीर्ष योगदानकर्ता</value>
-  </data>
-  <data name="Top #1" xml:space="preserve">
-    <value>शीर्ष #1</value>
+  <data name="Next" xml:space="preserve">
+    <value>अगला</value>
   </data>
   <data name="of" xml:space="preserve">
     <value>का</value>
   </data>
-  <data name="Next" xml:space="preserve">
-    <value>अगला</value>
+  <data name="Previous" xml:space="preserve">
+    <value>पिछला</value>
   </data>
   <data name="repositories" xml:space="preserve">
     <value>रिपॉजिटरीज़</value>
   </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>रिपॉजिटरी ट्रैक नहीं की गई?</value>
+  </data>
   <data name="Showing" xml:space="preserve">
     <value>दिखा रहा है</value>
-  </data>
-  <data name="Previous" xml:space="preserve">
-    <value>पिछला</value>
-  </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>अब रिपॉजिटरी जोड़ें</value>
-  </data>
-  <data name="My top hard-working collaborated repositories" xml:space="preserve">
-    <value>मेरे शीर्ष परिश्रमी सहयोगिता वाले रिपॉजिटरी</value>
   </data>
   <data name="Sorted by repository total work hours" xml:space="preserve">
     <value>रिपॉजिटरी की कुल कार्य घंटों के आधार पर क्रमबद्ध</value>
   </data>
-  <data name="Repository not tracked?" xml:space="preserve">
-    <value>रिपॉजिटरी ट्रैक नहीं की गई?</value>
+  <data name="Top #1" xml:space="preserve">
+    <value>शीर्ष #1</value>
+  </data>
+  <data name="Top Contributor" xml:space="preserve">
+    <value>शीर्ष योगदानकर्ता</value>
+  </data>
+  <data name="Top Repositories" xml:space="preserve">
+    <value>शीर्ष रिपॉजिटरीज़</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>कुल घंटे</value>
   </data>
 
 </root>

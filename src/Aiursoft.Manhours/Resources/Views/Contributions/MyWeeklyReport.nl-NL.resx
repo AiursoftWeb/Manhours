@@ -18,20 +18,80 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Profile Details" xml:space="preserve">
-    <value>Profielgegevens</value>
+      <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996? Werk je bijna non-stop. Vermindert creativiteit. Overschrijdt de normale druklimiet. Stop met werken!</value>
   </data>
-  <data name="Report Period" xml:space="preserve">
-    <value>Rapportageperiode</value>
+  <data name="Action" xml:space="preserve">
+    <value>Actie</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>Actieve Dagen</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Voeg repository nu toe</value>
+  </data>
+  <data name="All Contributions" xml:space="preserve">
+    <value>Alle Bijdragen</value>
+  </data>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>Onbegrijpelijk. Neem echt even pauze.</value>
+  </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Commits</value>
+  </data>
+  <data name="Computing..." xml:space="preserve">
+    <value>Bezig met berekenen...</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Dagen</value>
+  </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>Vlijt Score</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>Lichte werkdruk deze week. Heeft de baas je geen taken gegeven?</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Van</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>Goede werklast. Het lijkt erop dat je hard werkt voor je idealen en doelen.</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Uren</value>
   </data>
   <data name="Last 7 Days" xml:space="preserve">
     <value>Laatste 7 dagen</value>
   </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>Totale werkuren</value>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>Legendarisch! Je productiviteit is ongekend hoog.</value>
   </data>
-  <data name="From" xml:space="preserve">
-    <value>Van</value>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>Steunpilaar. Erg actief. Stevige werklast. Het is niet nodig om zoveel te doen.</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>Gemiddelde werkdruk. Het lijkt alsof je in een geweldige werksfeer zit.</value>
+  </data>
+  <data name="No contributions found in the last 7 days." xml:space="preserve">
+    <value>Er zijn geen bijdragen gevonden in de afgelopen 7 dagen.</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Profielgegevens</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>Behoorlijk wat werk. Jezelf verbeteren, maar vergeet niet uit te rusten.</value>
+  </data>
+  <data name="Report Period" xml:space="preserve">
+    <value>Rapportageperiode</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>Repository</value>
+  </data>
+  <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
+    <value>Repositorybijdragen (afgelopen 7 dagen)</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Repository niet gevolgd?</value>
   </data>
   <data name="To" xml:space="preserve">
     <value>Tot</value>
@@ -39,86 +99,26 @@
   <data name="Total Commits" xml:space="preserve">
     <value>Totaal aantal commits</value>
   </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>Actieve Dagen</value>
-  </data>
-  <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
-    <value>Repositorybijdragen (afgelopen 7 dagen)</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Uren</value>
-  </data>
-  <data name="Action" xml:space="preserve">
-    <value>Actie</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Werkuren</value>
-  </data>
-  <data name="Days" xml:space="preserve">
-    <value>Dagen</value>
-  </data>
-  <data name="All Contributions" xml:space="preserve">
-    <value>Alle Bijdragen</value>
-  </data>
-  <data name="Repository" xml:space="preserve">
-    <value>Repository</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Commits</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Bekijk Repo</value>
-  </data>
-  <data name="No contributions found in the last 7 days." xml:space="preserve">
-    <value>Er zijn geen bijdragen gevonden in de afgelopen 7 dagen.</value>
-  </data>
-  <data name="Computing..." xml:space="preserve">
-    <value>Bezig met berekenen...</value>
-  </data>
-  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
-    <value>We berekenen je wekelijkse statistieken vanuit de repositories. Dit kan een paar seconden duren.</value>
-  </data>
-  <data name="Diligence Score" xml:space="preserve">
-    <value>Vlijt Score</value>
-  </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Voeg repository nu toe</value>
-  </data>
-  <data name="Repository not tracked?" xml:space="preserve">
-    <value>Repository niet gevolgd?</value>
-  </data>
-  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
-    <value>Steunpilaar. Erg actief. Stevige werklast. Het is niet nodig om zoveel te doen.</value>
-  </data>
-  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
-    <value>Goede werklast. Het lijkt erop dat je hard werkt voor je idealen en doelen.</value>
-  </data>
-  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
-    <value>Lichte werkdruk deze week. Heeft de baas je geen taken gegeven?</value>
-  </data>
-  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
-    <value>Gemiddelde werkdruk. Het lijkt alsof je in een geweldige werksfeer zit.</value>
-  </data>
-  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
-    <value>Behoorlijk wat werk. Jezelf verbeteren, maar vergeet niet uit te rusten.</value>
-  </data>
-  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
-    <value>Je werk deze week is net begonnen. Hoe was je vakantie? Ben je klaar om te coderen?</value>
-  </data>
-  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
-    <value>996? Werk je bijna non-stop. Vermindert creativiteit. Overschrijdt de normale druklimiet. Stop met werken!</value>
-  </data>
-  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
-    <value>Legendarisch! Je productiviteit is ongekend hoog.</value>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Totale werkuren</value>
   </data>
   <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
     <value>Heel moe. Rust onmiddellijk. Bijna de bovengrens van normale werkdruk. Stop met werken!</value>
   </data>
-  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
-    <value>Onbegrijpelijk. Neem echt even pauze.</value>
+  <data name="View Repo" xml:space="preserve">
+    <value>Bekijk Repo</value>
+  </data>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>We berekenen je wekelijkse statistieken vanuit de repositories. Dit kan een paar seconden duren.</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Werkuren</value>
   </data>
   <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
     <value>Je bent een codeermachine! Ongelooflijke toewijding.</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>Je werk deze week is net begonnen. Hoe was je vakantie? Ben je klaar om te coderen?</value>
   </data>
 
 </root>

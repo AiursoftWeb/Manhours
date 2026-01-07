@@ -18,38 +18,32 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Git" xml:space="preserve">
-    <value>Git</value>
+      <data name="Active" xml:space="preserve">
+    <value>Actif</value>
   </data>
-  <data name="Contributed!" xml:space="preserve">
-    <value>Contribué !</value>
-  </data>
-  <data name="My Top Participated" xml:space="preserve">
-    <value>Mes principales participations</value>
-  </data>
-  <data name="Top Repositories" xml:space="preserve">
-    <value>Meilleurs dépôts</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Ajouter un dépôt maintenant</value>
   </data>
   <data name="All Repositories" xml:space="preserve">
     <value>Tous les dépôts</value>
   </data>
-  <data name="Top Contributor" xml:space="preserve">
-    <value>Contributeur principal</value>
-  </data>
-  <data name="Active" xml:space="preserve">
-    <value>Actif</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Heures</value>
-  </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>Heures totales</value>
+  <data name="Contributed!" xml:space="preserve">
+    <value>Contribué !</value>
   </data>
   <data name="Contributors" xml:space="preserve">
     <value>Contributeurs</value>
   </data>
-  <data name="Top #1" xml:space="preserve">
-    <value>Meilleur #1</value>
+  <data name="Git" xml:space="preserve">
+    <value>Git</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Heures</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Mes dépôts collaboratifs les plus actifs</value>
+  </data>
+  <data name="My Top Participated" xml:space="preserve">
+    <value>Mes principales participations</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>Suivant</value>
@@ -57,26 +51,32 @@
   <data name="of" xml:space="preserve">
     <value>de</value>
   </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Précédent</value>
+  </data>
   <data name="repositories" xml:space="preserve">
     <value>dépôts</value>
   </data>
-  <data name="Previous" xml:space="preserve">
-    <value>Précédent</value>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Dépôt non suivi ?</value>
   </data>
   <data name="Showing" xml:space="preserve">
     <value>Affichage</value>
   </data>
-  <data name="My top hard-working collaborated repositories" xml:space="preserve">
-    <value>Mes dépôts collaboratifs les plus actifs</value>
-  </data>
   <data name="Sorted by repository total work hours" xml:space="preserve">
     <value>Trié par nombre total d&apos;heures de travail du dépôt</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Ajouter un dépôt maintenant</value>
+  <data name="Top #1" xml:space="preserve">
+    <value>Meilleur #1</value>
   </data>
-  <data name="Repository not tracked?" xml:space="preserve">
-    <value>Dépôt non suivi ?</value>
+  <data name="Top Contributor" xml:space="preserve">
+    <value>Contributeur principal</value>
+  </data>
+  <data name="Top Repositories" xml:space="preserve">
+    <value>Meilleurs dépôts</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Heures totales</value>
   </data>
 
 </root>

@@ -18,20 +18,59 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="All Repositories" xml:space="preserve">
-    <value>Alle Repositories</value>
-  </data>
-  <data name="Git" xml:space="preserve">
-    <value>Git</value>
-  </data>
-  <data name="Active" xml:space="preserve">
+      <data name="Active" xml:space="preserve">
     <value>Actief</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Repository nu toevoegen</value>
+  </data>
+  <data name="All Repositories" xml:space="preserve">
+    <value>Alle Repositories</value>
   </data>
   <data name="Contributed!" xml:space="preserve">
     <value>Bijdrage geleverd!</value>
   </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Bijdragers</value>
+  </data>
+  <data name="Git" xml:space="preserve">
+    <value>Git</value>
+  </data>
   <data name="Hours" xml:space="preserve">
     <value>Uren</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Mijn top hardwerkende samenwerkingsrepositories</value>
+  </data>
+  <data name="My Top Participated" xml:space="preserve">
+    <value>Mijn Top Deelnames</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Volgende</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>van</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Vorige</value>
+  </data>
+  <data name="repositories" xml:space="preserve">
+    <value>repository&apos;s</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Repository niet gevolgd?</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Toont</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Gesorteerd op totale werkuren per repository</value>
+  </data>
+  <data name="Top #1" xml:space="preserve">
+    <value>Top #1</value>
+  </data>
+  <data name="Top 20" xml:space="preserve">
+    <value>Top 20</value>
   </data>
   <data name="Top Contributor" xml:space="preserve">
     <value>Topbijdrager</value>
@@ -39,47 +78,8 @@
   <data name="Top Repositories" xml:space="preserve">
     <value>Top Repositories</value>
   </data>
-  <data name="My Top Participated" xml:space="preserve">
-    <value>Mijn Top Deelnames</value>
-  </data>
-  <data name="Contributors" xml:space="preserve">
-    <value>Bijdragers</value>
-  </data>
   <data name="Total Hours" xml:space="preserve">
     <value>Totaal aantal uren</value>
-  </data>
-  <data name="Top #1" xml:space="preserve">
-    <value>Top #1</value>
-  </data>
-  <data name="repositories" xml:space="preserve">
-    <value>repository&apos;s</value>
-  </data>
-  <data name="of" xml:space="preserve">
-    <value>van</value>
-  </data>
-  <data name="Showing" xml:space="preserve">
-    <value>Toont</value>
-  </data>
-  <data name="Previous" xml:space="preserve">
-    <value>Vorige</value>
-  </data>
-  <data name="Next" xml:space="preserve">
-    <value>Volgende</value>
-  </data>
-  <data name="Top 20" xml:space="preserve">
-    <value>Top 20</value>
-  </data>
-  <data name="My top hard-working collaborated repositories" xml:space="preserve">
-    <value>Mijn top hardwerkende samenwerkingsrepositories</value>
-  </data>
-  <data name="Sorted by repository total work hours" xml:space="preserve">
-    <value>Gesorteerd op totale werkuren per repository</value>
-  </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Repository nu toevoegen</value>
-  </data>
-  <data name="Repository not tracked?" xml:space="preserve">
-    <value>Repository niet gevolgd?</value>
   </data>
 
 </root>

@@ -18,47 +18,32 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Total Man Hours" xml:space="preserve">
-    <value>Загальна кількість людино-годин</value>
-  </data>
-  <data name="Repository ManHours Statistics" xml:space="preserve">
-    <value>Статистика людських годин репозиторію</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Годин</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Коміти</value>
+      <data name="Active Days" xml:space="preserve">
+    <value>Активні дні</value>
   </data>
   <data name="Active days deleted" xml:space="preserve">
     <value>Активні робочі дні</value>
   </data>
-  <data name="My Stats" xml:space="preserve">
-    <value>Моя статистика</value>
+  <data name="Average Hours" xml:space="preserve">
+    <value>Середня кількість годин</value>
+  </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Коміти</value>
   </data>
   <data name="Contributors" xml:space="preserve">
     <value>Учасники</value>
   </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>Активні дні</value>
-  </data>
-  <data name="Repository Stats" xml:space="preserve">
-    <value>Статистика репозиторію</value>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>Учасники</value>
   </data>
   <data name="Details" xml:space="preserve">
     <value>Деталі</value>
   </data>
-  <data name="Std Dev" xml:space="preserve">
-    <value>Середнє квадратичне відхилення</value>
+  <data name="Hours" xml:space="preserve">
+    <value>Годин</value>
   </data>
-  <data name="Average Hours" xml:space="preserve">
-    <value>Середня кількість годин</value>
-  </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>Загальна кількість годин</value>
-  </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>Учасники</value>
+  <data name="My Stats" xml:space="preserve">
+    <value>Моя статистика</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>Наступна</value>
@@ -66,11 +51,26 @@
   <data name="of" xml:space="preserve">
     <value>з</value>
   </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Попередня</value>
+  </data>
+  <data name="Repository ManHours Statistics" xml:space="preserve">
+    <value>Статистика людських годин репозиторію</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>Статистика репозиторію</value>
+  </data>
   <data name="Showing" xml:space="preserve">
     <value>Показано</value>
   </data>
-  <data name="Previous" xml:space="preserve">
-    <value>Попередня</value>
+  <data name="Std Dev" xml:space="preserve">
+    <value>Середнє квадратичне відхилення</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Загальна кількість годин</value>
+  </data>
+  <data name="Total Man Hours" xml:space="preserve">
+    <value>Загальна кількість людино-годин</value>
   </data>
 
 </root>

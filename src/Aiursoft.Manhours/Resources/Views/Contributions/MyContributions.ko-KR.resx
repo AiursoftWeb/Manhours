@@ -18,56 +18,56 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Commits" xml:space="preserve">
-    <value>커밋</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>총 작업 시간</value>
-  </data>
-  <data name="Repository" xml:space="preserve">
-    <value>저장소</value>
-  </data>
-  <data name="My Contributions" xml:space="preserve">
-    <value>내 기여</value>
-  </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>전체 커밋 수</value>
-  </data>
-  <data name="Contributed Repositories" xml:space="preserve">
-    <value>기여한 저장소</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>근무 시간</value>
+      <data name="Action" xml:space="preserve">
+    <value>작업</value>
   </data>
   <data name="Active Days" xml:space="preserve">
     <value>활동 일수</value>
   </data>
-  <data name="Action" xml:space="preserve">
-    <value>작업</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>저장소 보기</value>
-  </data>
-  <data name="Days" xml:space="preserve">
-    <value>일</value>
-  </data>
-  <data name="No contributions found yet. Start coding!" xml:space="preserve">
-    <value>아직 기여한 내용이 없습니다. 코딩을 시작해 보세요!</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>저장소 추가하기</value>
   </data>
   <data name="All Contributions" xml:space="preserve">
     <value>전체 기여</value>
   </data>
+  <data name="Commits" xml:space="preserve">
+    <value>커밋</value>
+  </data>
+  <data name="Contributed Repositories" xml:space="preserve">
+    <value>기여한 저장소</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>일</value>
+  </data>
   <data name="Hours" xml:space="preserve">
     <value>시간</value>
+  </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>내 기여</value>
+  </data>
+  <data name="No contributions found yet. Start coding!" xml:space="preserve">
+    <value>아직 기여한 내용이 없습니다. 코딩을 시작해 보세요!</value>
   </data>
   <data name="Profile Details" xml:space="preserve">
     <value>프로필 상세 정보</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>저장소 추가하기</value>
+  <data name="Repository" xml:space="preserve">
+    <value>저장소</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>저장소가 추적되지 않나요?</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>전체 커밋 수</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>총 작업 시간</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>저장소 보기</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>근무 시간</value>
   </data>
 
 </root>

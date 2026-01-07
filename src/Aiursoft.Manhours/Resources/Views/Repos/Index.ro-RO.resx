@@ -18,41 +18,38 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Git" xml:space="preserve">
+      <data name="Active" xml:space="preserve">
+    <value>Activ</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Adaugă depozit acum</value>
+  </data>
+  <data name="All Repositories" xml:space="preserve">
+    <value>Toate Depozitele</value>
+  </data>
+  <data name="Contributed!" xml:space="preserve">
+    <value>Am contribuit!</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Contribuitori</value>
+  </data>
+  <data name="Git" xml:space="preserve">
     <value>Git</value>
   </data>
   <data name="Hours" xml:space="preserve">
     <value>Ore</value>
   </data>
-  <data name="Active" xml:space="preserve">
-    <value>Activ</value>
-  </data>
-  <data name="All Repositories" xml:space="preserve">
-    <value>Toate Depozitele</value>
-  </data>
-  <data name="Top Contributor" xml:space="preserve">
-    <value>Cel mai bun contribuitor</value>
-  </data>
-  <data name="Top Repositories" xml:space="preserve">
-    <value>Cele mai bune depozite</value>
-  </data>
-  <data name="Contributed!" xml:space="preserve">
-    <value>Am contribuit!</value>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Cele mai active depozite la care am contribuit</value>
   </data>
   <data name="My Top Participated" xml:space="preserve">
     <value>Cele mai participative ale mele</value>
   </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>Total Ore</value>
-  </data>
-  <data name="Contributors" xml:space="preserve">
-    <value>Contribuitori</value>
-  </data>
-  <data name="Top #1" xml:space="preserve">
-    <value>Top #1</value>
-  </data>
   <data name="Next" xml:space="preserve">
     <value>Următor</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>din</value>
   </data>
   <data name="Previous" xml:space="preserve">
     <value>Anterior</value>
@@ -60,23 +57,26 @@
   <data name="repositories" xml:space="preserve">
     <value>depozite</value>
   </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Depozitul nu este urmărit?</value>
+  </data>
   <data name="Showing" xml:space="preserve">
     <value>Se afișează</value>
-  </data>
-  <data name="of" xml:space="preserve">
-    <value>din</value>
   </data>
   <data name="Sorted by repository total work hours" xml:space="preserve">
     <value>Sortate după totalul orelor de lucru ale depozitului</value>
   </data>
-  <data name="My top hard-working collaborated repositories" xml:space="preserve">
-    <value>Cele mai active depozite la care am contribuit</value>
+  <data name="Top #1" xml:space="preserve">
+    <value>Top #1</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Adaugă depozit acum</value>
+  <data name="Top Contributor" xml:space="preserve">
+    <value>Cel mai bun contribuitor</value>
   </data>
-  <data name="Repository not tracked?" xml:space="preserve">
-    <value>Depozitul nu este urmărit?</value>
+  <data name="Top Repositories" xml:space="preserve">
+    <value>Cele mai bune depozite</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Total Ore</value>
   </data>
 
 </root>

@@ -18,56 +18,56 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="My Contributions" xml:space="preserve">
-    <value>Mine Bidrag</value>
-  </data>
-  <data name="Repository" xml:space="preserve">
-    <value>Repository</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Arbejdstimer</value>
+      <data name="Action" xml:space="preserve">
+    <value>Handling</value>
   </data>
   <data name="Active Days" xml:space="preserve">
     <value>Aktive dage</value>
   </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>Samlede Commits</value>
-  </data>
-  <data name="Contributed Repositories" xml:space="preserve">
-    <value>Bidragne Repositories</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Indsendelser</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>Samlede arbejdstimer</value>
-  </data>
-  <data name="Action" xml:space="preserve">
-    <value>Handling</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Tilføj repository nu</value>
   </data>
   <data name="All Contributions" xml:space="preserve">
     <value>Alle Bidrag</value>
   </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Indsendelser</value>
+  </data>
+  <data name="Contributed Repositories" xml:space="preserve">
+    <value>Bidragne Repositories</value>
+  </data>
   <data name="Days" xml:space="preserve">
     <value>Dage</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Se Repo</value>
-  </data>
-  <data name="No contributions found yet. Start coding!" xml:space="preserve">
-    <value>Ingen bidrag fundet endnu. Begynd at kode!</value>
   </data>
   <data name="Hours" xml:space="preserve">
     <value>Timer</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Mine Bidrag</value>
+  </data>
+  <data name="No contributions found yet. Start coding!" xml:space="preserve">
+    <value>Ingen bidrag fundet endnu. Begynd at kode!</value>
+  </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Profildetaljer</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Tilføj repository nu</value>
+  <data name="Repository" xml:space="preserve">
+    <value>Repository</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Repository ikke sporet?</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Samlede Commits</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Samlede arbejdstimer</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>Se Repo</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Arbejdstimer</value>
   </data>
 
 </root>

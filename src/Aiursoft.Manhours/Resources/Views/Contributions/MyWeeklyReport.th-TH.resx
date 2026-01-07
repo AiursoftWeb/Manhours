@@ -18,107 +18,107 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="To" xml:space="preserve">
-    <value>ถึง</value>
-  </data>
-  <data name="From" xml:space="preserve">
-    <value>จาก</value>
-  </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>วันที่มีกิจกรรม</value>
-  </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>จำนวนคอมมิตทั้งหมด</value>
-  </data>
-  <data name="Profile Details" xml:space="preserve">
-    <value>รายละเอียดโปรไฟล์</value>
-  </data>
-  <data name="Report Period" xml:space="preserve">
-    <value>ช่วงเวลาการรายงาน</value>
-  </data>
-  <data name="Last 7 Days" xml:space="preserve">
-    <value>7 วันที่ผ่านมา</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>ชั่วโมงทำงานทั้งหมด</value>
-  </data>
-  <data name="Repository" xml:space="preserve">
-    <value>ที่เก็บรหัส</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>คอมมิต</value>
-  </data>
-  <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
-    <value>ผลงานใน Repository (7 วันที่ผ่านมา)</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>ชั่วโมงทำงาน</value>
+      <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996? ทำงานแทบไม่หยุดพัก จะลดทอนความคิดสร้างสรรค์ เกินขีดจำกัดความกดดันปกติ หยุดทำงานได้แล้ว!</value>
   </data>
   <data name="Action" xml:space="preserve">
     <value>การดำเนินการ</value>
   </data>
-  <data name="Hours" xml:space="preserve">
-    <value>ชั่วโมง</value>
-  </data>
-  <data name="All Contributions" xml:space="preserve">
-    <value>ผลงานทั้งหมด</value>
-  </data>
-  <data name="Days" xml:space="preserve">
-    <value>วัน</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>ดูรีโพ</value>
-  </data>
-  <data name="No contributions found in the last 7 days." xml:space="preserve">
-    <value>ไม่พบผลงานในช่วง 7 วันที่ผ่านมา</value>
-  </data>
-  <data name="Computing..." xml:space="preserve">
-    <value>กำลังคำนวณ...</value>
-  </data>
-  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
-    <value>เรากำลังคำนวณสถิติรายสัปดาห์ของคุณจากรีโพสิทอรี ซึ่งอาจใช้เวลาสักครู่</value>
-  </data>
-  <data name="Diligence Score" xml:space="preserve">
-    <value>คะแนนความขยัน</value>
-  </data>
-  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
-    <value>งานค่อนข้างเยอะนะ กำลังพัฒนาตัวเอง แต่จำไว้ว่าต้องพักผ่อนด้วย</value>
+  <data name="Active Days" xml:space="preserve">
+    <value>วันที่มีกิจกรรม</value>
   </data>
   <data name="Add repository now" xml:space="preserve">
     <value>เพิ่ม repository ตอนนี้</value>
   </data>
-  <data name="Repository not tracked?" xml:space="preserve">
-    <value>ไม่พบการติดตาม Repository?</value>
-  </data>
-  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
-    <value>ปริมาณงานปานกลาง ดูเหมือนว่าคุณอยู่ในบรรยากาศการทำงานที่ดีเยี่ยม</value>
-  </data>
-  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
-    <value>งานเบาๆ สัปดาห์นี้ หัวหน้าไม่ได้มอบหมายงานให้เหรอ?</value>
-  </data>
-  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
-    <value>ปริมาณงานที่ดี ดูเหมือนว่าคุณกำลังทำงานหนักเพื่ออุดมการณ์และเป้าหมายของคุณ</value>
-  </data>
-  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
-    <value>เป็นกำลังหลัก ทำงานอย่างกระตือรือร้น มีปริมาณงานที่หนักแน่น ไม่จำเป็นต้องทำมากขนาดนั้น</value>
-  </data>
-  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
-    <value>งานของคุณในสัปดาห์นี้เพิ่งเริ่มต้น คุณไปพักร้อนมาดีไหม? พร้อมที่จะเขียนโค้ดแล้วหรือยัง?</value>
-  </data>
-  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
-    <value>คุณเป็นเครื่องจักรเขียนโค้ด! ความทุ่มเทที่น่าเหลือเชื่อ</value>
+  <data name="All Contributions" xml:space="preserve">
+    <value>ผลงานทั้งหมด</value>
   </data>
   <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
     <value>เกินความเข้าใจ พักผ่อนเถอะ จริงๆ</value>
   </data>
-  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
-    <value>996? ทำงานแทบไม่หยุดพัก จะลดทอนความคิดสร้างสรรค์ เกินขีดจำกัดความกดดันปกติ หยุดทำงานได้แล้ว!</value>
+  <data name="Commits" xml:space="preserve">
+    <value>คอมมิต</value>
+  </data>
+  <data name="Computing..." xml:space="preserve">
+    <value>กำลังคำนวณ...</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>วัน</value>
+  </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>คะแนนความขยัน</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>งานเบาๆ สัปดาห์นี้ หัวหน้าไม่ได้มอบหมายงานให้เหรอ?</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>จาก</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>ปริมาณงานที่ดี ดูเหมือนว่าคุณกำลังทำงานหนักเพื่ออุดมการณ์และเป้าหมายของคุณ</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>ชั่วโมง</value>
+  </data>
+  <data name="Last 7 Days" xml:space="preserve">
+    <value>7 วันที่ผ่านมา</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>ตำนาน! ผลงานของคุณเหนือชั้นเกินบรรยาย</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>เป็นกำลังหลัก ทำงานอย่างกระตือรือร้น มีปริมาณงานที่หนักแน่น ไม่จำเป็นต้องทำมากขนาดนั้น</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>ปริมาณงานปานกลาง ดูเหมือนว่าคุณอยู่ในบรรยากาศการทำงานที่ดีเยี่ยม</value>
+  </data>
+  <data name="No contributions found in the last 7 days." xml:space="preserve">
+    <value>ไม่พบผลงานในช่วง 7 วันที่ผ่านมา</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>รายละเอียดโปรไฟล์</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>งานค่อนข้างเยอะนะ กำลังพัฒนาตัวเอง แต่จำไว้ว่าต้องพักผ่อนด้วย</value>
+  </data>
+  <data name="Report Period" xml:space="preserve">
+    <value>ช่วงเวลาการรายงาน</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>ที่เก็บรหัส</value>
+  </data>
+  <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
+    <value>ผลงานใน Repository (7 วันที่ผ่านมา)</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>ไม่พบการติดตาม Repository?</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>ถึง</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>จำนวนคอมมิตทั้งหมด</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>ชั่วโมงทำงานทั้งหมด</value>
   </data>
   <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
     <value>เหนื่อยมาก พักผ่อนทันที ใกล้ถึงขีดจำกัดความกดดันในการทำงานปกติแล้ว หยุดทำงานได้แล้ว!</value>
   </data>
-  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
-    <value>ตำนาน! ผลงานของคุณเหนือชั้นเกินบรรยาย</value>
+  <data name="View Repo" xml:space="preserve">
+    <value>ดูรีโพ</value>
+  </data>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>เรากำลังคำนวณสถิติรายสัปดาห์ของคุณจากรีโพสิทอรี ซึ่งอาจใช้เวลาสักครู่</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>ชั่วโมงทำงาน</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>คุณเป็นเครื่องจักรเขียนโค้ด! ความทุ่มเทที่น่าเหลือเชื่อ</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>งานของคุณในสัปดาห์นี้เพิ่งเริ่มต้น คุณไปพักร้อนมาดีไหม? พร้อมที่จะเขียนโค้ดแล้วหรือยัง?</value>
   </data>
 
 </root>

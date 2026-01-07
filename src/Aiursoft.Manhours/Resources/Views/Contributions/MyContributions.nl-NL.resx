@@ -18,56 +18,56 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Repository" xml:space="preserve">
-    <value>Repository</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Werkuren</value>
+      <data name="Action" xml:space="preserve">
+    <value>Actie</value>
   </data>
   <data name="Active Days" xml:space="preserve">
     <value>Actieve Dagen</value>
   </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>Totaal aantal commits</value>
-  </data>
-  <data name="Contributed Repositories" xml:space="preserve">
-    <value>Bijdrage-gedane repositories</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>Totaal aantal gewerkte uren</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Commits</value>
-  </data>
-  <data name="My Contributions" xml:space="preserve">
-    <value>Mijn Bijdragen</value>
-  </data>
-  <data name="Days" xml:space="preserve">
-    <value>Dagen</value>
-  </data>
-  <data name="Action" xml:space="preserve">
-    <value>Actie</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Repository nu toevoegen</value>
   </data>
   <data name="All Contributions" xml:space="preserve">
     <value>Alle Bijdragen</value>
   </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Bekijk Repo</value>
+  <data name="Commits" xml:space="preserve">
+    <value>Commits</value>
   </data>
-  <data name="No contributions found yet. Start coding!" xml:space="preserve">
-    <value>Nog geen bijdragen gevonden. Begin met programmeren!</value>
+  <data name="Contributed Repositories" xml:space="preserve">
+    <value>Bijdrage-gedane repositories</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Dagen</value>
   </data>
   <data name="Hours" xml:space="preserve">
     <value>Uren</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Mijn Bijdragen</value>
+  </data>
+  <data name="No contributions found yet. Start coding!" xml:space="preserve">
+    <value>Nog geen bijdragen gevonden. Begin met programmeren!</value>
+  </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Profielgegevens</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Repository nu toevoegen</value>
+  <data name="Repository" xml:space="preserve">
+    <value>Repository</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Repository niet gevolgd?</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Totaal aantal commits</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Totaal aantal gewerkte uren</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>Bekijk Repo</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Werkuren</value>
   </data>
 
 </root>

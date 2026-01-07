@@ -18,107 +18,107 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Report Period" xml:space="preserve">
-    <value>Rapporteringsperiod</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>Totala arbetstimmar</value>
-  </data>
-  <data name="To" xml:space="preserve">
-    <value>Till</value>
-  </data>
-  <data name="Profile Details" xml:space="preserve">
-    <value>Profildetaljer</value>
-  </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>Aktiva dagar</value>
-  </data>
-  <data name="Last 7 Days" xml:space="preserve">
-    <value>Senaste 7 dagarna</value>
-  </data>
-  <data name="From" xml:space="preserve">
-    <value>Från</value>
-  </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>Totalt antal incheckningar</value>
-  </data>
-  <data name="Repository" xml:space="preserve">
-    <value>Förråd</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Arbetstimmar</value>
-  </data>
-  <data name="All Contributions" xml:space="preserve">
-    <value>Alla bidrag</value>
-  </data>
-  <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
-    <value>Bidragsrapport för arkiv (Senaste 7 dagarna)</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Incheckningar</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Timmar</value>
+      <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996? Jobbar nästan utan uppehåll. Kommer att minska kreativiteten. Överstiger normala tryckgränser. Sluta arbeta!</value>
   </data>
   <data name="Action" xml:space="preserve">
     <value>Åtgärd</value>
   </data>
-  <data name="Days" xml:space="preserve">
-    <value>Dagar</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Visa repo</value>
-  </data>
-  <data name="No contributions found in the last 7 days." xml:space="preserve">
-    <value>Inga bidrag hittades under de senaste 7 dagarna.</value>
-  </data>
-  <data name="Computing..." xml:space="preserve">
-    <value>Beräknar...</value>
-  </data>
-  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
-    <value>Vi beräknar dina veckostatistik från databaserna. Detta kan ta några sekunder.</value>
-  </data>
-  <data name="Diligence Score" xml:space="preserve">
-    <value>Flitighetsresultat</value>
-  </data>
-  <data name="Repository not tracked?" xml:space="preserve">
-    <value>Repository inte spårad?</value>
+  <data name="Active Days" xml:space="preserve">
+    <value>Aktiva dagar</value>
   </data>
   <data name="Add repository now" xml:space="preserve">
     <value>Lägg till arkiv nu</value>
   </data>
-  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
-    <value>Lagom arbetsbörda. Det verkar som att du befinner dig i en fantastisk arbetsmiljö.</value>
-  </data>
-  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
-    <value>Bra arbetsbelastning. Det verkar som att du arbetar hårt för dina ideal och mål.</value>
-  </data>
-  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
-    <value>Lätt arbetsbelastning den här veckan. Har chefen inte gett dig några uppgifter?</value>
-  </data>
-  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
-    <value>Stöttepelare. Mycket aktiv. Stabil arbetsbörda. Inget behov av att göra så mycket.</value>
-  </data>
-  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
-    <value>En hel del arbete. Du förbättrar dig själv, men kom ihåg att vila.</value>
-  </data>
-  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
-    <value>Ditt arbete den här veckan har precis börjat. Hur var din semester? Är du redo att koda?</value>
-  </data>
-  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
-    <value>Väldigt trött. Vila omedelbart. Nästan den övre gränsen för normalt arbetsbelastning. Sluta arbeta!</value>
+  <data name="All Contributions" xml:space="preserve">
+    <value>Alla bidrag</value>
   </data>
   <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
     <value>Obegripligt. Ta en paus, på riktigt.</value>
   </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Incheckningar</value>
+  </data>
+  <data name="Computing..." xml:space="preserve">
+    <value>Beräknar...</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Dagar</value>
+  </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>Flitighetsresultat</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>Lätt arbetsbelastning den här veckan. Har chefen inte gett dig några uppgifter?</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Från</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>Bra arbetsbelastning. Det verkar som att du arbetar hårt för dina ideal och mål.</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Timmar</value>
+  </data>
+  <data name="Last 7 Days" xml:space="preserve">
+    <value>Senaste 7 dagarna</value>
+  </data>
   <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
     <value>Legendarisk! Din produktivitet är helt otrolig.</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>Stöttepelare. Mycket aktiv. Stabil arbetsbörda. Inget behov av att göra så mycket.</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>Lagom arbetsbörda. Det verkar som att du befinner dig i en fantastisk arbetsmiljö.</value>
+  </data>
+  <data name="No contributions found in the last 7 days." xml:space="preserve">
+    <value>Inga bidrag hittades under de senaste 7 dagarna.</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Profildetaljer</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>En hel del arbete. Du förbättrar dig själv, men kom ihåg att vila.</value>
+  </data>
+  <data name="Report Period" xml:space="preserve">
+    <value>Rapporteringsperiod</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>Förråd</value>
+  </data>
+  <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
+    <value>Bidragsrapport för arkiv (Senaste 7 dagarna)</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Repository inte spårad?</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>Till</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Totalt antal incheckningar</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Totala arbetstimmar</value>
+  </data>
+  <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
+    <value>Väldigt trött. Vila omedelbart. Nästan den övre gränsen för normalt arbetsbelastning. Sluta arbeta!</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>Visa repo</value>
+  </data>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>Vi beräknar dina veckostatistik från databaserna. Detta kan ta några sekunder.</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Arbetstimmar</value>
   </data>
   <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
     <value>Du är en kodningsmaskin! Otrolig hängivenhet.</value>
   </data>
-  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
-    <value>996? Jobbar nästan utan uppehåll. Kommer att minska kreativiteten. Överstiger normala tryckgränser. Sluta arbeta!</value>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>Ditt arbete den här veckan har precis börjat. Hur var din semester? Är du redo att koda?</value>
   </data>
 
 </root>

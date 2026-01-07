@@ -18,47 +18,32 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Hours" xml:space="preserve">
-    <value>Ώρες</value>
+      <data name="Active" xml:space="preserve">
+    <value>Ενεργό</value>
   </data>
-  <data name="Git" xml:space="preserve">
-    <value>Git</value>
-  </data>
-  <data name="Contributed!" xml:space="preserve">
-    <value>Συνεισφέρθηκε!</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Προσθήκη αποθετηρίου τώρα</value>
   </data>
   <data name="All Repositories" xml:space="preserve">
     <value>Όλα τα Αποθετήρια</value>
   </data>
-  <data name="Top Repositories" xml:space="preserve">
-    <value>Κορυφαία Αποθετήρια</value>
-  </data>
-  <data name="My Top Participated" xml:space="preserve">
-    <value>Οι Κορυφαίες Μου Συνεισφορές</value>
-  </data>
-  <data name="Top Contributor" xml:space="preserve">
-    <value>Κορυφαίος Συνεισφέρων</value>
-  </data>
-  <data name="Active" xml:space="preserve">
-    <value>Ενεργό</value>
-  </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>Συνολικές Ώρες</value>
+  <data name="Contributed!" xml:space="preserve">
+    <value>Συνεισφέρθηκε!</value>
   </data>
   <data name="Contributors" xml:space="preserve">
     <value>Συνεισφέροντες</value>
   </data>
-  <data name="Top #1" xml:space="preserve">
-    <value>Κορυφαίος #1</value>
+  <data name="Git" xml:space="preserve">
+    <value>Git</value>
   </data>
-  <data name="Previous" xml:space="preserve">
-    <value>Προηγούμενο</value>
+  <data name="Hours" xml:space="preserve">
+    <value>Ώρες</value>
   </data>
-  <data name="repositories" xml:space="preserve">
-    <value>αποθετήρια</value>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Οι κορυφαίες συνεργαζόμενες αποθετήριά μου με την μεγαλύτερη εργασία</value>
   </data>
-  <data name="Showing" xml:space="preserve">
-    <value>Εμφάνιση</value>
+  <data name="My Top Participated" xml:space="preserve">
+    <value>Οι Κορυφαίες Μου Συνεισφορές</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>Επόμενο</value>
@@ -66,17 +51,32 @@
   <data name="of" xml:space="preserve">
     <value>από</value>
   </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Προηγούμενο</value>
+  </data>
+  <data name="repositories" xml:space="preserve">
+    <value>αποθετήρια</value>
+  </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Αποθετήριο δεν παρακολουθείται;</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Προσθήκη αποθετηρίου τώρα</value>
+  <data name="Showing" xml:space="preserve">
+    <value>Εμφάνιση</value>
   </data>
   <data name="Sorted by repository total work hours" xml:space="preserve">
     <value>Ταξινομημένα ανά συνολικές ώρες εργασίας αποθετηρίου</value>
   </data>
-  <data name="My top hard-working collaborated repositories" xml:space="preserve">
-    <value>Οι κορυφαίες συνεργαζόμενες αποθετήριά μου με την μεγαλύτερη εργασία</value>
+  <data name="Top #1" xml:space="preserve">
+    <value>Κορυφαίος #1</value>
+  </data>
+  <data name="Top Contributor" xml:space="preserve">
+    <value>Κορυφαίος Συνεισφέρων</value>
+  </data>
+  <data name="Top Repositories" xml:space="preserve">
+    <value>Κορυφαία Αποθετήρια</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Συνολικές Ώρες</value>
   </data>
 
 </root>

@@ -18,50 +18,35 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Total Man Hours" xml:space="preserve">
-    <value>Totaal aantal manuren</value>
-  </data>
-  <data name="Repository ManHours Statistics" xml:space="preserve">
-    <value>Repository Manuren Statistieken</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Uren</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Commits</value>
+      <data name="Active Days" xml:space="preserve">
+    <value>Actieve Dagen</value>
   </data>
   <data name="Active days deleted" xml:space="preserve">
     <value>Actieve werkdagen</value>
   </data>
-  <data name="Details" xml:space="preserve">
-    <value>Details</value>
+  <data name="Average Hours" xml:space="preserve">
+    <value>Gemiddelde uren</value>
+  </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Commits</value>
   </data>
   <data name="Contributors" xml:space="preserve">
     <value>Bijdragers</value>
   </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>Actieve Dagen</value>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>bijdragers</value>
   </data>
-  <data name="Average Hours" xml:space="preserve">
-    <value>Gemiddelde uren</value>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
   </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>Totaal aantal uren</value>
+  <data name="Hours" xml:space="preserve">
+    <value>Uren</value>
   </data>
   <data name="My Stats" xml:space="preserve">
     <value>Mijn Statistieken</value>
   </data>
-  <data name="Std Dev" xml:space="preserve">
-    <value>Standaardafwijking</value>
-  </data>
-  <data name="Repository Stats" xml:space="preserve">
-    <value>Repositorystatistieken</value>
-  </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>bijdragers</value>
-  </data>
-  <data name="Showing" xml:space="preserve">
-    <value>Toont</value>
+  <data name="Next" xml:space="preserve">
+    <value>Volgende</value>
   </data>
   <data name="of" xml:space="preserve">
     <value>van</value>
@@ -69,8 +54,23 @@
   <data name="Previous" xml:space="preserve">
     <value>Vorige</value>
   </data>
-  <data name="Next" xml:space="preserve">
-    <value>Volgende</value>
+  <data name="Repository ManHours Statistics" xml:space="preserve">
+    <value>Repository Manuren Statistieken</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>Repositorystatistieken</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Toont</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>Standaardafwijking</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Totaal aantal uren</value>
+  </data>
+  <data name="Total Man Hours" xml:space="preserve">
+    <value>Totaal aantal manuren</value>
   </data>
 
 </root>

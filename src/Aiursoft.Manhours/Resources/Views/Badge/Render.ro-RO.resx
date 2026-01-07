@@ -18,44 +18,32 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Total Man Hours" xml:space="preserve">
-    <value>Total Ore Lucrate</value>
-  </data>
-  <data name="Repository ManHours Statistics" xml:space="preserve">
-    <value>Statistici Ore de Muncă pentru Depozit</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Ore</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Commit-uri</value>
+      <data name="Active Days" xml:space="preserve">
+    <value>Zile Active</value>
   </data>
   <data name="Active days deleted" xml:space="preserve">
     <value>Zile de lucru active</value>
   </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>Total Ore</value>
-  </data>
   <data name="Average Hours" xml:space="preserve">
     <value>Ore medii</value>
   </data>
-  <data name="Details" xml:space="preserve">
-    <value>Detalii</value>
+  <data name="Commits" xml:space="preserve">
+    <value>Commit-uri</value>
   </data>
   <data name="Contributors" xml:space="preserve">
     <value>Contribuitori</value>
   </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>Zile Active</value>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>contribuitori</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detalii</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Ore</value>
   </data>
   <data name="My Stats" xml:space="preserve">
     <value>Statisticile mele</value>
-  </data>
-  <data name="Std Dev" xml:space="preserve">
-    <value>Deviație Standard</value>
-  </data>
-  <data name="Repository Stats" xml:space="preserve">
-    <value>Statistici Depozit</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>Următorul</value>
@@ -63,14 +51,26 @@
   <data name="of" xml:space="preserve">
     <value>din</value>
   </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>contribuitori</value>
+  <data name="Previous" xml:space="preserve">
+    <value>Anterior</value>
+  </data>
+  <data name="Repository ManHours Statistics" xml:space="preserve">
+    <value>Statistici Ore de Muncă pentru Depozit</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>Statistici Depozit</value>
   </data>
   <data name="Showing" xml:space="preserve">
     <value>Se afișează</value>
   </data>
-  <data name="Previous" xml:space="preserve">
-    <value>Anterior</value>
+  <data name="Std Dev" xml:space="preserve">
+    <value>Deviație Standard</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Total Ore</value>
+  </data>
+  <data name="Total Man Hours" xml:space="preserve">
+    <value>Total Ore Lucrate</value>
   </data>
 
 </root>

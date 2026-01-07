@@ -18,26 +18,68 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="From" xml:space="preserve">
+      <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996? Melkein työskentelet tauotta. Vähentää luovuutta. Ylittää normaalin paineen rajan. Lopeta työskentely!</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Toiminto</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>Aktiiviset päivät</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Lisää arkisto nyt</value>
+  </data>
+  <data name="All Contributions" xml:space="preserve">
+    <value>Kaikki panokset</value>
+  </data>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>Ymmärryksen ulottumattomissa. Ota todellakin tauko.</value>
+  </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Commitit</value>
+  </data>
+  <data name="Computing..." xml:space="preserve">
+    <value>Lasketaan...</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Päivää</value>
+  </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>Ahkeruuspistemäärä</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>Kevyt työmäärä tällä viikolla. Eikö pomo antanut sinulle tehtäviä?</value>
+  </data>
+  <data name="From" xml:space="preserve">
     <value>Alkaen</value>
   </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>Kokonaistyötunnit</value>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>Hyvä työmäärä. Vaikuttaa siltä, että työskentelet ahkerasti ihanteidesi ja tavoitteidesi puolesta.</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Tunnit</value>
   </data>
   <data name="Last 7 Days" xml:space="preserve">
     <value>Viimeiset 7 päivää</value>
   </data>
-  <data name="To" xml:space="preserve">
-    <value>Asti</value>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>Legendaarista! Tuottavuutesi on täysin poikkeuksellista.</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>Selkäranka. Erittäin aktiivinen. Vankka työmäärä. Ei tarvitse tehdä niin paljon.</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>Kohtalainen työmäärä. Vaikuttaa siltä, että olet loistavassa työilmapiirissä.</value>
+  </data>
+  <data name="No contributions found in the last 7 days." xml:space="preserve">
+    <value>Viimeisten 7 päivän aikana ei löytynyt yhtään panosta.</value>
   </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Profiilin tiedot</value>
   </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>Yhteensä tehdyt commitit</value>
-  </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>Aktiiviset päivät</value>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>Melkein liikaa töitä. Kehität itseäsi, mutta muista levätä.</value>
   </data>
   <data name="Report Period" xml:space="preserve">
     <value>Raportointijakso</value>
@@ -45,80 +87,38 @@
   <data name="Repository" xml:space="preserve">
     <value>Arkisto</value>
   </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Commitit</value>
-  </data>
   <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
     <value>Repository Contributions (Last 7 Days)</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Työtunnit</value>
-  </data>
-  <data name="Action" xml:space="preserve">
-    <value>Toiminto</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Tunnit</value>
-  </data>
-  <data name="Days" xml:space="preserve">
-    <value>Päivää</value>
-  </data>
-  <data name="All Contributions" xml:space="preserve">
-    <value>Kaikki panokset</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Näytä repo</value>
-  </data>
-  <data name="No contributions found in the last 7 days." xml:space="preserve">
-    <value>Viimeisten 7 päivän aikana ei löytynyt yhtään panosta.</value>
-  </data>
-  <data name="Computing..." xml:space="preserve">
-    <value>Lasketaan...</value>
-  </data>
-  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
-    <value>Laskemme viikkotilastoja arkistoistasi. Tämä saattaa kestää muutaman sekunnin.</value>
-  </data>
-  <data name="Diligence Score" xml:space="preserve">
-    <value>Ahkeruuspistemäärä</value>
-  </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Lisää arkisto nyt</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Repositorya ei seurata?</value>
   </data>
-  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
-    <value>Kohtalainen työmäärä. Vaikuttaa siltä, että olet loistavassa työilmapiirissä.</value>
+  <data name="To" xml:space="preserve">
+    <value>Asti</value>
   </data>
-  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
-    <value>Työsi tällä viikolla on vasta alkanut. Miten lomasi sujui? Oletko valmis koodaamaan?</value>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Yhteensä tehdyt commitit</value>
   </data>
-  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
-    <value>Hyvä työmäärä. Vaikuttaa siltä, että työskentelet ahkerasti ihanteidesi ja tavoitteidesi puolesta.</value>
-  </data>
-  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
-    <value>Kevyt työmäärä tällä viikolla. Eikö pomo antanut sinulle tehtäviä?</value>
-  </data>
-  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
-    <value>Melkein liikaa töitä. Kehität itseäsi, mutta muista levätä.</value>
-  </data>
-  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
-    <value>Selkäranka. Erittäin aktiivinen. Vankka työmäärä. Ei tarvitse tehdä niin paljon.</value>
-  </data>
-  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
-    <value>996? Melkein työskentelet tauotta. Vähentää luovuutta. Ylittää normaalin paineen rajan. Lopeta työskentely!</value>
-  </data>
-  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
-    <value>Ymmärryksen ulottumattomissa. Ota todellakin tauko.</value>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Kokonaistyötunnit</value>
   </data>
   <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
     <value>Erittäin väsynyt. Lepää heti. Melkein normaalin työpainon yläraja. Lopeta työskentely!</value>
   </data>
-  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
-    <value>Legendaarista! Tuottavuutesi on täysin poikkeuksellista.</value>
+  <data name="View Repo" xml:space="preserve">
+    <value>Näytä repo</value>
+  </data>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>Laskemme viikkotilastoja arkistoistasi. Tämä saattaa kestää muutaman sekunnin.</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Työtunnit</value>
   </data>
   <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
     <value>Olet koodauskone! Uskomaton omistautuminen.</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>Työsi tällä viikolla on vasta alkanut. Miten lomasi sujui? Oletko valmis koodaamaan?</value>
   </data>
 
 </root>

@@ -21,38 +21,32 @@
       <data name="Active" xml:space="preserve">
     <value>Активный</value>
   </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Добавить репозиторий сейчас</value>
+  </data>
   <data name="All Repositories" xml:space="preserve">
     <value>Все репозитории</value>
-  </data>
-  <data name="Top Repositories" xml:space="preserve">
-    <value>Лучшие репозитории</value>
-  </data>
-  <data name="Top Contributor" xml:space="preserve">
-    <value>Лучший контрибьютор</value>
-  </data>
-  <data name="Git" xml:space="preserve">
-    <value>Git</value>
   </data>
   <data name="Contributed!" xml:space="preserve">
     <value>Внёс вклад!</value>
   </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Участники</value>
+  </data>
+  <data name="Git" xml:space="preserve">
+    <value>Git</value>
+  </data>
   <data name="Hours" xml:space="preserve">
     <value>Часы</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Мои самые активные репозитории, в которых я участвую</value>
   </data>
   <data name="My Top Participated" xml:space="preserve">
     <value>Мои лучшие по участию</value>
   </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>Всего часов</value>
-  </data>
-  <data name="Contributors" xml:space="preserve">
-    <value>Участники</value>
-  </data>
-  <data name="Top #1" xml:space="preserve">
-    <value>Лучший #1</value>
-  </data>
-  <data name="repositories" xml:space="preserve">
-    <value>репозитории</value>
+  <data name="Next" xml:space="preserve">
+    <value>Далее</value>
   </data>
   <data name="of" xml:space="preserve">
     <value>из</value>
@@ -60,23 +54,29 @@
   <data name="Previous" xml:space="preserve">
     <value>Назад</value>
   </data>
-  <data name="Showing" xml:space="preserve">
-    <value>Показано</value>
-  </data>
-  <data name="Next" xml:space="preserve">
-    <value>Далее</value>
-  </data>
-  <data name="My top hard-working collaborated repositories" xml:space="preserve">
-    <value>Мои самые активные репозитории, в которых я участвую</value>
-  </data>
-  <data name="Sorted by repository total work hours" xml:space="preserve">
-    <value>Отсортировано по общему количеству рабочих часов репозитория</value>
+  <data name="repositories" xml:space="preserve">
+    <value>репозитории</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Репозиторий не отслеживается?</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Добавить репозиторий сейчас</value>
+  <data name="Showing" xml:space="preserve">
+    <value>Показано</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Отсортировано по общему количеству рабочих часов репозитория</value>
+  </data>
+  <data name="Top #1" xml:space="preserve">
+    <value>Лучший #1</value>
+  </data>
+  <data name="Top Contributor" xml:space="preserve">
+    <value>Лучший контрибьютор</value>
+  </data>
+  <data name="Top Repositories" xml:space="preserve">
+    <value>Лучшие репозитории</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Всего часов</value>
   </data>
 
 </root>

@@ -18,56 +18,56 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Total Work Hours" xml:space="preserve">
-    <value>Общее количество рабочих часов</value>
-  </data>
-  <data name="My Contributions" xml:space="preserve">
-    <value>Мои вклады</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Часы работы</value>
-  </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>Всего коммитов</value>
-  </data>
-  <data name="Repository" xml:space="preserve">
-    <value>Репозиторий</value>
-  </data>
-  <data name="Contributed Repositories" xml:space="preserve">
-    <value>Репозитории с вкладом</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Коммиты</value>
+      <data name="Action" xml:space="preserve">
+    <value>Действие</value>
   </data>
   <data name="Active Days" xml:space="preserve">
     <value>Активные дни</value>
   </data>
-  <data name="Days" xml:space="preserve">
-    <value>дней</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Добавить репозиторий сейчас</value>
   </data>
   <data name="All Contributions" xml:space="preserve">
     <value>Все вклады</value>
   </data>
-  <data name="Action" xml:space="preserve">
-    <value>Действие</value>
+  <data name="Commits" xml:space="preserve">
+    <value>Коммиты</value>
   </data>
-  <data name="No contributions found yet. Start coding!" xml:space="preserve">
-    <value>Пока нет вкладов. Начните программировать!</value>
+  <data name="Contributed Repositories" xml:space="preserve">
+    <value>Репозитории с вкладом</value>
   </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Посмотреть репозиторий</value>
+  <data name="Days" xml:space="preserve">
+    <value>дней</value>
   </data>
   <data name="Hours" xml:space="preserve">
     <value>Часы</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Мои вклады</value>
+  </data>
+  <data name="No contributions found yet. Start coding!" xml:space="preserve">
+    <value>Пока нет вкладов. Начните программировать!</value>
+  </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Детали профиля</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Добавить репозиторий сейчас</value>
+  <data name="Repository" xml:space="preserve">
+    <value>Репозиторий</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Репозиторий не отслеживается?</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Всего коммитов</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Общее количество рабочих часов</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>Посмотреть репозиторий</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Часы работы</value>
   </data>
 
 </root>

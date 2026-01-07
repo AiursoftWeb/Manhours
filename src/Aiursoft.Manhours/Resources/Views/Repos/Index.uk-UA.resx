@@ -18,44 +18,35 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Git" xml:space="preserve">
+      <data name="Active" xml:space="preserve">
+    <value>Активний</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Додати репозиторій зараз</value>
+  </data>
+  <data name="All Repositories" xml:space="preserve">
+    <value>Усі репозиторії</value>
+  </data>
+  <data name="Contributed!" xml:space="preserve">
+    <value>Зроблено внесок!</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Учасники</value>
+  </data>
+  <data name="Git" xml:space="preserve">
     <value>Git</value>
   </data>
   <data name="Hours" xml:space="preserve">
     <value>Години</value>
   </data>
-  <data name="Top Repositories" xml:space="preserve">
-    <value>Найкращі репозиторії</value>
-  </data>
-  <data name="All Repositories" xml:space="preserve">
-    <value>Усі репозиторії</value>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Мої топові репозиторії, над якими я найбільше працював(-ла) у співпраці</value>
   </data>
   <data name="My Top Participated" xml:space="preserve">
     <value>Мої найкращі за участю</value>
   </data>
-  <data name="Top Contributor" xml:space="preserve">
-    <value>Найкращий учасник</value>
-  </data>
-  <data name="Active" xml:space="preserve">
-    <value>Активний</value>
-  </data>
-  <data name="Contributed!" xml:space="preserve">
-    <value>Зроблено внесок!</value>
-  </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>Загальна кількість годин</value>
-  </data>
-  <data name="Contributors" xml:space="preserve">
-    <value>Учасники</value>
-  </data>
-  <data name="Top #1" xml:space="preserve">
-    <value>Топ #1</value>
-  </data>
-  <data name="Showing" xml:space="preserve">
-    <value>Показано</value>
-  </data>
-  <data name="repositories" xml:space="preserve">
-    <value>репозиторії</value>
+  <data name="Next" xml:space="preserve">
+    <value>Наступна</value>
   </data>
   <data name="of" xml:space="preserve">
     <value>з</value>
@@ -63,20 +54,29 @@
   <data name="Previous" xml:space="preserve">
     <value>Попередня</value>
   </data>
-  <data name="Next" xml:space="preserve">
-    <value>Наступна</value>
-  </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Додати репозиторій зараз</value>
+  <data name="repositories" xml:space="preserve">
+    <value>репозиторії</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Репозиторій не відстежується?</value>
   </data>
-  <data name="My top hard-working collaborated repositories" xml:space="preserve">
-    <value>Мої топові репозиторії, над якими я найбільше працював(-ла) у співпраці</value>
+  <data name="Showing" xml:space="preserve">
+    <value>Показано</value>
   </data>
   <data name="Sorted by repository total work hours" xml:space="preserve">
     <value>Відсортовано за загальною кількістю робочих годин репозиторію</value>
+  </data>
+  <data name="Top #1" xml:space="preserve">
+    <value>Топ #1</value>
+  </data>
+  <data name="Top Contributor" xml:space="preserve">
+    <value>Найкращий учасник</value>
+  </data>
+  <data name="Top Repositories" xml:space="preserve">
+    <value>Найкращі репозиторії</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Загальна кількість годин</value>
   </data>
 
 </root>

@@ -18,56 +18,56 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Total Commits" xml:space="preserve">
-    <value>Загальна кількість комітів</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Коміти</value>
-  </data>
-  <data name="Repository" xml:space="preserve">
-    <value>Репозиторій</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Робочі години</value>
+      <data name="Action" xml:space="preserve">
+    <value>Дія</value>
   </data>
   <data name="Active Days" xml:space="preserve">
     <value>Активні дні</value>
   </data>
-  <data name="My Contributions" xml:space="preserve">
-    <value>Мої внески</value>
-  </data>
-  <data name="Contributed Repositories" xml:space="preserve">
-    <value>Внесені репозиторії</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>Загальна кількість годин роботи</value>
-  </data>
-  <data name="Action" xml:space="preserve">
-    <value>Дія</value>
-  </data>
-  <data name="Days" xml:space="preserve">
-    <value>Днів</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Додати репозиторій зараз</value>
   </data>
   <data name="All Contributions" xml:space="preserve">
     <value>Усі внески</value>
   </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Переглянути репозиторій</value>
+  <data name="Commits" xml:space="preserve">
+    <value>Коміти</value>
   </data>
-  <data name="No contributions found yet. Start coding!" xml:space="preserve">
-    <value>Жодних внесків ще не знайдено. Почніть кодувати!</value>
+  <data name="Contributed Repositories" xml:space="preserve">
+    <value>Внесені репозиторії</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Днів</value>
   </data>
   <data name="Hours" xml:space="preserve">
     <value>Години</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Мої внески</value>
+  </data>
+  <data name="No contributions found yet. Start coding!" xml:space="preserve">
+    <value>Жодних внесків ще не знайдено. Почніть кодувати!</value>
+  </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Деталі профілю</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Додати репозиторій зараз</value>
+  <data name="Repository" xml:space="preserve">
+    <value>Репозиторій</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Репозиторій не відстежується?</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Загальна кількість комітів</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Загальна кількість годин роботи</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>Переглянути репозиторій</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Робочі години</value>
   </data>
 
 </root>

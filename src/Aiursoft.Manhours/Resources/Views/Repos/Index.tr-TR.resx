@@ -21,41 +21,29 @@
       <data name="Active" xml:space="preserve">
     <value>Aktif</value>
   </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Saat</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Depo ekle</value>
   </data>
   <data name="All Repositories" xml:space="preserve">
     <value>Tüm Depolar</value>
   </data>
-  <data name="Git" xml:space="preserve">
-    <value>Git</value>
-  </data>
-  <data name="My Top Participated" xml:space="preserve">
-    <value>En Çok Katıldıklarım</value>
-  </data>
-  <data name="Top Repositories" xml:space="preserve">
-    <value>En Popüler Depolar</value>
-  </data>
   <data name="Contributed!" xml:space="preserve">
     <value>Katkıda Bulunuldu!</value>
-  </data>
-  <data name="Top Contributor" xml:space="preserve">
-    <value>En Çok Katkı Sağlayan</value>
   </data>
   <data name="Contributors" xml:space="preserve">
     <value>Katkıda Bulunanlar</value>
   </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>Toplam Saat</value>
+  <data name="Git" xml:space="preserve">
+    <value>Git</value>
   </data>
-  <data name="Top #1" xml:space="preserve">
-    <value>En İyi #1</value>
+  <data name="Hours" xml:space="preserve">
+    <value>Saat</value>
   </data>
-  <data name="Showing" xml:space="preserve">
-    <value>Gösteriliyor</value>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>En çok çalıştığım işbirlikli depolarım</value>
   </data>
-  <data name="repositories" xml:space="preserve">
-    <value>depolar</value>
+  <data name="My Top Participated" xml:space="preserve">
+    <value>En Çok Katıldıklarım</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>Sonraki</value>
@@ -66,17 +54,29 @@
   <data name="Previous" xml:space="preserve">
     <value>Önceki</value>
   </data>
-  <data name="My top hard-working collaborated repositories" xml:space="preserve">
-    <value>En çok çalıştığım işbirlikli depolarım</value>
+  <data name="repositories" xml:space="preserve">
+    <value>depolar</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Depo izlenmiyor mu?</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Gösteriliyor</value>
   </data>
   <data name="Sorted by repository total work hours" xml:space="preserve">
     <value>Depo toplam çalışma saatine göre sıralandı</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Depo ekle</value>
+  <data name="Top #1" xml:space="preserve">
+    <value>En İyi #1</value>
   </data>
-  <data name="Repository not tracked?" xml:space="preserve">
-    <value>Depo izlenmiyor mu?</value>
+  <data name="Top Contributor" xml:space="preserve">
+    <value>En Çok Katkı Sağlayan</value>
+  </data>
+  <data name="Top Repositories" xml:space="preserve">
+    <value>En Popüler Depolar</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Toplam Saat</value>
   </data>
 
 </root>

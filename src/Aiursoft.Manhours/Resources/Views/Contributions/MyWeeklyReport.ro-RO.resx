@@ -18,83 +18,53 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="To" xml:space="preserve">
-    <value>Până la</value>
-  </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>Total Commits</value>
-  </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>Zile Active</value>
-  </data>
-  <data name="From" xml:space="preserve">
-    <value>De la</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>Total Ore Lucrate</value>
-  </data>
-  <data name="Report Period" xml:space="preserve">
-    <value>Perioada raportului</value>
-  </data>
-  <data name="Profile Details" xml:space="preserve">
-    <value>Detalii Profil</value>
-  </data>
-  <data name="Last 7 Days" xml:space="preserve">
-    <value>Ultimele 7 zile</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Ore</value>
-  </data>
-  <data name="Days" xml:space="preserve">
-    <value>Zile</value>
+      <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996? Aproape că lucrezi non-stop. Va reduce creativitatea. Depășește limita normală de presiune. Încetează să mai lucrezi!</value>
   </data>
   <data name="Action" xml:space="preserve">
     <value>Acțiune</value>
   </data>
-  <data name="Repository" xml:space="preserve">
-    <value>Depozit</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Commituri</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Ore de lucru</value>
-  </data>
-  <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
-    <value>Contribuții la Depozit (Ultimele 7 Zile)</value>
-  </data>
-  <data name="All Contributions" xml:space="preserve">
-    <value>Toate Contribuțiile</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Vezi Repo</value>
-  </data>
-  <data name="No contributions found in the last 7 days." xml:space="preserve">
-    <value>Nu s-au găsit contribuții în ultimele 7 zile.</value>
-  </data>
-  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
-    <value>Calculăm statisticile tale săptămânale din depozite. Acest lucru ar putea dura câteva secunde.</value>
-  </data>
-  <data name="Computing..." xml:space="preserve">
-    <value>Se calculează...</value>
-  </data>
-  <data name="Diligence Score" xml:space="preserve">
-    <value>Scor Diligență</value>
+  <data name="Active Days" xml:space="preserve">
+    <value>Zile Active</value>
   </data>
   <data name="Add repository now" xml:space="preserve">
     <value>Adaugă depozit acum</value>
   </data>
-  <data name="Repository not tracked?" xml:space="preserve">
-    <value>Depozitul nu este urmărit?</value>
+  <data name="All Contributions" xml:space="preserve">
+    <value>Toate Contribuțiile</value>
   </data>
-  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
-    <value>Destul de multă muncă. Te perfecționezi, dar nu uita să te odihnești.</value>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>Dincolo de înțelegere. Fă o pauză, serios.</value>
   </data>
-  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
-    <value>Munca ta din această săptămână tocmai a început. Cum a fost vacanța ta? Ești pregătit să codezi?</value>
+  <data name="Commits" xml:space="preserve">
+    <value>Commituri</value>
+  </data>
+  <data name="Computing..." xml:space="preserve">
+    <value>Se calculează...</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Zile</value>
+  </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>Scor Diligență</value>
   </data>
   <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
     <value>Sarcină ușoară săptămâna asta. Nu ți-a dat șeful sarcini?</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>De la</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>Sarcină bună de muncă. Se pare că muncești din greu pentru idealurile și obiectivele tale.</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Ore</value>
+  </data>
+  <data name="Last 7 Days" xml:space="preserve">
+    <value>Ultimele 7 zile</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>Legendary! Productivitatea ta este de neegalat.</value>
   </data>
   <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
     <value>Pilon. Foarte activ. Sarcină solidă. Nu este nevoie să faci atât de mult.</value>
@@ -102,23 +72,53 @@
   <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
     <value>Sarcină moderată. Se pare că ești într-o atmosferă de lucru excelentă.</value>
   </data>
-  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
-    <value>Sarcină bună de muncă. Se pare că muncești din greu pentru idealurile și obiectivele tale.</value>
+  <data name="No contributions found in the last 7 days." xml:space="preserve">
+    <value>Nu s-au găsit contribuții în ultimele 7 zile.</value>
   </data>
-  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
-    <value>Legendary! Productivitatea ta este de neegalat.</value>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Detalii Profil</value>
   </data>
-  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
-    <value>Ești o mașinărie de codat! Dedicare de necrezut.</value>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>Destul de multă muncă. Te perfecționezi, dar nu uita să te odihnești.</value>
+  </data>
+  <data name="Report Period" xml:space="preserve">
+    <value>Perioada raportului</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>Depozit</value>
+  </data>
+  <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
+    <value>Contribuții la Depozit (Ultimele 7 Zile)</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Depozitul nu este urmărit?</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>Până la</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Total Commits</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Total Ore Lucrate</value>
   </data>
   <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
     <value>Foarte obosit. Odihnește-te imediat. Aproape limita superioară a presiunii normale de muncă. Nu mai lucra!</value>
   </data>
-  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
-    <value>Dincolo de înțelegere. Fă o pauză, serios.</value>
+  <data name="View Repo" xml:space="preserve">
+    <value>Vezi Repo</value>
   </data>
-  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
-    <value>996? Aproape că lucrezi non-stop. Va reduce creativitatea. Depășește limita normală de presiune. Încetează să mai lucrezi!</value>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>Calculăm statisticile tale săptămânale din depozite. Acest lucru ar putea dura câteva secunde.</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Ore de lucru</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>Ești o mașinărie de codat! Dedicare de necrezut.</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>Munca ta din această săptămână tocmai a început. Cum a fost vacanța ta? Ești pregătit să codezi?</value>
   </data>
 
 </root>

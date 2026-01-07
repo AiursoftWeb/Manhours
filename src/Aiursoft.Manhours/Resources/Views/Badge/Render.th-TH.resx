@@ -18,41 +18,44 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Total Man Hours" xml:space="preserve">
-    <value>ชั่วโมงทำงานรวม</value>
-  </data>
-  <data name="Repository ManHours Statistics" xml:space="preserve">
-    <value>สถิติชั่วโมงการทำงานของ Repository</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>ชั่วโมง</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>คอมมิต</value>
+      <data name="Active Days" xml:space="preserve">
+    <value>วันที่มีการทำงาน</value>
   </data>
   <data name="Active days deleted" xml:space="preserve">
     <value>วันทำงานที่ใช้งาน</value>
   </data>
-  <data name="Details" xml:space="preserve">
-    <value>รายละเอียด</value>
+  <data name="Average Hours" xml:space="preserve">
+    <value>ชั่วโมงเฉลี่ย</value>
   </data>
-  <data name="My Stats" xml:space="preserve">
-    <value>สถิติของฉัน</value>
+  <data name="Commits" xml:space="preserve">
+    <value>คอมมิต</value>
   </data>
   <data name="Contributors" xml:space="preserve">
     <value>ผู้มีส่วนร่วม</value>
   </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>วันที่มีการทำงาน</value>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>ผู้มีส่วนร่วม</value>
   </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>ชั่วโมงรวม</value>
+  <data name="Details" xml:space="preserve">
+    <value>รายละเอียด</value>
   </data>
-  <data name="Std Dev" xml:space="preserve">
-    <value>ส่วนเบี่ยงเบนมาตรฐาน</value>
+  <data name="Hours" xml:space="preserve">
+    <value>ชั่วโมง</value>
   </data>
-  <data name="Average Hours" xml:space="preserve">
-    <value>ชั่วโมงเฉลี่ย</value>
+  <data name="My Stats" xml:space="preserve">
+    <value>สถิติของฉัน</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>ถัดไป</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>ของ</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>ก่อนหน้า</value>
+  </data>
+  <data name="Repository ManHours Statistics" xml:space="preserve">
+    <value>สถิติชั่วโมงการทำงานของ Repository</value>
   </data>
   <data name="Repository Stats" xml:space="preserve">
     <value>สถิติของที่เก็บ</value>
@@ -60,17 +63,14 @@
   <data name="Showing" xml:space="preserve">
     <value>กำลังแสดง</value>
   </data>
-  <data name="of" xml:space="preserve">
-    <value>ของ</value>
+  <data name="Std Dev" xml:space="preserve">
+    <value>ส่วนเบี่ยงเบนมาตรฐาน</value>
   </data>
-  <data name="Next" xml:space="preserve">
-    <value>ถัดไป</value>
+  <data name="Total Hours" xml:space="preserve">
+    <value>ชั่วโมงรวม</value>
   </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>ผู้มีส่วนร่วม</value>
-  </data>
-  <data name="Previous" xml:space="preserve">
-    <value>ก่อนหน้า</value>
+  <data name="Total Man Hours" xml:space="preserve">
+    <value>ชั่วโมงทำงานรวม</value>
   </data>
 
 </root>

@@ -2,6 +2,7 @@ using Aiursoft.Manhours.Entities;
 using Aiursoft.Scanner.Abstractions;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Concurrent;
+using System.Text.RegularExpressions;
 using Aiursoft.Canon;
 using Aiursoft.GitRunner;
 using Aiursoft.GitRunner.Models;
@@ -20,11 +21,39 @@ public class RepoService(
     IMemoryCache cache) : IScopedDependency
 {
     private static readonly ConcurrentDictionary<string, SemaphoreSlim> Lockers = new();
+    private static readonly Regex RepoNameRegex = new("^[a-zA-Z0-9._/-]+$", RegexOptions.Compiled);
     private readonly string _workspaceFolder = Path.Combine(configuration["Storage:Path"]!, "Repos");
 
+    private void ValidateRepoInput(string repoName, string repoUrl)
+    {
+        if (string.IsNullOrWhiteSpace(repoName) || !RepoNameRegex.IsMatch(repoName))
+        {
+            throw new ArgumentException("Invalid repository name.", nameof(repoName));
+        }
+
+        if (repoName.Contains("..") || repoName.Contains(':'))
+        {
+            throw new ArgumentException("Invalid repository name format.", nameof(repoName));
+        }
+
+        if (string.IsNullOrWhiteSpace(repoUrl) || 
+            (!repoUrl.StartsWith("https://", StringComparison.OrdinalIgnoreCase) && 
+             !repoUrl.StartsWith("http://", StringComparison.OrdinalIgnoreCase)))
+        {
+            throw new ArgumentException("Invalid repository URL. Only HTTPS/HTTP are allowed.", nameof(repoUrl));
+        }
+
+        // Additional check for shell metacharacters in URL
+        var illegalChars = new[] { ';', '&', '|', '`', '$', '(', ')', '<', '>', '*', '?', '[', ']', '{', '}', '\\', '"', '\'' };
+        if (repoUrl.Any(c => illegalChars.Contains(c)))
+        {
+            throw new ArgumentException("Invalid characters in repository URL.", nameof(repoUrl));
+        }
+    }
 
     public async Task<RepoStats> GetRepoStatsAsync(string repoName, string repoUrl)
     {
+        ValidateRepoInput(repoName, repoUrl);
         var cachedRepo = await GetCachedRepoAsync(repoUrl);
         if (cachedRepo != null)
         {
@@ -44,6 +73,10 @@ public class RepoService(
 
             var repoLocalPath = repoName.Replace('/', Path.DirectorySeparatorChar);
             var workPath = Path.GetFullPath(Path.Combine(_workspaceFolder, repoLocalPath));
+            if (!workPath.StartsWith(Path.GetFullPath(_workspaceFolder), StringComparison.Ordinal))
+            {
+                throw new ArgumentException("Invalid repository path.", nameof(repoName));
+            }
             if (!Directory.Exists(workPath))
             {
                 logger.LogInformation("Create folder for repo: {Repo} on {Path}", repoName, workPath);
@@ -140,6 +173,7 @@ public class RepoService(
 
     public async Task<RepoStats> GetRepoStatsInRangeAsync(string repoName, string repoUrl, DateTime startDate, DateTime endDate)
     {
+        ValidateRepoInput(repoName, repoUrl);
         // Create a cache key based on repo URL and date range
         var cacheKey = $"RepoStats_{repoUrl}_{startDate:yyyyMMdd}_{endDate:yyyyMMdd}";
 
@@ -163,6 +197,10 @@ public class RepoService(
 
             var repoLocalPath = repoName.Replace('/', Path.DirectorySeparatorChar);
             var workPath = Path.GetFullPath(Path.Combine(_workspaceFolder, repoLocalPath));
+            if (!workPath.StartsWith(Path.GetFullPath(_workspaceFolder), StringComparison.Ordinal))
+            {
+                throw new ArgumentException("Invalid repository path.", nameof(repoName));
+            }
             if (!Directory.Exists(workPath))
             {
                 logger.LogInformation("Create folder for repo: {Repo} on {Path}", repoName, workPath);

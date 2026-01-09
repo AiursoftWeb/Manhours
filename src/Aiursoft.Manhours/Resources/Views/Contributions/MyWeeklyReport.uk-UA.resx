@@ -18,107 +18,107 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Total Commits" xml:space="preserve">
-    <value>Загальна кількість комітів</value>
-  </data>
-  <data name="To" xml:space="preserve">
-    <value>До</value>
-  </data>
-  <data name="From" xml:space="preserve">
-    <value>З</value>
-  </data>
-  <data name="Report Period" xml:space="preserve">
-    <value>Період звіту</value>
-  </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>Активні дні</value>
-  </data>
-  <data name="Last 7 Days" xml:space="preserve">
-    <value>Останні 7 днів</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>Загальна кількість робочих годин</value>
-  </data>
-  <data name="Profile Details" xml:space="preserve">
-    <value>Деталі профілю</value>
-  </data>
-  <data name="Repository" xml:space="preserve">
-    <value>Репозиторій</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Робочі години</value>
+      <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996? Практично безперервна робота. Знижує креативність. Перевищує нормальну межу навантаження. Припиніть працювати!</value>
   </data>
   <data name="Action" xml:space="preserve">
     <value>Дія</value>
   </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Години</value>
-  </data>
-  <data name="Days" xml:space="preserve">
-    <value>Днів</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Коміти</value>
-  </data>
-  <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
-    <value>Внесок у репозиторії (останні 7 днів)</value>
-  </data>
-  <data name="All Contributions" xml:space="preserve">
-    <value>Усі внески</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Переглянути репозиторій</value>
-  </data>
-  <data name="No contributions found in the last 7 days." xml:space="preserve">
-    <value>За останні 7 днів внесків не знайдено.</value>
-  </data>
-  <data name="Computing..." xml:space="preserve">
-    <value>Обчислення...</value>
-  </data>
-  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
-    <value>Ми обчислюємо ваші тижневі статистичні дані з репозиторіїв. Це може зайняти кілька секунд.</value>
-  </data>
-  <data name="Diligence Score" xml:space="preserve">
-    <value>Бал старанності</value>
+  <data name="Active Days" xml:space="preserve">
+    <value>Активні дні</value>
   </data>
   <data name="Add repository now" xml:space="preserve">
     <value>Додати репозиторій зараз</value>
   </data>
-  <data name="Repository not tracked?" xml:space="preserve">
-    <value>Репозиторій не відстежується?</value>
-  </data>
-  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
-    <value>Легке навантаження цього тижня. Бос не дав вам завдань?</value>
-  </data>
-  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
-    <value>Помірне навантаження. Схоже, ви працюєте у чудовій атмосфері.</value>
-  </data>
-  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
-    <value>Гарне навантаження. Схоже, ви наполегливо працюєте заради своїх ідеалів та цілей.</value>
-  </data>
-  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
-    <value>Ваша робота цього тижня щойно почалася. Як пройшла ваша відпустка? Ви готові кодити?</value>
-  </data>
-  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
-    <value>Досить багато роботи. Вдосконалюєш себе, але пам&apos;ятай про відпочинок.</value>
-  </data>
-  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
-    <value>Основа команди. Дуже активний. Надійне навантаження. Не потрібно робити так багато.</value>
+  <data name="All Contributions" xml:space="preserve">
+    <value>Усі внески</value>
   </data>
   <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
     <value>За межами розуміння. Зробіть перерву, серйозно.</value>
   </data>
-  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
-    <value>Ти справжня кодувальна машина! Неймовірна відданість.</value>
+  <data name="Commits" xml:space="preserve">
+    <value>Коміти</value>
+  </data>
+  <data name="Computing..." xml:space="preserve">
+    <value>Обчислення...</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Днів</value>
+  </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>Бал старанності</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>Легке навантаження цього тижня. Бос не дав вам завдань?</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>З</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>Гарне навантаження. Схоже, ви наполегливо працюєте заради своїх ідеалів та цілей.</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Години</value>
+  </data>
+  <data name="Last 7 Days" xml:space="preserve">
+    <value>Останні 7 днів</value>
   </data>
   <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
     <value>Легендарно! Ваша продуктивність зашкалює.</value>
   </data>
-  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
-    <value>996? Практично безперервна робота. Знижує креативність. Перевищує нормальну межу навантаження. Припиніть працювати!</value>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>Основа команди. Дуже активний. Надійне навантаження. Не потрібно робити так багато.</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>Помірне навантаження. Схоже, ви працюєте у чудовій атмосфері.</value>
+  </data>
+  <data name="No contributions found in the last 7 days." xml:space="preserve">
+    <value>За останні 7 днів внесків не знайдено.</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Деталі профілю</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>Досить багато роботи. Вдосконалюєш себе, але пам&apos;ятай про відпочинок.</value>
+  </data>
+  <data name="Report Period" xml:space="preserve">
+    <value>Період звіту</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>Репозиторій</value>
+  </data>
+  <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
+    <value>Внесок у репозиторії (останні 7 днів)</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Репозиторій не відстежується?</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>До</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Загальна кількість комітів</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Загальна кількість робочих годин</value>
   </data>
   <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
     <value>Дуже втомився. Відпочинь негайно. Майже верхня межа нормального робочого тиску. Припини працювати!</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>Переглянути репозиторій</value>
+  </data>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>Ми обчислюємо ваші тижневі статистичні дані з репозиторіїв. Це може зайняти кілька секунд.</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Робочі години</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>Ти справжня кодувальна машина! Неймовірна відданість.</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>Ваша робота цього тижня щойно почалася. Як пройшла ваша відпустка? Ви готові кодити?</value>
   </data>
 
 </root>

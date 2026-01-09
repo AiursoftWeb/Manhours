@@ -18,50 +18,35 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Repository ManHours Statistics" xml:space="preserve">
-    <value>倉庫工時統計</value>
-  </data>
-  <data name="Total Man Hours" xml:space="preserve">
-    <value>總工時</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>小時</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>提交</value>
+      <data name="Active Days" xml:space="preserve">
+    <value>活躍日數</value>
   </data>
   <data name="Active days deleted" xml:space="preserve">
     <value>活躍工作日</value>
   </data>
-  <data name="Std Dev" xml:space="preserve">
-    <value>標準差</value>
-  </data>
-  <data name="Details" xml:space="preserve">
-    <value>詳細資料</value>
-  </data>
   <data name="Average Hours" xml:space="preserve">
     <value>平均時數</value>
   </data>
-  <data name="Repository Stats" xml:space="preserve">
-    <value>儲存庫統計</value>
-  </data>
-  <data name="My Stats" xml:space="preserve">
-    <value>我的統計</value>
+  <data name="Commits" xml:space="preserve">
+    <value>提交</value>
   </data>
   <data name="Contributors" xml:space="preserve">
     <value>貢獻者</value>
   </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>總時數</value>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>貢獻者</value>
   </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>活躍日數</value>
+  <data name="Details" xml:space="preserve">
+    <value>詳細資料</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>小時</value>
+  </data>
+  <data name="My Stats" xml:space="preserve">
+    <value>我的統計</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>下一頁</value>
-  </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>貢獻者</value>
   </data>
   <data name="of" xml:space="preserve">
     <value>的</value>
@@ -69,8 +54,23 @@
   <data name="Previous" xml:space="preserve">
     <value>上一頁</value>
   </data>
+  <data name="Repository ManHours Statistics" xml:space="preserve">
+    <value>倉庫工時統計</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>儲存庫統計</value>
+  </data>
   <data name="Showing" xml:space="preserve">
     <value>顯示</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>標準差</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>總時數</value>
+  </data>
+  <data name="Total Man Hours" xml:space="preserve">
+    <value>總工時</value>
   </data>
 
 </root>

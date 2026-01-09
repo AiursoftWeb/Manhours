@@ -18,56 +18,56 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Total Work Hours" xml:space="preserve">
-    <value>Toplam Çalışma Saati</value>
-  </data>
-  <data name="Contributed Repositories" xml:space="preserve">
-    <value>Katkıda Bulunulan Depolar</value>
-  </data>
-  <data name="Repository" xml:space="preserve">
-    <value>Depo</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Çalışma Saatleri</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>İşlemeler</value>
-  </data>
-  <data name="My Contributions" xml:space="preserve">
-    <value>Katkılarım</value>
-  </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>Toplam Commitler</value>
+      <data name="Action" xml:space="preserve">
+    <value>İşlem</value>
   </data>
   <data name="Active Days" xml:space="preserve">
     <value>Aktif Günler</value>
   </data>
-  <data name="Days" xml:space="preserve">
-    <value>Gün</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Depoyu Görüntüle</value>
-  </data>
-  <data name="No contributions found yet. Start coding!" xml:space="preserve">
-    <value>Henüz katkı bulunamadı. Kod yazmaya başla!</value>
-  </data>
-  <data name="Action" xml:space="preserve">
-    <value>İşlem</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Depo ekle</value>
   </data>
   <data name="All Contributions" xml:space="preserve">
     <value>Tüm Katkılar</value>
   </data>
+  <data name="Commits" xml:space="preserve">
+    <value>İşlemeler</value>
+  </data>
+  <data name="Contributed Repositories" xml:space="preserve">
+    <value>Katkıda Bulunulan Depolar</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Gün</value>
+  </data>
   <data name="Hours" xml:space="preserve">
     <value>Saat</value>
+  </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Katkılarım</value>
+  </data>
+  <data name="No contributions found yet. Start coding!" xml:space="preserve">
+    <value>Henüz katkı bulunamadı. Kod yazmaya başla!</value>
   </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Profil Detayları</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Depo ekle</value>
+  <data name="Repository" xml:space="preserve">
+    <value>Depo</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Depo izlenmiyor mu?</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Toplam Commitler</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Toplam Çalışma Saati</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>Depoyu Görüntüle</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Çalışma Saatleri</value>
   </data>
 
 </root>

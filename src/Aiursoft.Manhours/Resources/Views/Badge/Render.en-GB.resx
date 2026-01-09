@@ -18,59 +18,59 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Repository ManHours Statistics" xml:space="preserve">
-    <value>Repository Man-Hours Statistics</value>
-  </data>
-  <data name="Total Man Hours" xml:space="preserve">
-    <value>Total Hours Worked</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Hours</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Commits</value>
+      <data name="Active Days" xml:space="preserve">
+    <value>Days Active</value>
   </data>
   <data name="Active days deleted" xml:space="preserve">
     <value>Active work days</value>
   </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>Total Hours</value>
+  <data name="Average Hours" xml:space="preserve">
+    <value>Average Hours</value>
   </data>
-  <data name="Repository Stats" xml:space="preserve">
-    <value>Repository Statistics</value>
-  </data>
-  <data name="Std Dev" xml:space="preserve">
-    <value>Standard Deviation</value>
-  </data>
-  <data name="Details" xml:space="preserve">
-    <value>Details</value>
-  </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>Days Active</value>
-  </data>
-  <data name="My Stats" xml:space="preserve">
-    <value>My Statistics</value>
+  <data name="Commits" xml:space="preserve">
+    <value>Commits</value>
   </data>
   <data name="Contributors" xml:space="preserve">
     <value>Contributors</value>
   </data>
-  <data name="Average Hours" xml:space="preserve">
-    <value>Average Hours</value>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>Contributors</value>
   </data>
-  <data name="of" xml:space="preserve">
-    <value>of</value>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
   </data>
-  <data name="Showing" xml:space="preserve">
-    <value>Showing</value>
+  <data name="Hours" xml:space="preserve">
+    <value>Hours</value>
   </data>
-  <data name="Previous" xml:space="preserve">
-    <value>Previous</value>
+  <data name="My Stats" xml:space="preserve">
+    <value>My Statistics</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>Next</value>
   </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>Contributors</value>
+  <data name="of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="Repository ManHours Statistics" xml:space="preserve">
+    <value>Repository Man-Hours Statistics</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>Repository Statistics</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Showing</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>Standard Deviation</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Total Hours</value>
+  </data>
+  <data name="Total Man Hours" xml:space="preserve">
+    <value>Total Hours Worked</value>
   </data>
 
 </root>

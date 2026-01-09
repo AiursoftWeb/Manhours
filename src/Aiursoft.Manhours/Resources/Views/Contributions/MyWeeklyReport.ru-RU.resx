@@ -18,47 +18,71 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Report Period" xml:space="preserve">
-    <value>Период отчёта</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>Общее количество рабочих часов</value>
-  </data>
-  <data name="From" xml:space="preserve">
-    <value>С</value>
-  </data>
-  <data name="To" xml:space="preserve">
-    <value>До</value>
-  </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>Активные дни</value>
-  </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>Всего коммитов</value>
-  </data>
-  <data name="Last 7 Days" xml:space="preserve">
-    <value>Последние 7 дней</value>
-  </data>
-  <data name="Profile Details" xml:space="preserve">
-    <value>Детали профиля</value>
+      <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996? Работа почти без остановки. Это снизит креативность. Превышен нормальный предел нагрузки. Прекратите работать!</value>
   </data>
   <data name="Action" xml:space="preserve">
     <value>Действие</value>
   </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Коммиты</value>
+  <data name="Active Days" xml:space="preserve">
+    <value>Активные дни</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Добавить репозиторий сейчас</value>
   </data>
   <data name="All Contributions" xml:space="preserve">
     <value>Все вклады</value>
   </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Рабочие часы</value>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>За пределами понимания. Сделай перерыв, серьёзно.</value>
+  </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Коммиты</value>
+  </data>
+  <data name="Computing..." xml:space="preserve">
+    <value>Вычисление...</value>
   </data>
   <data name="Days" xml:space="preserve">
     <value>Дней</value>
   </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>Балл усердия</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>Лёгкая нагрузка на этой неделе. Босс не дал вам заданий?</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>С</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>Хорошая нагрузка. Похоже, вы усердно работаете над своими идеалами и целями.</value>
+  </data>
   <data name="Hours" xml:space="preserve">
     <value>Часы</value>
+  </data>
+  <data name="Last 7 Days" xml:space="preserve">
+    <value>Последние 7 дней</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>Легендарно! Ваша продуктивность зашкаливает.</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>Основной работник. Очень активен. Солидная нагрузка. Не нужно так много работать.</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>Умеренная нагрузка. Похоже, вы работаете в отличной атмосфере.</value>
+  </data>
+  <data name="No contributions found in the last 7 days." xml:space="preserve">
+    <value>За последние 7 дней вкладов не найдено.</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Детали профиля</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>Немало работы. Совершенствуешься, но не забывай отдыхать.</value>
+  </data>
+  <data name="Report Period" xml:space="preserve">
+    <value>Период отчёта</value>
   </data>
   <data name="Repository" xml:space="preserve">
     <value>Репозиторий</value>
@@ -66,59 +90,35 @@
   <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
     <value>Вклад в репозитории (за последние 7 дней)</value>
   </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Просмотреть репозиторий</value>
-  </data>
-  <data name="No contributions found in the last 7 days." xml:space="preserve">
-    <value>За последние 7 дней вкладов не найдено.</value>
-  </data>
-  <data name="Computing..." xml:space="preserve">
-    <value>Вычисление...</value>
-  </data>
-  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
-    <value>Мы рассчитываем вашу еженедельную статистику по репозиториям. Это может занять несколько секунд.</value>
-  </data>
-  <data name="Diligence Score" xml:space="preserve">
-    <value>Балл усердия</value>
-  </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Репозиторий не отслеживается?</value>
   </data>
-  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
-    <value>Лёгкая нагрузка на этой неделе. Босс не дал вам заданий?</value>
+  <data name="To" xml:space="preserve">
+    <value>До</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Добавить репозиторий сейчас</value>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Всего коммитов</value>
   </data>
-  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
-    <value>Ваша рабочая неделя только началась. Как прошёл отпуск? Готовы программировать?</value>
-  </data>
-  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
-    <value>Умеренная нагрузка. Похоже, вы работаете в отличной атмосфере.</value>
-  </data>
-  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
-    <value>Основной работник. Очень активен. Солидная нагрузка. Не нужно так много работать.</value>
-  </data>
-  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
-    <value>Хорошая нагрузка. Похоже, вы усердно работаете над своими идеалами и целями.</value>
-  </data>
-  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
-    <value>Немало работы. Совершенствуешься, но не забывай отдыхать.</value>
-  </data>
-  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
-    <value>Легендарно! Ваша продуктивность зашкаливает.</value>
-  </data>
-  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
-    <value>Ты просто машина по написанию кода! Невероятная самоотдача.</value>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Общее количество рабочих часов</value>
   </data>
   <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
     <value>Очень устал. Немедленно отдохни. Почти достигнут верхний предел нормальной рабочей нагрузки. Прекрати работу!</value>
   </data>
-  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
-    <value>996? Работа почти без остановки. Это снизит креативность. Превышен нормальный предел нагрузки. Прекратите работать!</value>
+  <data name="View Repo" xml:space="preserve">
+    <value>Просмотреть репозиторий</value>
   </data>
-  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
-    <value>За пределами понимания. Сделай перерыв, серьёзно.</value>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>Мы рассчитываем вашу еженедельную статистику по репозиториям. Это может занять несколько секунд.</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Рабочие часы</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>Ты просто машина по написанию кода! Невероятная самоотдача.</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>Ваша рабочая неделя только началась. Как прошёл отпуск? Готовы программировать?</value>
   </data>
 
 </root>

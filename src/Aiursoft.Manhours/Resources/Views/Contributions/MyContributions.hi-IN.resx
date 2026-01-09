@@ -18,56 +18,56 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Total Work Hours" xml:space="preserve">
-    <value>कुल कार्य घंटे</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>कार्य घंटे</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>कमिट्स</value>
-  </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>कुल कमिट्स</value>
+      <data name="Action" xml:space="preserve">
+    <value>कार्रवाई</value>
   </data>
   <data name="Active Days" xml:space="preserve">
     <value>सक्रिय दिन</value>
   </data>
-  <data name="Repository" xml:space="preserve">
-    <value>रिपॉजिटरी</value>
-  </data>
-  <data name="My Contributions" xml:space="preserve">
-    <value>मेरा योगदान</value>
-  </data>
-  <data name="Contributed Repositories" xml:space="preserve">
-    <value>योगदान किए गए रिपॉजिटरी</value>
-  </data>
-  <data name="Action" xml:space="preserve">
-    <value>कार्रवाई</value>
-  </data>
-  <data name="Days" xml:space="preserve">
-    <value>दिन</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>अब रिपॉजिटरी जोड़ें</value>
   </data>
   <data name="All Contributions" xml:space="preserve">
     <value>सभी योगदान</value>
   </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>रिपो देखें</value>
+  <data name="Commits" xml:space="preserve">
+    <value>कमिट्स</value>
   </data>
-  <data name="No contributions found yet. Start coding!" xml:space="preserve">
-    <value>अभी तक कोई योगदान नहीं मिला। कोडिंग शुरू करें!</value>
+  <data name="Contributed Repositories" xml:space="preserve">
+    <value>योगदान किए गए रिपॉजिटरी</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>दिन</value>
   </data>
   <data name="Hours" xml:space="preserve">
     <value>घंटे</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>मेरा योगदान</value>
+  </data>
+  <data name="No contributions found yet. Start coding!" xml:space="preserve">
+    <value>अभी तक कोई योगदान नहीं मिला। कोडिंग शुरू करें!</value>
+  </data>
   <data name="Profile Details" xml:space="preserve">
     <value>प्रोफ़ाइल विवरण</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>अब रिपॉजिटरी जोड़ें</value>
+  <data name="Repository" xml:space="preserve">
+    <value>रिपॉजिटरी</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>रिपॉजिटरी ट्रैक नहीं की गई?</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>कुल कमिट्स</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>कुल कार्य घंटे</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>रिपो देखें</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>कार्य घंटे</value>
   </data>
 
 </root>

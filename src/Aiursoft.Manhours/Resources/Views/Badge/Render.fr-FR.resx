@@ -18,59 +18,59 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Total Man Hours" xml:space="preserve">
-    <value>Total des Heures Homme</value>
-  </data>
-  <data name="Repository ManHours Statistics" xml:space="preserve">
-    <value>Statistiques des Heures Homme du Dépôt</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Heures</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Commits</value>
+      <data name="Active Days" xml:space="preserve">
+    <value>Jours d&apos;activité</value>
   </data>
   <data name="Active days deleted" xml:space="preserve">
     <value>Jours de travail actifs</value>
   </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>Heures totales</value>
-  </data>
   <data name="Average Hours" xml:space="preserve">
     <value>Heures moyennes</value>
   </data>
-  <data name="Details" xml:space="preserve">
-    <value>Détails</value>
+  <data name="Commits" xml:space="preserve">
+    <value>Commits</value>
   </data>
   <data name="Contributors" xml:space="preserve">
     <value>Contributeurs</value>
   </data>
-  <data name="Std Dev" xml:space="preserve">
-    <value>Écart type</value>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>Contributeurs</value>
   </data>
-  <data name="Repository Stats" xml:space="preserve">
-    <value>Statistiques du dépôt</value>
+  <data name="Details" xml:space="preserve">
+    <value>Détails</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Heures</value>
   </data>
   <data name="My Stats" xml:space="preserve">
     <value>Mes Statistiques</value>
   </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>Jours d&apos;activité</value>
+  <data name="Next" xml:space="preserve">
+    <value>Suivant</value>
   </data>
   <data name="of" xml:space="preserve">
     <value>de</value>
   </data>
-  <data name="Next" xml:space="preserve">
-    <value>Suivant</value>
+  <data name="Previous" xml:space="preserve">
+    <value>Précédent</value>
+  </data>
+  <data name="Repository ManHours Statistics" xml:space="preserve">
+    <value>Statistiques des Heures Homme du Dépôt</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>Statistiques du dépôt</value>
   </data>
   <data name="Showing" xml:space="preserve">
     <value>Affichage</value>
   </data>
-  <data name="Previous" xml:space="preserve">
-    <value>Précédent</value>
+  <data name="Std Dev" xml:space="preserve">
+    <value>Écart type</value>
   </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>Contributeurs</value>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Heures totales</value>
+  </data>
+  <data name="Total Man Hours" xml:space="preserve">
+    <value>Total des Heures Homme</value>
   </data>
 
 </root>

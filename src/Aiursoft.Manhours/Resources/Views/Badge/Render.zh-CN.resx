@@ -18,17 +18,8 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Repository ManHours Statistics" xml:space="preserve">
-    <value>仓库工时统计</value>
-  </data>
-  <data name="Total Man Hours" xml:space="preserve">
-    <value>总工时</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>小时</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>提交</value>
+      <data name="Active Days" xml:space="preserve">
+    <value>活跃天数</value>
   </data>
   <data name="Active days deleted" xml:space="preserve">
     <value>活跃工作日</value>
@@ -36,32 +27,23 @@
   <data name="Average Hours" xml:space="preserve">
     <value>平均工时</value>
   </data>
-  <data name="Details" xml:space="preserve">
-    <value>详情</value>
-  </data>
-  <data name="My Stats" xml:space="preserve">
-    <value>我的统计</value>
-  </data>
-  <data name="Std Dev" xml:space="preserve">
-    <value>标准差</value>
-  </data>
-  <data name="Repository Stats" xml:space="preserve">
-    <value>仓库统计</value>
+  <data name="Commits" xml:space="preserve">
+    <value>提交</value>
   </data>
   <data name="Contributors" xml:space="preserve">
     <value>贡献者</value>
   </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>总工时</value>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>贡献者</value>
   </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>活跃天数</value>
+  <data name="Details" xml:space="preserve">
+    <value>详情</value>
   </data>
-  <data name="Previous" xml:space="preserve">
-    <value>上一页</value>
+  <data name="Hours" xml:space="preserve">
+    <value>小时</value>
   </data>
-  <data name="Showing" xml:space="preserve">
-    <value>显示</value>
+  <data name="My Stats" xml:space="preserve">
+    <value>我的统计</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>下一页</value>
@@ -69,8 +51,26 @@
   <data name="of" xml:space="preserve">
     <value>的</value>
   </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>贡献者</value>
+  <data name="Previous" xml:space="preserve">
+    <value>上一页</value>
+  </data>
+  <data name="Repository ManHours Statistics" xml:space="preserve">
+    <value>仓库工时统计</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>仓库统计</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>显示</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>标准差</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>总工时</value>
+  </data>
+  <data name="Total Man Hours" xml:space="preserve">
+    <value>总工时</value>
   </data>
 
 </root>

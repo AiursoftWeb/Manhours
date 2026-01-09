@@ -18,107 +18,107 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Report Period" xml:space="preserve">
-    <value>Περίοδος Αναφοράς</value>
-  </data>
-  <data name="From" xml:space="preserve">
-    <value>Από</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>Συνολικές Ώρες Εργασίας</value>
-  </data>
-  <data name="To" xml:space="preserve">
-    <value>Έως</value>
-  </data>
-  <data name="Profile Details" xml:space="preserve">
-    <value>Στοιχεία Προφίλ</value>
-  </data>
-  <data name="Last 7 Days" xml:space="preserve">
-    <value>Τελευταίες 7 Ημέρες</value>
-  </data>
-  <data name="Repository" xml:space="preserve">
-    <value>Αποθετήριο</value>
-  </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>Συνολικές Επιβεβαιώσεις</value>
-  </data>
-  <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
-    <value>Συνεισφορές Αποθετηρίου (Τελευταίες 7 Ημέρες)</value>
-  </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>Ενεργές Ημέρες</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Ώρες Εργασίας</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Ώρες</value>
+      <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996; Σχεδόν αδιάκοπη εργασία. Θα μειώσει τη δημιουργικότητα. Υπερβαίνει το φυσιολογικό όριο πίεσης. Σταματήστε να εργάζεστε!</value>
   </data>
   <data name="Action" xml:space="preserve">
     <value>Ενέργεια</value>
   </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Commits</value>
-  </data>
-  <data name="All Contributions" xml:space="preserve">
-    <value>Όλες οι Συνεισφορές</value>
-  </data>
-  <data name="Days" xml:space="preserve">
-    <value>Ημέρες</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Προβολή Αποθετηρίου</value>
-  </data>
-  <data name="No contributions found in the last 7 days." xml:space="preserve">
-    <value>Δεν βρέθηκαν συνεισφορές τις τελευταίες 7 ημέρες.</value>
-  </data>
-  <data name="Computing..." xml:space="preserve">
-    <value>Υπολογισμός...</value>
-  </data>
-  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
-    <value>Υπολογίζουμε τις εβδομαδιαίες σας στατιστικές από τα αποθετήρια. Αυτό μπορεί να πάρει μερικά δευτερόλεπτα.</value>
-  </data>
-  <data name="Diligence Score" xml:space="preserve">
-    <value>Βαθμός Επιμέλειας</value>
+  <data name="Active Days" xml:space="preserve">
+    <value>Ενεργές Ημέρες</value>
   </data>
   <data name="Add repository now" xml:space="preserve">
     <value>Προσθήκη αποθετηρίου τώρα</value>
   </data>
-  <data name="Repository not tracked?" xml:space="preserve">
-    <value>Αποθετήριο δεν παρακολουθείται;</value>
+  <data name="All Contributions" xml:space="preserve">
+    <value>Όλες οι Συνεισφορές</value>
   </data>
-  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
-    <value>Μέτριο φόρτο εργασίας. Φαίνεται ότι είστε σε εξαιρετικό εργασιακό περιβάλλον.</value>
+  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
+    <value>Πέρα από κάθε κατανόηση. Κάνε ένα διάλειμμα, στα αλήθεια.</value>
   </data>
-  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
-    <value>Αρκετή δουλειά. Βελτιώνεσαι, αλλά θυμήσου να ξεκουραστείς.</value>
+  <data name="Commits" xml:space="preserve">
+    <value>Commits</value>
   </data>
-  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
-    <value>Καλό φόρτο εργασίας. Φαίνεται πως δουλεύεις σκληρά για τα ιδανικά και τους στόχους σου.</value>
+  <data name="Computing..." xml:space="preserve">
+    <value>Υπολογισμός...</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Ημέρες</value>
+  </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>Βαθμός Επιμέλειας</value>
   </data>
   <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
     <value>Ελαφριά φόρτωση εργασίας αυτή την εβδομάδα. Δεν σου ανέθεσε εργασίες ο προϊστάμενος;</value>
   </data>
-  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
-    <value>Στήριγμα. Πολύ δραστήριος. Σταθερό φόρτο εργασίας. Δεν χρειάζεται να κάνεις τόσα πολλά.</value>
+  <data name="From" xml:space="preserve">
+    <value>Από</value>
   </data>
-  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
-    <value>Η δουλειά σου αυτή την εβδομάδα μόλις ξεκίνησε. Πώς ήταν οι διακοπές σου; Είσαι έτοιμος να προγραμματίσεις;</value>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>Καλό φόρτο εργασίας. Φαίνεται πως δουλεύεις σκληρά για τα ιδανικά και τους στόχους σου.</value>
   </data>
-  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
-    <value>Είσαι μια μηχανή προγραμματισμού! Απίστευτη αφοσίωση.</value>
+  <data name="Hours" xml:space="preserve">
+    <value>Ώρες</value>
+  </data>
+  <data name="Last 7 Days" xml:space="preserve">
+    <value>Τελευταίες 7 Ημέρες</value>
   </data>
   <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
     <value>Θρυλικό! Η παραγωγικότητά σου είναι εκτός των γραφημάτων.</value>
   </data>
-  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
-    <value>996; Σχεδόν αδιάκοπη εργασία. Θα μειώσει τη δημιουργικότητα. Υπερβαίνει το φυσιολογικό όριο πίεσης. Σταματήστε να εργάζεστε!</value>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>Στήριγμα. Πολύ δραστήριος. Σταθερό φόρτο εργασίας. Δεν χρειάζεται να κάνεις τόσα πολλά.</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>Μέτριο φόρτο εργασίας. Φαίνεται ότι είστε σε εξαιρετικό εργασιακό περιβάλλον.</value>
+  </data>
+  <data name="No contributions found in the last 7 days." xml:space="preserve">
+    <value>Δεν βρέθηκαν συνεισφορές τις τελευταίες 7 ημέρες.</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Στοιχεία Προφίλ</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>Αρκετή δουλειά. Βελτιώνεσαι, αλλά θυμήσου να ξεκουραστείς.</value>
+  </data>
+  <data name="Report Period" xml:space="preserve">
+    <value>Περίοδος Αναφοράς</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>Αποθετήριο</value>
+  </data>
+  <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
+    <value>Συνεισφορές Αποθετηρίου (Τελευταίες 7 Ημέρες)</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Αποθετήριο δεν παρακολουθείται;</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>Έως</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Συνολικές Επιβεβαιώσεις</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Συνολικές Ώρες Εργασίας</value>
   </data>
   <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
     <value>Πολύ κουρασμένος. Ξεκουραστείτε αμέσως. Σχεδόν το ανώτατο όριο της φυσιολογικής πίεσης εργασίας. Σταματήστε να εργάζεστε!</value>
   </data>
-  <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
-    <value>Πέρα από κάθε κατανόηση. Κάνε ένα διάλειμμα, στα αλήθεια.</value>
+  <data name="View Repo" xml:space="preserve">
+    <value>Προβολή Αποθετηρίου</value>
+  </data>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>Υπολογίζουμε τις εβδομαδιαίες σας στατιστικές από τα αποθετήρια. Αυτό μπορεί να πάρει μερικά δευτερόλεπτα.</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Ώρες Εργασίας</value>
+  </data>
+  <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
+    <value>Είσαι μια μηχανή προγραμματισμού! Απίστευτη αφοσίωση.</value>
+  </data>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>Η δουλειά σου αυτή την εβδομάδα μόλις ξεκίνησε. Πώς ήταν οι διακοπές σου; Είσαι έτοιμος να προγραμματίσεις;</value>
   </data>
 
 </root>

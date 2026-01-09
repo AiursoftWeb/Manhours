@@ -18,59 +18,59 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Total Man Hours" xml:space="preserve">
-    <value>Tổng Số Giờ Làm Việc</value>
-  </data>
-  <data name="Repository ManHours Statistics" xml:space="preserve">
-    <value>Thống kê Giờ công Kho lưu trữ</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Giờ</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Commit</value>
+      <data name="Active Days" xml:space="preserve">
+    <value>Ngày Hoạt Động</value>
   </data>
   <data name="Active days deleted" xml:space="preserve">
     <value>Ngày làm việc tích cực</value>
   </data>
-  <data name="Details" xml:space="preserve">
-    <value>Chi tiết</value>
+  <data name="Average Hours" xml:space="preserve">
+    <value>Số Giờ Trung Bình</value>
+  </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Commit</value>
   </data>
   <data name="Contributors" xml:space="preserve">
     <value>Người đóng góp</value>
   </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>Tổng Số Giờ</value>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>Người đóng góp</value>
   </data>
-  <data name="Average Hours" xml:space="preserve">
-    <value>Số Giờ Trung Bình</value>
+  <data name="Details" xml:space="preserve">
+    <value>Chi tiết</value>
   </data>
-  <data name="Std Dev" xml:space="preserve">
-    <value>Độ lệch chuẩn</value>
-  </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>Ngày Hoạt Động</value>
+  <data name="Hours" xml:space="preserve">
+    <value>Giờ</value>
   </data>
   <data name="My Stats" xml:space="preserve">
     <value>Thống kê của tôi</value>
   </data>
-  <data name="Repository Stats" xml:space="preserve">
-    <value>Thống kê Kho lưu trữ</value>
-  </data>
-  <data name="Previous" xml:space="preserve">
-    <value>Trước</value>
+  <data name="Next" xml:space="preserve">
+    <value>Tiếp theo</value>
   </data>
   <data name="of" xml:space="preserve">
     <value>trong số</value>
   </data>
-  <data name="Next" xml:space="preserve">
-    <value>Tiếp theo</value>
+  <data name="Previous" xml:space="preserve">
+    <value>Trước</value>
+  </data>
+  <data name="Repository ManHours Statistics" xml:space="preserve">
+    <value>Thống kê Giờ công Kho lưu trữ</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>Thống kê Kho lưu trữ</value>
   </data>
   <data name="Showing" xml:space="preserve">
     <value>Đang hiển thị</value>
   </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>Người đóng góp</value>
+  <data name="Std Dev" xml:space="preserve">
+    <value>Độ lệch chuẩn</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Tổng Số Giờ</value>
+  </data>
+  <data name="Total Man Hours" xml:space="preserve">
+    <value>Tổng Số Giờ Làm Việc</value>
   </data>
 
 </root>

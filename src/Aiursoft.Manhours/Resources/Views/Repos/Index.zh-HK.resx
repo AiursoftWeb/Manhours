@@ -18,23 +18,56 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Hours" xml:space="preserve">
-    <value>小時</value>
+      <data name="Active" xml:space="preserve">
+    <value>活躍</value>
   </data>
-  <data name="Git" xml:space="preserve">
-    <value>Git</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>立即新增儲存庫</value>
+  </data>
+  <data name="All Repositories" xml:space="preserve">
+    <value>所有儲存庫</value>
   </data>
   <data name="Contributed!" xml:space="preserve">
     <value>已貢獻！</value>
   </data>
-  <data name="Active" xml:space="preserve">
-    <value>活躍</value>
+  <data name="Contributors" xml:space="preserve">
+    <value>貢獻者</value>
+  </data>
+  <data name="Git" xml:space="preserve">
+    <value>Git</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>小時</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>我最勤力協作嘅儲存庫</value>
   </data>
   <data name="My Top Participated" xml:space="preserve">
     <value>我最常參與的</value>
   </data>
-  <data name="All Repositories" xml:space="preserve">
-    <value>所有儲存庫</value>
+  <data name="Next" xml:space="preserve">
+    <value>下一頁</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>的</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>上一頁</value>
+  </data>
+  <data name="repositories" xml:space="preserve">
+    <value>儲存庫</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>未追蹤倉庫？</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>顯示</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>按儲存庫總工作時數排序</value>
+  </data>
+  <data name="Top #1" xml:space="preserve">
+    <value>榜首</value>
   </data>
   <data name="Top Contributor" xml:space="preserve">
     <value>頂尖貢獻者</value>
@@ -44,39 +77,6 @@
   </data>
   <data name="Total Hours" xml:space="preserve">
     <value>總時數</value>
-  </data>
-  <data name="Contributors" xml:space="preserve">
-    <value>貢獻者</value>
-  </data>
-  <data name="Top #1" xml:space="preserve">
-    <value>榜首</value>
-  </data>
-  <data name="Showing" xml:space="preserve">
-    <value>顯示</value>
-  </data>
-  <data name="Previous" xml:space="preserve">
-    <value>上一頁</value>
-  </data>
-  <data name="repositories" xml:space="preserve">
-    <value>儲存庫</value>
-  </data>
-  <data name="of" xml:space="preserve">
-    <value>的</value>
-  </data>
-  <data name="Next" xml:space="preserve">
-    <value>下一頁</value>
-  </data>
-  <data name="My top hard-working collaborated repositories" xml:space="preserve">
-    <value>我最勤力協作嘅儲存庫</value>
-  </data>
-  <data name="Sorted by repository total work hours" xml:space="preserve">
-    <value>按儲存庫總工作時數排序</value>
-  </data>
-  <data name="Repository not tracked?" xml:space="preserve">
-    <value>未追蹤倉庫？</value>
-  </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>立即新增儲存庫</value>
   </data>
 
 </root>

@@ -18,41 +18,32 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Git" xml:space="preserve">
-    <value>Git</value>
-  </data>
-  <data name="Active" xml:space="preserve">
+      <data name="Active" xml:space="preserve">
     <value>アクティブ</value>
   </data>
-  <data name="Contributed!" xml:space="preserve">
-    <value>貢献済み！</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>リポジトリを追加</value>
   </data>
   <data name="All Repositories" xml:space="preserve">
     <value>すべてのリポジトリ</value>
   </data>
-  <data name="Top Repositories" xml:space="preserve">
-    <value>トップリポジトリ</value>
-  </data>
-  <data name="My Top Participated" xml:space="preserve">
-    <value>私が最も参加したリポジトリ</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>時間</value>
-  </data>
-  <data name="Top Contributor" xml:space="preserve">
-    <value>トップコントリビューター</value>
+  <data name="Contributed!" xml:space="preserve">
+    <value>貢献済み！</value>
   </data>
   <data name="Contributors" xml:space="preserve">
     <value>貢献者</value>
   </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>総時間</value>
+  <data name="Git" xml:space="preserve">
+    <value>Git</value>
   </data>
-  <data name="Top #1" xml:space="preserve">
-    <value>トップ #1</value>
+  <data name="Hours" xml:space="preserve">
+    <value>時間</value>
   </data>
-  <data name="repositories" xml:space="preserve">
-    <value>リポジトリ</value>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>私が最も貢献したリポジトリ</value>
+  </data>
+  <data name="My Top Participated" xml:space="preserve">
+    <value>私が最も参加したリポジトリ</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>次へ</value>
@@ -63,20 +54,29 @@
   <data name="Previous" xml:space="preserve">
     <value>前へ</value>
   </data>
+  <data name="repositories" xml:space="preserve">
+    <value>リポジトリ</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>リポジトリが追跡されていませんか？</value>
+  </data>
   <data name="Showing" xml:space="preserve">
     <value>表示中</value>
-  </data>
-  <data name="My top hard-working collaborated repositories" xml:space="preserve">
-    <value>私が最も貢献したリポジトリ</value>
   </data>
   <data name="Sorted by repository total work hours" xml:space="preserve">
     <value>リポジトリの総作業時間でソート</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>リポジトリを追加</value>
+  <data name="Top #1" xml:space="preserve">
+    <value>トップ #1</value>
   </data>
-  <data name="Repository not tracked?" xml:space="preserve">
-    <value>リポジトリが追跡されていませんか？</value>
+  <data name="Top Contributor" xml:space="preserve">
+    <value>トップコントリビューター</value>
+  </data>
+  <data name="Top Repositories" xml:space="preserve">
+    <value>トップリポジトリ</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>総時間</value>
   </data>
 
 </root>

@@ -18,23 +18,56 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Hours" xml:space="preserve">
-    <value>Jam</value>
-  </data>
-  <data name="Active" xml:space="preserve">
+      <data name="Active" xml:space="preserve">
     <value>Aktif</value>
   </data>
-  <data name="My Top Participated" xml:space="preserve">
-    <value>Repositori Teratas Saya</value>
-  </data>
-  <data name="Git" xml:space="preserve">
-    <value>Git</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Tambahkan repositori sekarang</value>
   </data>
   <data name="All Repositories" xml:space="preserve">
     <value>Semua Repositori</value>
   </data>
   <data name="Contributed!" xml:space="preserve">
     <value>Berkontribusi!</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Kontributor</value>
+  </data>
+  <data name="Git" xml:space="preserve">
+    <value>Git</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Jam</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Repositori kolaborasi saya yang paling rajin</value>
+  </data>
+  <data name="My Top Participated" xml:space="preserve">
+    <value>Repositori Teratas Saya</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Berikutnya</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>dari</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Sebelumnya</value>
+  </data>
+  <data name="repositories" xml:space="preserve">
+    <value>repositori</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Repositori tidak dilacak?</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Menampilkan</value>
+  </data>
+  <data name="Sorted by repository total work hours" xml:space="preserve">
+    <value>Diurutkan berdasarkan total jam kerja repositori</value>
+  </data>
+  <data name="Top #1" xml:space="preserve">
+    <value>Teratas #1</value>
   </data>
   <data name="Top Contributor" xml:space="preserve">
     <value>Kontributor Teratas</value>
@@ -44,39 +77,6 @@
   </data>
   <data name="Total Hours" xml:space="preserve">
     <value>Total Jam</value>
-  </data>
-  <data name="Contributors" xml:space="preserve">
-    <value>Kontributor</value>
-  </data>
-  <data name="Top #1" xml:space="preserve">
-    <value>Teratas #1</value>
-  </data>
-  <data name="of" xml:space="preserve">
-    <value>dari</value>
-  </data>
-  <data name="Next" xml:space="preserve">
-    <value>Berikutnya</value>
-  </data>
-  <data name="Previous" xml:space="preserve">
-    <value>Sebelumnya</value>
-  </data>
-  <data name="repositories" xml:space="preserve">
-    <value>repositori</value>
-  </data>
-  <data name="Showing" xml:space="preserve">
-    <value>Menampilkan</value>
-  </data>
-  <data name="Repository not tracked?" xml:space="preserve">
-    <value>Repositori tidak dilacak?</value>
-  </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Tambahkan repositori sekarang</value>
-  </data>
-  <data name="My top hard-working collaborated repositories" xml:space="preserve">
-    <value>Repositori kolaborasi saya yang paling rajin</value>
-  </data>
-  <data name="Sorted by repository total work hours" xml:space="preserve">
-    <value>Diurutkan berdasarkan total jam kerja repositori</value>
   </data>
 
 </root>

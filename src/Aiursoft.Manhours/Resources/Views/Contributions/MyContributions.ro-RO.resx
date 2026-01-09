@@ -18,26 +18,20 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="My Contributions" xml:space="preserve">
-    <value>Contribuțiile mele</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Commituri</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>Total Ore Lucrate</value>
+      <data name="Action" xml:space="preserve">
+    <value>Acțiune</value>
   </data>
   <data name="Active Days" xml:space="preserve">
     <value>Zile Active</value>
   </data>
-  <data name="Repository" xml:space="preserve">
-    <value>Depozit</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Adaugă depozit acum</value>
   </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Ore de lucru</value>
+  <data name="All Contributions" xml:space="preserve">
+    <value>Toate Contribuțiile</value>
   </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>Total Commits</value>
+  <data name="Commits" xml:space="preserve">
+    <value>Commituri</value>
   </data>
   <data name="Contributed Repositories" xml:space="preserve">
     <value>Depozite Contribuite</value>
@@ -45,29 +39,35 @@
   <data name="Days" xml:space="preserve">
     <value>Zile</value>
   </data>
-  <data name="All Contributions" xml:space="preserve">
-    <value>Toate Contribuțiile</value>
+  <data name="Hours" xml:space="preserve">
+    <value>Ore</value>
   </data>
-  <data name="Action" xml:space="preserve">
-    <value>Acțiune</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Vezi Depozitul</value>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Contribuțiile mele</value>
   </data>
   <data name="No contributions found yet. Start coding!" xml:space="preserve">
     <value>Nu s-au găsit încă contribuții. Începe să codezi!</value>
   </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Ore</value>
-  </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Detalii Profil</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Adaugă depozit acum</value>
+  <data name="Repository" xml:space="preserve">
+    <value>Depozit</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Depozitarul nu este urmărit?</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Total Commits</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Total Ore Lucrate</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>Vezi Depozitul</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Ore de lucru</value>
   </data>
 
 </root>

@@ -18,59 +18,59 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Total Man Hours" xml:space="preserve">
-    <value>総作業時間</value>
-  </data>
-  <data name="Repository ManHours Statistics" xml:space="preserve">
-    <value>リポジトリ工数統計</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>時間</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>コミット</value>
+      <data name="Active Days" xml:space="preserve">
+    <value>活動日数</value>
   </data>
   <data name="Active days deleted" xml:space="preserve">
     <value>アクティブな作業日</value>
   </data>
-  <data name="Repository Stats" xml:space="preserve">
-    <value>リポジトリ統計</value>
-  </data>
-  <data name="Details" xml:space="preserve">
-    <value>詳細</value>
-  </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>活動日数</value>
-  </data>
   <data name="Average Hours" xml:space="preserve">
     <value>平均時間</value>
   </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>総時間</value>
+  <data name="Commits" xml:space="preserve">
+    <value>コミット</value>
   </data>
   <data name="Contributors" xml:space="preserve">
     <value>貢献者</value>
   </data>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>貢献者</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>詳細</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>時間</value>
+  </data>
   <data name="My Stats" xml:space="preserve">
     <value>私の統計</value>
-  </data>
-  <data name="Std Dev" xml:space="preserve">
-    <value>標準偏差</value>
   </data>
   <data name="Next" xml:space="preserve">
     <value>次へ</value>
   </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>貢献者</value>
+  <data name="of" xml:space="preserve">
+    <value>の</value>
   </data>
   <data name="Previous" xml:space="preserve">
     <value>前へ</value>
   </data>
-  <data name="of" xml:space="preserve">
-    <value>の</value>
+  <data name="Repository ManHours Statistics" xml:space="preserve">
+    <value>リポジトリ工数統計</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>リポジトリ統計</value>
   </data>
   <data name="Showing" xml:space="preserve">
     <value>表示中</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>標準偏差</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>総時間</value>
+  </data>
+  <data name="Total Man Hours" xml:space="preserve">
+    <value>総作業時間</value>
   </data>
 
 </root>

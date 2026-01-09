@@ -18,56 +18,56 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Repository" xml:space="preserve">
-    <value>المستودع</value>
-  </data>
-  <data name="My Contributions" xml:space="preserve">
-    <value>مساهماتي</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>ساعات العمل</value>
+      <data name="Action" xml:space="preserve">
+    <value>الإجراء</value>
   </data>
   <data name="Active Days" xml:space="preserve">
     <value>الأيام النشطة</value>
   </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>إجمالي ساعات العمل</value>
-  </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>إجمالي عمليات الالتزام</value>
-  </data>
-  <data name="Contributed Repositories" xml:space="preserve">
-    <value>المستودعات المساهمة</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>التزامات</value>
-  </data>
-  <data name="Days" xml:space="preserve">
-    <value>أيام</value>
-  </data>
-  <data name="Action" xml:space="preserve">
-    <value>الإجراء</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>عرض المستودع</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>أضف مستودعًا الآن</value>
   </data>
   <data name="All Contributions" xml:space="preserve">
     <value>جميع المساهمات</value>
   </data>
-  <data name="No contributions found yet. Start coding!" xml:space="preserve">
-    <value>لم يتم العثور على مساهمات بعد. ابدأ بالبرمجة!</value>
+  <data name="Commits" xml:space="preserve">
+    <value>التزامات</value>
+  </data>
+  <data name="Contributed Repositories" xml:space="preserve">
+    <value>المستودعات المساهمة</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>أيام</value>
   </data>
   <data name="Hours" xml:space="preserve">
     <value>ساعات</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>مساهماتي</value>
+  </data>
+  <data name="No contributions found yet. Start coding!" xml:space="preserve">
+    <value>لم يتم العثور على مساهمات بعد. ابدأ بالبرمجة!</value>
+  </data>
   <data name="Profile Details" xml:space="preserve">
     <value>تفاصيل الملف الشخصي</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>المستودع</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>المستودع غير مُتتبع؟</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>أضف مستودعًا الآن</value>
+  <data name="Total Commits" xml:space="preserve">
+    <value>إجمالي عمليات الالتزام</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>إجمالي ساعات العمل</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>عرض المستودع</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>ساعات العمل</value>
   </data>
 
 </root>

@@ -18,107 +18,107 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="To" xml:space="preserve">
-    <value>À</value>
-  </data>
-  <data name="From" xml:space="preserve">
-    <value>De</value>
-  </data>
-  <data name="Profile Details" xml:space="preserve">
-    <value>Détails du profil</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>Heures totales de travail</value>
-  </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>Jours d&apos;activité</value>
-  </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>Total des commits</value>
-  </data>
-  <data name="Last 7 Days" xml:space="preserve">
-    <value>7 derniers jours</value>
-  </data>
-  <data name="Report Period" xml:space="preserve">
-    <value>Période du rapport</value>
+      <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
+    <value>996 ? Travailler presque sans arrêt. Cela réduira la créativité. Dépassement de la limite de pression normale. Arrêtez de travailler !</value>
   </data>
   <data name="Action" xml:space="preserve">
     <value>Action</value>
   </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Validations</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Heures</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Heures de travail</value>
-  </data>
-  <data name="Repository" xml:space="preserve">
-    <value>Dépôt</value>
-  </data>
-  <data name="All Contributions" xml:space="preserve">
-    <value>Toutes les contributions</value>
-  </data>
-  <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
-    <value>Contributions aux dépôts (7 derniers jours)</value>
-  </data>
-  <data name="Days" xml:space="preserve">
-    <value>Jours</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Voir le dépôt</value>
-  </data>
-  <data name="No contributions found in the last 7 days." xml:space="preserve">
-    <value>Aucune contribution trouvée au cours des 7 derniers jours.</value>
-  </data>
-  <data name="Computing..." xml:space="preserve">
-    <value>Calcul en cours...</value>
-  </data>
-  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
-    <value>Nous calculons vos statistiques hebdomadaires à partir des dépôts. Cela peut prendre quelques secondes.</value>
-  </data>
-  <data name="Diligence Score" xml:space="preserve">
-    <value>Score de Diligence</value>
-  </data>
-  <data name="Repository not tracked?" xml:space="preserve">
-    <value>Dépôt non suivi ?</value>
+  <data name="Active Days" xml:space="preserve">
+    <value>Jours d&apos;activité</value>
   </data>
   <data name="Add repository now" xml:space="preserve">
     <value>Ajouter un dépôt maintenant</value>
   </data>
-  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
-    <value>Bon travail. On dirait que vous travaillez dur pour vos idéaux et vos objectifs.</value>
-  </data>
-  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
-    <value>Charge de travail modérée. On dirait que vous êtes dans une excellente atmosphère de travail.</value>
-  </data>
-  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
-    <value>Pas mal de travail. Vous vous améliorez, mais n&apos;oubliez pas de vous reposer.</value>
-  </data>
-  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
-    <value>Votre travail de cette semaine vient de commencer. Comment s&apos;est passée votre vacance ? Êtes-vous prêt à coder ?</value>
-  </data>
-  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
-    <value>Charge de travail légère cette semaine. Le patron ne t&apos;a pas donné de tâches ?</value>
-  </data>
-  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
-    <value>Pilier. Très actif. Charge de travail solide. Pas besoin d&apos;en faire autant.</value>
+  <data name="All Contributions" xml:space="preserve">
+    <value>Toutes les contributions</value>
   </data>
   <data name="Beyond comprehension. Take a break, for real." xml:space="preserve">
     <value>Incompréhensible. Fais une vraie pause.</value>
   </data>
-  <data name="996? Almost working non-stop. Will reduce creativity. Exceeds normal pressure limit. Stop working!" xml:space="preserve">
-    <value>996 ? Travailler presque sans arrêt. Cela réduira la créativité. Dépassement de la limite de pression normale. Arrêtez de travailler !</value>
+  <data name="Commits" xml:space="preserve">
+    <value>Validations</value>
+  </data>
+  <data name="Computing..." xml:space="preserve">
+    <value>Calcul en cours...</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Jours</value>
+  </data>
+  <data name="Diligence Score" xml:space="preserve">
+    <value>Score de Diligence</value>
+  </data>
+  <data name="Easy workload this week. Didn&apos;t the boss assign you tasks?" xml:space="preserve">
+    <value>Charge de travail légère cette semaine. Le patron ne t&apos;a pas donné de tâches ?</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>De</value>
+  </data>
+  <data name="Good workload. Seems like you are working hard for your ideals and goals." xml:space="preserve">
+    <value>Bon travail. On dirait que vous travaillez dur pour vos idéaux et vos objectifs.</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Heures</value>
+  </data>
+  <data name="Last 7 Days" xml:space="preserve">
+    <value>7 derniers jours</value>
+  </data>
+  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
+    <value>Légendaire ! Votre productivité dépasse toutes les limites.</value>
+  </data>
+  <data name="Mainstay. Very active. Solid workload. No need to do so much." xml:space="preserve">
+    <value>Pilier. Très actif. Charge de travail solide. Pas besoin d&apos;en faire autant.</value>
+  </data>
+  <data name="Moderate workload. Seems like you are in a great working atmosphere." xml:space="preserve">
+    <value>Charge de travail modérée. On dirait que vous êtes dans une excellente atmosphère de travail.</value>
+  </data>
+  <data name="No contributions found in the last 7 days." xml:space="preserve">
+    <value>Aucune contribution trouvée au cours des 7 derniers jours.</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Détails du profil</value>
+  </data>
+  <data name="Quite a bit of work. Improving yourself, but remember to rest." xml:space="preserve">
+    <value>Pas mal de travail. Vous vous améliorez, mais n&apos;oubliez pas de vous reposer.</value>
+  </data>
+  <data name="Report Period" xml:space="preserve">
+    <value>Période du rapport</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>Dépôt</value>
+  </data>
+  <data name="Repository Contributions (Last 7 Days)" xml:space="preserve">
+    <value>Contributions aux dépôts (7 derniers jours)</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Dépôt non suivi ?</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>À</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Total des commits</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Heures totales de travail</value>
   </data>
   <data name="Very tired. Rest immediately. Almost the upper limit of normal work pressure. Stop working!" xml:space="preserve">
     <value>Très fatigué. Reposez-vous immédiatement. Presque la limite supérieure de la pression de travail normale. Arrêtez de travailler !</value>
   </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>Voir le dépôt</value>
+  </data>
+  <data name="We are calculating your weekly statistics from the repositories. This might take a few seconds." xml:space="preserve">
+    <value>Nous calculons vos statistiques hebdomadaires à partir des dépôts. Cela peut prendre quelques secondes.</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Heures de travail</value>
+  </data>
   <data name="You are a coding machine! Unbelievable dedication." xml:space="preserve">
     <value>Tu es une machine à coder ! Un dévouement incroyable.</value>
   </data>
-  <data name="Legendary! Your productivity is off the charts." xml:space="preserve">
-    <value>Légendaire ! Votre productivité dépasse toutes les limites.</value>
+  <data name="Your work this week has just started. How was your vacation? Are you ready to code?" xml:space="preserve">
+    <value>Votre travail de cette semaine vient de commencer. Comment s&apos;est passée votre vacance ? Êtes-vous prêt à coder ?</value>
   </data>
 
 </root>

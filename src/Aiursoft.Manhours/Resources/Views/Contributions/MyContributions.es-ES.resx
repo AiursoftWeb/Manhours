@@ -18,26 +18,20 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Total Work Hours" xml:space="preserve">
-    <value>Horas Totales de Trabajo</value>
-  </data>
-  <data name="Repository" xml:space="preserve">
-    <value>Repositorio</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Commits</value>
-  </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>Total de Commits</value>
-  </data>
-  <data name="My Contributions" xml:space="preserve">
-    <value>Mis Contribuciones</value>
+      <data name="Action" xml:space="preserve">
+    <value>Acción</value>
   </data>
   <data name="Active Days" xml:space="preserve">
     <value>Días Activos</value>
   </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Horas de trabajo</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Añadir repositorio ahora</value>
+  </data>
+  <data name="All Contributions" xml:space="preserve">
+    <value>Todas las Contribuciones</value>
+  </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Commits</value>
   </data>
   <data name="Contributed Repositories" xml:space="preserve">
     <value>Repositorios Contribuidos</value>
@@ -45,29 +39,35 @@
   <data name="Days" xml:space="preserve">
     <value>Días</value>
   </data>
-  <data name="All Contributions" xml:space="preserve">
-    <value>Todas las Contribuciones</value>
+  <data name="Hours" xml:space="preserve">
+    <value>Horas</value>
   </data>
-  <data name="Action" xml:space="preserve">
-    <value>Acción</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>Ver Repositorio</value>
+  <data name="My Contributions" xml:space="preserve">
+    <value>Mis Contribuciones</value>
   </data>
   <data name="No contributions found yet. Start coding!" xml:space="preserve">
     <value>No se han encontrado contribuciones todavía. ¡Empieza a programar!</value>
   </data>
-  <data name="Hours" xml:space="preserve">
-    <value>Horas</value>
-  </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Detalles del perfil</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Añadir repositorio ahora</value>
+  <data name="Repository" xml:space="preserve">
+    <value>Repositorio</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>¿Repositorio no rastreado?</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Total de Commits</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Horas Totales de Trabajo</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>Ver Repositorio</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Horas de trabajo</value>
   </data>
 
 </root>

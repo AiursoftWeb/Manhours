@@ -18,59 +18,59 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Repository ManHours Statistics" xml:space="preserve">
-    <value>Статистика человеко-часов репозитория</value>
-  </data>
-  <data name="Total Man Hours" xml:space="preserve">
-    <value>Всего человеко-часов</value>
-  </data>
-  <data name="Hours" xml:space="preserve">
-    <value>часов</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Коммиты</value>
+      <data name="Active Days" xml:space="preserve">
+    <value>Активные дни</value>
   </data>
   <data name="Active days deleted" xml:space="preserve">
     <value>Активные рабочие дни</value>
   </data>
-  <data name="Active Days" xml:space="preserve">
-    <value>Активные дни</value>
+  <data name="Average Hours" xml:space="preserve">
+    <value>Среднее количество часов</value>
   </data>
-  <data name="Std Dev" xml:space="preserve">
-    <value>Стандартное отклонение</value>
+  <data name="Commits" xml:space="preserve">
+    <value>Коммиты</value>
   </data>
   <data name="Contributors" xml:space="preserve">
+    <value>Участники</value>
+  </data>
+  <data name="contributors deleted" xml:space="preserve">
     <value>Участники</value>
   </data>
   <data name="Details" xml:space="preserve">
     <value>Подробности</value>
   </data>
-  <data name="Total Hours" xml:space="preserve">
-    <value>Всего часов</value>
-  </data>
-  <data name="Repository Stats" xml:space="preserve">
-    <value>Статистика репозитория</value>
+  <data name="Hours" xml:space="preserve">
+    <value>часов</value>
   </data>
   <data name="My Stats" xml:space="preserve">
     <value>Моя статистика</value>
   </data>
-  <data name="Average Hours" xml:space="preserve">
-    <value>Среднее количество часов</value>
-  </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>Участники</value>
-  </data>
-  <data name="Previous" xml:space="preserve">
-    <value>Предыдущая</value>
+  <data name="Next" xml:space="preserve">
+    <value>Далее</value>
   </data>
   <data name="of" xml:space="preserve">
     <value>из</value>
   </data>
-  <data name="Next" xml:space="preserve">
-    <value>Далее</value>
+  <data name="Previous" xml:space="preserve">
+    <value>Предыдущая</value>
+  </data>
+  <data name="Repository ManHours Statistics" xml:space="preserve">
+    <value>Статистика человеко-часов репозитория</value>
+  </data>
+  <data name="Repository Stats" xml:space="preserve">
+    <value>Статистика репозитория</value>
   </data>
   <data name="Showing" xml:space="preserve">
     <value>Показано</value>
+  </data>
+  <data name="Std Dev" xml:space="preserve">
+    <value>Стандартное отклонение</value>
+  </data>
+  <data name="Total Hours" xml:space="preserve">
+    <value>Всего часов</value>
+  </data>
+  <data name="Total Man Hours" xml:space="preserve">
+    <value>Всего человеко-часов</value>
   </data>
 
 </root>

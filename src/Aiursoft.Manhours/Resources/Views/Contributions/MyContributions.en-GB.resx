@@ -18,56 +18,56 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Repository" xml:space="preserve">
-    <value>Repository</value>
+      <data name="Action" xml:space="preserve">
+    <value>Action</value>
   </data>
   <data name="Active Days" xml:space="preserve">
     <value>Active Days</value>
   </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>Total Hours Worked</value>
-  </data>
-  <data name="Contributed Repositories" xml:space="preserve">
-    <value>Repositories Contributed To</value>
-  </data>
-  <data name="My Contributions" xml:space="preserve">
-    <value>My Contributions</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>Commits</value>
-  </data>
-  <data name="Work Hours" xml:space="preserve">
-    <value>Hours Worked</value>
-  </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>View Repository</value>
-  </data>
-  <data name="Days" xml:space="preserve">
-    <value>Days</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Add repository now</value>
   </data>
   <data name="All Contributions" xml:space="preserve">
     <value>All Contributions</value>
   </data>
-  <data name="Action" xml:space="preserve">
-    <value>Action</value>
+  <data name="Commits" xml:space="preserve">
+    <value>Commits</value>
   </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>Total Commits</value>
+  <data name="Contributed Repositories" xml:space="preserve">
+    <value>Repositories Contributed To</value>
   </data>
-  <data name="No contributions found yet. Start coding!" xml:space="preserve">
-    <value>No contributions found yet. Start coding!</value>
+  <data name="Days" xml:space="preserve">
+    <value>Days</value>
   </data>
   <data name="Hours" xml:space="preserve">
     <value>Hours</value>
   </data>
+  <data name="My Contributions" xml:space="preserve">
+    <value>My Contributions</value>
+  </data>
+  <data name="No contributions found yet. Start coding!" xml:space="preserve">
+    <value>No contributions found yet. Start coding!</value>
+  </data>
   <data name="Profile Details" xml:space="preserve">
     <value>Profile Details</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>Add repository now</value>
+  <data name="Repository" xml:space="preserve">
+    <value>Repository</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Repository not being tracked?</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Total Commits</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Total Hours Worked</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>View Repository</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Hours Worked</value>
   </data>
 
 </root>

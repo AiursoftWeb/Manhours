@@ -18,29 +18,20 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Work Hours" xml:space="preserve">
-    <value>作業時間</value>
-  </data>
-  <data name="Commits" xml:space="preserve">
-    <value>コミット数</value>
-  </data>
-  <data name="Repository" xml:space="preserve">
-    <value>リポジトリ</value>
-  </data>
-  <data name="Total Work Hours" xml:space="preserve">
-    <value>総作業時間</value>
-  </data>
-  <data name="My Contributions" xml:space="preserve">
-    <value>私の貢献</value>
-  </data>
-  <data name="Total Commits" xml:space="preserve">
-    <value>総コミット数</value>
+      <data name="Action" xml:space="preserve">
+    <value>操作</value>
   </data>
   <data name="Active Days" xml:space="preserve">
     <value>活動日数</value>
   </data>
-  <data name="Action" xml:space="preserve">
-    <value>操作</value>
+  <data name="Add repository now" xml:space="preserve">
+    <value>リポジトリを追加</value>
+  </data>
+  <data name="All Contributions" xml:space="preserve">
+    <value>すべての貢献</value>
+  </data>
+  <data name="Commits" xml:space="preserve">
+    <value>コミット数</value>
   </data>
   <data name="Contributed Repositories" xml:space="preserve">
     <value>貢献したリポジトリ</value>
@@ -48,26 +39,35 @@
   <data name="Days" xml:space="preserve">
     <value>日</value>
   </data>
-  <data name="All Contributions" xml:space="preserve">
-    <value>すべての貢献</value>
+  <data name="Hours" xml:space="preserve">
+    <value>時間</value>
   </data>
-  <data name="View Repo" xml:space="preserve">
-    <value>リポジトリを表示</value>
+  <data name="My Contributions" xml:space="preserve">
+    <value>私の貢献</value>
   </data>
   <data name="No contributions found yet. Start coding!" xml:space="preserve">
     <value>まだ貢献が見つかりません。コーディングを始めましょう！</value>
   </data>
-  <data name="Hours" xml:space="preserve">
-    <value>時間</value>
-  </data>
   <data name="Profile Details" xml:space="preserve">
     <value>プロフィール詳細</value>
   </data>
-  <data name="Add repository now" xml:space="preserve">
-    <value>リポジトリを追加</value>
+  <data name="Repository" xml:space="preserve">
+    <value>リポジトリ</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>リポジトリが追跡されていませんか？</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>総コミット数</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>総作業時間</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>リポジトリを表示</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>作業時間</value>
   </data>
 
 </root>

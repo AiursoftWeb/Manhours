@@ -51,6 +51,35 @@ public class RepoService(
         }
     }
 
+    private string GetWorkPath(string repoUrl)
+    {
+        var repoName = repoUrl;
+        if (repoName.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
+        {
+            repoName = repoName["https://".Length..];
+        }
+
+        if (repoName.StartsWith("http://", StringComparison.OrdinalIgnoreCase))
+        {
+            repoName = repoName["http://".Length..];
+        }
+
+        if (repoName.EndsWith(".git", StringComparison.OrdinalIgnoreCase))
+        {
+            repoName = repoName[..^4];
+        }
+
+        var repoLocalPath = repoName
+            .Replace('/', Path.DirectorySeparatorChar)
+            .Replace('\\', Path.DirectorySeparatorChar)
+            .Replace(':', Path.DirectorySeparatorChar)
+            .Replace('@', Path.DirectorySeparatorChar)
+            .Replace('?', '_')
+            .Replace('*', '_');
+
+        return Path.GetFullPath(Path.Combine(_workspaceFolder, repoLocalPath));
+    }
+
     public async Task<RepoStats> GetRepoStatsAsync(string repoName, string repoUrl)
     {
         ValidateRepoInput(repoName, repoUrl);
@@ -60,8 +89,8 @@ public class RepoService(
             return ConvertToRepoStats(cachedRepo);
         }
 
-        var locker = Lockers.GetOrAdd(repoName, _ => new SemaphoreSlim(1, 1));
-        logger.LogInformation("Waiting for locker for repo: {Repo}", repoName);
+        var locker = Lockers.GetOrAdd(repoUrl, _ => new SemaphoreSlim(1, 1));
+        logger.LogInformation("Waiting for locker for repo: {RepoUrl}", repoUrl);
         await locker.WaitAsync();
         try
         {
@@ -71,11 +100,10 @@ public class RepoService(
                 return ConvertToRepoStats(cachedRepo);
             }
 
-            var repoLocalPath = repoName.Replace('/', Path.DirectorySeparatorChar);
-            var workPath = Path.GetFullPath(Path.Combine(_workspaceFolder, repoLocalPath));
+            var workPath = GetWorkPath(repoUrl);
             if (!workPath.StartsWith(Path.GetFullPath(_workspaceFolder), StringComparison.Ordinal))
             {
-                throw new ArgumentException("Invalid repository path.", nameof(repoName));
+                throw new ArgumentException("Invalid repository path.", nameof(repoUrl));
             }
             if (!Directory.Exists(workPath))
             {
@@ -89,7 +117,7 @@ public class RepoService(
         }
         finally
         {
-            logger.LogInformation("Release locker for repo: {Repo}", repoName);
+            logger.LogInformation("Release locker for repo: {RepoUrl}", repoUrl);
             locker.Release();
         }
     }
@@ -184,8 +212,8 @@ public class RepoService(
             return cachedStats!;
         }
 
-        var locker = Lockers.GetOrAdd(repoName, _ => new SemaphoreSlim(1, 1));
-        logger.LogInformation("Waiting for locker for repo: {Repo}", repoName);
+        var locker = Lockers.GetOrAdd(repoUrl, _ => new SemaphoreSlim(1, 1));
+        logger.LogInformation("Waiting for locker for repo: {RepoUrl}", repoUrl);
         await locker.WaitAsync();
         try
         {
@@ -195,11 +223,10 @@ public class RepoService(
                 return cachedStats!;
             }
 
-            var repoLocalPath = repoName.Replace('/', Path.DirectorySeparatorChar);
-            var workPath = Path.GetFullPath(Path.Combine(_workspaceFolder, repoLocalPath));
+            var workPath = GetWorkPath(repoUrl);
             if (!workPath.StartsWith(Path.GetFullPath(_workspaceFolder), StringComparison.Ordinal))
             {
-                throw new ArgumentException("Invalid repository path.", nameof(repoName));
+                throw new ArgumentException("Invalid repository path.", nameof(repoUrl));
             }
             if (!Directory.Exists(workPath))
             {
@@ -221,7 +248,7 @@ public class RepoService(
         }
         finally
         {
-            logger.LogInformation("Release locker for repo: {Repo}", repoName);
+            logger.LogInformation("Release locker for repo: {RepoUrl}", repoUrl);
             locker.Release();
         }
     }

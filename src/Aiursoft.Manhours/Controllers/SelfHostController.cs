@@ -1,6 +1,5 @@
 using Aiursoft.Manhours.Models.SelfHostViewModels;
 using Aiursoft.Manhours.Services;
-using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Navigation;
 using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Mvc;

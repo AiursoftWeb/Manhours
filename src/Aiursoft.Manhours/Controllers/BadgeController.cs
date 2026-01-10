@@ -14,7 +14,7 @@ public class BadgeController(
     UserManager<User> userManager)
     : Controller
 {
-    private static readonly Regex RepoNameRegex = new("^[a-zA-Z0-9-._/]+$", RegexOptions.Compiled);
+    private static readonly Regex RepoNameRegex = new("^[a-zA-Z0-9._/-]+$", RegexOptions.Compiled);
     private static readonly string[] ValidExtensions = ["git", "svg", "json", "html"];
 
     [Route("r/{**repo}")]

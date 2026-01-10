@@ -57,10 +57,42 @@ public class SecurityTests
 
         // Test valid repo
         // We expect 404 or 200, but NOT 400.
-        // Since we don't have internet access in tests usually, it might fail with 500 or 404.
-        // But definitely not 400.
-        url = "/r/github.com/aiursoft/manhours.html";
+        // We use a non-existent domain to avoid real git clone and timeout.
+        url = "/r/nonexistent.aiursoft.com/user/repo.html";
         response = await _http.GetAsync(url);
         Assert.AreNotEqual(HttpStatusCode.BadRequest, response.StatusCode, "Should accept valid repo characters");
+    }
+
+    [TestMethod]
+    public async Task TestPathTraversalRejection()
+    {
+        // Test path traversal in URL
+        var url = "/r/github.com/user/repo/../../../../etc/passwd.svg";
+        var response = await _http.GetAsync(url);
+        // This will be rejected by BadgeController because it contains '..'
+        Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode, "Should reject path traversal with 404");
+    }
+
+    [TestMethod]
+    public async Task TestEncodedInjectionRejection()
+    {
+        // Test encoded semicolon
+        var url = "/r/github.com/user/repo%3Bls.svg";
+        var response = await _http.GetAsync(url);
+        Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode, "Should reject encoded semicolons");
+        
+        // Test encoded quote
+        url = "/r/github.com/user/repo%27ls.svg";
+        response = await _http.GetAsync(url);
+        Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode, "Should reject encoded quotes");
+    }
+
+    [TestMethod]
+    public async Task TestBackslashRejection()
+    {
+        // Test backslash that might be converted to forward slash
+        var url = "/r/github.com/user/repo\\;ls.svg";
+        var response = await _http.GetAsync(url);
+        Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode, "Should reject backslashes with semicolons");
     }
 }

@@ -60,6 +60,9 @@
   <data name="Delete User" xml:space="preserve">
     <value>Gebruiker verwijderen</value>
   </data>
+  <data name="Deployment" xml:space="preserve">
+    <value>Implementatie</value>
+  </data>
   <data name="Directory" xml:space="preserve">
     <value>Map</value>
   </data>
@@ -122,6 +125,12 @@
   </data>
   <data name="Roles" xml:space="preserve">
     <value>Rollen</value>
+  </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>Zelf hosten</value>
+  </data>
+  <data name="Self host a new server" xml:space="preserve">
+    <value>Zelf een nieuwe server hosten</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Instellingen</value>

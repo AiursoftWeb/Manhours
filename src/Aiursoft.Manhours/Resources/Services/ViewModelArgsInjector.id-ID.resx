@@ -60,6 +60,9 @@
   <data name="Delete User" xml:space="preserve">
     <value>Hapus Pengguna</value>
   </data>
+  <data name="Deployment" xml:space="preserve">
+    <value>Penyebaran</value>
+  </data>
   <data name="Directory" xml:space="preserve">
     <value>Direktori</value>
   </data>
@@ -122,6 +125,12 @@
   </data>
   <data name="Roles" xml:space="preserve">
     <value>Peran</value>
+  </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>Host Sendiri</value>
+  </data>
+  <data name="Self host a new server" xml:space="preserve">
+    <value>Meng-host sendiri server baru</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Pengaturan</value>

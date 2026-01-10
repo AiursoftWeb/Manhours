@@ -60,6 +60,9 @@
   <data name="Delete User" xml:space="preserve">
     <value>Elimina utente</value>
   </data>
+  <data name="Deployment" xml:space="preserve">
+    <value>Distribuzione</value>
+  </data>
   <data name="Directory" xml:space="preserve">
     <value>Elenco</value>
   </data>
@@ -122,6 +125,12 @@
   </data>
   <data name="Roles" xml:space="preserve">
     <value>Ruoli</value>
+  </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>Auto-ospitato</value>
+  </data>
+  <data name="Self host a new server" xml:space="preserve">
+    <value>Ospita autonomamente un nuovo server</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Impostazioni</value>

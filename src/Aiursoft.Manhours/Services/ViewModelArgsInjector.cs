@@ -69,6 +69,10 @@ public class ViewModelArgsInjector(
         _ = localizer["Top Repos"];
         _ = localizer["Contributions"];
         _ = localizer["My Weekly Report"];
+    
+        _ = localizer["Deployment"];
+        _ = localizer["Self Host"];
+        _ = localizer["Self host a new server"];
     }
 
     public void InjectSimple(

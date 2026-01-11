@@ -63,6 +63,9 @@
   <data name="Delete User" xml:space="preserve">
     <value>ลบผู้ใช้</value>
   </data>
+  <data name="Deployment" xml:space="preserve">
+    <value>การติดตั้ง</value>
+  </data>
   <data name="Directory" xml:space="preserve">
     <value>ไดเรกทอรี</value>
   </data>
@@ -125,6 +128,12 @@
   </data>
   <data name="Roles" xml:space="preserve">
     <value>บทบาท</value>
+  </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>โฮสต์ด้วยตัวเอง</value>
+  </data>
+  <data name="Self host a new server" xml:space="preserve">
+    <value>ติดตั้งเซิร์ฟเวอร์ใหม่เอง</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>การตั้งค่า</value>

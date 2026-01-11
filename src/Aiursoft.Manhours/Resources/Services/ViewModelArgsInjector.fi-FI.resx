@@ -60,6 +60,9 @@
   <data name="Delete User" xml:space="preserve">
     <value>Poista käyttäjä</value>
   </data>
+  <data name="Deployment" xml:space="preserve">
+    <value>Julkaisu</value>
+  </data>
   <data name="Directory" xml:space="preserve">
     <value>Hakemisto</value>
   </data>
@@ -122,6 +125,12 @@
   </data>
   <data name="Roles" xml:space="preserve">
     <value>Roolit</value>
+  </data>
+  <data name="Self Host" xml:space="preserve">
+    <value>Oma palvelin</value>
+  </data>
+  <data name="Self host a new server" xml:space="preserve">
+    <value>Omistakaa uusi palvelin itse</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Asetukset</value>

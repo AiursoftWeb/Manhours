@@ -1,18 +1,14 @@
 using Aiursoft.CSTools.Tools;
-
 using Aiursoft.DbTools.Switchable;
 using Aiursoft.Scanner;
-using Aiursoft.Manhours.BackgroundJobs;
 using Aiursoft.Manhours.Configuration;
 using Aiursoft.WebTools.Abstractions.Models;
 using Aiursoft.Manhours.InMemory;
 using Aiursoft.Manhours.MySql;
-using Aiursoft.Manhours.Services;
 using Aiursoft.Manhours.Services.Authentication;
 using Aiursoft.Manhours.Sqlite;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Navigation;
-using Aiursoft.Manhours.Services.Background;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -46,9 +42,14 @@ public class Startup : IWebStartup
         services.AddSingleton<IBackgroundTaskQueue, BackgroundTaskQueue>();
         services.AddHostedService<RepoUpdateWorker>();
         services.AddScoped<RepoService>();
+        services.AddMemoryCache();
         services.AddHttpClient();
         services.AddAssemblyDependencies(typeof(Startup).Assembly);
         services.AddSingleton<NavigationState<Startup>>();
+
+        // Background job queue
+        services.AddSingleton<Services.BackgroundJobs.BackgroundJobQueue>();
+        services.AddHostedService<Services.BackgroundJobs.QueueWorkerService>();
 
         // Controllers and localization
         services.AddControllersWithViews()

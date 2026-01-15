@@ -3,6 +3,7 @@ using Aiursoft.Manhours.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using Aiursoft.Manhours.Services;
 using Aiursoft.Manhours.Services.FileStorage;
 
 namespace Aiursoft.Manhours;
@@ -53,6 +54,10 @@ public static class ProgramExtends
         var services = scope.ServiceProvider;
         var db = services.GetRequiredService<TemplateDbContext>();
         var logger = services.GetRequiredService<ILogger<Program>>();
+        
+        var settingsService = services.GetRequiredService<GlobalSettingsService>();
+        await settingsService.SeedSettingsAsync();
+
         var shouldSeed = await ShouldSeedAsync(db);
         if (!shouldSeed)
         {

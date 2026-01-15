@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Aiursoft.Manhours.Authorization;
 using Aiursoft.Manhours.Configuration;
 using Aiursoft.Manhours.Entities;
@@ -9,6 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Aiursoft.Manhours.Services.Authentication;
 
+[ExcludeFromCodeCoverage]
 public static class AuthenticationExtensions
 {
     public static IServiceCollection AddTemplateAuth(

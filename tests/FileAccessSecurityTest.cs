@@ -1,4 +1,5 @@
 using Aiursoft.Manhours.Services.FileStorage;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace Aiursoft.Manhours.Tests;
 
@@ -21,7 +22,12 @@ public class FileAccessSecurityTest
             })
             .Build();
 
-        _storageService = new StorageService(config);
+        var rootProvider = new StorageRootPathProvider(config);
+        var foldersProvider = new FeatureFoldersProvider(rootProvider);
+        var memoryCache = new MemoryCache(new MemoryCacheOptions());
+        var fileLockProvider = new FileLockProvider(memoryCache);
+
+        _storageService = new StorageService(foldersProvider, fileLockProvider);
     }
 
     [TestCleanup]

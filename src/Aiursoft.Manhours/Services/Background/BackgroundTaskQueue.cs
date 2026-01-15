@@ -2,20 +2,6 @@ using System.Threading.Channels;
 
 namespace Aiursoft.Manhours.Services.Background;
 
-public class RepoUpdateTask
-{
-    public string RepoName { get; set; } = string.Empty;
-    public string RepoUrl { get; set; } = string.Empty;
-    public DateTime StartDate { get; set; }
-    public DateTime EndDate { get; set; }
-}
-
-public interface IBackgroundTaskQueue
-{
-    ValueTask QueueBackgroundWorkItemAsync(RepoUpdateTask workItem);
-    ValueTask<RepoUpdateTask> DequeueAsync(CancellationToken cancellationToken);
-}
-
 public class BackgroundTaskQueue : IBackgroundTaskQueue
 {
     private readonly Channel<RepoUpdateTask> _queue;

@@ -28,26 +28,26 @@ public class RepoService(
     {
         if (string.IsNullOrWhiteSpace(repoName) || !RepoNameRegex.IsMatch(repoName))
         {
-            throw new ArgumentException("Invalid repository name.", nameof(repoName));
+            throw new ArgumentException(@"Invalid repository name.", nameof(repoName));
         }
 
         if (repoName.Contains("..") || repoName.Contains(':'))
         {
-            throw new ArgumentException("Invalid repository name format.", nameof(repoName));
+            throw new ArgumentException(@"Invalid repository name format.", nameof(repoName));
         }
 
-        if (string.IsNullOrWhiteSpace(repoUrl) || 
-            (!repoUrl.StartsWith("https://", StringComparison.OrdinalIgnoreCase) && 
+        if (string.IsNullOrWhiteSpace(repoUrl) ||
+            (!repoUrl.StartsWith("https://", StringComparison.OrdinalIgnoreCase) &&
              !repoUrl.StartsWith("http://", StringComparison.OrdinalIgnoreCase)))
         {
-            throw new ArgumentException("Invalid repository URL. Only HTTPS/HTTP are allowed.", nameof(repoUrl));
+            throw new ArgumentException(@"Invalid repository URL. Only HTTPS/HTTP are allowed.", nameof(repoUrl));
         }
 
         // Additional check for shell metacharacters in URL
         var illegalChars = new[] { ';', '&', '|', '`', '$', '(', ')', '<', '>', '*', '?', '[', ']', '{', '}', '\\', '"', '\'' };
         if (repoUrl.Any(c => illegalChars.Contains(c)))
         {
-            throw new ArgumentException("Invalid characters in repository URL.", nameof(repoUrl));
+            throw new ArgumentException(@"Invalid characters in repository URL.", nameof(repoUrl));
         }
     }
 
@@ -103,7 +103,7 @@ public class RepoService(
             var workPath = GetWorkPath(repoUrl);
             if (!workPath.StartsWith(Path.GetFullPath(_workspaceFolder), StringComparison.Ordinal))
             {
-                throw new ArgumentException("Invalid repository path.", nameof(repoUrl));
+                throw new ArgumentException(@"Invalid repository path.", nameof(repoUrl));
             }
             if (!Directory.Exists(workPath))
             {
@@ -226,7 +226,7 @@ public class RepoService(
             var workPath = GetWorkPath(repoUrl);
             if (!workPath.StartsWith(Path.GetFullPath(_workspaceFolder), StringComparison.Ordinal))
             {
-                throw new ArgumentException("Invalid repository path.", nameof(repoUrl));
+                throw new ArgumentException(@"Invalid repository path.", nameof(repoUrl));
             }
             if (!Directory.Exists(workPath))
             {

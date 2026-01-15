@@ -11,6 +11,10 @@ public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbCo
 {
     public DbSet<GlobalSetting> GlobalSettings { get; set; }
 
+    public DbSet<Repo> Repos => Set<Repo>();
+    public DbSet<Contributor> Contributors => Set<Contributor>();
+    public DbSet<RepoContribution> RepoContributions => Set<RepoContribution>();
+
     public virtual  Task MigrateAsync(CancellationToken cancellationToken) =>
         Database.MigrateAsync(cancellationToken);
 

@@ -1,11 +1,14 @@
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools.Switchable;
+using Aiursoft.Manhours.BackgroundJobs;
 using Aiursoft.Scanner;
 using Aiursoft.Manhours.Configuration;
 using Aiursoft.WebTools.Abstractions.Models;
 using Aiursoft.Manhours.InMemory;
 using Aiursoft.Manhours.MySql;
+using Aiursoft.Manhours.Services;
 using Aiursoft.Manhours.Services.Authentication;
+using Aiursoft.Manhours.Services.Background;
 using Aiursoft.Manhours.Sqlite;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Navigation;

@@ -15,7 +15,7 @@ namespace Aiursoft.Manhours.Sqlite.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "10.0.0");
+            modelBuilder.HasAnnotation("ProductVersion", "10.0.2");
 
             modelBuilder.Entity("Aiursoft.Manhours.Entities.Contributor", b =>
                 {
@@ -38,6 +38,19 @@ namespace Aiursoft.Manhours.Sqlite.Migrations
                         .IsUnique();
 
                     b.ToTable("Contributors");
+                });
+
+            modelBuilder.Entity("Aiursoft.Manhours.Entities.GlobalSetting", b =>
+                {
+                    b.Property<string>("Key")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Key");
+
+                    b.ToTable("GlobalSettings");
                 });
 
             modelBuilder.Entity("Aiursoft.Manhours.Entities.Repo", b =>

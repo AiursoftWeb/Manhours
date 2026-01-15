@@ -28,4 +28,7 @@
     <ProjectReference Include="..\Aiursoft.Manhours.MySql\Aiursoft.Manhours.MySql.csproj" />
     <ProjectReference Include="..\Aiursoft.Manhours.Sqlite\Aiursoft.Manhours.Sqlite.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Dashboard\Index.cshtml" />
+  </ItemGroup>
 </Project>

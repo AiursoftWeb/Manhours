@@ -30,6 +30,9 @@
   <data name="Anonymous" xml:space="preserve">
     <value>Ανώνυμος</value>
   </data>
+  <data name="Background Jobs" xml:space="preserve">
+    <value>Ημερήσιες Εργασίες</value>
+  </data>
   <data name="Badge Generator" xml:space="preserve">
     <value>Δημιουργός Σημάτων</value>
   </data>
@@ -78,6 +81,9 @@
   <data name="Features" xml:space="preserve">
     <value>Λειτουργίες</value>
   </data>
+  <data name="Global Settings" xml:space="preserve">
+    <value>Καθολικές Ρυθμίσεις</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Αρχική</value>
   </data>
@@ -107,6 +113,9 @@
   </data>
   <data name="My Weekly Report" xml:space="preserve">
     <value>Η Εβδομαδιαία Μου Αναφορά</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Άδειες</value>
   </data>
   <data name="Personal" xml:space="preserve">
     <value>Προσωπικά</value>

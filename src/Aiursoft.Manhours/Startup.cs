@@ -1,6 +1,5 @@
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools.Switchable;
-using Aiursoft.Manhours.BackgroundJobs;
 using Aiursoft.Scanner;
 using Aiursoft.Manhours.Configuration;
 using Aiursoft.WebTools.Abstractions.Models;
@@ -9,10 +8,7 @@ using Aiursoft.Manhours.MySql;
 using Aiursoft.Manhours.Services;
 using Aiursoft.Manhours.Services.Authentication;
 using Aiursoft.Manhours.Services.Background;
-using Aiursoft.Manhours.Sqlite;
-using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Navigation;
-using Microsoft.AspNetCore.Mvc.Razor;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
@@ -69,7 +65,8 @@ public class Startup : IWebStartup
 
     public void Configure(WebApplication app)
     {
-        app.UseExceptionHandler("/Error/Error");
+        app.UseExceptionHandler("/Error/Code500");
+        app.UseStatusCodePagesWithReExecute("/Error/Code{0}");
         app.UseStaticFiles();
         app.UseRouting();
         app.UseAuthentication();

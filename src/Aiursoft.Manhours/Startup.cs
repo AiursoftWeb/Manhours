@@ -9,6 +9,10 @@ using Aiursoft.Manhours.Services;
 using Aiursoft.Manhours.Services.Authentication;
 using Aiursoft.Manhours.Services.Background;
 using Aiursoft.UiStack.Navigation;
+using Aiursoft.Manhours.Sqlite;
+using Aiursoft.Manhours.BackgroundJobs;
+using Aiursoft.UiStack.Layout;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 

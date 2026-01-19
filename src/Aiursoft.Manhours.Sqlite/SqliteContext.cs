@@ -6,7 +6,7 @@ namespace Aiursoft.Manhours.Sqlite;
 
 [ExcludeFromCodeCoverage]
 
-public class SqliteContext(DbContextOptions<SqliteContext> options) : TemplateDbContext(options)
+public class SqliteContext(DbContextOptions<SqliteContext> options) : ManhoursDbContext(options)
 {
     public override Task<bool> CanConnectAsync()
     {

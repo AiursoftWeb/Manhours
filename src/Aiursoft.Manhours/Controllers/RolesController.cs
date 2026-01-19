@@ -19,7 +19,7 @@ namespace Aiursoft.Manhours.Controllers;
 [LimitPerMin]
 public class RolesController(
     UserManager<User> userManager,
-    TemplateDbContext context,
+    ManhoursDbContext context,
     RoleManager<IdentityRole> roleManager)
     : Controller
 {

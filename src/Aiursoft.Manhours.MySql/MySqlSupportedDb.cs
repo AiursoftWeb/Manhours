@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 namespace Aiursoft.Manhours.MySql;
 
 [ExcludeFromCodeCoverage]
-public class MySqlSupportedDb(bool allowCache, bool splitQuery) : SupportedDatabaseType<TemplateDbContext>
+public class MySqlSupportedDb(bool allowCache, bool splitQuery) : SupportedDatabaseType<ManhoursDbContext>
 {
     public override string DbType => "MySql";
 
@@ -19,7 +19,7 @@ public class MySqlSupportedDb(bool allowCache, bool splitQuery) : SupportedDatab
             allowCache: allowCache);
     }
 
-    public override TemplateDbContext ContextResolver(IServiceProvider serviceProvider)
+    public override ManhoursDbContext ContextResolver(IServiceProvider serviceProvider)
     {
         return serviceProvider.GetRequiredService<MySqlContext>();
     }

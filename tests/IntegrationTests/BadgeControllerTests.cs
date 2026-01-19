@@ -34,7 +34,7 @@ public class BadgeControllerTests
     public async Task CreateServer()
     {
         _server = await AppAsync<Startup>([], port: _port);
-        await _server.UpdateDbAsync<TemplateDbContext>();
+        await _server.UpdateDbAsync<ManhoursDbContext>();
         await _server.SeedAsync();
         await _server.StartAsync();
     }

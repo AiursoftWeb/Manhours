@@ -33,7 +33,7 @@ public class UpdateRepoStatsJob(
         {
             logger.LogInformation("Update repo stats job started");
             using var scope = scopeFactory.CreateScope();
-            var dbContext = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
+            var dbContext = scope.ServiceProvider.GetRequiredService<ManhoursDbContext>();
             var repoService = scope.ServiceProvider.GetRequiredService<RepoService>();
 
             var repos = await dbContext.Repos.ToListAsync();
@@ -48,7 +48,7 @@ public class UpdateRepoStatsJob(
         }
     }
 
-    private async Task UpdateRepo(Repo repo, RepoService repoService, TemplateDbContext dbContext)
+    private async Task UpdateRepo(Repo repo, RepoService repoService, ManhoursDbContext dbContext)
     {
         var retryCount = 0;
         const int maxRetries = 3;

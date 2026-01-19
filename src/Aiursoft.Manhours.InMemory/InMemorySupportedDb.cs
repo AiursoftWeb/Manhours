@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Aiursoft.Manhours.InMemory;
 
-public class InMemorySupportedDb : SupportedDatabaseType<TemplateDbContext>
+public class InMemorySupportedDb : SupportedDatabaseType<ManhoursDbContext>
 {
     public override string DbType => "InMemory";
 
@@ -14,7 +14,7 @@ public class InMemorySupportedDb : SupportedDatabaseType<TemplateDbContext>
         return services.AddAiurInMemoryDb<InMemoryContext>();
     }
 
-    public override TemplateDbContext ContextResolver(IServiceProvider serviceProvider)
+    public override ManhoursDbContext ContextResolver(IServiceProvider serviceProvider)
     {
         return serviceProvider.GetRequiredService<InMemoryContext>();
     }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Aiursoft.Manhours.Services;
 
-public class GlobalSettingsService(TemplateDbContext dbContext, IConfiguration configuration) : IScopedDependency
+public class GlobalSettingsService(ManhoursDbContext dbContext, IConfiguration configuration) : IScopedDependency
 {
     public async Task<string> GetSettingValueAsync(string key)
     {

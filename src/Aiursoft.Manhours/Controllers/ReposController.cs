@@ -10,7 +10,7 @@ namespace Aiursoft.Manhours.Controllers;
 
 [Route("repos")]
 public class ReposController(
-    TemplateDbContext dbContext,
+    ManhoursDbContext dbContext,
     UserManager<User> userManager) : Controller
 {
     [Route("index")]

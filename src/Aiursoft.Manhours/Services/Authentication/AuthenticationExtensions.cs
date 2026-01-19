@@ -39,7 +39,7 @@ public static class AuthenticationExtensions
                     options.Password.RequireUppercase = true;
                 }
             })
-            .AddEntityFrameworkStores<TemplateDbContext>()
+            .AddEntityFrameworkStores<ManhoursDbContext>()
             .AddDefaultTokenProviders();
 
         services.AddScoped<IUserClaimsPrincipalFactory<User>, UserClaimsPrincipalFactory>();

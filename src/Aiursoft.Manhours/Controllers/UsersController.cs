@@ -19,7 +19,7 @@ namespace Aiursoft.Manhours.Controllers;
 public class UsersController(
     RoleManager<IdentityRole> roleManager,
     UserManager<User> userManager,
-    TemplateDbContext context)
+    ManhoursDbContext context)
     : Controller
 {
     [Authorize(Policy = AppPermissionNames.CanReadUsers)]

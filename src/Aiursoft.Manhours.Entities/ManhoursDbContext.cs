@@ -7,7 +7,7 @@ namespace Aiursoft.Manhours.Entities;
 
 [ExcludeFromCodeCoverage]
 
-public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbContext<User>(options), ICanMigrate
+public abstract class ManhoursDbContext(DbContextOptions options) : IdentityDbContext<User>(options), ICanMigrate
 {
     public DbSet<GlobalSetting> GlobalSettings { get; set; }
 

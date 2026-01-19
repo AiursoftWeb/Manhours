@@ -14,7 +14,7 @@ namespace Aiursoft.Manhours.Services;
 
 public class RepoService(
     RetryEngine retryEngine,
-    TemplateDbContext dbContext,
+    ManhoursDbContext dbContext,
     ILogger<RepoService> logger,
     WorkspaceManager workspaceManager,
     IConfiguration configuration,

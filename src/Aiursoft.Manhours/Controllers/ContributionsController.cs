@@ -12,7 +12,7 @@ namespace Aiursoft.Manhours.Controllers;
 [Route("contributions")]
 public class ContributionsController(
     UserManager<User> userManager,
-    TemplateDbContext dbContext,
+    ManhoursDbContext dbContext,
     RepoService repoService,
     Services.Background.IBackgroundTaskQueue backgroundQueue) : Controller
 {

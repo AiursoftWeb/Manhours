@@ -35,7 +35,7 @@ public class ContributionsControllerTests
     public async Task CreateServer()
     {
         _server = await AppAsync<Startup>([], port: _port);
-        await _server.UpdateDbAsync<TemplateDbContext>();
+        await _server.UpdateDbAsync<ManhoursDbContext>();
         await _server.SeedAsync();
         await _server.StartAsync();
     }
@@ -169,7 +169,7 @@ public class ContributionsControllerTests
     {
         // Arrange - Get a contributor from the database
         var scope = _server!.Services.CreateScope();
-        var dbContext = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
+        var dbContext = scope.ServiceProvider.GetRequiredService<ManhoursDbContext>();
 
         var contributor = await dbContext.Contributors.FirstOrDefaultAsync();
         scope.Dispose();

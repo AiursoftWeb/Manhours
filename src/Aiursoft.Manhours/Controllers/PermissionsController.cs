@@ -19,7 +19,7 @@ namespace Aiursoft.Manhours.Controllers;
 [LimitPerMin]
 public class PermissionsController(
     RoleManager<IdentityRole> roleManager,
-    TemplateDbContext context)
+    ManhoursDbContext context)
     : Controller
 {
     [Authorize(Policy = AppPermissionNames.CanReadPermissions)]

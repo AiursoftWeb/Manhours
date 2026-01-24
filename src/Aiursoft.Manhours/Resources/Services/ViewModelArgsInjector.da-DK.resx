@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Admin" xml:space="preserve">
+      <data name="Access Denied" xml:space="preserve">
+    <value>Adgang nægtet</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
     <value>Administrator</value>
   </data>
   <data name="Administration" xml:space="preserve">
@@ -32,6 +35,9 @@
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Baggrundstasker</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>Forkert anmodning</value>
   </data>
   <data name="Badge Generator" xml:space="preserve">
     <value>Mærkegenerator</value>
@@ -56,6 +62,9 @@
   </data>
   <data name="Create User" xml:space="preserve">
     <value>Opret bruger</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
   </data>
   <data name="Delete Role" xml:space="preserve">
     <value>Slet rolle</value>
@@ -93,6 +102,12 @@
   <data name="Info" xml:space="preserve">
     <value>Info</value>
   </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>Intern serverfejl</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>Låst</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Log ind</value>
   </data>
@@ -113,6 +128,12 @@
   </data>
   <data name="My Weekly Report" xml:space="preserve">
     <value>Min ugentlige rapport</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>Ikke fundet</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>Tilladelsesdetaljer</value>
   </data>
   <data name="Permissions" xml:space="preserve">
     <value>Tilladelse</value>

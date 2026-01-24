@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Account Settings" xml:space="preserve">
+      <data name="Access Denied" xml:space="preserve">
+    <value>การเข้าถึงถูกปฏิเสธ</value>
+  </data>
+  <data name="Account Settings" xml:space="preserve">
     <value>การตั้งค่าบัญชี</value>
   </data>
   <data name="Admin" xml:space="preserve">
@@ -35,6 +38,9 @@
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>งานเบื้องหลัง</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>คำขอผิดพลาด</value>
   </data>
   <data name="Badge Generator" xml:space="preserve">
     <value>ตัวสร้างป้าย</value>
@@ -59,6 +65,9 @@
   </data>
   <data name="Create User" xml:space="preserve">
     <value>สร้างผู้ใช้</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>แดชบอร์ด</value>
   </data>
   <data name="Delete Role" xml:space="preserve">
     <value>ลบบทบาท</value>
@@ -96,6 +105,12 @@
   <data name="Info" xml:space="preserve">
     <value>ข้อมูล</value>
   </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>ข้อผิดพลาดภายในเซิร์ฟเวอร์</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>การถูกล็อก</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>เข้าสู่ระบบ</value>
   </data>
@@ -116,6 +131,12 @@
   </data>
   <data name="My Weekly Report" xml:space="preserve">
     <value>รายงานประจำสัปดาห์ของฉัน</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>ไม่พบ</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>รายละเอียดสิทธิ์</value>
   </data>
   <data name="Permissions" xml:space="preserve">
     <value>สิทธิ์การเข้าถึง</value>

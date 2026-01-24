@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Admin" xml:space="preserve">
+      <data name="Access Denied" xml:space="preserve">
+    <value>Acces interzis</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
     <value>Administrator</value>
   </data>
   <data name="Administration" xml:space="preserve">
@@ -32,6 +35,9 @@
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Joburi în fundal</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>Cerere invalidă</value>
   </data>
   <data name="Badge Generator" xml:space="preserve">
     <value>Generator de Insigne</value>
@@ -56,6 +62,9 @@
   </data>
   <data name="Create User" xml:space="preserve">
     <value>Creează utilizator</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Panou de control</value>
   </data>
   <data name="Delete Role" xml:space="preserve">
     <value>Șterge Rol</value>
@@ -93,6 +102,12 @@
   <data name="Info" xml:space="preserve">
     <value>Informații</value>
   </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>Eroare Internă a Serverului</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>Blocare</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Autentificare</value>
   </data>
@@ -113,6 +128,12 @@
   </data>
   <data name="My Weekly Report" xml:space="preserve">
     <value>Raportul meu săptămânal</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>Nu a fost găsit</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>Detalii permisiuni</value>
   </data>
   <data name="Permissions" xml:space="preserve">
     <value>Permisiuni</value>

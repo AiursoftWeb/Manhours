@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Account Settings" xml:space="preserve">
+      <data name="Access Denied" xml:space="preserve">
+    <value>Truy cập bị từ chối</value>
+  </data>
+  <data name="Account Settings" xml:space="preserve">
     <value>Cài đặt Tài khoản</value>
   </data>
   <data name="Admin" xml:space="preserve">
@@ -35,6 +38,9 @@
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Công việc nền</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>Yêu cầu sai</value>
   </data>
   <data name="Badge Generator" xml:space="preserve">
     <value>Trình Tạo Huy Hiệu</value>
@@ -59,6 +65,9 @@
   </data>
   <data name="Create User" xml:space="preserve">
     <value>Tạo Người Dùng</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Bảng điều khiển</value>
   </data>
   <data name="Delete Role" xml:space="preserve">
     <value>Xóa Vai trò</value>
@@ -96,6 +105,12 @@
   <data name="Info" xml:space="preserve">
     <value>Thông tin</value>
   </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>Lỗi máy chủ nội bộ</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>Khóa tài khoản</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Đăng nhập</value>
   </data>
@@ -116,6 +131,12 @@
   </data>
   <data name="My Weekly Report" xml:space="preserve">
     <value>Báo cáo tuần của tôi</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>Không tìm thấy</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>Chi tiết quyền hạn</value>
   </data>
   <data name="Permissions" xml:space="preserve">
     <value>Quyền hạn</value>

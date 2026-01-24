@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Admin" xml:space="preserve">
+      <data name="Access Denied" xml:space="preserve">
+    <value>Acesso Negado</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
     <value>Administrador</value>
   </data>
   <data name="Administration" xml:space="preserve">
@@ -32,6 +35,9 @@
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Tarefas em segundo plano</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>Requisição Inválida</value>
   </data>
   <data name="Badge Generator" xml:space="preserve">
     <value>Gerador de Emblemas</value>
@@ -56,6 +62,9 @@
   </data>
   <data name="Create User" xml:space="preserve">
     <value>Criar Usuário</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Painel</value>
   </data>
   <data name="Delete Role" xml:space="preserve">
     <value>Excluir Função</value>
@@ -93,6 +102,12 @@
   <data name="Info" xml:space="preserve">
     <value>Informações</value>
   </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>Erro Interno do Servidor</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>Bloqueio</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Entrar</value>
   </data>
@@ -113,6 +128,12 @@
   </data>
   <data name="My Weekly Report" xml:space="preserve">
     <value>Meu Relatório Semanal</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>Não Encontrado</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>Detalhes da Permissão</value>
   </data>
   <data name="Permissions" xml:space="preserve">
     <value>Permissões</value>

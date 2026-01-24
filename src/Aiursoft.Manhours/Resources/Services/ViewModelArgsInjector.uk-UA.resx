@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Admin" xml:space="preserve">
+      <data name="Access Denied" xml:space="preserve">
+    <value>Доступ заборонено</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
     <value>Адмін</value>
   </data>
   <data name="Administration" xml:space="preserve">
@@ -32,6 +35,9 @@
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Фонові завдання</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>Помилковий запит</value>
   </data>
   <data name="Badge Generator" xml:space="preserve">
     <value>Генератор бейджів</value>
@@ -56,6 +62,9 @@
   </data>
   <data name="Create User" xml:space="preserve">
     <value>Створити користувача</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Панель керування</value>
   </data>
   <data name="Delete Role" xml:space="preserve">
     <value>Видалити роль</value>
@@ -93,6 +102,12 @@
   <data name="Info" xml:space="preserve">
     <value>Інформація</value>
   </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>Помилка внутрішнього сервера</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>Блокування</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Увійти</value>
   </data>
@@ -113,6 +128,12 @@
   </data>
   <data name="My Weekly Report" xml:space="preserve">
     <value>Мій тижневий звіт</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>Не знайдено</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>Деталі дозволів</value>
   </data>
   <data name="Permissions" xml:space="preserve">
     <value>Дозволи</value>

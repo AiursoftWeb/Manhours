@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Admin" xml:space="preserve">
+      <data name="Access Denied" xml:space="preserve">
+    <value>Toegang geweigerd</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
     <value>Beheerder</value>
   </data>
   <data name="Administration" xml:space="preserve">
@@ -32,6 +35,9 @@
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Achtergrondtaken</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>Ongeldige aanvraag</value>
   </data>
   <data name="Badge Generator" xml:space="preserve">
     <value>Badge Generator</value>
@@ -56,6 +62,9 @@
   </data>
   <data name="Create User" xml:space="preserve">
     <value>Gebruiker aanmaken</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
   </data>
   <data name="Delete Role" xml:space="preserve">
     <value>Rol verwijderen</value>
@@ -93,6 +102,12 @@
   <data name="Info" xml:space="preserve">
     <value>Informatie</value>
   </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>Interne serverfout</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>Account vergrendeld</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Inloggen</value>
   </data>
@@ -113,6 +128,12 @@
   </data>
   <data name="My Weekly Report" xml:space="preserve">
     <value>Mijn Wekelijkse Rapport</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>Niet gevonden</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>Toegangsrechten details</value>
   </data>
   <data name="Permissions" xml:space="preserve">
     <value>Machtigingen</value>

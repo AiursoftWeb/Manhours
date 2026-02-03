@@ -24,5 +24,11 @@
   <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
     <value>Kullanıcıların profil yönetimi sayfasında takma isimlerini ayarlamasına izin ver.</value>
   </data>
+  <data name="Dashboard Banner" xml:space="preserve">
+    <value>Gösterge Paneli Bannerı</value>
+  </data>
+  <data name="The banner image displayed on the dashboard." xml:space="preserve">
+    <value>Gösterge panelinde görüntülenen bayrak resmi.</value>
+  </data>
 
 </root>

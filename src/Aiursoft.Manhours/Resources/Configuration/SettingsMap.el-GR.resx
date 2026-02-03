@@ -24,5 +24,11 @@
   <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
     <value>Επιτρέψτε στους χρήστες να τροποποιήσουν το ψευδώνυμό τους στη σελίδα διαχείρισης προφίλ.</value>
   </data>
+  <data name="Dashboard Banner" xml:space="preserve">
+    <value>Πίνακας Ειδοποίησης</value>
+  </data>
+  <data name="The banner image displayed on the dashboard." xml:space="preserve">
+    <value>Η εικόνα με το μπανέρ που εμφανίζεται στον πίνακα ελέγχου.</value>
+  </data>
 
 </root>

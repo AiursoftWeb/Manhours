@@ -24,5 +24,11 @@
   <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
     <value>Allow users to adjust their nickname in the profile management page.</value>
   </data>
+  <data name="Dashboard Banner" xml:space="preserve">
+    <value>Dashboard Banner</value>
+  </data>
+  <data name="The banner image displayed on the dashboard." xml:space="preserve">
+    <value>The banner image displayed on the dashboard.</value>
+  </data>
 
 </root>

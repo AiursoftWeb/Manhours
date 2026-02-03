@@ -24,5 +24,11 @@
   <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
     <value>Permite utilizatorilor să-și ajusteze pseudonimul în pagina de gestionare a profilului.</value>
   </data>
+  <data name="Dashboard Banner" xml:space="preserve">
+    <value>Banner Panou de control</value>
+  </data>
+  <data name="The banner image displayed on the dashboard." xml:space="preserve">
+    <value>Imaginea banner afișată pe panoul de control.</value>
+  </data>
 
 </root>

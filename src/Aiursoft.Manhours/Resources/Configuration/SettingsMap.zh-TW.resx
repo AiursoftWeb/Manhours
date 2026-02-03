@@ -24,5 +24,11 @@
   <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
     <value>允許使用者在個人資料管理頁面中調整其暱稱。</value>
   </data>
+  <data name="Dashboard Banner" xml:space="preserve">
+    <value>儀表板橫幅</value>
+  </data>
+  <data name="The banner image displayed on the dashboard." xml:space="preserve">
+    <value>儀表板上顯示的橫幅圖片。</value>
+  </data>
 
 </root>

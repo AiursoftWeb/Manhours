@@ -24,5 +24,11 @@
   <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
     <value>Gebruikers toestaan hun bijnaam aan te passen op de pagina voor profielbeheer.</value>
   </data>
+  <data name="Dashboard Banner" xml:space="preserve">
+    <value>Dashboardbanner</value>
+  </data>
+  <data name="The banner image displayed on the dashboard." xml:space="preserve">
+    <value>De bannerafbeelding die wordt weergegeven op het dashboard.</value>
+  </data>
 
 </root>

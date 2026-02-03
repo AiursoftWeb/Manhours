@@ -24,5 +24,11 @@
   <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
     <value>Permitir que os usuários ajustem seu apelido na página de gerenciamento de perfil.</value>
   </data>
+  <data name="Dashboard Banner" xml:space="preserve">
+    <value>Banner do Painel</value>
+  </data>
+  <data name="The banner image displayed on the dashboard." xml:space="preserve">
+    <value>A imagem de banner exibida no painel de controle.</value>
+  </data>
 
 </root>

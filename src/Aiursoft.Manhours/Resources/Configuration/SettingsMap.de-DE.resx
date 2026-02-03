@@ -24,5 +24,11 @@
   <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
     <value>Benutzern erlauben, ihren Spitznamen auf der Seite zur Profilverwaltung anzupassen.</value>
   </data>
+  <data name="Dashboard Banner" xml:space="preserve">
+    <value>Dashboard-Banner</value>
+  </data>
+  <data name="The banner image displayed on the dashboard." xml:space="preserve">
+    <value>Das Bannerbild, das auf der Übersichtsseite angezeigt wird.</value>
+  </data>
 
 </root>

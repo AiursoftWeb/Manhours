@@ -24,5 +24,11 @@
   <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
     <value>Tillåt användare att ändra sitt smeknamn på sidan för profilhantering.</value>
   </data>
+  <data name="Dashboard Banner" xml:space="preserve">
+    <value>Instrumentbrädabanner</value>
+  </data>
+  <data name="The banner image displayed on the dashboard." xml:space="preserve">
+    <value>Bannertbilden som visas på instrumentbrädet.</value>
+  </data>
 
 </root>

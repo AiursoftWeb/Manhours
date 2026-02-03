@@ -24,5 +24,11 @@
   <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
     <value>Дозволити користувачам змінювати свій прізвисько на сторінці керування профілем.</value>
   </data>
+  <data name="Dashboard Banner" xml:space="preserve">
+    <value>Банер панелі керування</value>
+  </data>
+  <data name="The banner image displayed on the dashboard." xml:space="preserve">
+    <value>Зображення банера, що відображається на панелі керування.</value>
+  </data>
 
 </root>

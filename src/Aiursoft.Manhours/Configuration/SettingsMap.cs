@@ -22,6 +22,17 @@ public class SettingsMap
             Description = Localizer["Allow users to adjust their nickname in the profile management page."],
             Type = SettingType.Bool,
             DefaultValue = "True"
+        },
+        new GlobalSettingDefinition
+        {
+            Key = "DashboardBanner",
+            Name = Localizer["Dashboard Banner"],
+            Description = Localizer["The banner image displayed on the dashboard."],
+            Type = SettingType.File,
+            DefaultValue = "",
+            Subfolder = "banners",
+            AllowedExtensions = ".jpg,.png,.jpeg",
+            MaxSizeInMb = 5
         }
     };
 }

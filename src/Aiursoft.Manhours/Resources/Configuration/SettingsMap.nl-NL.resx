@@ -24,11 +24,35 @@
   <data name="Allow users to adjust their nickname in the profile management page." xml:space="preserve">
     <value>Gebruikers toestaan hun bijnaam aan te passen op de pagina voor profielbeheer.</value>
   </data>
+  <data name="Brand Home URL" xml:space="preserve">
+    <value>Brand Home URL</value>
+  </data>
+  <data name="Brand Name" xml:space="preserve">
+    <value>Merkenaam</value>
+  </data>
   <data name="Dashboard Banner" xml:space="preserve">
     <value>Dashboardbanner</value>
   </data>
+  <data name="Project Logo" xml:space="preserve">
+    <value>Projectlogo</value>
+  </data>
+  <data name="Project Name" xml:space="preserve">
+    <value>Projectnaam</value>
+  </data>
   <data name="The banner image displayed on the dashboard." xml:space="preserve">
     <value>De bannerafbeelding die wordt weergegeven op het dashboard.</value>
+  </data>
+  <data name="The brand name of the company or project. E.g. Aiursoft." xml:space="preserve">
+    <value>De merknaam van het bedrijf of project. Bijv. Aiursoft.</value>
+  </data>
+  <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
+    <value>Het logo van het project dat wordt weergegeven in de navigatiebalk en voettekst. Ondersteunt jpg, png, svg.</value>
+  </data>
+  <data name="The name of the project displayed in the frontend." xml:space="preserve">
+    <value>De naam van het project die wordt weergegeven in de frontend.</value>
+  </data>
+  <data name="The URL of the company or project. E.g. https://www.aiursoft.com" xml:space="preserve">
+    <value>De URL van het bedrijf of project. Bijv. https://www.aiursoft.com</value>
   </data>
 
 </root>

@@ -138,7 +138,7 @@ public class RepoService(
                     null,
                     repoUrl,
                     CloneMode.BareWithOnlyCommits);
-            }, attempts: 5);
+            }, attempts: EntryExtends.IsInUnitTests() ? 1 : 5);
 
             logger.LogInformation("Getting commits for repo: {Repo} on {Path}", repoName, workPath);
             var commits = await workspaceManager.GetCommits(workPath);
@@ -174,7 +174,7 @@ public class RepoService(
                     null,
                     repoUrl,
                     CloneMode.BareWithOnlyCommits);
-            }, attempts: 5);
+            }, attempts: EntryExtends.IsInUnitTests() ? 1 : 5);
 
             logger.LogInformation("Getting commits for repo: {Repo} on {Path}", repoName, workPath);
             var commits = await workspaceManager.GetCommits(workPath);

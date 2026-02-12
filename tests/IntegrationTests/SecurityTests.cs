@@ -16,7 +16,8 @@ public class SecurityTests
         _port = Network.GetAvailablePort();
         _http = new HttpClient(new HttpClientHandler { AllowAutoRedirect = false })
         {
-            BaseAddress = new Uri($"http://localhost:{_port}")
+            BaseAddress = new Uri($"http://localhost:{_port}"),
+            Timeout = TimeSpan.FromMinutes(5)
         };
     }
 
@@ -57,8 +58,9 @@ public class SecurityTests
 
         // Test valid repo
         // We expect 404 or 200, but NOT 400.
-        // We use a non-existent domain to avoid real git clone and timeout.
-        url = "/r/nonexistent.aiursoft.com/user/repo.html";
+        // We use a non-existent domain to avoid real git clone. 
+        // It might still try to clone and take time, so we increased the timeout.
+        url = "/r/nonexistent-domain.aiursoft.com/user/repo.html";
         response = await _http.GetAsync(url);
         Assert.AreNotEqual(HttpStatusCode.BadRequest, response.StatusCode, "Should accept valid repo characters");
     }

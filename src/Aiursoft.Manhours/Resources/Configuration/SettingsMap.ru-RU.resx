@@ -33,6 +33,9 @@
   <data name="Dashboard Banner" xml:space="preserve">
     <value>Панель приборов — баннер</value>
   </data>
+  <data name="ICP Number" xml:space="preserve">
+    <value>Номер ICP</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Логотип проекта</value>
   </data>
@@ -44,6 +47,9 @@
   </data>
   <data name="The brand name of the company or project. E.g. Aiursoft." xml:space="preserve">
     <value>Название бренда компании или проекта. Например: Aiursoft.</value>
+  </data>
+  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
+    <value>Номер лицензии ICP для пользователей материкового Китая. Оставьте пустым, чтобы скрыть.</value>
   </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>Логотип проекта отображается в навигационной панели и подвале. Поддержка форматов jpg, png, svg.</value>

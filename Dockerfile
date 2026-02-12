@@ -35,6 +35,9 @@ RUN sed -i 's/DataSource=app.db/DataSource=\/data\/app.db/g' appsettings.json
 RUN sed -i 's/\/tmp\/data/\/data/g' appsettings.json
 RUN mkdir -p /data
 
+# Install git
+RUN apt-get update && apt-get install -y git
+
 VOLUME /data
 EXPOSE 5000
 

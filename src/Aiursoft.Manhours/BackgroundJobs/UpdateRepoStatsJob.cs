@@ -11,7 +11,7 @@ public class UpdateRepoStatsJob(
     IServiceScopeFactory scopeFactory)
     : IHostedService, IDisposable, ISingletonDependency
 {
-    private const int IntervalHours = 18;
+    private const int IntervalHours = 24; // Was 18h, extended to reduce frequency
     private Timer? _timer;
 
     public Task StartAsync(CancellationToken cancellationToken)
@@ -23,7 +23,10 @@ public class UpdateRepoStatsJob(
         }
 
         logger.LogInformation("Timed Background Service is starting. Update all repos every {Interval} hours.", IntervalHours);
-        _timer = new Timer(DoWork, null, TimeSpan.FromSeconds(5), TimeSpan.FromHours(IntervalHours));
+        // Delay initial run to 30 minutes after startup (was 5 seconds).
+        // This prevents slamming the disk immediately on boot when other services
+        // (bcache writeback, other containers) are also starting up.
+        _timer = new Timer(DoWork, null, TimeSpan.FromMinutes(30), TimeSpan.FromHours(IntervalHours));
         return Task.CompletedTask;
     }
 
@@ -39,7 +42,10 @@ public class UpdateRepoStatsJob(
             var repos = await dbContext.Repos.ToListAsync();
             foreach (var repo in repos)
             {
-                await UpdateRepo(repo, repoService, dbContext);
+                await UpdateRepo(repo, repoService);
+                // Add a 30-second delay between repos to prevent IO storms.
+                // On a slow mechanical disk, back-to-back git fetches are devastating.
+                await Task.Delay(TimeSpan.FromSeconds(30));
             }
         }
         catch (Exception ex)
@@ -48,37 +54,21 @@ public class UpdateRepoStatsJob(
         }
     }
 
-    private async Task UpdateRepo(Repo repo, RepoService repoService, ManhoursDbContext dbContext)
+    private async Task UpdateRepo(Repo repo, RepoService repoService)
     {
-        var retryCount = 0;
-        const int maxRetries = 3;
-
-        while (retryCount < maxRetries)
+        try
         {
-            try
-            {
-                logger.LogInformation("Updating stats for repo: {RepoUrl} (Attempt {Attempt}/{Max})", repo.Url, retryCount + 1, maxRetries);
-                var repoName = repo.Url.Split('/').LastOrDefault()?.Replace(".git", "") ?? repo.Url;
-                await repoService.GetRepoStatsAsync(repoName, repo.Url);
-                logger.LogInformation("Successfully updated stats for repo: {RepoUrl}", repo.Url);
-                return;
-            }
-            catch (Exception ex)
-            {
-                retryCount++;
-                logger.LogWarning(ex, "Failed to update stats for repo: {RepoUrl}. Attempt {Attempt}/{Max}", repo.Url, retryCount, maxRetries);
-
-                if (retryCount >= maxRetries)
-                {
-                    logger.LogError("Failed to update stats for repo: {RepoUrl} after {Max} attempts. Deleting repo from database.", repo.Url, maxRetries);
-                    dbContext.Repos.Remove(repo);
-                    await dbContext.SaveChangesAsync();
-                }
-                else
-                {
-                    await Task.Delay(TimeSpan.FromSeconds(5 * retryCount)); // Exponential backoff-ish
-                }
-            }
+            logger.LogInformation("Updating stats for repo: {RepoUrl}", repo.Url);
+            var repoName = repo.Url.Split('/').LastOrDefault()?.Replace(".git", "") ?? repo.Url;
+            await repoService.GetRepoStatsAsync(repoName, repo.Url);
+            logger.LogInformation("Successfully updated stats for repo: {RepoUrl}", repo.Url);
+        }
+        catch (Exception ex)
+        {
+            // Log and move on — do NOT delete the repo from DB on failure.
+            // The old logic deleted repos after 3 failures, which meant the next request
+            // would trigger a full git clone (much heavier than a fetch).
+            logger.LogWarning(ex, "Failed to update stats for repo: {RepoUrl}. Will retry next cycle.", repo.Url);
         }
     }
 

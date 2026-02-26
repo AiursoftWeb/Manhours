@@ -10,8 +10,9 @@ public class RepoUpdateWorker(
     ILogger<RepoUpdateWorker> logger)
     : BackgroundService, ISingletonDependency
 {
-    // Limit to 4 concurrent git operations
-    private readonly SemaphoreSlim _semaphore = new(4);
+    // Limit to 1 concurrent git operation — on slow disks, concurrency kills IO.
+    // The global git semaphore in RepoService provides an additional layer of protection.
+    private readonly SemaphoreSlim _semaphore = new(1);
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {

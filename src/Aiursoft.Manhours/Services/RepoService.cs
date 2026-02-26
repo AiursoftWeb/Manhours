@@ -132,7 +132,7 @@ public class RepoService(
         try
         {
             // Double-check all cache layers after acquiring lock
-            if (cache.TryGetValue<RepoStats>(memKey, out memStats))
+            if (cache.TryGetValue(memKey, out memStats))
                 return memStats!;
 
             cachedRepo = await GetCachedRepoStaleOkAsync(repoUrl);

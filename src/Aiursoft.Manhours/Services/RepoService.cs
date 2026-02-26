@@ -18,6 +18,7 @@ public class RepoService(
     ILogger<RepoService> logger,
     WorkspaceManager workspaceManager,
     IConfiguration configuration,
+    Background.IBackgroundTaskQueue backgroundQueue,
     IMemoryCache cache) : IScopedDependency
 {
     private static readonly ConcurrentDictionary<string, SemaphoreSlim> Lockers = new();
@@ -28,11 +29,11 @@ public class RepoService(
     // On slow disks, concurrent git operations are catastrophic.
     private static readonly SemaphoreSlim GlobalGitSemaphore = new(1, 1);
 
-    // DB cache freshness period (was 6 hours — far too short for statistical data)
-    private const int DbCacheFreshnessHours = 24;
+    // DB cache freshness period (was 24 hours — extended to 7 days for statistical data)
+    private const int DbCacheFreshnessHours = 168;
 
-    // Memory cache TTL for full repo stats
-    private static readonly TimeSpan MemoryCacheTtl = TimeSpan.FromHours(6);
+    // Memory cache TTL for full repo stats (was 6 hours — extended to 24 hours)
+    private static readonly TimeSpan MemoryCacheTtl = TimeSpan.FromHours(24);
     private const string MemCachePrefix = "RepoStatsFullMemory_";
 
     private void ValidateRepoInput(string repoName, string repoUrl)
@@ -91,20 +92,20 @@ public class RepoService(
         return Path.GetFullPath(Path.Combine(_workspaceFolder, repoLocalPath));
     }
 
-    public async Task<RepoStats> GetRepoStatsAsync(string repoName, string repoUrl)
+    public async Task<RepoStats> GetRepoStatsAsync(string repoName, string repoUrl, bool force = false)
     {
         ValidateRepoInput(repoName, repoUrl);
 
         // Layer 1: Memory cache (fastest, no DB hit, no disk hit)
         var memKey = MemCachePrefix + repoUrl;
-        if (cache.TryGetValue<RepoStats>(memKey, out var memStats))
+        if (!force && cache.TryGetValue<RepoStats>(memKey, out var memStats))
         {
             return memStats!;
         }
 
         // Layer 2: Fresh DB cache (DB hit only, no git/disk)
         var cachedRepo = await GetCachedRepoAsync(repoUrl);
-        if (cachedRepo != null)
+        if (!force && cachedRepo != null)
         {
             var result = ConvertToRepoStats(cachedRepo);
             SetMemoryCache(memKey, result, MemoryCacheTtl);
@@ -112,14 +113,21 @@ public class RepoService(
         }
 
         // Layer 3: Stale DB cache — return stale data immediately (stale-while-revalidate)
-        // The periodic UpdateRepoStatsJob will refresh it in the background.
         var staleRepo = await GetCachedRepoStaleOkAsync(repoUrl);
-        if (staleRepo != null)
+        if (!force && staleRepo != null)
         {
             logger.LogInformation("Returning stale data for repo: {RepoUrl} (last updated: {LastUpdate})",
                 repoUrl, staleRepo.LastUpdateTime);
+
+            // Trigger background update if stale
+            await backgroundQueue.QueueBackgroundWorkItemAsync(new Background.RepoUpdateTask
+            {
+                RepoName = repoName,
+                RepoUrl = repoUrl
+            });
+
             var result = ConvertToRepoStats(staleRepo);
-            // Cache stale data in memory for a shorter period
+            // Cache stale data in memory for a shorter period (1 hour) to avoid spamming the background queue
             SetMemoryCache(memKey, result, TimeSpan.FromHours(1));
             return result;
         }
@@ -132,42 +140,33 @@ public class RepoService(
         try
         {
             // Double-check all cache layers after acquiring lock
-            if (cache.TryGetValue(memKey, out memStats))
+            if (!force && cache.TryGetValue(memKey, out memStats))
                 return memStats!;
 
-            cachedRepo = await GetCachedRepoStaleOkAsync(repoUrl);
-            if (cachedRepo != null)
+            if (!force)
             {
-                var result = ConvertToRepoStats(cachedRepo);
-                SetMemoryCache(memKey, result, TimeSpan.FromHours(1));
-                return result;
+                cachedRepo = await GetCachedRepoStaleOkAsync(repoUrl);
+                if (cachedRepo != null)
+                {
+                    var result = ConvertToRepoStats(cachedRepo);
+                    SetMemoryCache(memKey, result, TimeSpan.FromHours(1));
+                    return result;
+                }
             }
 
             // Acquire global git semaphore — only 1 git fetch at a time
-            logger.LogInformation("Waiting for global git semaphore for repo: {RepoUrl}", repoUrl);
-            await GlobalGitSemaphore.WaitAsync();
-            try
+            var workPath = GetWorkPath(repoUrl);
+            if (!workPath.StartsWith(Path.GetFullPath(_workspaceFolder), StringComparison.Ordinal))
             {
-                var workPath = GetWorkPath(repoUrl);
-                if (!workPath.StartsWith(Path.GetFullPath(_workspaceFolder), StringComparison.Ordinal))
-                {
-                    throw new ArgumentException(@"Invalid repository path.", nameof(repoUrl));
-                }
-                if (!Directory.Exists(workPath))
-                {
-                    logger.LogInformation("Create folder for repo: {Repo} on {Path}", repoName, workPath);
-                    Directory.CreateDirectory(workPath);
-                }
+                throw new ArgumentException(@"Invalid repository path.", nameof(repoUrl));
+            }
 
-                var stats = await GetWorkHoursFromGitPath(repoName, repoUrl, workPath);
-                await UpdateRepoStatsAsync(repoUrl, stats);
-                SetMemoryCache(memKey, stats, MemoryCacheTtl);
-                return stats;
-            }
-            finally
-            {
-                GlobalGitSemaphore.Release();
-            }
+            await EnsureRepoFreshOnDisk(repoName, repoUrl, workPath, force);
+
+            var stats = await GetRepoStatsFromDiskAsync(repoName, workPath);
+            await UpdateRepoStatsAsync(repoUrl, stats);
+            SetMemoryCache(memKey, stats, MemoryCacheTtl);
+            return stats;
         }
         finally
         {
@@ -176,55 +175,15 @@ public class RepoService(
         }
     }
 
-    private async Task<RepoStats> GetWorkHoursFromGitPath(
+    private async Task<RepoStats> GetRepoStatsFromDiskAsync(
         string repoName,
-        string repoUrl,
         string workPath)
     {
-        // Reduced from 5 to 2 retries — on slow disks, retrying just compounds the IO pressure.
-        // Removed the destructive autoCleanIfError pattern that deleted the entire repo folder
-        // and re-cloned from scratch, which was the root cause of the IO death spiral:
-        //   slow disk → git timeout → delete folder → full re-clone → even more IO → repeat
-        logger.LogInformation("Resetting repo: {Repo} on {Path}", repoName, workPath);
-        await retryEngine.RunWithRetry(async _ =>
-        {
-            await workspaceManager.ResetRepo(
-                workPath,
-                null,
-                repoUrl,
-                CloneMode.BareWithOnlyCommits);
-        }, attempts: EntryExtends.IsInUnitTests() ? 1 : 2);
-
         logger.LogInformation("Getting commits for repo: {Repo} on {Path}", repoName, workPath);
         var commits = await workspaceManager.GetCommits(workPath);
 
         logger.LogInformation("Calculating work time for repo: {Repo} on {Path}", repoName, workPath);
         return WorkTimeService.CalculateWorkTime(commits);
-    }
-
-    private async Task<RepoStats> GetWorkHoursFromGitPathInRange(
-        string repoName,
-        string repoUrl,
-        string workPath,
-        DateTime startDate,
-        DateTime endDate)
-    {
-        logger.LogInformation("Resetting repo: {Repo} on {Path}", repoName, workPath);
-        await retryEngine.RunWithRetry(async _ =>
-        {
-            await workspaceManager.ResetRepo(
-                workPath,
-                null,
-                repoUrl,
-                CloneMode.BareWithOnlyCommits);
-        }, attempts: EntryExtends.IsInUnitTests() ? 1 : 2);
-
-        logger.LogInformation("Getting commits for repo: {Repo} on {Path}", repoName, workPath);
-        var commits = await workspaceManager.GetCommits(workPath);
-
-        logger.LogInformation("Calculating work time for repo: {Repo} on {Path} in range {Start} to {End}",
-            repoName, workPath, startDate, endDate);
-        return WorkTimeService.CalculateWorkTimeInRange(commits, startDate, endDate);
     }
 
     /// <summary>
@@ -248,6 +207,47 @@ public class RepoService(
         return cache.TryGetValue(cacheKey, out stats);
     }
 
+    private async Task EnsureRepoFreshOnDisk(string repoName, string repoUrl, string workPath, bool force = false)
+    {
+        // Check if we already have this repo in DB and it was updated recently
+        var cachedRepo = await GetCachedRepoAsync(repoUrl);
+        if (!force && cachedRepo != null && Directory.Exists(workPath))
+        {
+            // Even if it's fresh in DB, the disk might have been wiped.
+            // But if it's fresh in DB AND folder exists, we can assume it's good to go.
+            // This avoids a costly git fetch.
+            logger.LogInformation("Repo {Repo} is fresh in DB (last update: {LastUpdate}) and exists on disk. Skipping git fetch.",
+                repoName, cachedRepo.LastUpdateTime);
+            return;
+        }
+
+        // Acquire global git semaphore — only 1 git fetch at a time
+        logger.LogInformation("Waiting for global git semaphore to fetch repo: {RepoUrl}", repoUrl);
+        await GlobalGitSemaphore.WaitAsync();
+        try
+        {
+            if (!Directory.Exists(workPath))
+            {
+                logger.LogInformation("Create folder for repo: {Repo} on {Path}", repoName, workPath);
+                Directory.CreateDirectory(workPath);
+            }
+
+            logger.LogInformation("Resetting repo: {Repo} on {Path}", repoName, workPath);
+            await retryEngine.RunWithRetry(async _ =>
+            {
+                await workspaceManager.ResetRepo(
+                    workPath,
+                    null,
+                    repoUrl,
+                    CloneMode.BareWithOnlyCommits);
+            }, attempts: EntryExtends.IsInUnitTests() ? 1 : 2);
+        }
+        finally
+        {
+            GlobalGitSemaphore.Release();
+        }
+    }
+
     public async Task<RepoStats> GetRepoStatsInRangeAsync(string repoName, string repoUrl, DateTime startDate, DateTime endDate)
     {
         ValidateRepoInput(repoName, repoUrl);
@@ -260,6 +260,10 @@ public class RepoService(
             return cachedStats!;
         }
 
+        // Layer 2: No fresh cache. Return stale data if available?
+        // Range stats are NOT stored in DB, so we don't have "stale" DB stats for ranges.
+        // But we can trigger a background update and return null/loading.
+
         var locker = Lockers.GetOrAdd(repoUrl, _ => new SemaphoreSlim(1, 1));
         logger.LogInformation("Waiting for locker for repo: {RepoUrl}", repoUrl);
         await locker.WaitAsync();
@@ -271,34 +275,33 @@ public class RepoService(
                 return cachedStats!;
             }
 
-            // Acquire global git semaphore — only 1 git fetch at a time
-            logger.LogInformation("Waiting for global git semaphore for repo: {RepoUrl}", repoUrl);
-            await GlobalGitSemaphore.WaitAsync();
-            try
+            var workPath = GetWorkPath(repoUrl);
+            if (!workPath.StartsWith(Path.GetFullPath(_workspaceFolder), StringComparison.Ordinal))
             {
-                var workPath = GetWorkPath(repoUrl);
-                if (!workPath.StartsWith(Path.GetFullPath(_workspaceFolder), StringComparison.Ordinal))
-                {
-                    throw new ArgumentException(@"Invalid repository path.", nameof(repoUrl));
-                }
-                if (!Directory.Exists(workPath))
-                {
-                    logger.LogInformation("Create folder for repo: {Repo} on {Path}", repoName, workPath);
-                    Directory.CreateDirectory(workPath);
-                }
-
-                var stats = await GetWorkHoursFromGitPathInRange(repoName, repoUrl, workPath, startDate, endDate);
-
-                // Cache the result for 6 hours (was 1 hour)
-                SetMemoryCache(cacheKey, stats, MemoryCacheTtl);
-                logger.LogInformation("Cached stats for repo: {Repo} from {Start} to {End}", repoName, startDate, endDate);
-
-                return stats;
+                throw new ArgumentException(@"Invalid repository path.", nameof(repoUrl));
             }
-            finally
-            {
-                GlobalGitSemaphore.Release();
-            }
+
+            // Ensure repo is on disk and fresh
+            await EnsureRepoFreshOnDisk(repoName, repoUrl, workPath);
+
+            logger.LogInformation("Getting commits for repo: {Repo} on {Path}", repoName, workPath);
+            var commits = await workspaceManager.GetCommits(workPath);
+
+            logger.LogInformation("Calculating work time for repo: {Repo} on {Path} in range {Start} to {End}",
+                repoName, workPath, startDate, endDate);
+            var stats = WorkTimeService.CalculateWorkTimeInRange(commits, startDate, endDate);
+
+            // If this was a full fetch, we should also update the total stats in DB!
+            // But only if we did a fetch.
+            // Actually, calculating total stats is cheap once we have commits.
+            var totalStats = WorkTimeService.CalculateWorkTime(commits);
+            await UpdateRepoStatsAsync(repoUrl, totalStats);
+
+            // Cache the result in memory (24 hours)
+            SetMemoryCache(cacheKey, stats, MemoryCacheTtl);
+            logger.LogInformation("Cached stats for repo: {Repo} from {Start} to {End}", repoName, startDate, endDate);
+
+            return stats;
         }
         finally
         {

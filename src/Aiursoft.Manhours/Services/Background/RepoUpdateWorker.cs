@@ -36,12 +36,23 @@ public class RepoUpdateWorker(
 
                         logger.LogInformation("Processing background update for {Repo}", workItem.RepoName);
 
-                        // This will check cache, lock, fetch git, calculate, and Populate Cache.
-                        await repoService.GetRepoStatsInRangeAsync(
-                            workItem.RepoName,
-                            workItem.RepoUrl,
-                            workItem.StartDate,
-                            workItem.EndDate);
+                        if (workItem.StartDate == default && workItem.EndDate == default)
+                        {
+                            // Full update
+                            await repoService.GetRepoStatsAsync(
+                                workItem.RepoName,
+                                workItem.RepoUrl,
+                                force: true);
+                        }
+                        else
+                        {
+                            // Range update (e.g. for Weekly Report)
+                            await repoService.GetRepoStatsInRangeAsync(
+                                workItem.RepoName,
+                                workItem.RepoUrl,
+                                workItem.StartDate,
+                                workItem.EndDate);
+                        }
                     }
                     catch (Exception ex)
                     {

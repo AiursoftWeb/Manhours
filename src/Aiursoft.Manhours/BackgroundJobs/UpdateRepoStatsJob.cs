@@ -60,7 +60,8 @@ public class UpdateRepoStatsJob(
         {
             logger.LogInformation("Updating stats for repo: {RepoUrl}", repo.Url);
             var repoName = repo.Url.Split('/').LastOrDefault()?.Replace(".git", "") ?? repo.Url;
-            await repoService.GetRepoStatsAsync(repoName, repo.Url);
+            // Force update to bypass stale cache and perform git fetch
+            await repoService.GetRepoStatsAsync(repoName, repo.Url, force: true);
             logger.LogInformation("Successfully updated stats for repo: {RepoUrl}", repo.Url);
         }
         catch (Exception ex)

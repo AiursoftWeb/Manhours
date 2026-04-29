@@ -77,7 +77,7 @@ public class UsersController(
             .OrderBy(p => p.Name)
             .ToList();
 
-        return this.StackView(new DetailsViewModel
+        return this.StackView(new DetailsViewModel(user.DisplayName)
         {
             User = user,
             Roles = roles,

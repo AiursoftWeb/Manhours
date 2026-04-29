@@ -9,7 +9,11 @@ public class DetailsViewModel : UiStackLayoutViewModel
 {
     public DetailsViewModel()
     {
-        PageTitle = "User Details";
+    }
+
+    public DetailsViewModel(string userDisplayName)
+    {
+        PageTitle = userDisplayName;
     }
 
     public required User User { get; set; }

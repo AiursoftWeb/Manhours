@@ -97,7 +97,7 @@ public class RolesController(
 
         var usersInRole = await userManager.GetUsersInRoleAsync(role.Name!);
 
-        return this.StackView(new DetailsViewModel
+        return this.StackView(new DetailsViewModel(role.Name!)
         {
             Role = role,
             Permissions = permissions,

@@ -9,7 +9,11 @@ public class DetailsViewModel : UiStackLayoutViewModel
 {
     public DetailsViewModel()
     {
-        PageTitle = "Role Details";
+    }
+
+    public DetailsViewModel(string roleName)
+    {
+        PageTitle = roleName;
     }
 
     public required IdentityRole Role { get; set; }

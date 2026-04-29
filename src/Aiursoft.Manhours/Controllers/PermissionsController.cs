@@ -117,7 +117,7 @@ public class PermissionsController(
             .Where(u => userIdsWithPermission.Contains(u.Id))
             .ToListAsync();
 
-        return this.StackView(new DetailsViewModel
+        return this.StackView(new DetailsViewModel(permission.Name)
         {
             Permission = permission,
             Roles = roles,

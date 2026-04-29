@@ -9,7 +9,11 @@ public class DetailsViewModel : UiStackLayoutViewModel
 {
     public DetailsViewModel()
     {
-        PageTitle = "Permission Details";
+    }
+
+    public DetailsViewModel(string permissionName)
+    {
+        PageTitle = permissionName;
     }
 
     public required PermissionDescriptor Permission { get; set; }

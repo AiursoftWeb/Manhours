@@ -153,6 +153,9 @@
   <data name="Register" xml:space="preserve">
     <value>회원가입</value>
   </data>
+  <data name="Repository Not Found" xml:space="preserve">
+    <value>저장소 없음</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>역할 상세 정보</value>
   </data>

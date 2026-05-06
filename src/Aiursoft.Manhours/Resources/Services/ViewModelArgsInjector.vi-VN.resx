@@ -153,6 +153,9 @@
   <data name="Register" xml:space="preserve">
     <value>Đăng ký</value>
   </data>
+  <data name="Repository Not Found" xml:space="preserve">
+    <value>Không tìm thấy Kho lưu trữ</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Chi tiết Vai trò</value>
   </data>

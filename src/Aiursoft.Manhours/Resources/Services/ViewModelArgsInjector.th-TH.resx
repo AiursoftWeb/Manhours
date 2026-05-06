@@ -153,6 +153,9 @@
   <data name="Register" xml:space="preserve">
     <value>สมัครสมาชิก</value>
   </data>
+  <data name="Repository Not Found" xml:space="preserve">
+    <value>ไม่พบที่เก็บข้อมูล</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>รายละเอียดบทบาท</value>
   </data>

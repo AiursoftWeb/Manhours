@@ -86,6 +86,8 @@ public class ViewModelArgsInjector(
         _ = localizer["Not Found"];
         _ = localizer["Permission Details"];
         _ = localizer["Register"];
+    
+        _ = localizer["Repository Not Found"];
     }
 
     public void InjectSimple(

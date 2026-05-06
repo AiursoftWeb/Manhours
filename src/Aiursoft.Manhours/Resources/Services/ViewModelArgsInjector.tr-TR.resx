@@ -150,6 +150,9 @@
   <data name="Register" xml:space="preserve">
     <value>Kayıt Ol</value>
   </data>
+  <data name="Repository Not Found" xml:space="preserve">
+    <value>Depo Bulunamadı</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Rol Detayları</value>
   </data>

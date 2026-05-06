@@ -153,6 +153,9 @@
   <data name="Register" xml:space="preserve">
     <value>註冊</value>
   </data>
+  <data name="Repository Not Found" xml:space="preserve">
+    <value>找不到儲存庫</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>角色詳情</value>
   </data>

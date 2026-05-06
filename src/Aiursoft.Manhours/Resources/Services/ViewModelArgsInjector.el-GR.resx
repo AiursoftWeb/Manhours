@@ -150,6 +150,9 @@
   <data name="Register" xml:space="preserve">
     <value>Εγγραφή</value>
   </data>
+  <data name="Repository Not Found" xml:space="preserve">
+    <value>Το αποθετήριο δεν βρέθηκε</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Λεπτομέρειες Ρόλου</value>
   </data>

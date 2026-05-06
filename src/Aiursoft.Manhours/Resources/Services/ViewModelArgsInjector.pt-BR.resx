@@ -150,6 +150,9 @@
   <data name="Register" xml:space="preserve">
     <value>Cadastrar</value>
   </data>
+  <data name="Repository Not Found" xml:space="preserve">
+    <value>Repositório não encontrado</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Detalhes da Função</value>
   </data>

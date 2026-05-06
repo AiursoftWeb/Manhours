@@ -150,6 +150,9 @@
   <data name="Register" xml:space="preserve">
     <value>Зарегистрироваться</value>
   </data>
+  <data name="Repository Not Found" xml:space="preserve">
+    <value>Репозиторий не найден</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Детали роли</value>
   </data>

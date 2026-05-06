@@ -3,8 +3,10 @@ using Aiursoft.Manhours.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.RegularExpressions;
+using Aiursoft.GitRunner.Exceptions;
 using Aiursoft.Manhours.Models;
 using Aiursoft.Manhours.Models.BadgeViewModels;
+using Aiursoft.Manhours.Models.ErrorViewModels;
 
 namespace Aiursoft.Manhours.Controllers;
 
@@ -26,6 +28,7 @@ public class BadgeController(
             logger.LogInformation("Invalid extension: {Extension}", extension);
             return NotFound();
         }
+        var lowerExtension = extension.ToLower();
 
         // Trim path splitters
         repo = repo.Replace('\\', '/').Trim('/');
@@ -61,7 +64,38 @@ public class BadgeController(
 
         logger.LogInformation("Requesting repo: {Repo}", repoWithoutExtension);
         var repoUrl = $"https://{repoWithoutExtension}.git";
-        var stats = await repoService.GetRepoStatsAsync(repoWithoutExtension, repoUrl);
+
+        RepoStats stats;
+        try
+        {
+            stats = await repoService.GetRepoStatsAsync(repoWithoutExtension, repoUrl);
+        }
+        catch (Exception ex) when (ex is GitCommandException or TimeoutException)
+        {
+            logger.LogWarning(ex, "Failed to get repo stats for {Repo}", repoWithoutExtension);
+            if (lowerExtension == "svg" || lowerExtension == "git")
+            {
+                var errorBadge = new Badge
+                {
+                    Label = "man-hours",
+                    Message = "error",
+                    Color = "e05d44" // Red
+                };
+                return File(errorBadge.Draw(), "image/svg+xml");
+            }
+
+            if (lowerExtension == "json")
+            {
+                return BadRequest(new { error = "Failed to fetch repository statistics.", message = ex.Message });
+            }
+
+            return this.StackView(new ErrorViewModel
+            {
+                ErrorCode = 404,
+                PageTitle = "Repository Not Found",
+                RequestId = HttpContext.TraceIdentifier
+            }, "~/Views/Error/Error.cshtml");
+        }
 
         var hours = stats.TotalWorkTime.TotalHours;
         var badge = new Badge
@@ -83,7 +117,6 @@ public class BadgeController(
         // Access-Control-Allow-Origin:
         Response.Headers.Append("Access-Control-Allow-Origin", "*");
 
-        var lowerExtension = extension.ToLower();
         if (lowerExtension == "svg" || lowerExtension == "git")
         {
             return File(badge.Draw(), "image/svg+xml");

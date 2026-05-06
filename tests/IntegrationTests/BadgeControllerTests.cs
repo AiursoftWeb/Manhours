@@ -26,7 +26,8 @@ public class BadgeControllerTests
         _port = Network.GetAvailablePort();
         _http = new HttpClient(handler)
         {
-            BaseAddress = new Uri($"http://localhost:{_port}")
+            BaseAddress = new Uri($"http://localhost:{_port}"),
+            Timeout = TimeSpan.FromMinutes(5)
         };
     }
 
@@ -147,12 +148,40 @@ public class BadgeControllerTests
         // Assert
         // Note: ASP.NET Core's routing engine normalizes paths before they reach the controller.
         // The path /r/gitlab.aiursoft.com/../etc/passwd.svg becomes /r/etc/passwd.svg,
-        // which then tries to clone a git repo "etc/passwd" and fails with 500.
-        // While ideally this should return 404, the current behavior returns 500 due to git clone failure.
-        Assert.IsTrue(
-            response.StatusCode == HttpStatusCode.NotFound ||
-            response.StatusCode == HttpStatusCode.InternalServerError,
-            $"Expected NotFound (404) or InternalServerError (500), but got {response.StatusCode}");
+        // which then tries to clone a git repo "etc/passwd" and fails.
+        // Now it should return 200 with an error badge (since it's .svg) or 404 if it's not found earlier.
+        // In this case, it passes regex and goes to clone, which fails and returns the error badge.
+        Assert.AreNotEqual(HttpStatusCode.InternalServerError, response.StatusCode);
+        if (response.StatusCode == HttpStatusCode.OK)
+        {
+            var svg = await response.Content.ReadAsStringAsync();
+            Assert.Contains("error", svg);
+        }
+    }
+
+    [TestMethod]
+    public async Task GetNonExistentRepoBadge()
+    {
+        // Act
+        var response = await _http.GetAsync("/r/github.com/aiursoft-non-existent/not-found.svg");
+
+        // Assert
+        Assert.AreNotEqual(HttpStatusCode.InternalServerError, response.StatusCode);
+        Assert.AreEqual("image/svg+xml", response.Content.Headers.ContentType?.MediaType);
+        var svg = await response.Content.ReadAsStringAsync();
+        Assert.Contains("error", svg);
+    }
+
+    [TestMethod]
+    public async Task GetNonExistentRepoHtml()
+    {
+        // Act
+        var response = await _http.GetAsync("/r/github.com/aiursoft-non-existent/not-found.html");
+
+        // Assert
+        Assert.AreNotEqual(HttpStatusCode.InternalServerError, response.StatusCode);
+        var html = await response.Content.ReadAsStringAsync();
+        Assert.Contains("Repository Not Found", html);
     }
 
     [TestMethod]
@@ -220,8 +249,7 @@ public class BadgeControllerTests
         // Assert - Should handle the path
         Assert.IsTrue(
             response.StatusCode == HttpStatusCode.OK ||
-            response.StatusCode == HttpStatusCode.NotFound ||
-            response.StatusCode == HttpStatusCode.InternalServerError);
+            response.StatusCode == HttpStatusCode.NotFound);
     }
 
     [TestMethod]
@@ -259,7 +287,6 @@ public class BadgeControllerTests
         // Assert - Should handle path normalization
         Assert.IsTrue(
             response.StatusCode == HttpStatusCode.OK ||
-            response.StatusCode == HttpStatusCode.NotFound ||
-            response.StatusCode == HttpStatusCode.InternalServerError);
+            response.StatusCode == HttpStatusCode.NotFound);
     }
 }

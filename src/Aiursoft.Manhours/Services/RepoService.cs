@@ -226,21 +226,37 @@ public class RepoService(
         await GlobalGitSemaphore.WaitAsync();
         try
         {
-            if (!Directory.Exists(workPath))
-            {
-                logger.LogInformation("Create folder for repo: {Repo} on {Path}", repoName, workPath);
-                Directory.CreateDirectory(workPath);
-            }
-
             logger.LogInformation("Resetting repo: {Repo} on {Path}", repoName, workPath);
             await retryEngine.RunWithRetry(async _ =>
             {
+                if (!Directory.Exists(workPath))
+                {
+                    logger.LogInformation("Create folder for repo: {Repo} on {Path}", repoName, workPath);
+                    Directory.CreateDirectory(workPath);
+                }
+
                 await workspaceManager.ResetRepo(
                     workPath,
                     null,
                     repoUrl,
                     CloneMode.BareWithOnlyCommits);
-            }, attempts: EntryExtends.IsInUnitTests() ? 1 : 2);
+            }, 
+            attempts: EntryExtends.IsInUnitTests() ? 1 : 3,
+            onError: (e) => 
+            {
+                logger.LogWarning(e, "Failed to reset repo: {Repo}. Deleting local copy to force re-clone on next retry.", repoName);
+                if (Directory.Exists(workPath))
+                {
+                    try
+                    {
+                        Directory.Delete(workPath, true);
+                    }
+                    catch (Exception deleteEx)
+                    {
+                        logger.LogError(deleteEx, "Failed to delete directory: {Path} during recovery.", workPath);
+                    }
+                }
+            });
         }
         finally
         {

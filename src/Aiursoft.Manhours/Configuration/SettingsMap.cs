@@ -10,6 +10,7 @@ public class SettingsMap
     public const string ProjectLogo = "ProjectLogo";
     public const string AllowUserAdjustNickname = "Allow_User_Adjust_Nickname";
     public const string Icp = "Icp";
+    public const string RepoWhitelistDomains = "RepoWhitelistDomains";
 
     public class FakeLocalizer
     {
@@ -70,6 +71,14 @@ public class SettingsMap
             Description = Localizer["The ICP license number for China mainland users. Leave empty to hide."],
             Type = SettingType.Text,
             DefaultValue = ""
+        },
+        new GlobalSettingDefinition
+        {
+            Key = RepoWhitelistDomains,
+            Name = Localizer["Repo Whitelist Domains"],
+            Description = Localizer["Only repositories from these domains will be persisted to the database and participate in statistics. Separate multiple domains with semicolons (;). Repos from other domains can still generate badges but won't be stored. Default: github.com;gitlab.com"],
+            Type = SettingType.Text,
+            DefaultValue = "github.com;gitlab.com"
         }
     };
 }

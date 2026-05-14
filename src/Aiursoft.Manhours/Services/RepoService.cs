@@ -19,7 +19,8 @@ public class RepoService(
     WorkspaceManager workspaceManager,
     IConfiguration configuration,
     Background.IBackgroundTaskQueue backgroundQueue,
-    IMemoryCache cache) : IScopedDependency
+    IMemoryCache cache,
+    RepoWhitelistService whitelistService) : IScopedDependency
 {
     private static readonly ConcurrentDictionary<string, SemaphoreSlim> Lockers = new();
     private static readonly Regex RepoNameRegex = new("^[a-zA-Z0-9._/-]+$", RegexOptions.Compiled);
@@ -103,37 +104,38 @@ public class RepoService(
             return memStats!;
         }
 
-        // Layer 2: Fresh DB cache (DB hit only, no git/disk)
-        var cachedRepo = await GetCachedRepoAsync(repoUrl);
-        if (!force && cachedRepo != null)
-        {
-            var result = ConvertToRepoStats(cachedRepo);
-            SetMemoryCache(memKey, result, MemoryCacheTtl);
-            return result;
-        }
+        var isWhitelisted = await whitelistService.IsWhitelistedAsync(repoUrl);
 
-        // Layer 3: Stale DB cache — return stale data immediately (stale-while-revalidate)
-        var staleRepo = await GetCachedRepoStaleOkAsync(repoUrl);
-        if (!force && staleRepo != null)
+        // Layer 2 & 3: DB cache layers — only for whitelisted repos
+        if (isWhitelisted)
         {
-            logger.LogInformation("Returning stale data for repo: {RepoUrl} (last updated: {LastUpdate})",
-                repoUrl, staleRepo.LastUpdateTime);
-
-            // Trigger background update if stale
-            await backgroundQueue.QueueBackgroundWorkItemAsync(new Background.RepoUpdateTask
+            var cachedRepo = await GetCachedRepoAsync(repoUrl);
+            if (!force && cachedRepo != null)
             {
-                RepoName = repoName,
-                RepoUrl = repoUrl
-            });
+                var result = ConvertToRepoStats(cachedRepo);
+                SetMemoryCache(memKey, result, MemoryCacheTtl);
+                return result;
+            }
 
-            var result = ConvertToRepoStats(staleRepo);
-            // Cache stale data in memory for a shorter period (1 hour) to avoid spamming the background queue
-            SetMemoryCache(memKey, result, TimeSpan.FromHours(1));
-            return result;
+            var staleRepo = await GetCachedRepoStaleOkAsync(repoUrl);
+            if (!force && staleRepo != null)
+            {
+                logger.LogInformation("Returning stale data for repo: {RepoUrl} (last updated: {LastUpdate})",
+                    repoUrl, staleRepo.LastUpdateTime);
+
+                await backgroundQueue.QueueBackgroundWorkItemAsync(new Background.RepoUpdateTask
+                {
+                    RepoName = repoName,
+                    RepoUrl = repoUrl
+                });
+
+                var result = ConvertToRepoStats(staleRepo);
+                SetMemoryCache(memKey, result, TimeSpan.FromHours(1));
+                return result;
+            }
         }
 
-        // Layer 4: No data at all — must do git fetch (only path that hits disk)
-        // Use both per-repo lock AND global semaphore to prevent IO storms
+        // Layer 4: No data at all (or non-whitelisted) — must do git fetch
         var locker = Lockers.GetOrAdd(repoUrl, _ => new SemaphoreSlim(1, 1));
         logger.LogInformation("Waiting for per-repo locker for repo: {RepoUrl}", repoUrl);
         await locker.WaitAsync();
@@ -143,9 +145,9 @@ public class RepoService(
             if (!force && cache.TryGetValue(memKey, out memStats))
                 return memStats!;
 
-            if (!force)
+            if (isWhitelisted && !force)
             {
-                cachedRepo = await GetCachedRepoStaleOkAsync(repoUrl);
+                var cachedRepo = await GetCachedRepoStaleOkAsync(repoUrl);
                 if (cachedRepo != null)
                 {
                     var result = ConvertToRepoStats(cachedRepo);
@@ -154,7 +156,6 @@ public class RepoService(
                 }
             }
 
-            // Acquire global git semaphore — only 1 git fetch at a time
             var workPath = GetWorkPath(repoUrl);
             if (!workPath.StartsWith(Path.GetFullPath(_workspaceFolder), StringComparison.Ordinal))
             {
@@ -164,7 +165,13 @@ public class RepoService(
             await EnsureRepoFreshOnDisk(repoName, repoUrl, workPath, force);
 
             var stats = await GetRepoStatsFromDiskAsync(repoName, workPath);
-            await UpdateRepoStatsAsync(repoUrl, stats);
+
+            // Only persist to DB for whitelisted repos
+            if (isWhitelisted)
+            {
+                await UpdateRepoStatsAsync(repoUrl, stats);
+            }
+
             SetMemoryCache(memKey, stats, MemoryCacheTtl);
             return stats;
         }
@@ -307,11 +314,12 @@ public class RepoService(
                 repoName, workPath, startDate, endDate);
             var stats = WorkTimeService.CalculateWorkTimeInRange(commits, startDate, endDate);
 
-            // If this was a full fetch, we should also update the total stats in DB!
-            // But only if we did a fetch.
-            // Actually, calculating total stats is cheap once we have commits.
-            var totalStats = WorkTimeService.CalculateWorkTime(commits);
-            await UpdateRepoStatsAsync(repoUrl, totalStats);
+            // Update total stats in DB — only for whitelisted repos
+            if (await whitelistService.IsWhitelistedAsync(repoUrl))
+            {
+                var totalStats = WorkTimeService.CalculateWorkTime(commits);
+                await UpdateRepoStatsAsync(repoUrl, totalStats);
+            }
 
             // Cache the result in memory (24 hours)
             SetMemoryCache(cacheKey, stats, MemoryCacheTtl);

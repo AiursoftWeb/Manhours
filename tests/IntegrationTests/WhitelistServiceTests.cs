@@ -4,8 +4,6 @@ using Aiursoft.DbTools;
 using Aiursoft.Manhours.Configuration;
 using Aiursoft.Manhours.Entities;
 using Aiursoft.Manhours.Services;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.Manhours.Tests.IntegrationTests;

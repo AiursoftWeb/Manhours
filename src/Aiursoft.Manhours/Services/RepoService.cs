@@ -247,9 +247,9 @@ public class RepoService(
                     null,
                     repoUrl,
                     CloneMode.BareWithOnlyCommits);
-            }, 
+            },
             attempts: EntryExtends.IsInUnitTests() ? 1 : 3,
-            onError: (e) => 
+            onError: (e) =>
             {
                 logger.LogWarning(e, "Failed to reset repo: {Repo}. Deleting local copy to force re-clone on next retry.", repoName);
                 if (Directory.Exists(workPath))

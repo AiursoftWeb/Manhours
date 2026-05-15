@@ -36,11 +36,17 @@
   <data name="ICP Number" xml:space="preserve">
     <value>ICP番号</value>
   </data>
+  <data name="Only repositories from these domains will be persisted to the database and participate in statistics. Separate multiple domains with semicolons (;). Repos from other domains can still generate badges but won&apos;t be stored. Default: github.com;gitlab.com" xml:space="preserve">
+    <value>これらのドメインからのリポジトリのみがデータベースに保存され、統計情報に反映されます。複数のドメインをセミコロン（;）で区切ってください。他のドメインからのリポジトリはバッジを生成できますが、保存されません。デフォルト: github.com;gitlab.com</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>プロジェクトロゴ</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>プロジェクト名</value>
+  </data>
+  <data name="Repo Whitelist Domains" xml:space="preserve">
+    <value>リポジトリホワイトリストドメイン</value>
   </data>
   <data name="The banner image displayed on the dashboard." xml:space="preserve">
     <value>ダッシュボードに表示されるバナー画像。</value>

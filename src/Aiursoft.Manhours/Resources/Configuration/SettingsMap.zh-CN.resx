@@ -36,11 +36,17 @@
   <data name="ICP Number" xml:space="preserve">
     <value>ICP 备案号</value>
   </data>
+  <data name="Only repositories from these domains will be persisted to the database and participate in statistics. Separate multiple domains with semicolons (;). Repos from other domains can still generate badges but won&apos;t be stored. Default: github.com;gitlab.com" xml:space="preserve">
+    <value>仅持久化来自这些域名的仓库到数据库并参与统计。使用分号 (;) 分隔多个域名。其他域名的仓库仍可生成徽章，但不会被存储。默认值：github.com;gitlab.com</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>项目图标</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>项目名称</value>
+  </data>
+  <data name="Repo Whitelist Domains" xml:space="preserve">
+    <value>仓库白名单域名</value>
   </data>
   <data name="The banner image displayed on the dashboard." xml:space="preserve">
     <value>仪表板上显示的横幅图片。</value>

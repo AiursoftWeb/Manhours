@@ -36,11 +36,17 @@
   <data name="ICP Number" xml:space="preserve">
     <value>ICP編號</value>
   </data>
+  <data name="Only repositories from these domains will be persisted to the database and participate in statistics. Separate multiple domains with semicolons (;). Repos from other domains can still generate badges but won&apos;t be stored. Default: github.com;gitlab.com" xml:space="preserve">
+    <value>只有來自這些網域的程式碼庫才會持久化到資料庫並參與統計。使用分號 (;) 分隔多個網域。來自其他網域的程式碼庫仍可產生徽章，但不會儲存。預設：github.com;gitlab.com</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>項目圖示</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>專案名稱</value>
+  </data>
+  <data name="Repo Whitelist Domains" xml:space="preserve">
+    <value>儲存庫白名單網域</value>
   </data>
   <data name="The banner image displayed on the dashboard." xml:space="preserve">
     <value>顯示於儀表板的橫幅圖片</value>

@@ -36,11 +36,17 @@
   <data name="ICP Number" xml:space="preserve">
     <value>ICP 번호</value>
   </data>
+  <data name="Only repositories from these domains will be persisted to the database and participate in statistics. Separate multiple domains with semicolons (;). Repos from other domains can still generate badges but won&apos;t be stored. Default: github.com;gitlab.com" xml:space="preserve">
+    <value>이 도메인의 저장소만 데이터베이스에 저장되고 통계에 반영됩니다. 여러 도메인은 세미콜론(;)으로 구분하세요. 다른 도메인의 저장소는 뱃지를 생성할 수 있지만 저장되지는 않습니다. 기본값: github.com;gitlab.com</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>프로젝트 로고</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>프로젝트 이름</value>
+  </data>
+  <data name="Repo Whitelist Domains" xml:space="preserve">
+    <value>저장소 화이트리스트 도메인</value>
   </data>
   <data name="The banner image displayed on the dashboard." xml:space="preserve">
     <value>대시보드에 표시되는 배너 이미지입니다.</value>

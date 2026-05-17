@@ -36,11 +36,17 @@
   <data name="ICP Number" xml:space="preserve">
     <value>ICP नंबर</value>
   </data>
+  <data name="Only repositories from these domains will be persisted to the database and participate in statistics. Separate multiple domains with semicolons (;). Repos from other domains can still generate badges but won&apos;t be stored. Default: github.com;gitlab.com" xml:space="preserve">
+    <value>केवल इन्हीं डोमेन से प्राप्त रिपॉजिटरी ही डेटाबेस में सहेजी जाएँगी और सांख्यिकी में शामिल होंगी। कई डोमेन को अर्धविराम (;) से अलग करें। अन्य डोमेन से प्राप्त रिपॉजिटरी बैज बना सकती हैं, लेकिन उन्हें सहेजा नहीं जाएगा। डीफ़ॉल्ट: github.com;gitlab.com</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>प्रोजेक्ट लोगो</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>प्रोजेक्ट नाम</value>
+  </data>
+  <data name="Repo Whitelist Domains" xml:space="preserve">
+    <value>रिपो व्हाइटलिस्ट डोमेन</value>
   </data>
   <data name="The banner image displayed on the dashboard." xml:space="preserve">
     <value>डैशबोर्ड पर प्रदर्शित बैनर छवि</value>

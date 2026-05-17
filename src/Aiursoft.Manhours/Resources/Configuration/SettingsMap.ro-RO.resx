@@ -36,11 +36,17 @@
   <data name="ICP Number" xml:space="preserve">
     <value>Număr ICP</value>
   </data>
+  <data name="Only repositories from these domains will be persisted to the database and participate in statistics. Separate multiple domains with semicolons (;). Repos from other domains can still generate badges but won&apos;t be stored. Default: github.com;gitlab.com" xml:space="preserve">
+    <value>Doar depozitele din aceste domenii vor fi persistate în baza de date și vor participa la statistici. Separați mai multe domenii cu punct și virgulă (;). Depozitele din alte domenii pot genera încă badge-uri, dar nu vor fi stocate. Implicit: github.com;gitlab.com</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Logo Proiect</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>Numele proiectului</value>
+  </data>
+  <data name="Repo Whitelist Domains" xml:space="preserve">
+    <value>Domenii în lista albă a depozitelor</value>
   </data>
   <data name="The banner image displayed on the dashboard." xml:space="preserve">
     <value>Imaginea banner afișată pe panoul de control.</value>

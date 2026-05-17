@@ -36,11 +36,17 @@
   <data name="ICP Number" xml:space="preserve">
     <value>Αριθμός ΑΔΚ</value>
   </data>
+  <data name="Only repositories from these domains will be persisted to the database and participate in statistics. Separate multiple domains with semicolons (;). Repos from other domains can still generate badges but won&apos;t be stored. Default: github.com;gitlab.com" xml:space="preserve">
+    <value>Μόνο αποθετήρια από αυτές τις domains θα αποθηκεύονται στη βάση δεδομένων και θα συμμετέχουν στα στατιστικά. Διαχωρίστε πολλαπλά domains με ερωτηματικά (;). Τα αποθετήρια από άλλες domains μπορούν ακόμα να δημιουργήσουν σήματα αλλά δεν θα αποθηκεύονται. Προεπιλογή: github.com;gitlab.com</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Λογότυπο Έργου</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>Όνομα Έργου</value>
+  </data>
+  <data name="Repo Whitelist Domains" xml:space="preserve">
+    <value>Τομείς Λευκής Λίστας Αποθετηρίου</value>
   </data>
   <data name="The banner image displayed on the dashboard." xml:space="preserve">
     <value>Η εικόνα με το μπανέρ που εμφανίζεται στον πίνακα ελέγχου.</value>

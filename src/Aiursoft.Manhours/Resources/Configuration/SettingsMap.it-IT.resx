@@ -36,11 +36,17 @@
   <data name="ICP Number" xml:space="preserve">
     <value>Numero ICP</value>
   </data>
+  <data name="Only repositories from these domains will be persisted to the database and participate in statistics. Separate multiple domains with semicolons (;). Repos from other domains can still generate badges but won&apos;t be stored. Default: github.com;gitlab.com" xml:space="preserve">
+    <value>Solo le repository di questi domini verranno salvate nel database e incluse nelle statistiche. Separa i domini multipli con punti e virgola (;). Le repository di altri domini possono comunque generare badge, ma non verranno salvate. Predefinito: github.com;gitlab.com</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>Logo del progetto</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>Nome del progetto</value>
+  </data>
+  <data name="Repo Whitelist Domains" xml:space="preserve">
+    <value>Domini nella whitelist dei repository</value>
   </data>
   <data name="The banner image displayed on the dashboard." xml:space="preserve">
     <value>L&apos;immagine del banner visualizzata nel pannello di controllo.</value>

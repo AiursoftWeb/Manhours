@@ -36,11 +36,17 @@
   <data name="ICP Number" xml:space="preserve">
     <value>رقم الترخيص ICP</value>
   </data>
+  <data name="Only repositories from these domains will be persisted to the database and participate in statistics. Separate multiple domains with semicolons (;). Repos from other domains can still generate badges but won&apos;t be stored. Default: github.com;gitlab.com" xml:space="preserve">
+    <value>سيتم حفظ المستودعات من هذه النطاقات فقط في قاعدة البيانات والمشاركة في الإحصائيات. افصل بين النطاقات المتعددة باستخدام الفاصلة المنقوطة (;). لا تزال المستودعات من النطاقات الأخرى قادرة على إنشاءشارات ولكن لن يتم تخزينها. الافتراضي: github.com;gitlab.com</value>
+  </data>
   <data name="Project Logo" xml:space="preserve">
     <value>شعار المشروع</value>
   </data>
   <data name="Project Name" xml:space="preserve">
     <value>اسم المشروع</value>
+  </data>
+  <data name="Repo Whitelist Domains" xml:space="preserve">
+    <value>نطاقات القائمة البيضاء للمستودعات</value>
   </data>
   <data name="The banner image displayed on the dashboard." xml:space="preserve">
     <value>الصورة البطاقية المعروضة على لوحة القيادة.</value>

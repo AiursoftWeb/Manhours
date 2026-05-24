@@ -11,6 +11,7 @@ public abstract class ManhoursDbContext(DbContextOptions options) : IdentityDbCo
 {
     public DbSet<GlobalSetting> GlobalSettings { get; set; }
 
+    public DbSet<UserEmail> UserEmails => Set<UserEmail>();
     public DbSet<Repo> Repos => Set<Repo>();
     public DbSet<Contributor> Contributors => Set<Contributor>();
     public DbSet<RepoContribution> RepoContributions => Set<RepoContribution>();

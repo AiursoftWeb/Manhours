@@ -116,13 +116,9 @@ public class UsersController(
                 await context.SaveChangesAsync();
                 return RedirectToAction(nameof(Details), new { id = user.Id });
             }
-            else
+            foreach (var error in result.Errors)
             {
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, error.Description);
-                }
-                return this.StackView(newUser);
+                ModelState.AddModelError(string.Empty, error.Description);
             }
         }
         return this.StackView(newUser);

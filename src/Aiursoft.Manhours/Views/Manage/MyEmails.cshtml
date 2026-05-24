@@ -1,0 +1,77 @@
+@model Aiursoft.Manhours.Models.ManageViewModels.EmailsViewModel
+
+<h1 class="h3 mb-3">@Localizer["Manage your email addresses"]</h1>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="d-flex">
+            <div class="alert-icon pe-3">
+                <i class="align-middle" data-lucide="alert-circle"></i>
+            </div>
+            <div class="alert-message">
+                <div asp-validation-summary="All"></div>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-8 col-lg-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0">@Localizer["Your email addresses"]</h5>
+            </div>
+            <div class="list-group list-group-flush">
+                @foreach (var email in Model.Emails)
+                {
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <span>@email.Email</span>
+                            @if (email.IsVerified)
+                            {
+                                <span class="badge bg-success ms-2">@Localizer["Verified"]</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-warning text-dark ms-2">@Localizer["Unverified"]</span>
+                            }
+                            <small class="text-muted ms-2">@email.CreatedTime.ToString("yyyy-MM-dd")</small>
+                        </div>
+                        @if (Model.Emails.Count > 1)
+                        {
+                            <form asp-controller="Manage" asp-action="DeleteEmail" method="post" class="d-inline">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="id" value="@email.Id" />
+                                <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('@Localizer["Are you sure you want to remove this email?"]')">
+                                    <i class="align-middle" data-lucide="trash-2"></i>
+                                </button>
+                            </form>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">@Localizer["Add new email"]</h5>
+            </div>
+            <div class="card-body">
+                <form asp-controller="Manage" asp-action="AddEmail" method="post">
+                    @Html.AntiForgeryToken()
+                    <div class="mb-3">
+                        <label for="email" class="form-label">@Localizer["Email address"]</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="@Localizer["Enter new email address"]" required />
+                        <small class="form-text text-muted">@Localizer["You can add multiple email addresses to your account."]</small>
+                    </div>
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-primary">@Localizer["Add email"]</button>
+                        <a asp-controller="Manage" asp-action="Index" class="btn btn-light">@Localizer["Back to settings"]</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

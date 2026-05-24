@@ -29,6 +29,14 @@
     </div>
     @* The obsolete <dl> is replaced with a modern and responsive List Group. *@
     <div class="list-group list-group-flush">
+        <a asp-controller="Manage" asp-action="MyEmails" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            <span>
+                <i class="align-middle me-2" data-lucide="mail"></i>
+                @Localizer["Manage your emails"]
+            </span>
+            <i class="align-middle" data-lucide="chevron-right"></i>
+        </a>
+
         <a asp-controller="Manage" asp-action="ChangeAvatar" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
             <span>
                 <i class="align-middle me-2" data-lucide="image"></i>

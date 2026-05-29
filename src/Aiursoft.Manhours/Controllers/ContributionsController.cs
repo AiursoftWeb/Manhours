@@ -80,21 +80,46 @@ public class ContributionsController(
         var endDate = DateTime.UtcNow;
         var startDate = endDate.AddDays(-7);
 
-        // Get all repos that the user has contributed to
+        // Collect all emails associated with this user: primary email + additional emails from UserEmails table.
+        var userEmails = await dbContext.UserEmails
+            .AsNoTracking()
+            .Where(e => e.UserId == user.Id)
+            .Select(e => e.Email)
+            .ToListAsync();
+
+        var allEmails = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        if (!string.IsNullOrEmpty(user.Email))
+        {
+            allEmails.Add(user.Email);
+        }
+        foreach (var email in userEmails)
+        {
+            if (!string.IsNullOrEmpty(email))
+            {
+                allEmails.Add(email);
+            }
+        }
+
+        // Get all repos that the user has contributed to via any of their emails
         var contributions = await dbContext.RepoContributions
             .AsNoTracking()
             .Include(c => c.Repo)
             .Include(c => c.Contributor)
-            .Where(c => c.Contributor!.Email == user.Email)
+            .Where(c => allEmails.Contains(c.Contributor!.Email))
             .ToListAsync();
 
         var weeklyContributions = new List<WeeklyRepoContribution>();
         var loading = false;
 
-        foreach (var contribution in contributions)
+        // Group contributions by repo so we can merge stats from multiple emails for the same repo
+        var contributionsByRepo = contributions
+            .Where(c => c.Repo != null)
+            .GroupBy(c => c.Repo!.Id);
+
+        foreach (var repoGroup in contributionsByRepo)
         {
-            if (contribution.Repo == null) continue;
-            var repo = contribution.Repo;
+            var contribution = repoGroup.First();
+            var repo = contribution.Repo!;
             var repoUrl = repo.Url;
             var repoName = repoUrl.Replace("https://", "").Replace("http://", "");
             if (repoName.EndsWith(".git"))
@@ -104,18 +129,32 @@ public class ContributionsController(
 
             if (repoService.TryGetCachedStats(repoUrl, startDate, endDate, out var stats))
             {
-                // Find the contributor's stats in the result
-                var contributorStat = stats?.Contributors.FirstOrDefault(c =>
-                    c.Email.Equals(user.Email, StringComparison.OrdinalIgnoreCase));
+                // Aggregate stats from all emails belonging to this user in this repo
+                double totalHours = 0;
+                int totalCommits = 0;
+                int totalActiveDays = 0;
 
-                if (contributorStat != null && contributorStat.WorkTime.TotalHours > 0)
+                foreach (var email in allEmails)
+                {
+                    var contributorStat = stats?.Contributors.FirstOrDefault(c =>
+                        c.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
+
+                    if (contributorStat != null && contributorStat.WorkTime.TotalHours > 0)
+                    {
+                        totalHours += contributorStat.WorkTime.TotalHours;
+                        totalCommits += contributorStat.CommitCount;
+                        totalActiveDays += contributorStat.ContributionDays;
+                    }
+                }
+
+                if (totalHours > 0)
                 {
                     weeklyContributions.Add(new WeeklyRepoContribution
                     {
                         Repo = repo,
-                        TotalWorkHours = contributorStat.WorkTime.TotalHours,
-                        CommitCount = contributorStat.CommitCount,
-                        ActiveDays = contributorStat.ContributionDays
+                        TotalWorkHours = totalHours,
+                        CommitCount = totalCommits,
+                        ActiveDays = totalActiveDays
                     });
                 }
             }

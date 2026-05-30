@@ -133,7 +133,6 @@ public class AccountController(
                     UserId = user.Id,
                     IsVerified = false
                 });
-                await dbContext.SaveChangesAsync();
 
                 if (!string.IsNullOrWhiteSpace(_appSettings.DefaultRole))
                 {
@@ -144,6 +143,8 @@ public class AccountController(
                         return this.StackView(model);
                     }
                 }
+
+                await dbContext.SaveChangesAsync();
 
                 await signInManager.SignInAsync(user, isPersistent: false);
                 logger.LogInformation(3, "User created a new account with password");

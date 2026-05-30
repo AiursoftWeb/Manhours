@@ -31,7 +31,8 @@ public class ContributionsController(
         var user = await userManager.GetUserAsync(User);
         if (user == null) return NotFound();
 
-        return await RenderContributions(user.Email, "My");
+        var allEmails = await GetAllUserEmailsAsync(user);
+        return await RenderContributions(allEmails, "My", user);
     }
 
     [Authorize]
@@ -81,24 +82,7 @@ public class ContributionsController(
         var startDate = endDate.AddDays(-7);
 
         // Collect all emails associated with this user: primary email + additional emails from UserEmails table.
-        var userEmails = await dbContext.UserEmails
-            .AsNoTracking()
-            .Where(e => e.UserId == user.Id)
-            .Select(e => e.Email)
-            .ToListAsync();
-
-        var allEmails = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-        if (!string.IsNullOrEmpty(user.Email))
-        {
-            allEmails.Add(user.Email);
-        }
-        foreach (var email in userEmails)
-        {
-            if (!string.IsNullOrEmpty(email))
-            {
-                allEmails.Add(email);
-            }
-        }
+        var allEmails = await GetAllUserEmailsAsync(user);
 
         // Get all repos that the user has contributed to via any of their emails
         var contributions = await dbContext.RepoContributions
@@ -143,7 +127,7 @@ public class ContributionsController(
                     {
                         totalHours += contributorStat.WorkTime.TotalHours;
                         totalCommits += contributorStat.CommitCount;
-                        totalActiveDays += contributorStat.ContributionDays;
+                        totalActiveDays = Math.Max(totalActiveDays, contributorStat.ContributionDays);
                     }
                 }
 
@@ -198,33 +182,53 @@ public class ContributionsController(
     public async Task<IActionResult> UserContributions(Guid id)
     {
         var contributor = await dbContext.Contributors.FindAsync(id);
-        if (contributor == null)
-        {
-            return NotFound();
-        }
+        if (contributor == null) return NotFound();
 
-        return await RenderContributions(contributor.Email, contributor.Name ?? "Unknown");
+        var emailSet = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        if (!string.IsNullOrEmpty(contributor.Email))
+            emailSet.Add(contributor.Email);
+
+        return await RenderContributions(emailSet, contributor.Name ?? "Unknown");
     }
 
-    private async Task<IActionResult> RenderContributions(string? email, string name)
+    private async Task<HashSet<string>> GetAllUserEmailsAsync(User user)
+    {
+        var userEmails = await dbContext.UserEmails
+            .AsNoTracking()
+            .Where(e => e.UserId == user.Id)
+            .Select(e => e.Email)
+            .ToListAsync();
+
+        var allEmails = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        if (!string.IsNullOrEmpty(user.Email))
+            allEmails.Add(user.Email);
+        foreach (var email in userEmails)
+        {
+            if (!string.IsNullOrEmpty(email))
+                allEmails.Add(email);
+        }
+        return allEmails;
+    }
+
+    private async Task<IActionResult> RenderContributions(HashSet<string> emails, string name, User? user = null)
     {
         var contributions = await dbContext.RepoContributions
             .AsNoTracking()
             .Include(c => c.Repo)
             .Include(c => c.Contributor)
-            .Where(c => c.Contributor!.Email == email)
+            .Where(c => emails.Contains(c.Contributor!.Email))
             .OrderByDescending(c => c.TotalWorkHours)
             .ToListAsync();
 
         // Deduplicate forked/mirrored repositories
         contributions = RepoDeduplicationService.Deduplicate(contributions);
 
-        var user = await userManager.FindByEmailAsync(email ?? string.Empty);
+        user ??= await userManager.FindByEmailAsync(emails.FirstOrDefault() ?? string.Empty);
 
         var model = new MyContributionsViewModel
         {
             ContributorName = name,
-            Email = email ?? string.Empty,
+            Email = user?.Email ?? emails.FirstOrDefault() ?? string.Empty,
             User = user,
             TotalWorkHours = contributions.Sum(c => c.TotalWorkHours),
             TotalCommits = contributions.Sum(c => c.CommitCount),

@@ -225,7 +225,7 @@ public class ManageController(
             return this.StackView(new EmailsViewModel { Emails = emails }, "MyEmails");
         }
 
-        var normalizedEmail = email.Trim().ToUpperInvariant();
+        var normalizedEmail = email.Trim().ToUpper();
 
         if (await dbContext.UserEmails.AnyAsync(e => e.Email.ToUpper() == normalizedEmail))
         {

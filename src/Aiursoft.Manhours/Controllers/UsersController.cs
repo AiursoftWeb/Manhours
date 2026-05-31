@@ -117,8 +117,7 @@ public class UsersController(
             context.UserEmails.Add(new UserEmail
             {
                 Email = user.Email!,
-                UserId = user.Id,
-                IsVerified = false
+                UserId = user.Id
             });
             await context.SaveChangesAsync();
             return RedirectToAction(nameof(Details), new { id = user.Id });

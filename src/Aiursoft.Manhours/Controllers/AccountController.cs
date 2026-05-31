@@ -130,8 +130,7 @@ public class AccountController(
                 dbContext.UserEmails.Add(new UserEmail
                 {
                     Email = user.Email!,
-                    UserId = user.Id,
-                    IsVerified = false
+                    UserId = user.Id
                 });
 
                 if (!string.IsNullOrWhiteSpace(_appSettings.DefaultRole))

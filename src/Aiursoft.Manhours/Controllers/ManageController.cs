@@ -237,8 +237,7 @@ public class ManageController(
         dbContext.UserEmails.Add(new UserEmail
         {
             Email = email.Trim(),
-            UserId = user.Id,
-            IsVerified = false
+            UserId = user.Id
         });
         await dbContext.SaveChangesAsync();
 

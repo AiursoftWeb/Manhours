@@ -14,8 +14,6 @@ public class UserEmail
     [EmailAddress]
     public string Email { get; set; } = string.Empty;
 
-    public bool IsVerified { get; set; }
-
     public DateTime CreatedTime { get; init; } = DateTime.UtcNow;
 
     [Required]

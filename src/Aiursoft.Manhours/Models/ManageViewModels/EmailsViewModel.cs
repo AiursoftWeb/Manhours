@@ -11,4 +11,5 @@ public class EmailsViewModel : UiStackLayoutViewModel
     }
 
     public List<UserEmail> Emails { get; set; } = [];
+    public string LoginEmail { get; set; } = string.Empty;
 }

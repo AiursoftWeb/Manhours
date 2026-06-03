@@ -5,6 +5,7 @@ using Aiursoft.Manhours.Entities;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Microsoft.IdentityModel.Tokens;
@@ -138,6 +139,7 @@ public static class AuthenticationExtensions
     {
         var userManager = context.HttpContext.RequestServices.GetRequiredService<UserManager<User>>();
         var roleManager = context.HttpContext.RequestServices.GetRequiredService<RoleManager<IdentityRole>>();
+        var dbContext = context.HttpContext.RequestServices.GetRequiredService<ManhoursDbContext>();
         var appSettings = context.HttpContext.RequestServices.GetRequiredService<IOptions<AppSettings>>().Value;
         var logger = context.HttpContext.RequestServices.GetRequiredService<ILogger<Startup>>();
         var principal = context.Principal!;
@@ -174,6 +176,14 @@ public static class AuthenticationExtensions
         // 4. If the user doesn't exist, create a new one
         if (localUser is null)
         {
+            var normalizedEmail = email.Trim().ToUpperInvariant();
+            if (await dbContext.UserEmails.AnyAsync(e => e.Email.ToUpper() == normalizedEmail))
+            {
+                context.Fail("The email is already used as a contribution email.");
+                return;
+            }
+
+            await using var transaction = await dbContext.Database.BeginTransactionAsync();
             localUser = new User
             {
                 UserName = username,
@@ -190,6 +200,14 @@ public static class AuthenticationExtensions
                 context.Fail($"Failed to create a local user: {errors}");
                 return;
             }
+
+            dbContext.UserEmails.Add(new UserEmail
+            {
+                Email = email,
+                UserId = localUser.Id
+            });
+            await dbContext.SaveChangesAsync();
+            await transaction.CommitAsync();
         }
 
         // 5. Patch the user's information if needed

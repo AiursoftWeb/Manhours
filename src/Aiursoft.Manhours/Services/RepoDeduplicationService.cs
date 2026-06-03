@@ -66,7 +66,9 @@ public static class RepoDeduplicationService
             var repoName = GetRepoName(contribution.Repo?.Url);
 
             // Check if we already have a repo with this name
-            var existingIndex = result.FindIndex(c => GetRepoName(c.Repo?.Url) == repoName);
+            var existingIndex = result.FindIndex(c =>
+                string.Equals(c.Email, contribution.Email, StringComparison.OrdinalIgnoreCase) &&
+                GetRepoName(c.Repo?.Url) == repoName);
 
             if (existingIndex >= 0)
             {

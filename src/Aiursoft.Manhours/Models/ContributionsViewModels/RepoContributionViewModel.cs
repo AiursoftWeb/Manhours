@@ -2,7 +2,7 @@ using Aiursoft.Manhours.Entities;
 
 namespace Aiursoft.Manhours.Models.ContributionsViewModels;
 
-public class WeeklyRepoContribution
+public class RepoContributionViewModel
 {
     public Repo? Repo { get; set; }
     public string Email { get; set; } = string.Empty;

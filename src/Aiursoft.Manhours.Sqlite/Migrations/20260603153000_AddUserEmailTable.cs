@@ -36,6 +36,13 @@ namespace Aiursoft.Manhours.Sqlite.Migrations
                 table: "UserEmails",
                 column: "UserId");
 
+            migrationBuilder.Sql("""
+                INSERT INTO "UserEmails" ("Email", "CreatedTime", "UserId")
+                SELECT "Email", CURRENT_TIMESTAMP, "Id"
+                FROM "AspNetUsers"
+                WHERE "Email" IS NOT NULL AND "Email" <> ''
+                """);
+
             migrationBuilder.CreateIndex(
                 name: "IX_UserEmails_Email",
                 table: "UserEmails",

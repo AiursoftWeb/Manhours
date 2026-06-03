@@ -98,6 +98,14 @@ public class UsersController(
     {
         if (ModelState.IsValid)
         {
+            var normalizedEmail = newUser.Email!.Trim().ToUpperInvariant();
+            if (await context.UserEmails.AnyAsync(e => e.Email.ToUpper() == normalizedEmail))
+            {
+                ModelState.AddModelError(string.Empty, "This email is already in use.");
+                return this.StackView(newUser);
+            }
+
+            await using var transaction = await context.Database.BeginTransactionAsync();
             var user = new User
             {
                 UserName = newUser.UserName,
@@ -113,6 +121,7 @@ public class UsersController(
                     UserId = user.Id
                 });
                 await context.SaveChangesAsync();
+                await transaction.CommitAsync();
                 return RedirectToAction(nameof(Details), new { id = user.Id });
             }
             foreach (var error in result.Errors)

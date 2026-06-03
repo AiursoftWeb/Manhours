@@ -16,5 +16,5 @@ public class MyContributionsViewModel : UiStackLayoutViewModel
     public double TotalWorkHours { get; set; }
     public int TotalCommits { get; set; }
     public int TotalActiveDays { get; set; }
-    public List<RepoContribution> Contributions { get; set; } = new();
+    public List<RepoContributionViewModel> Contributions { get; set; } = new();
 }

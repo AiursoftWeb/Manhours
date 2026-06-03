@@ -31,7 +31,7 @@
                             <span>@email.Email</span>
                             <small class="text-muted ms-2">@email.CreatedTime.ToString("yyyy-MM-dd")</small>
                         </div>
-                        @if (Model.Emails.Count > 1)
+                        @if (Model.Emails.Count > 1 && !string.Equals(email.Email, Model.LoginEmail, StringComparison.OrdinalIgnoreCase))
                         {
                             <form asp-controller="Manage" asp-action="DeleteEmail" method="post" class="d-inline">
                                 @Html.AntiForgeryToken()

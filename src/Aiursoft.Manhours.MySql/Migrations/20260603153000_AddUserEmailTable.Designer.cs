@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aiursoft.Manhours.MySql.Migrations
 {
     [DbContext(typeof(MySqlContext))]
-    [Migration("20260524120000_AddUserEmailTable")]
+    [Migration("20260603153000_AddUserEmailTable")]
     partial class AddUserEmailTable
     {
         /// <inheritdoc />

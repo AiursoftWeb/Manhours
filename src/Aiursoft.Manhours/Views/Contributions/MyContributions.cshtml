@@ -124,6 +124,7 @@
                                     <thead>
                                     <tr>
                                         <th>@Localizer["Repository"]</th>
+                                        <th class="d-none d-lg-table-cell">@Localizer["Email"]</th>
                                         <th class="d-none d-xl-table-cell">@Localizer["Work Hours"]</th>
                                         <th class="d-none d-xl-table-cell">@Localizer["Commits"]</th>
                                         <th>@Localizer["Active Days"]</th>
@@ -161,6 +162,9 @@
                                                             <div class="text-muted">
                                                         @contribution.Repo?.Url
                                                             </div>
+                                                            <div class="d-lg-none text-muted">
+                                                                @contribution.Email
+                                                            </div>
                                                             <div class="progress progress-sm mt-2" style="height: 4px;"
                                                                  data-bs-toggle="tooltip"
                                                                  title="@contribution.TotalWorkHours.ToString("F1") @Localizer["Hours"]">
@@ -170,6 +174,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                </td>
+                                                <td class="d-none d-lg-table-cell">
+                                            @contribution.Email
                                                 </td>
                                                 <td class="d-none d-xl-table-cell">
                                             @contribution.TotalWorkHours.ToString("F1")

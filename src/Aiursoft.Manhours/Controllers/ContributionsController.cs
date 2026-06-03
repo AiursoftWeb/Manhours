@@ -31,7 +31,8 @@ public class ContributionsController(
         var user = await userManager.GetUserAsync(User);
         if (user == null) return NotFound();
 
-        return await RenderContributions(user.Email, "My");
+        var emails = await GetUserContributionEmailsAsync(user);
+        return await RenderContributions(emails, "My", user);
     }
 
     [Authorize]
@@ -80,38 +81,19 @@ public class ContributionsController(
         var endDate = DateTime.UtcNow;
         var startDate = endDate.AddDays(-7);
 
-        // Collect all emails associated with this user: primary email + additional emails from UserEmails table.
-        var userEmails = await dbContext.UserEmails
-            .AsNoTracking()
-            .Where(e => e.UserId == user.Id)
-            .Select(e => e.Email)
-            .ToListAsync();
+        var emails = await GetUserContributionEmailsAsync(user);
+        var normalizedEmails = emails.Select(e => e.ToLowerInvariant()).ToList();
 
-        var allEmails = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-        if (!string.IsNullOrEmpty(user.Email))
-        {
-            allEmails.Add(user.Email);
-        }
-        foreach (var email in userEmails)
-        {
-            if (!string.IsNullOrEmpty(email))
-            {
-                allEmails.Add(email);
-            }
-        }
-
-        // Get all repos that the user has contributed to via any of their emails
         var contributions = await dbContext.RepoContributions
             .AsNoTracking()
             .Include(c => c.Repo)
             .Include(c => c.Contributor)
-            .Where(c => allEmails.Contains(c.Contributor!.Email))
+            .Where(c => normalizedEmails.Contains(c.Contributor!.Email.ToLower()))
             .ToListAsync();
 
         var weeklyContributions = new List<WeeklyRepoContribution>();
         var loading = false;
 
-        // Group contributions by repo so we can merge stats from multiple emails for the same repo
         var contributionsByRepo = contributions
             .Where(c => c.Repo != null)
             .GroupBy(c => c.Repo!.Id);
@@ -129,33 +111,22 @@ public class ContributionsController(
 
             if (repoService.TryGetCachedStats(repoUrl, startDate, endDate, out var stats))
             {
-                // Aggregate stats from all emails belonging to this user in this repo
-                double totalHours = 0;
-                int totalCommits = 0;
-                int totalActiveDays = 0;
-
-                foreach (var email in allEmails)
+                foreach (var email in emails)
                 {
                     var contributorStat = stats?.Contributors.FirstOrDefault(c =>
                         c.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
 
                     if (contributorStat != null && contributorStat.WorkTime.TotalHours > 0)
                     {
-                        totalHours += contributorStat.WorkTime.TotalHours;
-                        totalCommits += contributorStat.CommitCount;
-                        totalActiveDays += contributorStat.ContributionDays;
+                        weeklyContributions.Add(new WeeklyRepoContribution
+                        {
+                            Repo = repo,
+                            Email = email,
+                            TotalWorkHours = contributorStat.WorkTime.TotalHours,
+                            CommitCount = contributorStat.CommitCount,
+                            ActiveDays = contributorStat.ContributionDays
+                        });
                     }
-                }
-
-                if (totalHours > 0)
-                {
-                    weeklyContributions.Add(new WeeklyRepoContribution
-                    {
-                        Repo = repo,
-                        TotalWorkHours = totalHours,
-                        CommitCount = totalCommits,
-                        ActiveDays = totalActiveDays
-                    });
                 }
             }
             else
@@ -208,30 +179,66 @@ public class ContributionsController(
 
     private async Task<IActionResult> RenderContributions(string? email, string name)
     {
+        var emails = string.IsNullOrWhiteSpace(email) ? Array.Empty<string>() : [email];
+        var user = await userManager.FindByEmailAsync(email ?? string.Empty);
+        return await RenderContributions(emails, name, user);
+    }
+
+    private async Task<IActionResult> RenderContributions(IEnumerable<string> emails, string name, User? user)
+    {
+        var emailList = emails
+            .Where(e => !string.IsNullOrWhiteSpace(e))
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .ToList();
+        var normalizedEmails = emailList.Select(e => e.ToLowerInvariant()).ToList();
+
         var contributions = await dbContext.RepoContributions
             .AsNoTracking()
             .Include(c => c.Repo)
             .Include(c => c.Contributor)
-            .Where(c => c.Contributor!.Email == email)
+            .Where(c => normalizedEmails.Contains(c.Contributor!.Email.ToLower()))
             .OrderByDescending(c => c.TotalWorkHours)
             .ToListAsync();
 
-        // Deduplicate forked/mirrored repositories
-        contributions = RepoDeduplicationService.Deduplicate(contributions);
-
-        var user = await userManager.FindByEmailAsync(email ?? string.Empty);
+        var contributionRows = contributions
+            .GroupBy(c => c.Contributor!.Email, StringComparer.OrdinalIgnoreCase)
+            .SelectMany(g => RepoDeduplicationService.Deduplicate(g))
+            .Select(c => new RepoContributionViewModel
+            {
+                Repo = c.Repo,
+                Email = c.Contributor!.Email,
+                TotalWorkHours = c.TotalWorkHours,
+                CommitCount = c.CommitCount,
+                ActiveDays = c.ActiveDays
+            })
+            .OrderByDescending(c => c.TotalWorkHours)
+            .ToList();
 
         var model = new MyContributionsViewModel
         {
             ContributorName = name,
-            Email = email ?? string.Empty,
+            Email = emailList.FirstOrDefault() ?? string.Empty,
             User = user,
-            TotalWorkHours = contributions.Sum(c => c.TotalWorkHours),
-            TotalCommits = contributions.Sum(c => c.CommitCount),
-            TotalActiveDays = contributions.Sum(c => c.ActiveDays),
-            Contributions = contributions
+            TotalWorkHours = contributionRows.Sum(c => c.TotalWorkHours),
+            TotalCommits = contributionRows.Sum(c => c.CommitCount),
+            TotalActiveDays = contributionRows.Sum(c => c.ActiveDays),
+            Contributions = contributionRows
         };
 
         return this.StackView(model, "MyContributions");
+    }
+
+    private async Task<List<string>> GetUserContributionEmailsAsync(User user)
+    {
+        var emails = await dbContext.UserEmails
+            .AsNoTracking()
+            .Where(e => e.UserId == user.Id)
+            .Select(e => e.Email)
+            .ToListAsync();
+
+        return emails
+            .Where(e => !string.IsNullOrWhiteSpace(e))
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .ToList();
     }
 }

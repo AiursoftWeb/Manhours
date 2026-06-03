@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 
@@ -118,10 +119,18 @@ public class AccountController(
         ViewData["ReturnUrl"] = returnUrl;
         if (ModelState.IsValid)
         {
+            var normalizedEmail = model.Email!.Trim().ToUpperInvariant();
+            if (await dbContext.UserEmails.AnyAsync(e => e.Email.ToUpper() == normalizedEmail))
+            {
+                ModelState.AddModelError(string.Empty, localizer["This email is already in use."]);
+                return this.StackView(model);
+            }
+
+            await using var transaction = await dbContext.Database.BeginTransactionAsync();
             var user = new User
             {
-                UserName = model.Email!.Split('@')[0],
-                DisplayName = model.Email!.Split('@')[0],
+                UserName = model.Email.Split('@')[0],
+                DisplayName = model.Email.Split('@')[0],
                 Email = model.Email,
             };
             var result = await userManager.CreateAsync(user, model.Password!);
@@ -144,6 +153,7 @@ public class AccountController(
                     }
                 }
 
+                await transaction.CommitAsync();
                 await signInManager.SignInAsync(user, isPersistent: false);
                 logger.LogInformation(3, "User created a new account with password");
                 return RedirectToLocal(returnUrl ?? "/Home/Index");

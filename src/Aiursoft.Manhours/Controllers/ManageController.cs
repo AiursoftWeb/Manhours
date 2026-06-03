@@ -205,7 +205,8 @@ public class ManageController(
 
         return this.StackView(new EmailsViewModel
         {
-            Emails = emails
+            Emails = emails,
+            LoginEmail = user.Email ?? string.Empty
         });
     }
 
@@ -222,7 +223,7 @@ public class ManageController(
         {
             ModelState.AddModelError(string.Empty, localizer["Email address is required."]);
             var emails = await dbContext.UserEmails.Where(e => e.UserId == user.Id).OrderBy(e => e.CreatedTime).ToListAsync();
-            return this.StackView(new EmailsViewModel { Emails = emails }, "MyEmails");
+            return this.StackView(new EmailsViewModel { Emails = emails, LoginEmail = user.Email ?? string.Empty }, "MyEmails");
         }
 
         var normalizedEmail = email.Trim().ToUpperInvariant();
@@ -231,7 +232,7 @@ public class ManageController(
         {
             ModelState.AddModelError(string.Empty, localizer["This email is already in use."]);
             var emails = await dbContext.UserEmails.Where(e => e.UserId == user.Id).OrderBy(e => e.CreatedTime).ToListAsync();
-            return this.StackView(new EmailsViewModel { Emails = emails }, "MyEmails");
+            return this.StackView(new EmailsViewModel { Emails = emails, LoginEmail = user.Email ?? string.Empty }, "MyEmails");
         }
 
         dbContext.UserEmails.Add(new UserEmail
@@ -257,14 +258,20 @@ public class ManageController(
             .Where(e => e.UserId == user.Id)
             .ToListAsync();
 
+        var emailToDelete = userEmails.FirstOrDefault(e => e.Id == id);
+        if (emailToDelete == null) return NotFound();
+
+        if (string.Equals(emailToDelete.Email, user.Email, StringComparison.OrdinalIgnoreCase))
+        {
+            ModelState.AddModelError(string.Empty, localizer["You can't remove your login email address."]);
+            return this.StackView(new EmailsViewModel { Emails = userEmails, LoginEmail = user.Email ?? string.Empty }, "MyEmails");
+        }
+
         if (userEmails.Count <= 1)
         {
             ModelState.AddModelError(string.Empty, localizer["You must have at least one email address."]);
-            return this.StackView(new EmailsViewModel { Emails = userEmails }, "MyEmails");
+            return this.StackView(new EmailsViewModel { Emails = userEmails, LoginEmail = user.Email ?? string.Empty }, "MyEmails");
         }
-
-        var emailToDelete = userEmails.FirstOrDefault(e => e.Id == id);
-        if (emailToDelete == null) return NotFound();
 
         dbContext.UserEmails.Remove(emailToDelete);
         await dbContext.SaveChangesAsync();

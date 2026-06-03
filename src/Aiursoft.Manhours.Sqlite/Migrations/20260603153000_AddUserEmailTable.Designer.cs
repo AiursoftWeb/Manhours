@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aiursoft.Manhours.Sqlite.Migrations
 {
     [DbContext(typeof(SqliteContext))]
-    [Migration("20260524120000_AddUserEmailTable")]
+    [Migration("20260603153000_AddUserEmailTable")]
     partial class AddUserEmailTable
     {
         /// <inheritdoc />

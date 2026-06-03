@@ -40,6 +40,13 @@ namespace Aiursoft.Manhours.MySql.Migrations
                 table: "UserEmails",
                 column: "UserId");
 
+            migrationBuilder.Sql("""
+                INSERT INTO `UserEmails` (`Email`, `CreatedTime`, `UserId`)
+                SELECT `Email`, UTC_TIMESTAMP(6), `Id`
+                FROM `AspNetUsers`
+                WHERE `Email` IS NOT NULL AND `Email` <> ''
+                """);
+
             migrationBuilder.CreateIndex(
                 name: "IX_UserEmails_Email",
                 table: "UserEmails",

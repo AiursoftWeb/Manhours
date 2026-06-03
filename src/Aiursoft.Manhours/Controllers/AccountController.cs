@@ -22,7 +22,8 @@ public class AccountController(
     IOptions<AppSettings> appSettings,
     UserManager<User> userManager,
     SignInManager<User> signInManager,
-    ILogger<AccountController> logger)
+    ILogger<AccountController> logger,
+    ManhoursDbContext dbContext)
     : Controller
 {
     private readonly AppSettings _appSettings = appSettings.Value;
@@ -126,6 +127,13 @@ public class AccountController(
             var result = await userManager.CreateAsync(user, model.Password!);
             if (result.Succeeded)
             {
+                dbContext.UserEmails.Add(new UserEmail
+                {
+                    Email = user.Email!,
+                    UserId = user.Id
+                });
+                await dbContext.SaveChangesAsync();
+
                 if (!string.IsNullOrWhiteSpace(_appSettings.DefaultRole))
                 {
                     var addToRoleResult = await userManager.AddToRoleAsync(user, _appSettings.DefaultRole);

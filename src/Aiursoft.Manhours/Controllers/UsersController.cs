@@ -105,16 +105,20 @@ public class UsersController(
                 Email = newUser.Email,
             };
             var result = await userManager.CreateAsync(user, newUser.Password!);
-            if (!result.Succeeded)
+            if (result.Succeeded)
             {
-                foreach (var error in result.Errors)
+                context.UserEmails.Add(new UserEmail
                 {
-                    ModelState.AddModelError(string.Empty, error.Description);
-                }
-                return this.StackView(newUser);
+                    Email = user.Email!,
+                    UserId = user.Id
+                });
+                await context.SaveChangesAsync();
+                return RedirectToAction(nameof(Details), new { id = user.Id });
             }
-
-            return RedirectToAction(nameof(Details), new { id = user.Id });
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
         }
         return this.StackView(newUser);
     }

@@ -15,7 +15,7 @@ namespace Aiursoft.Manhours.Sqlite.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "10.0.7");
+            modelBuilder.HasAnnotation("ProductVersion", "10.0.8");
 
             modelBuilder.Entity("Aiursoft.Manhours.Entities.Contributor", b =>
                 {
@@ -183,6 +183,34 @@ namespace Aiursoft.Manhours.Sqlite.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("Aiursoft.Manhours.Entities.UserEmail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserEmails");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -330,6 +358,17 @@ namespace Aiursoft.Manhours.Sqlite.Migrations
                     b.Navigation("Repo");
                 });
 
+            modelBuilder.Entity("Aiursoft.Manhours.Entities.UserEmail", b =>
+                {
+                    b.HasOne("Aiursoft.Manhours.Entities.User", "User")
+                        .WithMany("UserEmails")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -389,6 +428,11 @@ namespace Aiursoft.Manhours.Sqlite.Migrations
             modelBuilder.Entity("Aiursoft.Manhours.Entities.Repo", b =>
                 {
                     b.Navigation("Contributions");
+                });
+
+            modelBuilder.Entity("Aiursoft.Manhours.Entities.User", b =>
+                {
+                    b.Navigation("UserEmails");
                 });
 #pragma warning restore 612, 618
         }

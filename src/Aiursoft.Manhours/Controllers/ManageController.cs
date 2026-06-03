@@ -8,6 +8,7 @@ using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 
@@ -26,7 +27,8 @@ public class ManageController(
     UserManager<User> userManager,
     SignInManager<User> signInManager,
     GlobalSettingsService settingsService,
-    ILogger<ManageController> logger)
+    ILogger<ManageController> logger,
+    ManhoursDbContext dbContext)
     : Controller
 {
     //
@@ -186,6 +188,88 @@ public class ManageController(
         }
 
         return this.StackView(model);
+    }
+
+    //
+    // GET: /Manage/MyEmails
+    [HttpGet]
+    public async Task<IActionResult> MyEmails()
+    {
+        var user = await GetCurrentUserAsync();
+        if (user == null) return RedirectToAction(nameof(Index), new { Message = ManageMessageId.Error });
+
+        var emails = await dbContext.UserEmails
+            .Where(e => e.UserId == user.Id)
+            .OrderBy(e => e.CreatedTime)
+            .ToListAsync();
+
+        return this.StackView(new EmailsViewModel
+        {
+            Emails = emails
+        });
+    }
+
+    //
+    // POST: /Manage/AddEmail
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> AddEmail(string email)
+    {
+        var user = await GetCurrentUserAsync();
+        if (user == null) return RedirectToAction(nameof(Index), new { Message = ManageMessageId.Error });
+
+        if (string.IsNullOrWhiteSpace(email))
+        {
+            ModelState.AddModelError(string.Empty, localizer["Email address is required."]);
+            var emails = await dbContext.UserEmails.Where(e => e.UserId == user.Id).OrderBy(e => e.CreatedTime).ToListAsync();
+            return this.StackView(new EmailsViewModel { Emails = emails }, "MyEmails");
+        }
+
+        var normalizedEmail = email.Trim().ToUpperInvariant();
+
+        if (await dbContext.UserEmails.AnyAsync(e => e.Email.ToUpper() == normalizedEmail))
+        {
+            ModelState.AddModelError(string.Empty, localizer["This email is already in use."]);
+            var emails = await dbContext.UserEmails.Where(e => e.UserId == user.Id).OrderBy(e => e.CreatedTime).ToListAsync();
+            return this.StackView(new EmailsViewModel { Emails = emails }, "MyEmails");
+        }
+
+        dbContext.UserEmails.Add(new UserEmail
+        {
+            Email = email.Trim(),
+            UserId = user.Id
+        });
+        await dbContext.SaveChangesAsync();
+
+        return RedirectToAction(nameof(MyEmails));
+    }
+
+    //
+    // POST: /Manage/DeleteEmail
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> DeleteEmail(int id)
+    {
+        var user = await GetCurrentUserAsync();
+        if (user == null) return RedirectToAction(nameof(Index), new { Message = ManageMessageId.Error });
+
+        var userEmails = await dbContext.UserEmails
+            .Where(e => e.UserId == user.Id)
+            .ToListAsync();
+
+        if (userEmails.Count <= 1)
+        {
+            ModelState.AddModelError(string.Empty, localizer["You must have at least one email address."]);
+            return this.StackView(new EmailsViewModel { Emails = userEmails }, "MyEmails");
+        }
+
+        var emailToDelete = userEmails.FirstOrDefault(e => e.Id == id);
+        if (emailToDelete == null) return NotFound();
+
+        dbContext.UserEmails.Remove(emailToDelete);
+        await dbContext.SaveChangesAsync();
+
+        return RedirectToAction(nameof(MyEmails));
     }
 
     #region Helpers

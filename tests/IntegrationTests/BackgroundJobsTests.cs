@@ -44,7 +44,7 @@ public class BackgroundJobsTests : TestBase
         // Step 5: 验证任务已完成
         Assert.IsTrue(jobCompleted);
         var recentTasks = queue.GetRecentCompletedTasks(TimeSpan.FromMinutes(1)).ToList();
-        Assert.IsTrue(recentTasks.Any(t => t.TaskName == "Test Job 1"));
+        Assert.Contains(t => t.TaskName == "Test Job 1", recentTasks);
     }
 
     [TestMethod]
@@ -317,7 +317,7 @@ public class BackgroundJobsTests : TestBase
         queue.CleanupOldCompletedTasks(TimeSpan.FromSeconds(-1));
 
         var allTasks = queue.GetAllTasks().ToList();
-        Assert.IsFalse(allTasks.Any(t => t.TaskId == taskId));
+        Assert.DoesNotContain(t => t.TaskId == taskId, allTasks);
     }
 
     [TestMethod]

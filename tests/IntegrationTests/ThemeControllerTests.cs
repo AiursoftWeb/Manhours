@@ -14,6 +14,6 @@ public class ThemeControllerTests : TestBase
         
         // Verify cookie
         var cookies = response.Headers.GetValues("Set-Cookie");
-        Assert.IsTrue(cookies.Any(c => c.Contains("prefer-dark=True")));
+        Assert.Contains(c => c.Contains("prefer-dark=True"), cookies);
     }
 }

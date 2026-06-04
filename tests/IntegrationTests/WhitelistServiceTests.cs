@@ -63,9 +63,9 @@ public class WhitelistServiceTests
         var domains = await whitelistService.GetWhitelistDomainsAsync();
 
         // Assert
-        Assert.AreEqual(2, domains.Count, "Default whitelist should have 2 domains");
-        Assert.IsTrue(domains.Contains("github.com"), "Should contain github.com");
-        Assert.IsTrue(domains.Contains("gitlab.com"), "Should contain gitlab.com");
+        Assert.HasCount(2, domains, "Default whitelist should have 2 domains");
+        Assert.Contains("github.com", domains, "Should contain github.com");
+        Assert.Contains("gitlab.com", domains, "Should contain gitlab.com");
     }
 
     [TestMethod]
@@ -139,10 +139,10 @@ public class WhitelistServiceTests
         var domains = await whitelistService.GetWhitelistDomainsAsync();
 
         // Assert
-        Assert.AreEqual(2, domains.Count);
-        Assert.IsTrue(domains.Contains("mycompany.com"));
-        Assert.IsTrue(domains.Contains("open-source.org"));
-        Assert.IsFalse(domains.Contains("github.com"), "github.com should no longer be whitelisted");
+        Assert.HasCount(2, domains);
+        Assert.Contains("mycompany.com", domains);
+        Assert.Contains("open-source.org", domains);
+        Assert.DoesNotContain("github.com", domains, "github.com should no longer be whitelisted");
 
         Assert.IsTrue(await whitelistService.IsWhitelistedAsync("https://mycompany.com/repo.git"));
         Assert.IsTrue(await whitelistService.IsWhitelistedAsync("https://open-source.org/proj.git"));
@@ -162,9 +162,9 @@ public class WhitelistServiceTests
         var domains = await whitelistService.GetWhitelistDomainsAsync();
 
         // Assert
-        Assert.AreEqual(2, domains.Count);
-        Assert.IsTrue(domains.Contains("github.com"));
-        Assert.IsTrue(domains.Contains("gitlab.com"));
+        Assert.HasCount(2, domains);
+        Assert.Contains("github.com", domains);
+        Assert.Contains("gitlab.com", domains);
     }
 
     [TestMethod]

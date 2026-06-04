@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
+using System.Text.RegularExpressions;
 
 namespace Aiursoft.Manhours.Controllers;
 
@@ -31,6 +32,11 @@ public class ManageController(
     ManhoursDbContext dbContext)
     : Controller
 {
+    private const int MaxEmailLength = 256;
+    private static readonly Regex EmailRegex = new(
+        @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
+        RegexOptions.Compiled | RegexOptions.CultureInvariant | RegexOptions.IgnoreCase);
+
     //
     // GET: /Manage/Index
     [RenderInNavBar(
@@ -222,22 +228,33 @@ public class ManageController(
         if (string.IsNullOrWhiteSpace(email))
         {
             ModelState.AddModelError(string.Empty, localizer["Email address is required."]);
-            var emails = await dbContext.UserEmails.Where(e => e.UserId == user.Id).OrderBy(e => e.CreatedTime).ToListAsync();
-            return this.StackView(new EmailsViewModel { Emails = emails, LoginEmail = user.Email ?? string.Empty }, "MyEmails");
+            return await MyEmailsViewAsync(user);
         }
 
-        var normalizedEmail = email.Trim().ToUpperInvariant();
+        var emailValue = email.Trim();
+        if (emailValue.Length > MaxEmailLength)
+        {
+            ModelState.AddModelError(string.Empty, localizer["Email address is too long."]);
+            return await MyEmailsViewAsync(user);
+        }
+
+        if (!EmailRegex.IsMatch(emailValue))
+        {
+            ModelState.AddModelError(string.Empty, localizer["Email address is invalid."]);
+            return await MyEmailsViewAsync(user);
+        }
+
+        var normalizedEmail = emailValue.ToUpperInvariant();
 
         if (await dbContext.UserEmails.AnyAsync(e => e.UserId == user.Id && e.Email.ToUpper() == normalizedEmail))
         {
             ModelState.AddModelError(string.Empty, localizer["This email is already in use."]);
-            var emails = await dbContext.UserEmails.Where(e => e.UserId == user.Id).OrderBy(e => e.CreatedTime).ToListAsync();
-            return this.StackView(new EmailsViewModel { Emails = emails, LoginEmail = user.Email ?? string.Empty }, "MyEmails");
+            return await MyEmailsViewAsync(user);
         }
 
         dbContext.UserEmails.Add(new UserEmail
         {
-            Email = email.Trim(),
+            Email = emailValue,
             UserId = user.Id
         });
         await dbContext.SaveChangesAsync();
@@ -300,6 +317,16 @@ public class ManageController(
     private Task<User?> GetCurrentUserAsync()
     {
         return userManager.GetUserAsync(HttpContext.User);
+    }
+
+    private async Task<IActionResult> MyEmailsViewAsync(User user)
+    {
+        var emails = await dbContext.UserEmails
+            .Where(e => e.UserId == user.Id)
+            .OrderBy(e => e.CreatedTime)
+            .ToListAsync();
+
+        return this.StackView(new EmailsViewModel { Emails = emails, LoginEmail = user.Email ?? string.Empty }, "MyEmails");
     }
 
     #endregion

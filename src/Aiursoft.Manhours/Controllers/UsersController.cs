@@ -98,13 +98,6 @@ public class UsersController(
     {
         if (ModelState.IsValid)
         {
-            var normalizedEmail = newUser.Email!.Trim().ToUpperInvariant();
-            if (await context.UserEmails.AnyAsync(e => e.Email.ToUpper() == normalizedEmail))
-            {
-                ModelState.AddModelError(string.Empty, "This email is already in use.");
-                return this.StackView(newUser);
-            }
-
             await using var transaction = await context.Database.BeginTransactionAsync();
             var user = new User
             {
@@ -180,6 +173,7 @@ public class UsersController(
         userInDb.DisplayName = model.DisplayName;
         userInDb.AvatarRelativePath = model.AvatarUrl;
         await userManager.UpdateAsync(userInDb);
+        await EnsureLoginEmailAsync(userInDb.Id, model.Email);
 
         if (!string.IsNullOrWhiteSpace(model.Password) && model.Password != "you-cant-read-it")
         {
@@ -249,5 +243,26 @@ public class UsersController(
         }
         await userManager.DeleteAsync(user);
         return RedirectToAction(nameof(Index));
+    }
+
+    private async Task EnsureLoginEmailAsync(string userId, string? email)
+    {
+        if (string.IsNullOrWhiteSpace(email))
+        {
+            return;
+        }
+
+        var emailValue = email.Trim();
+        if (await context.UserEmails.AnyAsync(e => e.UserId == userId && e.Email.ToUpper() == emailValue.ToUpperInvariant()))
+        {
+            return;
+        }
+
+        context.UserEmails.Add(new UserEmail
+        {
+            Email = emailValue,
+            UserId = userId
+        });
+        await context.SaveChangesAsync();
     }
 }

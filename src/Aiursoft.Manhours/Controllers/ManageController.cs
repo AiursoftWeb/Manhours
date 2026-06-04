@@ -228,7 +228,7 @@ public class ManageController(
 
         var normalizedEmail = email.Trim().ToUpperInvariant();
 
-        if (await dbContext.UserEmails.AnyAsync(e => e.Email.ToUpper() == normalizedEmail))
+        if (await dbContext.UserEmails.AnyAsync(e => e.UserId == user.Id && e.Email.ToUpper() == normalizedEmail))
         {
             ModelState.AddModelError(string.Empty, localizer["This email is already in use."]);
             var emails = await dbContext.UserEmails.Where(e => e.UserId == user.Id).OrderBy(e => e.CreatedTime).ToListAsync();

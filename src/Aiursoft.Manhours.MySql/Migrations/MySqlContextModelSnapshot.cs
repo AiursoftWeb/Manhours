@@ -210,9 +210,6 @@ namespace Aiursoft.Manhours.MySql.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Email")
-                        .IsUnique();
-
                     b.HasIndex("UserId");
 
                     b.ToTable("UserEmails");

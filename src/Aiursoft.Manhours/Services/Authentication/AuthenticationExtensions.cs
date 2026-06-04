@@ -176,13 +176,6 @@ public static class AuthenticationExtensions
         // 4. If the user doesn't exist, create a new one
         if (localUser is null)
         {
-            var normalizedEmail = email.Trim().ToUpperInvariant();
-            if (await dbContext.UserEmails.AnyAsync(e => e.Email.ToUpper() == normalizedEmail))
-            {
-                context.Fail("The email is already used as a contribution email.");
-                return;
-            }
-
             await using var transaction = await dbContext.Database.BeginTransactionAsync();
             localUser = new User
             {
@@ -230,6 +223,7 @@ public static class AuthenticationExtensions
             await userManager.SetEmailAsync(localUser, email);
             localUser.EmailConfirmed = true;
             await userManager.UpdateAsync(localUser);
+            await EnsureLoginEmailAsync(dbContext, localUser.Id, email);
         }
 
         // 6. Add the user's login information if needed
@@ -271,5 +265,21 @@ public static class AuthenticationExtensions
             logger.LogInformation("Remove the roles '{Roles}' from the user.", string.Join(", ", rolesToRemove));
             await userManager.RemoveFromRolesAsync(localUser, rolesToRemove);
         }
+    }
+
+    private static async Task EnsureLoginEmailAsync(ManhoursDbContext dbContext, string userId, string email)
+    {
+        var emailValue = email.Trim();
+        if (await dbContext.UserEmails.AnyAsync(e => e.UserId == userId && e.Email.ToUpper() == emailValue.ToUpperInvariant()))
+        {
+            return;
+        }
+
+        dbContext.UserEmails.Add(new UserEmail
+        {
+            Email = emailValue,
+            UserId = userId
+        });
+        await dbContext.SaveChangesAsync();
     }
 }

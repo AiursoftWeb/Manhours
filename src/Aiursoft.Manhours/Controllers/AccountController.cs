@@ -119,19 +119,13 @@ public class AccountController(
         ViewData["ReturnUrl"] = returnUrl;
         if (ModelState.IsValid)
         {
-            var normalizedEmail = model.Email!.Trim().ToUpperInvariant();
-            if (await dbContext.UserEmails.AnyAsync(e => e.Email.ToUpper() == normalizedEmail))
-            {
-                ModelState.AddModelError(string.Empty, localizer["This email is already in use."]);
-                return this.StackView(model);
-            }
-
+            var email = model.Email!;
             await using var transaction = await dbContext.Database.BeginTransactionAsync();
             var user = new User
             {
-                UserName = model.Email.Split('@')[0],
-                DisplayName = model.Email.Split('@')[0],
-                Email = model.Email,
+                UserName = email.Split('@')[0],
+                DisplayName = email.Split('@')[0],
+                Email = email,
             };
             var result = await userManager.CreateAsync(user, model.Password!);
             if (result.Succeeded)

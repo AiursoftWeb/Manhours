@@ -42,12 +42,6 @@ namespace Aiursoft.Manhours.Sqlite.Migrations
                 FROM "AspNetUsers"
                 WHERE "Email" IS NOT NULL AND "Email" <> ''
                 """);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_UserEmails_Email",
-                table: "UserEmails",
-                column: "Email",
-                unique: true);
         }
 
         /// <inheritdoc />

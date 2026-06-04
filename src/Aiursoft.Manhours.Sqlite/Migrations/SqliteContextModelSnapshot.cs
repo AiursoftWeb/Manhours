@@ -203,9 +203,6 @@ namespace Aiursoft.Manhours.Sqlite.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Email")
-                        .IsUnique();
-
                     b.HasIndex("UserId");
 
                     b.ToTable("UserEmails");

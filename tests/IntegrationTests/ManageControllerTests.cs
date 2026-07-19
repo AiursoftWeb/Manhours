@@ -3,7 +3,6 @@ using Aiursoft.Manhours.Services;
 using Aiursoft.Manhours.Entities;
 using System.Net;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.DependencyInjection;
 namespace Aiursoft.Manhours.Tests.IntegrationTests;
 
 [TestClass]

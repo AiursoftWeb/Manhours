@@ -3,6 +3,8 @@ using System.Text.Json;
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools;
 using Aiursoft.Manhours.Entities;
+using Aiursoft.Manhours.Models;
+using Microsoft.Extensions.Caching.Memory;
 using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.Manhours.Tests.IntegrationTests;
@@ -227,6 +229,41 @@ public class BadgeControllerTests
         // Assert
         response1.EnsureSuccessStatusCode();
         response2.EnsureSuccessStatusCode();
+    }
+
+    [TestMethod]
+    public async Task BadgePaginationPreservesCachedContributors()
+    {
+        const string repoName = "gitlab.aiursoft.com/aiursoft/pagination-test";
+        var contributors = Enumerable.Range(1, 55).Select(i => new ContributorStat
+        {
+            Name = $"Contributor{i:D3}",
+            Email = $"contributor{i:D3}@example.com",
+            WorkTime = TimeSpan.FromHours(56 - i)
+        }).ToList();
+        var stats = new RepoStats
+        {
+            TotalWorkTime = TimeSpan.FromHours(contributors.Sum(c => c.WorkTime.TotalHours)),
+            Contributors = contributors
+        };
+        var cache = _server!.Services.GetRequiredService<IMemoryCache>();
+        cache.Set($"RepoStatsFullMemory_https://{repoName}.git", stats);
+
+        var firstPage = await _http.GetStringAsync($"/r/{repoName}.html?page=1");
+        Assert.Contains("Contributor001", firstPage);
+        Assert.Contains("Contributor050", firstPage);
+        Assert.DoesNotContain("Contributor051", firstPage);
+
+        var secondPage = await _http.GetStringAsync($"/r/{repoName}.html?page=2");
+        Assert.Contains("Contributor051", secondPage);
+        Assert.Contains("Contributor055", secondPage);
+        Assert.DoesNotContain("Contributor001", secondPage);
+
+        var firstPageAgain = await _http.GetStringAsync($"/r/{repoName}.html?page=1");
+        Assert.Contains("Contributor001", firstPageAgain);
+        Assert.Contains("Contributor050", firstPageAgain);
+        Assert.AreEqual(55, stats.Contributors.Count);
+        Assert.AreSame(contributors, stats.Contributors);
     }
 
     [TestMethod]

@@ -141,12 +141,13 @@ public class BadgeController(
                 .Take(pageSize)
                 .ToList();
 
-            // Update stats with paged contributors
-            stats.Contributors = pagedContributors;
-
             return this.StackView(new RenderRepoViewModel(repoWithoutExtension)
             {
-                Stats = stats,
+                Stats = new RepoStats
+                {
+                    TotalWorkTime = stats.TotalWorkTime,
+                    Contributors = pagedContributors
+                },
                 CurrentUserEmail = user?.Email,
                 CurrentPage = page,
                 PageSize = pageSize,

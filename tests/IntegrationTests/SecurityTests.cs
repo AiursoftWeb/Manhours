@@ -1,4 +1,3 @@
-using Aiursoft.CSTools.Tools;
 using static Aiursoft.WebTools.Extends;
 using System.Net;
 
@@ -7,13 +6,12 @@ namespace Aiursoft.Manhours.Tests.IntegrationTests;
 [TestClass]
 public class SecurityTests
 {
-    private readonly int _port;
+    private int _port => _http.BaseAddress!.Port;
     private readonly HttpClient _http;
     private IHost? _server;
 
     public SecurityTests()
     {
-        _port = Network.GetAvailablePort();
         _http = new HttpClient(new HttpClientHandler { AllowAutoRedirect = false })
         {
             BaseAddress = new Uri($"http://localhost:{_port}"),
@@ -24,8 +22,19 @@ public class SecurityTests
     [TestInitialize]
     public async Task CreateServer()
     {
-        _server = await AppAsync<Startup>([], port: _port);
-        await _server.StartAsync();
+        using var reservation = new TestPortReservation();
+        _http.BaseAddress = new Uri($"http://localhost:{reservation.Port}");
+        _server = await AppAsync<Startup>([], port: reservation.Port);
+        try
+        {
+            reservation.ConfigureServer(_server);
+            await _server.StartAsync();
+        }
+        catch
+        {
+            _server.Dispose();
+            throw;
+        }
     }
 
     [TestCleanup]

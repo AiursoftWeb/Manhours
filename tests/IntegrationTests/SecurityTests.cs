@@ -6,7 +6,6 @@ namespace Aiursoft.Manhours.Tests.IntegrationTests;
 [TestClass]
 public class SecurityTests
 {
-    private int _port => _http.BaseAddress!.Port;
     private readonly HttpClient _http;
     private IHost? _server;
 
@@ -14,7 +13,6 @@ public class SecurityTests
     {
         _http = new HttpClient(new HttpClientHandler { AllowAutoRedirect = false })
         {
-            BaseAddress = new Uri($"http://localhost:{_port}"),
             Timeout = TimeSpan.FromMinutes(5)
         };
     }

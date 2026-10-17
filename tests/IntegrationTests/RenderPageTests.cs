@@ -5,16 +5,12 @@ namespace Aiursoft.Manhours.Tests.IntegrationTests;
 [TestClass]
 public class RenderPageTests
 {
-    private int _port => _http.BaseAddress!.Port;
     private readonly HttpClient _http;
     private IHost? _server;
 
     public RenderPageTests()
     {
-        _http = new HttpClient(new HttpClientHandler { AllowAutoRedirect = false })
-        {
-            BaseAddress = new Uri($"http://localhost:{_port}")
-        };
+        _http = new HttpClient(new HttpClientHandler { AllowAutoRedirect = false });
     }
 
     [TestInitialize]

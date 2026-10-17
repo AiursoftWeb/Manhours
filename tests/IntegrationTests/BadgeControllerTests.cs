@@ -11,7 +11,6 @@ namespace Aiursoft.Manhours.Tests.IntegrationTests;
 [TestClass]
 public class BadgeControllerTests
 {
-    private int _port => _http.BaseAddress!.Port;
     private readonly HttpClient _http;
     private IHost? _server;
 
@@ -26,7 +25,6 @@ public class BadgeControllerTests
         };
         _http = new HttpClient(handler)
         {
-            BaseAddress = new Uri($"http://localhost:{_port}"),
             Timeout = TimeSpan.FromMinutes(5)
         };
     }

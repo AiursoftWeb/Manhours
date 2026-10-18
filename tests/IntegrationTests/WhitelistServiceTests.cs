@@ -184,9 +184,10 @@ public class WhitelistServiceTests
     [TestMethod]
     public async Task NonWhitelistedRepoBadgeStillWorks()
     {
-        // The default whitelist is github.com;gitlab.com.
-        // gitlab.aiursoft.com is NOT whitelisted, but badge should still work.
-        var response = await _http.GetAsync("/r/gitlab.aiursoft.com/aiursoft/tracer.svg");
+        // Exclude the public test repository from persistence without blocking badges.
+        var settingsService = GetService<GlobalSettingsService>();
+        await settingsService.UpdateSettingAsync(SettingsMap.RepoWhitelistDomains, "gitlab.com");
+        var response = await _http.GetAsync("/r/github.com/aiursoftweb/inmemorykvdb.svg");
 
         response.EnsureSuccessStatusCode();
         Assert.AreEqual("image/svg+xml", response.Content.Headers.ContentType?.MediaType);
@@ -194,26 +195,28 @@ public class WhitelistServiceTests
         var svg = await response.Content.ReadAsStringAsync();
         Assert.Contains("<svg", svg);
         Assert.Contains("man-hours", svg);
+        Assert.DoesNotContain("man-hours: error", svg);
     }
 
     [TestMethod]
     public async Task NonWhitelistedRepoDoesNotAppearInHotRepos()
     {
-        // Arrange — ensure whitelist is strict (only github.com)
+        // Arrange — exclude the public test repository domain from the whitelist
         var settingsService = GetService<GlobalSettingsService>();
-        await settingsService.UpdateSettingAsync(SettingsMap.RepoWhitelistDomains, "github.com");
+        await settingsService.UpdateSettingAsync(SettingsMap.RepoWhitelistDomains, "gitlab.com");
 
         // Act — request badge for a non-whitelisted repo
-        var badgeResponse = await _http.GetAsync("/r/gitlab.aiursoft.com/aiursoft/tracer.svg");
+        var badgeResponse = await _http.GetAsync("/r/github.com/aiursoftweb/inmemorykvdb.svg");
         badgeResponse.EnsureSuccessStatusCode();
+        Assert.DoesNotContain("man-hours: error", await badgeResponse.Content.ReadAsStringAsync());
 
         // Assert — the repo should NOT appear in the Top Repos page
         var reposResponse = await _http.GetAsync("/repos/index");
         reposResponse.EnsureSuccessStatusCode();
         var html = await reposResponse.Content.ReadAsStringAsync();
 
-        Assert.DoesNotContain("gitlab.aiursoft.com", html, "Non-whitelisted repo should not appear in Top Repos");
-        Assert.DoesNotContain("tracer", html, "Non-whitelisted repo name should not appear in Top Repos");
+        Assert.DoesNotContain("github.com/aiursoftweb/inmemorykvdb", html, "Non-whitelisted repo should not appear in Top Repos");
+        Assert.DoesNotContain("inmemorykvdb", html, "Non-whitelisted repo name should not appear in Top Repos");
     }
 
     [TestMethod]
@@ -221,17 +224,18 @@ public class WhitelistServiceTests
     {
         // Arrange — set whitelist to include the test repo's domain
         var settingsService = GetService<GlobalSettingsService>();
-        await settingsService.UpdateSettingAsync(SettingsMap.RepoWhitelistDomains, "github.com;gitlab.aiursoft.com");
+        await settingsService.UpdateSettingAsync(SettingsMap.RepoWhitelistDomains, "github.com");
 
         // Act — request badge for the now-whitelisted repo
-        var badgeResponse = await _http.GetAsync("/r/gitlab.aiursoft.com/aiursoft/tracer.svg");
+        var badgeResponse = await _http.GetAsync("/r/github.com/aiursoftweb/tracer.svg");
         badgeResponse.EnsureSuccessStatusCode();
+        Assert.DoesNotContain("man-hours: error", await badgeResponse.Content.ReadAsStringAsync());
 
         // Assert — the repo SHOULD appear in the Top Repos page
         var reposResponse = await _http.GetAsync("/repos/index");
         reposResponse.EnsureSuccessStatusCode();
         var html = await reposResponse.Content.ReadAsStringAsync();
 
-        Assert.Contains("gitlab.aiursoft.com", html, "Whitelisted repo should appear in Top Repos");
+        Assert.Contains("github.com/aiursoftweb/tracer", html, "Whitelisted repo should appear in Top Repos");
     }
 }

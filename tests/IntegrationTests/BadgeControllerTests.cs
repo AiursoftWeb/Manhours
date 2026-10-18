@@ -61,7 +61,7 @@ public class BadgeControllerTests
     public async Task GetBadgeAsSvg()
     {
         // Act
-        var response = await _http.GetAsync("/r/gitlab.aiursoft.com/aiursoft/tracer.svg");
+        var response = await _http.GetAsync("/r/github.com/aiursoftweb/tracer.svg");
 
         // Assert
         response.EnsureSuccessStatusCode();
@@ -76,7 +76,7 @@ public class BadgeControllerTests
     public async Task GetBadgeAsGit()
     {
         // Act - .git extension should also return SVG
-        var response = await _http.GetAsync("/r/gitlab.aiursoft.com/aiursoft/tracer.git");
+        var response = await _http.GetAsync("/r/github.com/aiursoftweb/tracer.git");
 
         // Assert
         response.EnsureSuccessStatusCode();
@@ -90,7 +90,7 @@ public class BadgeControllerTests
     public async Task GetBadgeAsJson()
     {
         // Act
-        var response = await _http.GetAsync("/r/gitlab.aiursoft.com/aiursoft/tracer.json");
+        var response = await _http.GetAsync("/r/github.com/aiursoftweb/tracer.json");
 
         // Assert
         response.EnsureSuccessStatusCode();
@@ -109,7 +109,7 @@ public class BadgeControllerTests
     public async Task GetBadgeAsHtml()
     {
         // Act
-        var response = await _http.GetAsync("/r/gitlab.aiursoft.com/aiursoft/tracer.html");
+        var response = await _http.GetAsync("/r/github.com/aiursoftweb/tracer.html");
 
         // Assert
         response.EnsureSuccessStatusCode();
@@ -122,7 +122,7 @@ public class BadgeControllerTests
     public async Task GetBadgeWithInvalidExtension()
     {
         // Act
-        var response = await _http.GetAsync("/r/gitlab.aiursoft.com/aiursoft/tracer.txt");
+        var response = await _http.GetAsync("/r/github.com/aiursoftweb/tracer.txt");
 
         // Assert
         Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
@@ -132,7 +132,7 @@ public class BadgeControllerTests
     public async Task GetBadgeWithNoExtension()
     {
         // Act
-        var response = await _http.GetAsync("/r/gitlab.aiursoft.com/aiursoft/tracer");
+        var response = await _http.GetAsync("/r/github.com/aiursoftweb/tracer");
 
         // Assert
         Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
@@ -207,7 +207,7 @@ public class BadgeControllerTests
     public async Task GetBadgeWithHttpsPrefix()
     {
         // Act - HTTPS prefix should be trimmed
-        var response = await _http.GetAsync("/r/https://gitlab.aiursoft.com/aiursoft/tracer.svg");
+        var response = await _http.GetAsync("/r/https://github.com/aiursoftweb/tracer.svg");
 
         // Assert
         response.EnsureSuccessStatusCode();
@@ -218,7 +218,7 @@ public class BadgeControllerTests
     public async Task BadgeHasCorsHeader()
     {
         // Act
-        var response = await _http.GetAsync("/r/gitlab.aiursoft.com/aiursoft/tracer.svg");
+        var response = await _http.GetAsync("/r/github.com/aiursoftweb/tracer.svg");
 
         // Assert
         response.EnsureSuccessStatusCode();
@@ -230,8 +230,8 @@ public class BadgeControllerTests
     public async Task GetBadgeHtmlWithPagination()
     {
         // Act - Test pagination parameter
-        var response1 = await _http.GetAsync("/r/gitlab.aiursoft.com/aiursoft/tracer.html?page=1");
-        var response2 = await _http.GetAsync("/r/gitlab.aiursoft.com/aiursoft/tracer.html?page=2");
+        var response1 = await _http.GetAsync("/r/github.com/aiursoftweb/tracer.html?page=1");
+        var response2 = await _http.GetAsync("/r/github.com/aiursoftweb/tracer.html?page=2");
 
         // Assert
         response1.EnsureSuccessStatusCode();
@@ -277,7 +277,7 @@ public class BadgeControllerTests
     public async Task GetBadgeHtmlWithInvalidPage()
     {
         // Act - Negative page should be handled
-        var response = await _http.GetAsync("/r/gitlab.aiursoft.com/aiursoft/tracer.html?page=-1");
+        var response = await _http.GetAsync("/r/github.com/aiursoftweb/tracer.html?page=-1");
 
         // Assert - Should still succeed (treated as page 1)
         response.EnsureSuccessStatusCode();
@@ -303,7 +303,7 @@ public class BadgeControllerTests
         // based on their work hours
 
         // Act
-        var response = await _http.GetAsync("/r/gitlab.aiursoft.com/aiursoft/tracer.json");
+        var response = await _http.GetAsync("/r/github.com/aiursoftweb/tracer.json");
 
         // Assert
         if (response.IsSuccessStatusCode)
@@ -326,7 +326,7 @@ public class BadgeControllerTests
     public async Task GetBadgeWithLeadingAndTrailingSlashes()
     {
         // Act - Test path with extra slashes
-        var response = await _http.GetAsync("/r//gitlab.aiursoft.com/aiursoft/tracer/.svg");
+        var response = await _http.GetAsync("/r//github.com/aiursoftweb/tracer/.svg");
 
         // Assert - Should handle path normalization
         Assert.IsTrue(

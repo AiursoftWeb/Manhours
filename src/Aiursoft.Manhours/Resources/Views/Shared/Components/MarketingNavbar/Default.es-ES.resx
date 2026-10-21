@@ -27,6 +27,9 @@
   <data name="Documentation" xml:space="preserve">
     <value>Documentación</value>
   </data>
+  <data name="Generate a badge" xml:space="preserve">
+    <value>Generar una insignia</value>
+  </data>
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
   </data>

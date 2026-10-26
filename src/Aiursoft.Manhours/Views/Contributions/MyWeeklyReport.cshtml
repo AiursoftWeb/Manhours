@@ -290,6 +290,10 @@
                                                         </div>
                                                         <div class="flex-grow-1 ms-3">
                                                             <strong>@contribution.Repo?.Name</strong>
+                                                            <div class="d-flex d-md-none flex-wrap gap-2 mt-2">
+                                                                <a href="@statsUrl" class="btn btn-light btn-sm">@Localizer["All Contributions"]</a>
+                                                                <a href="@contribution.Repo?.Url" target="_blank" class="btn btn-light btn-sm">@Localizer["View Repo"]</a>
+                                                            </div>
                                                             <div class="text-muted">
                                                             @contribution.Repo?.Url
                                                             </div>

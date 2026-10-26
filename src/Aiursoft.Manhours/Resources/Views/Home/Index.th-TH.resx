@@ -153,6 +153,9 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>เข้าร่วมชุมชนของเราและเริ่มสร้างสรรค์สิ่งใหม่วันนี้!</value>
   </data>
+  <data name="Loading preview..." xml:space="preserve">
+    <value>กำลังโหลดตัวอย่าง...</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>ชั่วโมงการทำงาน</value>
   </data>
@@ -188,6 +191,9 @@
   </data>
   <data name="Preview" xml:space="preserve">
     <value>ตัวอย่าง</value>
+  </data>
+  <data name="Preview could not be loaded. Select Generate to try again. You can still copy the code below." xml:space="preserve">
+    <value>ไม่สามารถโหลดตัวอย่างได้ เลือกสร้างเพื่อลองอีกครั้ง คุณยังสามารถคัดลอกโค้ดด้านล่างได้</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>การอนุญาตตามบทบาท RBAC</value>

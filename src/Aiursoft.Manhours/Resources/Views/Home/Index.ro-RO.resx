@@ -153,6 +153,9 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>Alăturați-vă comunității noastre și începeți să construiți astăzi!</value>
   </data>
+  <data name="Loading preview..." xml:space="preserve">
+    <value>Se încarcă previzualizarea...</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>Ore de lucru</value>
   </data>
@@ -188,6 +191,9 @@
   </data>
   <data name="Preview" xml:space="preserve">
     <value>Previzualizare</value>
+  </data>
+  <data name="Preview could not be loaded. Select Generate to try again. You can still copy the code below." xml:space="preserve">
+    <value>Previzualizarea nu a putut fi încărcată. Selectați „Generează” pentru a încerca din nou. Puteți copia în continuare codul de mai jos.</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Autorizare RBAC</value>

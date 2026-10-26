@@ -153,6 +153,9 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>Word lid van onze community en begin vandaag nog met bouwen!</value>
   </data>
+  <data name="Loading preview..." xml:space="preserve">
+    <value>Voorbeeld wordt geladen...</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>Manuren</value>
   </data>
@@ -188,6 +191,9 @@
   </data>
   <data name="Preview" xml:space="preserve">
     <value>Voorbeeld</value>
+  </data>
+  <data name="Preview could not be loaded. Select Generate to try again. You can still copy the code below." xml:space="preserve">
+    <value>Het voorbeeld kon niet worden geladen. Selecteer Genereren om het opnieuw te proberen. Je kunt de code hieronder nog steeds kopiëren.</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC-autorisatie</value>

@@ -153,6 +153,9 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>Liity yhteisöömme ja aloita rakentaminen tänään!</value>
   </data>
+  <data name="Loading preview..." xml:space="preserve">
+    <value>Ladataan esikatselua...</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>Työtunnit</value>
   </data>
@@ -188,6 +191,9 @@
   </data>
   <data name="Preview" xml:space="preserve">
     <value>Esikatselu</value>
+  </data>
+  <data name="Preview could not be loaded. Select Generate to try again. You can still copy the code below." xml:space="preserve">
+    <value>Esikatselua ei voitu ladata. Yritä uudelleen valitsemalla Luo. Voit silti kopioida alla olevan koodin.</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC-valtuutus</value>

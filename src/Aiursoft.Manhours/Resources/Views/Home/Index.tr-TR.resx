@@ -153,6 +153,9 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>Topluluğumuza katılın ve hemen bugün inşa etmeye başlayın!</value>
   </data>
+  <data name="Loading preview..." xml:space="preserve">
+    <value>Önizleme yükleniyor...</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>İnsan Saatleri</value>
   </data>
@@ -188,6 +191,9 @@
   </data>
   <data name="Preview" xml:space="preserve">
     <value>Önizleme</value>
+  </data>
+  <data name="Preview could not be loaded. Select Generate to try again. You can still copy the code below." xml:space="preserve">
+    <value>Önizleme yüklenemedi. Yeniden denemek için Oluştur&apos;u seçin. Aşağıdaki kodu yine de kopyalayabilirsiniz.</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC Yetkilendirmesi</value>

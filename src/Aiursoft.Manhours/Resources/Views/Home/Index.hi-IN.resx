@@ -153,6 +153,9 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>हमारे समुदाय से जुड़ें और आज ही निर्माण शुरू करें!</value>
   </data>
+  <data name="Loading preview..." xml:space="preserve">
+    <value>पूर्वावलोकन लोड हो रहा है...</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>मैन-घंटे</value>
   </data>
@@ -188,6 +191,9 @@
   </data>
   <data name="Preview" xml:space="preserve">
     <value>पूर्वावलोकन</value>
+  </data>
+  <data name="Preview could not be loaded. Select Generate to try again. You can still copy the code below." xml:space="preserve">
+    <value>पूर्वावलोकन लोड नहीं हो सका। फिर से प्रयास करने के लिए “जनरेट करें” चुनें। आप नीचे दिया गया कोड अब भी कॉपी कर सकते हैं।</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC प्राधिकरण</value>

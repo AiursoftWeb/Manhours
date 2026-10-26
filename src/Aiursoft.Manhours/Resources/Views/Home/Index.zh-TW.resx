@@ -153,6 +153,9 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>加入我們的社群，立即開始建構！</value>
   </data>
+  <data name="Loading preview..." xml:space="preserve">
+    <value>正在載入預覽...</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>工時</value>
   </data>
@@ -188,6 +191,9 @@
   </data>
   <data name="Preview" xml:space="preserve">
     <value>預覽</value>
+  </data>
+  <data name="Preview could not be loaded. Select Generate to try again. You can still copy the code below." xml:space="preserve">
+    <value>無法載入預覽。請選取「產生」再試一次。您仍可複製下方的程式碼。</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC 授權</value>

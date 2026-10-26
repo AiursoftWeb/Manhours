@@ -153,6 +153,9 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>Γίνετε μέλος της κοινότητάς μας και ξεκινήστε να χτίζετε σήμερα!</value>
   </data>
+  <data name="Loading preview..." xml:space="preserve">
+    <value>Φόρτωση προεπισκόπησης...</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>Ώρες εργασίας</value>
   </data>
@@ -188,6 +191,9 @@
   </data>
   <data name="Preview" xml:space="preserve">
     <value>Προεπισκόπηση</value>
+  </data>
+  <data name="Preview could not be loaded. Select Generate to try again. You can still copy the code below." xml:space="preserve">
+    <value>Δεν ήταν δυνατή η φόρτωση της προεπισκόπησης. Επιλέξτε «Δημιουργία» για να δοκιμάσετε ξανά. Μπορείτε και πάλι να αντιγράψετε τον παρακάτω κώδικα.</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Εξουσιοδότηση RBAC</value>

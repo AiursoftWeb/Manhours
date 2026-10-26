@@ -153,6 +153,9 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>コミュニティに参加して、今すぐ構築を始めましょう！</value>
   </data>
+  <data name="Loading preview..." xml:space="preserve">
+    <value>プレビューを読み込み中...</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>工数</value>
   </data>
@@ -188,6 +191,9 @@
   </data>
   <data name="Preview" xml:space="preserve">
     <value>プレビュー</value>
+  </data>
+  <data name="Preview could not be loaded. Select Generate to try again. You can still copy the code below." xml:space="preserve">
+    <value>プレビューを読み込めませんでした。「生成」を選択して、もう一度お試しください。下のコードはコピーできます。</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC認可</value>

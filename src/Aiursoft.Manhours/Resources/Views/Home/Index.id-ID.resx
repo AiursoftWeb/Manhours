@@ -153,6 +153,9 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>Bergabunglah dengan komunitas kami dan mulailah membangun hari ini!</value>
   </data>
+  <data name="Loading preview..." xml:space="preserve">
+    <value>Memuat pratinjau...</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>Jam Kerja</value>
   </data>
@@ -188,6 +191,9 @@
   </data>
   <data name="Preview" xml:space="preserve">
     <value>Pratinjau</value>
+  </data>
+  <data name="Preview could not be loaded. Select Generate to try again. You can still copy the code below." xml:space="preserve">
+    <value>Pratinjau tidak dapat dimuat. Pilih Buat untuk mencoba lagi. Anda masih dapat menyalin kode di bawah ini.</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Otorisasi RBAC</value>

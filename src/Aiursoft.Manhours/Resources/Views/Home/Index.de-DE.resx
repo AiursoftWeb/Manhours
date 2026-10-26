@@ -153,6 +153,9 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>Treten Sie unserer Community bei und beginnen Sie noch heute mit dem Entwickeln!</value>
   </data>
+  <data name="Loading preview..." xml:space="preserve">
+    <value>Vorschau wird geladen...</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>Mannstunden</value>
   </data>
@@ -188,6 +191,9 @@
   </data>
   <data name="Preview" xml:space="preserve">
     <value>Vorschau</value>
+  </data>
+  <data name="Preview could not be loaded. Select Generate to try again. You can still copy the code below." xml:space="preserve">
+    <value>Die Vorschau konnte nicht geladen werden. Wählen Sie „Generieren“, um es erneut zu versuchen. Sie können den unten stehenden Code weiterhin kopieren.</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC-Autorisierung</value>

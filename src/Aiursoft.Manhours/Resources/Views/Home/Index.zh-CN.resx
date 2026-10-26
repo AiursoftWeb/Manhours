@@ -153,6 +153,9 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>加入我们的社区，立即开始构建！</value>
   </data>
+  <data name="Loading preview..." xml:space="preserve">
+    <value>正在加载预览...</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>工时</value>
   </data>
@@ -188,6 +191,9 @@
   </data>
   <data name="Preview" xml:space="preserve">
     <value>预览</value>
+  </data>
+  <data name="Preview could not be loaded. Select Generate to try again. You can still copy the code below." xml:space="preserve">
+    <value>无法加载预览。请选择“生成”重试。你仍然可以复制下面的代码。</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>基于角色的访问控制 (RBAC) 授权</value>

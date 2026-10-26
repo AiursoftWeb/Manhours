@@ -153,6 +153,9 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>انضم إلى مجتمعنا وابدأ البناء اليوم!</value>
   </data>
+  <data name="Loading preview..." xml:space="preserve">
+    <value>جارٍ تحميل المعاينة...</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>ساعات العمل</value>
   </data>
@@ -188,6 +191,9 @@
   </data>
   <data name="Preview" xml:space="preserve">
     <value>معاينة</value>
+  </data>
+  <data name="Preview could not be loaded. Select Generate to try again. You can still copy the code below." xml:space="preserve">
+    <value>تعذّر تحميل المعاينة. اختر «إنشاء» للمحاولة مرة أخرى. لا يزال بإمكانك نسخ الشيفرة أدناه.</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>التحكم في الوصول القائم على الأدوار (RBAC)</value>

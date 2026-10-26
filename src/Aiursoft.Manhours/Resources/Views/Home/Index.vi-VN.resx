@@ -153,6 +153,9 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>Hãy tham gia cộng đồng của chúng tôi và bắt đầu xây dựng ngay hôm nay!</value>
   </data>
+  <data name="Loading preview..." xml:space="preserve">
+    <value>Đang tải bản xem trước...</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>Giờ công</value>
   </data>
@@ -188,6 +191,9 @@
   </data>
   <data name="Preview" xml:space="preserve">
     <value>Xem trước</value>
+  </data>
+  <data name="Preview could not be loaded. Select Generate to try again. You can still copy the code below." xml:space="preserve">
+    <value>Không thể tải bản xem trước. Chọn Tạo để thử lại. Bạn vẫn có thể sao chép mã bên dưới.</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Ủy quyền RBAC</value>

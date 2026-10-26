@@ -153,6 +153,9 @@
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>Gå med i vår community och börja bygga idag!</value>
   </data>
+  <data name="Loading preview..." xml:space="preserve">
+    <value>Läser in förhandsgranskning...</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>Arbetstimmar</value>
   </data>
@@ -188,6 +191,9 @@
   </data>
   <data name="Preview" xml:space="preserve">
     <value>Förhandsgranska</value>
+  </data>
+  <data name="Preview could not be loaded. Select Generate to try again. You can still copy the code below." xml:space="preserve">
+    <value>Förhandsgranskningen kunde inte läsas in. Välj Generera för att försöka igen. Du kan fortfarande kopiera koden nedan.</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC-auktorisering</value>

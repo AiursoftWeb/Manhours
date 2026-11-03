@@ -37,11 +37,13 @@ public class UpdateRepoStatsJob(
             await repoService.GetRepoStatsAsync(repoName, repo.Url, force: true);
             logger.LogInformation("Successfully updated stats for repo: {RepoUrl}", repo.Url);
         }
-        catch (Exception ex)
+        catch (Exception ex) when (OriginFailure.IsOriginFailure(ex))
         {
-            // Log and move on — do NOT delete the repo from DB on failure.
-            // The old logic deleted repos after failures, which caused expensive full clones on next request.
             logger.LogWarning(ex, "Failed to update stats for repo: {RepoUrl}. Will retry next cycle.", repo.Url);
+        }
+        catch (Exception ex) when (ex is not OperationCanceledException)
+        {
+            logger.LogError(ex, "Failed to update stats for repo: {RepoUrl}. Will retry next cycle.", repo.Url);
         }
     }
 }

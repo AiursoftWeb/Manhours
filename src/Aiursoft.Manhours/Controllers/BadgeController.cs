@@ -3,7 +3,6 @@ using Aiursoft.Manhours.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.RegularExpressions;
-using Aiursoft.GitRunner.Exceptions;
 using Aiursoft.Manhours.Models;
 using Aiursoft.Manhours.Models.BadgeViewModels;
 using Aiursoft.Manhours.Models.ErrorViewModels;
@@ -70,7 +69,7 @@ public class BadgeController(
         {
             stats = await repoService.GetRepoStatsAsync(repoWithoutExtension, repoUrl);
         }
-        catch (Exception ex) when (ex is GitCommandException or TimeoutException)
+        catch (Exception ex) when (OriginFailure.IsOriginFailure(ex))
         {
             logger.LogWarning(ex, "Failed to get repo stats for {Repo}", repoWithoutExtension);
             if (lowerExtension == "svg" || lowerExtension == "git")

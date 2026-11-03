@@ -54,6 +54,14 @@ public class RepoUpdateWorker(
                                 workItem.EndDate);
                         }
                     }
+                    catch (OperationCanceledException) when (stoppingToken.IsCancellationRequested)
+                    {
+                        // The worker is shutting down.
+                    }
+                    catch (Exception ex) when (OriginFailure.IsOriginFailure(ex))
+                    {
+                        logger.LogWarning(ex, "Unable to update repository {Repo}; will retry later", workItem.RepoName);
+                    }
                     catch (Exception ex)
                     {
                         logger.LogError(ex, "Error occurred executing background work item for {Repo}", workItem.RepoName);

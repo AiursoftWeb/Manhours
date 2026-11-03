@@ -1,13 +1,11 @@
 using System.Net;
 using System.Collections.Concurrent;
-using Microsoft.Extensions.Logging;
 using Aiursoft.Canon;
 using Aiursoft.CSTools.Services;
 using Aiursoft.GitRunner;
 using Aiursoft.GitRunner.Services;
 using Aiursoft.Manhours.Controllers;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
 using System.Xml.Linq;
 using Aiursoft.GitRunner.Exceptions;
 using Aiursoft.Manhours.Models;
@@ -74,7 +72,7 @@ public class OriginFailureTests : TestBase
         Assert.IsNotNull(file);
         Assert.AreEqual("image/svg+xml", file.ContentType);
         var svg = System.Text.Encoding.UTF8.GetString(file.FileContents);
-        XDocument.Parse(svg);
+        Assert.AreEqual("svg", XDocument.Parse(svg).Root?.Name.LocalName);
         Assert.Contains("man-hours", svg);
         Assert.Contains("error", svg);
         Assert.Contains("e05d44", svg);
@@ -124,7 +122,7 @@ public class OriginFailureTests : TestBase
         Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
         Assert.AreEqual("image/svg+xml", response.Content.Headers.ContentType?.MediaType);
         var text = await response.Content.ReadAsStringAsync();
-        XDocument.Parse(text);
+        Assert.AreEqual("svg", XDocument.Parse(text).Root?.Name.LocalName);
         Assert.Contains("man-hours", text);
         Assert.Contains("error", text);
         Assert.Contains("e05d44", text);
@@ -227,7 +225,7 @@ public class OriginFailureTests : TestBase
         var response = await Http.GetAsync("/r/localhost/cached.svg");
         response.EnsureSuccessStatusCode();
         var text = await response.Content.ReadAsStringAsync();
-        XDocument.Parse(text);
+        Assert.AreEqual("svg", XDocument.Parse(text).Root?.Name.LocalName);
         Assert.Contains("42", text);
         Assert.DoesNotContain("error", text);
     }

@@ -90,7 +90,19 @@ public class RepoService(
             .Replace('?', '_')
             .Replace('*', '_');
 
-        return Path.GetFullPath(Path.Combine(_workspaceFolder, repoLocalPath));
+        var path = Path.GetFullPath(Path.Combine(_workspaceFolder, repoLocalPath));
+        // Legacy worktrees must not be reset or cleaned. Use a separate bare cache
+        // so GitRunner never invokes its internally retried non-bare fetch path.
+        if (Directory.Exists(Path.Combine(path, ".git")) || File.Exists(Path.Combine(path, ".git")))
+        {
+            var key = Convert.ToHexString(System.Security.Cryptography.SHA256.HashData(System.Text.Encoding.UTF8.GetBytes(repoUrl)));
+            path = Path.Combine(_workspaceFolder, ".bare-cache", key);
+            if (Directory.Exists(Path.Combine(path, ".git")) || File.Exists(Path.Combine(path, ".git")))
+            {
+                throw new InvalidOperationException("The bare cache path contains a non-bare repository.");
+            }
+        }
+        return path;
     }
 
     public async Task<RepoStats> GetRepoStatsAsync(string repoName, string repoUrl, bool force = false)
@@ -242,15 +254,30 @@ public class RepoService(
                     Directory.CreateDirectory(workPath);
                 }
 
-                await workspaceManager.ResetRepo(
-                    workPath,
-                    null,
-                    repoUrl,
-                    CloneMode.BareWithOnlyCommits);
+                try
+                {
+                    await workspaceManager.ResetRepo(
+                        workPath,
+                        null,
+                        repoUrl,
+                        CloneMode.BareWithOnlyCommits);
+                }
+                catch (TimeoutException ex) when (
+                    ex.Message.Contains("clone ", StringComparison.OrdinalIgnoreCase) ||
+                    ex.Message.Contains("fetch ", StringComparison.OrdinalIgnoreCase))
+                {
+                    throw new RemoteTimeoutException(ex);
+                }
             },
             attempts: EntryExtends.IsInUnitTests() ? 1 : 3,
+            when: e => !OriginFailure.IsOriginFailure(e) && e is not OperationCanceledException,
             onError: (e) =>
             {
+                if (OriginFailure.IsOriginFailure(e) || e is OperationCanceledException)
+                {
+                    return;
+                }
+
                 logger.LogWarning(e, "Failed to reset repo: {Repo}. Deleting local copy to force re-clone on next retry.", repoName);
                 if (Directory.Exists(workPath))
                 {

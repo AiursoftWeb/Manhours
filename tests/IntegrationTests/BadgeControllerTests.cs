@@ -323,14 +323,22 @@ public class BadgeControllerTests
     }
 
     [TestMethod]
-    public async Task GetBadgeWithLeadingAndTrailingSlashes()
+    [DataRow("/r//github.com/aiursoftweb/tracer/.svg")]
+    [DataRow("/r//github.com/aiursoftweb/tracer///.svg")]
+    [DataRow("/r//github.com/aiursoftweb/tracer/.git")]
+    public async Task GetBadgeWithLeadingAndTrailingSlashes(string path)
     {
-        // Act - Test path with extra slashes
-        var response = await _http.GetAsync("/r//github.com/aiursoftweb/tracer/.svg");
+        var cache = _server!.Services.GetRequiredService<IMemoryCache>();
+        cache.Set("RepoStatsFullMemory_https://github.com/aiursoftweb/tracer.git",
+            new RepoStats { TotalWorkTime = TimeSpan.FromHours(42) });
 
-        // Assert - Should handle path normalization
-        Assert.IsTrue(
-            response.StatusCode == HttpStatusCode.OK ||
-            response.StatusCode == HttpStatusCode.NotFound);
+        var response = await _http.GetAsync(path);
+
+        Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+        Assert.AreEqual("image/svg+xml", response.Content.Headers.ContentType?.MediaType);
+        var svg = await response.Content.ReadAsStringAsync();
+        Assert.Contains("man-hours", svg);
+        Assert.Contains("42", svg);
+        Assert.DoesNotContain("error", svg);
     }
 }

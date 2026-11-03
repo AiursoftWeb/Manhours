@@ -59,7 +59,7 @@ public class BadgeController(
         }
 
         var repoWithoutExtension =
-            repo[..(repo.Length - extension.Length - 1)].ToLower().Trim();
+            repo[..(repo.Length - extension.Length - 1)].ToLowerInvariant().Trim().TrimEnd('/');
 
         logger.LogInformation("Requesting repo: {Repo}", repoWithoutExtension);
         var repoUrl = $"https://{repoWithoutExtension}.git";

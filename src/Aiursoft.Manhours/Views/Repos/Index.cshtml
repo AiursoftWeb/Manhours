@@ -24,24 +24,24 @@
             <div class="col-md-4 col-xl-3">
                 <div class="card mb-3">
                     <div class="card-header">
-                        <h5 class="card-title mb-0">@Localizer["My top hard-working collaborated repositories"]</h5>
-                        <small class="text-muted">@Localizer["Sorted by repository total work hours"]</small>
+                        <h5 class="card-title mb-0">@Localizer["My top repositories"]</h5>
+                        <small class="text-muted">@Localizer["Ranked by your estimated work hours"]</small>
                     </div>
                     <div class="card-body">
-                        @foreach (var repo in Model.MyTopRepos)
+                        @foreach (var contribution in Model.MyTopRepos)
                         {
+                            var repo = contribution.Repository;
                             <div class="d-flex align-items-start mb-3">
                                 <div class="flex-grow-1">
                                     <h5 class="mb-1">
                                         <a href="@repo.StatsUrl" class="text-reset">@repo.Name</a>
                                     </h5>
                                     <div class="text-muted small">
-                                        <i class="fas fa-clock me-1"></i> @repo.TotalWorkHours.ToString("N1") @Localizer["Hours"]
+                                        <i class="fas fa-clock me-1"></i> @contribution.WorkHours.ToString("N1") @Localizer["Hours"]
                                     </div>
                                 </div>
-                                <span class="badge bg-success ms-2">@Localizer["Active"]</span>
                             </div>
-                            @if (repo != Model.MyTopRepos.Last())
+                            @if (contribution != Model.MyTopRepos.Last())
                             {
                                 <hr class="my-2" />
                             }

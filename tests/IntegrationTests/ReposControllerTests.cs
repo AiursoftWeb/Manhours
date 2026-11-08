@@ -182,4 +182,77 @@ public class ReposControllerTests
 
         // Both should return successfully even if empty
     }
+
+    [TestMethod]
+    public async Task PersonalRankingUsesOwnHoursAfterMirrorDeduplication()
+    {
+        var (email, _) = await RegisterAndLoginAsync();
+        var key = Guid.NewGuid().ToString("N");
+        using (var scope = _server!.Services.CreateScope())
+        {
+            var db = scope.ServiceProvider.GetRequiredService<ManhoursDbContext>();
+            var me = new Contributor { Id = Guid.NewGuid(), Email = email };
+            var other = new Contributor { Id = Guid.NewGuid(), Email = $"{key}@example.test" };
+            var high = new Repo { Id = Guid.NewGuid(), Name = "More personal hours", Url = $"https://example.test/{key}/high.git" };
+            var low = new Repo { Id = Guid.NewGuid(), Name = "More commits", Url = $"https://example.test/{key}/low.git" };
+            var mirror = new Repo { Id = Guid.NewGuid(), Name = "Duplicate mirror", Url = $"https://mirror.example.test/{key}/high.git" };
+            var otherOnly = new Repo { Id = Guid.NewGuid(), Name = "Other contributor repository", Url = $"https://example.test/{key}/other.git" };
+            db.RepoContributions.AddRange(
+                new RepoContribution { Id = Guid.NewGuid(), Repo = high, Contributor = me, TotalWorkHours = 12, CommitCount = 2 },
+                new RepoContribution { Id = Guid.NewGuid(), Repo = high, Contributor = other, TotalWorkHours = 88, CommitCount = 100 },
+                new RepoContribution { Id = Guid.NewGuid(), Repo = low, Contributor = me, TotalWorkHours = 3, CommitCount = 30 },
+                new RepoContribution { Id = Guid.NewGuid(), Repo = low, Contributor = other, TotalWorkHours = 197, CommitCount = 100 },
+                new RepoContribution { Id = Guid.NewGuid(), Repo = mirror, Contributor = me, TotalWorkHours = 11, CommitCount = 1 },
+                new RepoContribution { Id = Guid.NewGuid(), Repo = otherOnly, Contributor = other, TotalWorkHours = 500, CommitCount = 10 });
+            await db.SaveChangesAsync();
+        }
+
+        var html = await _http.GetStringAsync("/repos/index");
+        var start = html.IndexOf("My top repositories", StringComparison.Ordinal);
+        var end = html.IndexOf("Repository not tracked?", start, StringComparison.Ordinal);
+        var panel = html[start..end];
+
+        Assert.IsTrue(panel.IndexOf("More personal hours", StringComparison.Ordinal) < panel.IndexOf("More commits", StringComparison.Ordinal));
+        StringAssert.Contains(panel, "12.0 Hours");
+        StringAssert.Contains(panel, "3.0 Hours");
+        Assert.IsFalse(panel.Contains("100.0 Hours"));
+        Assert.IsFalse(panel.Contains("200.0 Hours"));
+        Assert.IsFalse(panel.Contains("Duplicate mirror"));
+        Assert.IsFalse(panel.Contains("Other contributor repository"));
+        Assert.IsFalse(panel.Contains(">Active</span>"));
+        StringAssert.Contains(html[end..], "100.0");
+        StringAssert.Contains(html[end..], "200.0");
+    }
+
+    [TestMethod]
+    public async Task PersonalRankingSelectsTwentyByHoursRatherThanCommitCount()
+    {
+        var (email, _) = await RegisterAndLoginAsync();
+        var key = Guid.NewGuid().ToString("N");
+        using (var scope = _server!.Services.CreateScope())
+        {
+            var db = scope.ServiceProvider.GetRequiredService<ManhoursDbContext>();
+            var me = new Contributor { Id = Guid.NewGuid(), Email = email };
+            for (var i = 1; i <= 25; i++)
+            {
+                db.RepoContributions.Add(new RepoContribution
+                {
+                    Id = Guid.NewGuid(), Contributor = me, TotalWorkHours = i, CommitCount = 100 - i,
+                    Repo = new Repo { Id = Guid.NewGuid(), Name = $"Personal project {i:D2}", Url = $"https://example.test/{key}/project-{i:D2}.git" }
+                });
+            }
+            await db.SaveChangesAsync();
+        }
+
+        var html = await _http.GetStringAsync("/repos/index");
+        var start = html.IndexOf("My top repositories", StringComparison.Ordinal);
+        var end = html.IndexOf("Repository not tracked?", start, StringComparison.Ordinal);
+        var panel = html[start..end];
+
+        Assert.AreEqual(20, Regex.Matches(panel, "<h5 class=\"mb-1\">").Count);
+        Assert.IsTrue(panel.IndexOf("Personal project 25", StringComparison.Ordinal) < panel.IndexOf("Personal project 24", StringComparison.Ordinal));
+        StringAssert.Contains(panel, "Personal project 06");
+        Assert.IsFalse(panel.Contains("Personal project 05"));
+        Assert.IsFalse(panel.Contains("Personal project 01"));
+    }
 }

@@ -61,7 +61,7 @@ public class ReposController(
             .Take(pageSize)
             .ToList();
 
-        var myTopRepos = new List<RepoDisplayModel>();
+        var myTopRepos = new List<PersonalRepoDisplayModel>();
         if (!string.IsNullOrEmpty(userEmail))
         {
             // Get user's contributions directly from database
@@ -75,12 +75,22 @@ public class ReposController(
             // Deduplicate forked/mirrored repositories using existing method
             var deduplicatedContributions = RepoDeduplicationService.Deduplicate(myContributions);
 
-            // Convert to RepoDisplayModel
+            // Pair personal hours with repository details.
             myTopRepos = deduplicatedContributions
+                .OrderByDescending(c => c.TotalWorkHours)
                 .Take(20)
-                .Select(c => allRepoModels.FirstOrDefault(r => r.Url == c.Repo!.Url))
-                .Where(r => r != null)
-                .ToList()!;
+                .Select(c => new
+                {
+                    Repository = allRepoModels.FirstOrDefault(r => r.Url == c.Repo!.Url),
+                    WorkHours = c.TotalWorkHours
+                })
+                .Where(c => c.Repository != null)
+                .Select(c => new PersonalRepoDisplayModel
+                {
+                    Repository = c.Repository!,
+                    WorkHours = c.WorkHours
+                })
+                .ToList();
         }
 
         var model = new TopReposViewModel

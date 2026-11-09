@@ -45,6 +45,9 @@
   <data name="My Top Participated" xml:space="preserve">
     <value>أعلى مشاركاتي</value>
   </data>
+  <data name="My top repositories" xml:space="preserve">
+    <value>مستودعاتي الأعلى</value>
+  </data>
   <data name="Next" xml:space="preserve">
     <value>التالي</value>
   </data>
@@ -53,6 +56,9 @@
   </data>
   <data name="Previous" xml:space="preserve">
     <value>السابق</value>
+  </data>
+  <data name="Ranked by your estimated work hours" xml:space="preserve">
+    <value>مرتبة حسب ساعات العمل المقدرة لديك</value>
   </data>
   <data name="repositories" xml:space="preserve">
     <value>المستودعات</value>

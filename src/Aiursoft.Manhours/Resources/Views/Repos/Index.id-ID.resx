@@ -45,6 +45,9 @@
   <data name="My Top Participated" xml:space="preserve">
     <value>Repositori Teratas Saya</value>
   </data>
+  <data name="My top repositories" xml:space="preserve">
+    <value>Repositori teratas saya</value>
+  </data>
   <data name="Next" xml:space="preserve">
     <value>Berikutnya</value>
   </data>
@@ -53,6 +56,9 @@
   </data>
   <data name="Previous" xml:space="preserve">
     <value>Sebelumnya</value>
+  </data>
+  <data name="Ranked by your estimated work hours" xml:space="preserve">
+    <value>Diurutkan berdasarkan jam kerja estimasi Anda</value>
   </data>
   <data name="repositories" xml:space="preserve">
     <value>repositori</value>

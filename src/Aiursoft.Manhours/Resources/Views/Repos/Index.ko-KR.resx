@@ -45,6 +45,9 @@
   <data name="My Top Participated" xml:space="preserve">
     <value>내가 가장 많이 참여한 저장소</value>
   </data>
+  <data name="My top repositories" xml:space="preserve">
+    <value>내 상위 저장소</value>
+  </data>
   <data name="Next" xml:space="preserve">
     <value>다음</value>
   </data>
@@ -53,6 +56,9 @@
   </data>
   <data name="Previous" xml:space="preserve">
     <value>이전</value>
+  </data>
+  <data name="Ranked by your estimated work hours" xml:space="preserve">
+    <value>예상 작업 시간 순</value>
   </data>
   <data name="repositories" xml:space="preserve">
     <value>저장소</value>

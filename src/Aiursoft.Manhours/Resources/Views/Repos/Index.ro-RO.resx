@@ -45,6 +45,9 @@
   <data name="My Top Participated" xml:space="preserve">
     <value>Cele mai participative ale mele</value>
   </data>
+  <data name="My top repositories" xml:space="preserve">
+    <value>Cele mai bune depozite ale mele</value>
+  </data>
   <data name="Next" xml:space="preserve">
     <value>Următor</value>
   </data>
@@ -53,6 +56,9 @@
   </data>
   <data name="Previous" xml:space="preserve">
     <value>Anterior</value>
+  </data>
+  <data name="Ranked by your estimated work hours" xml:space="preserve">
+    <value>Clasificate după orele de muncă estimate</value>
   </data>
   <data name="repositories" xml:space="preserve">
     <value>depozite</value>

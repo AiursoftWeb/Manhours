@@ -52,6 +52,9 @@ public class OriginFailureTests : TestBase
     [DataRow("The requested URL returned error: 403", "git")]
     [DataRow("The requested URL returned error: 404", "svg")]
     [DataRow("timeout", "git")]
+    [DataRow("fatal: unable to access 'https://example.test/repo.git/': GnuTLS, handshake failed: Internal error", "svg")]
+    [DataRow("gnutls_handshake() failed: The TLS connection was non-properly terminated.", "git")]
+    [DataRow("SSL certificate problem: certificate has expired", "svg")]
     public async Task SimulatedOriginFailureProducesBadgeAndNoHighSeverityLogs(string failure, string extension)
     {
         var capture = new CaptureProvider();
@@ -99,9 +102,22 @@ public class OriginFailureTests : TestBase
     [DataRow("The requested URL returned error: 403")]
     [DataRow("repository not found")]
     [DataRow("Connection timed out")]
+    [DataRow("GnuTLS, handshake failed: Internal error")]
+    [DataRow("gnutls_handshake() failed: The TLS connection was non-properly terminated.")]
+    [DataRow("GnuTLS recv error (-110): The TLS connection was non-properly terminated.")]
+    [DataRow("SSL connect error")]
+    [DataRow("SSL connection timeout")]
+    [DataRow("SSL certificate problem: unable to get local issuer certificate")]
+    [DataRow("server certificate verification failed. CAfile: none CRLfile: none")]
+    [DataRow("SSL peer certificate or SSH remote key was not OK")]
+    [DataRow("OpenSSL SSL_connect: SSL_ERROR_SYSCALL")]
+    [DataRow("TLS connect error: error:0A000126:SSL routines::unexpected eof while reading")]
     public void ClassifiesRemoteFailures(string error)
     {
-        Assert.IsTrue(OriginFailure.IsOriginFailure(new GitCommandException("failed", "clone https://example.test/repo .", "", error, "/tmp")));
+        foreach (var command in new[] { "clone https://example.test/repo .", "fetch origin" })
+        {
+            Assert.IsTrue(OriginFailure.IsOriginFailure(new GitCommandException("failed", command, "", error, "/tmp")));
+        }
     }
 
     [TestMethod]

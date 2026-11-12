@@ -23,6 +23,11 @@ public static class OriginFailure
         [
             "could not resolve host", "could not resolve proxy", "failed to connect", "connection refused",
             "connection timed out", "connection reset", "operation timed out", "network is unreachable",
+            // TLS 连接失败属于远端访问失败，不应删除本地仓库后重试。
+            "gnutls, handshake failed", "gnutls_handshake() failed", "gnutls recv error",
+            "ssl connect error", "ssl connection timeout", "ssl certificate problem",
+            "server certificate verification failed", "ssl peer certificate",
+            "openssl ssl_connect", "tls connect error",
             "authentication failed", "authentication required", "could not read username",
             "terminal prompts disabled", "repository not found", "repository does not exist",
             "returned error: 401", "returned error: 403", "returned error: 404",

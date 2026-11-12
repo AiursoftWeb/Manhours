@@ -1,3 +1,4 @@
+@using System.Globalization
 @model Aiursoft.Manhours.Models.ContributionsViewModels.MyWeeklyReportViewModel
 @using Aiursoft.Manhours.Services.FileStorage
 @using Aiursoft.WebTools
@@ -10,7 +11,7 @@
         using var md5 = System.Security.Cryptography.MD5.Create();
         var inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
         var hashBytes = md5.ComputeHash(inputBytes);
-        return Convert.ToHexString(hashBytes).ToLower();
+        return Convert.ToHexString(hashBytes).ToLowerInvariant();
     }
 
     var diligenceScore = Model.DiligenceScore;
@@ -94,7 +95,7 @@
                     <div class="card-body py-4">
                         <div class="d-flex align-items-start">
                             <div class="flex-grow-1">
-                                <h3 class="mb-2">@Model.TotalWorkHours.ToString("F1")</h3>
+                                <h3 class="mb-2">@Model.TotalWorkHours.ToString("F1", CultureInfo.CurrentCulture)</h3>
                                 <p class="mb-2">@Localizer["Total Work Hours"]</p>
                                 <div class="mb-0">
                                     <span class="badge bg-primary text-dark">
@@ -299,7 +300,7 @@
                                                             </div>
                                                             <div class="progress progress-sm mt-2" style="height: 4px;"
                                                                  data-bs-toggle="tooltip"
-                                                                 title="@contribution.TotalWorkHours.ToString("F1") @Localizer["Hours"]">
+                                                                 title="@contribution.TotalWorkHours.ToString("F1", CultureInfo.CurrentCulture) @Localizer["Hours"]">
                                                                 <div class="progress-bar bg-primary" role="progressbar"
                                                                      style="width: @percentage%" aria-valuenow="@percentage"
                                                                      aria-valuemin="0" aria-valuemax="100"></div>
@@ -308,7 +309,7 @@
                                                     </div>
                                                 </td>
                                                 <td class="d-none d-xl-table-cell">
-                                                @contribution.TotalWorkHours.ToString("F1")
+                                                @contribution.TotalWorkHours.ToString("F1", CultureInfo.CurrentCulture)
                                                 </td>
                                                 <td class="d-none d-xl-table-cell">
                                                 @contribution.CommitCount

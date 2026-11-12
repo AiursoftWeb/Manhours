@@ -166,7 +166,7 @@ public class ContributionsControllerTests
         response.EnsureSuccessStatusCode();
         var json = await response.Content.ReadAsStringAsync();
         Assert.IsNotNull(json);
-        Assert.Contains("loading", json.ToLower());
+        Assert.Contains("loading", json.ToLowerInvariant());
     }
 
     [TestMethod]

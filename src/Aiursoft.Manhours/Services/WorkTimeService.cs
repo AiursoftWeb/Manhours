@@ -14,7 +14,7 @@ public class WorkTimeService : ITransientDependency
         if (commitList.Count == 0)
             return stats;
 
-        var groups = commitList.GroupBy(t => t.Email.ToLower().Trim());
+        var groups = commitList.GroupBy(t => t.Email.ToLowerInvariant().Trim());
 
         foreach (var group in groups)
         {

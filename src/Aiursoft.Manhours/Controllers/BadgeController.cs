@@ -22,12 +22,12 @@ public class BadgeController(
     public async Task<IActionResult> RenderRepo([FromRoute] string repo, [FromQuery] int page = 1)
     {
         var extension = repo.Split('.').LastOrDefault();
-        if (string.IsNullOrWhiteSpace(extension) || !ValidExtensions.Contains(extension.ToLower()))
+        if (string.IsNullOrWhiteSpace(extension) || !ValidExtensions.Contains(extension.ToLowerInvariant()))
         {
             logger.LogInformation("Invalid extension: {Extension}", extension);
             return NotFound();
         }
-        var lowerExtension = extension.ToLower();
+        var lowerExtension = extension.ToLowerInvariant();
 
         // Trim path splitters
         repo = repo.Replace('\\', '/').Trim('/');

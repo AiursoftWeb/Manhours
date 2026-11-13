@@ -1,3 +1,4 @@
+@using System.Globalization
 @model Aiursoft.Manhours.Models.ReposViewModels.TopReposViewModel
 @using System.Security.Cryptography
 @using System.Text
@@ -7,7 +8,7 @@
         using var md5 = MD5.Create();
         var inputBytes = Encoding.ASCII.GetBytes(input);
         var hashBytes = md5.ComputeHash(inputBytes);
-        return Convert.ToHexString(hashBytes).ToLower();
+        return Convert.ToHexString(hashBytes).ToLowerInvariant();
     }
 }
 @{
@@ -37,7 +38,7 @@
                                         <a href="@repo.StatsUrl" class="text-reset">@repo.Name</a>
                                     </h5>
                                     <div class="text-muted small">
-                                        <i class="fas fa-clock me-1"></i> @contribution.WorkHours.ToString("N1") @Localizer["Hours"]
+                                        <i class="fas fa-clock me-1"></i> @contribution.WorkHours.ToString("N1", CultureInfo.CurrentCulture) @Localizer["Hours"]
                                     </div>
                                 </div>
                             </div>
@@ -128,7 +129,7 @@
 
                                 <div class="row mb-2">
                                     <div class="col-auto">
-                                        <span class="text-muted">@Localizer["Total Hours"]:</span> <strong>@repo.TotalWorkHours.ToString("N1")</strong>
+                                        <span class="text-muted">@Localizer["Total Hours"]:</span> <strong>@repo.TotalWorkHours.ToString("N1", CultureInfo.CurrentCulture)</strong>
                                     </div>
                                     <div class="col-auto">
                                         <span class="text-muted">@Localizer["Contributors"]:</span> <strong>@repo.ContributorCount</strong>

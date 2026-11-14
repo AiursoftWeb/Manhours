@@ -33,9 +33,6 @@
   <data name="Contributors" xml:space="preserve">
     <value>Bidragydere</value>
   </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>bidragydere</value>
-  </data>
   <data name="Details" xml:space="preserve">
     <value>Detaljer</value>
   </data>
@@ -47,9 +44,6 @@
   </data>
   <data name="Next" xml:space="preserve">
     <value>Næste</value>
-  </data>
-  <data name="of" xml:space="preserve">
-    <value>af</value>
   </data>
   <data name="Previous" xml:space="preserve">
     <value>Forrige</value>
@@ -71,6 +65,12 @@
   </data>
   <data name="Total Man Hours" xml:space="preserve">
     <value>Samlede mandetimer</value>
+  </data>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>bidragydere</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>af</value>
   </data>
 
 </root>

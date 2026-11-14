@@ -45,9 +45,6 @@
   <data name="Next" xml:space="preserve">
     <value>Επόμενο</value>
   </data>
-  <data name="of" xml:space="preserve">
-    <value>από</value>
-  </data>
   <data name="Previous" xml:space="preserve">
     <value>Προηγούμενο</value>
   </data>
@@ -68,6 +65,9 @@
   </data>
   <data name="Total Man Hours" xml:space="preserve">
     <value>Συνολικές Ώρες Εργασίας</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>από</value>
   </data>
 
 </root>

@@ -30,11 +30,11 @@
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>一个现代化、功能丰富且高度可扩展的基础框架，为您的下一个Web应用程序提供强大支持。</value>
   </data>
-  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
-    <value>借助 Aiursoft Template 成就更多可能</value>
-  </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>AI 驱动翻译</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>借助 Aiursoft Template 成就更多可能</value>
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template 是我们企业项目的最终选择！它专为开发者打造，轻量级却功能强大。我们可以跳过所有身份验证和用户管理的样板代码。</value>
@@ -93,17 +93,11 @@
   <data name="FAQ" xml:space="preserve">
     <value>常见问题解答</value>
   </data>
-  <data name="faster" xml:space="preserve">
-    <value>更快</value>
-  </data>
   <data name="Features" xml:space="preserve">
     <value>功能特性</value>
   </data>
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>内置文件管理系统，支持自动头像压缩。</value>
-  </data>
-  <data name="for any inquiries or to report issues." xml:space="preserve">
-    <value>如有任何疑问或报告问题。</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>免费</value>
@@ -116,6 +110,12 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>前往仪表盘</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>HTTP 克隆 URL</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>你好，世界！</value>
@@ -131,12 +131,6 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>如何部署我的应用程序？</value>
-  </data>
-  <data name="HTML" xml:space="preserve">
-    <value>HTML</value>
-  </data>
-  <data name="HTTP Clone URL" xml:space="preserve">
-    <value>HTTP 克隆 URL</value>
   </data>
   <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
     <value>包含详尽的文档和实用示例，助您快速上手。</value>
@@ -156,6 +150,9 @@
   <data name="Loading preview..." xml:space="preserve">
     <value>正在加载预览...</value>
   </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>MIT 许可证</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>工时</value>
   </data>
@@ -170,9 +167,6 @@
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown 转 HTML</value>
-  </data>
-  <data name="MIT Licence" xml:space="preserve">
-    <value>MIT 许可证</value>
   </data>
   <data name="Multiple Database Support" xml:space="preserve">
     <value>多数据库支持</value>
@@ -257,6 +251,12 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>您需要安装 .NET 10 SDK、npm 以及您喜欢的 IDE（如 Visual Studio 或 JetBrains Rider）。完整的设置指南可在我们的文档中找到。</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>更快</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>如有任何疑问或报告问题。</value>
   </data>
 
 </root>

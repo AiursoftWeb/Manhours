@@ -48,23 +48,23 @@
   <data name="Repo Whitelist Domains" xml:space="preserve">
     <value>Τομείς Λευκής Λίστας Αποθετηρίου</value>
   </data>
+  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
+    <value>Ο αριθμός άδειας ICP για χρήστες της Κίνας. Αφήστε κενό για να κρυφτεί.</value>
+  </data>
+  <data name="The URL of the company or project. E.g. https://www.aiursoft.com" xml:space="preserve">
+    <value>Η διεύθυνση της εταιρείας ή του έργου. Π.χ. https://www.aiursoft.com</value>
+  </data>
   <data name="The banner image displayed on the dashboard." xml:space="preserve">
     <value>Η εικόνα με το μπανέρ που εμφανίζεται στον πίνακα ελέγχου.</value>
   </data>
   <data name="The brand name of the company or project. E.g. Aiursoft." xml:space="preserve">
     <value>Το όνομα του σήματος της εταιρείας ή του έργου. Π.χ. Aiursoft.</value>
   </data>
-  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
-    <value>Ο αριθμός άδειας ICP για χρήστες της Κίνας. Αφήστε κενό για να κρυφτεί.</value>
-  </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>Το λογότυπο του έργου που εμφανίζεται στην ναβιγατόρια και τον ποδόσκαλο. Υποστηρίζει jpg, png, svg.</value>
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Το όνομα του έργου που εμφανίζεται στο frontend.</value>
-  </data>
-  <data name="The URL of the company or project. E.g. https://www.aiursoft.com" xml:space="preserve">
-    <value>Η διεύθυνση της εταιρείας ή του έργου. Π.χ. https://www.aiursoft.com</value>
   </data>
 
 </root>

@@ -30,11 +30,11 @@
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>Sebuah fondasi yang modern, kaya fitur, dan sangat dapat diperluas untuk aplikasi web Anda berikutnya.</value>
   </data>
-  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
-    <value>Raih lebih banyak dengan Aiursoft Template</value>
-  </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Terjemahan Berbasis AI</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>Raih lebih banyak dengan Aiursoft Template</value>
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template adalah pilihan utama kami untuk proyek perusahaan! Template ini dibangun untuk pengembang, ringan namun bertenaga. Kami bisa melewati semua kode boilerplate untuk autentikasi dan manajemen pengguna.</value>
@@ -93,17 +93,11 @@
   <data name="FAQ" xml:space="preserve">
     <value>FAQ</value>
   </data>
-  <data name="faster" xml:space="preserve">
-    <value>lebih cepat</value>
-  </data>
   <data name="Features" xml:space="preserve">
     <value>Fitur</value>
   </data>
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Fitur sistem manajemen file bawaan dengan kompresi avatar otomatis.</value>
-  </data>
-  <data name="for any inquiries or to report issues." xml:space="preserve">
-    <value>untuk pertanyaan apa pun atau untuk melaporkan masalah.</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>Gratis</value>
@@ -116,6 +110,12 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Buka dasbor</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>URL Klon HTTP</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Halo Dunia!</value>
@@ -131,12 +131,6 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Bagaimana cara saya menerapkan aplikasi saya?</value>
-  </data>
-  <data name="HTML" xml:space="preserve">
-    <value>HTML</value>
-  </data>
-  <data name="HTTP Clone URL" xml:space="preserve">
-    <value>URL Klon HTTP</value>
   </data>
   <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
     <value>Termasuk dokumentasi yang luas dan contoh praktis untuk memulai dengan cepat.</value>
@@ -156,6 +150,9 @@
   <data name="Loading preview..." xml:space="preserve">
     <value>Memuat pratinjau...</value>
   </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>Lisensi MIT</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>Jam Kerja</value>
   </data>
@@ -170,9 +167,6 @@
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown ke HTML</value>
-  </data>
-  <data name="MIT Licence" xml:space="preserve">
-    <value>Lisensi MIT</value>
   </data>
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Dukungan Banyak Basis Data</value>
@@ -257,6 +251,12 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Anda akan memerlukan .NET 10 SDK, npm, dan IDE favorit Anda, seperti Visual Studio atau JetBrains Rider. Anda dapat menemukan panduan penyiapan lengkap di dokumentasi kami.</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>lebih cepat</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>untuk pertanyaan apa pun atau untuk melaporkan masalah.</value>
   </data>
 
 </root>

@@ -30,11 +30,11 @@
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>Une base moderne, riche en fonctionnalités et hautement extensible pour votre prochaine application web.</value>
   </data>
-  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
-    <value>Atteignez plus avec Aiursoft Template</value>
-  </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Traductions par IA</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>Atteignez plus avec Aiursoft Template</value>
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template est notre choix définitif pour les projets d&apos;entreprise ! Il est conçu pour les développeurs, léger mais puissant. Nous pouvons ignorer tout le code passe-partout pour l&apos;authentification et la gestion des utilisateurs.</value>
@@ -93,17 +93,11 @@
   <data name="FAQ" xml:space="preserve">
     <value>FAQ</value>
   </data>
-  <data name="faster" xml:space="preserve">
-    <value>plus rapidement</value>
-  </data>
   <data name="Features" xml:space="preserve">
     <value>Fonctionnalités</value>
   </data>
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Intègre un système de gestion de fichiers intégré avec compression automatique des avatars.</value>
-  </data>
-  <data name="for any inquiries or to report issues." xml:space="preserve">
-    <value>pour toute demande ou pour signaler des problèmes.</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>Gratuit</value>
@@ -116,6 +110,12 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Accéder au tableau de bord</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>URL de clonage HTTP</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Bonjour le monde !</value>
@@ -131,12 +131,6 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Comment déployer mon application ?</value>
-  </data>
-  <data name="HTML" xml:space="preserve">
-    <value>HTML</value>
-  </data>
-  <data name="HTTP Clone URL" xml:space="preserve">
-    <value>URL de clonage HTTP</value>
   </data>
   <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
     <value>Comprend une documentation exhaustive et des exemples pratiques pour vous permettre de démarrer rapidement.</value>
@@ -156,6 +150,9 @@
   <data name="Loading preview..." xml:space="preserve">
     <value>Chargement de l’aperçu...</value>
   </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>Licence MIT</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>Heures-homme</value>
   </data>
@@ -170,9 +167,6 @@
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown vers HTML</value>
-  </data>
-  <data name="MIT Licence" xml:space="preserve">
-    <value>Licence MIT</value>
   </data>
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Prise en charge de plusieurs bases de données</value>
@@ -257,6 +251,12 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Vous aurez besoin du SDK .NET 10, de npm et de votre IDE préféré, comme Visual Studio ou JetBrains Rider. Vous trouverez le guide d&apos;installation complet dans notre documentation.</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>plus rapidement</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>pour toute demande ou pour signaler des problèmes.</value>
   </data>
 
 </root>

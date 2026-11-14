@@ -30,11 +30,11 @@
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>Μια σύγχρονη, πλούσια σε λειτουργίες και εξαιρετικά επεκτάσιμη βάση για την επόμενη εφαρμογή σας web.</value>
   </data>
-  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
-    <value>Κερδίστε περισσότερα με το Aiursoft Template</value>
-  </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Μεταφράσεις με Τεχνητή Νοημοσύνη</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>Κερδίστε περισσότερα με το Aiursoft Template</value>
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Το Aiursoft Template είναι η απόλυτη μας επιλογή για εταιρικά έργα! Είναι φτιαγμένο για προγραμματιστές και είναι ελαφρύ αλλά και ισχυρό. Μπορούμε να παραλείψουμε όλο τον τυπικό κώδικα για την ταυτοποίηση και τη διαχείριση χρηστών.</value>
@@ -93,17 +93,11 @@
   <data name="FAQ" xml:space="preserve">
     <value>Συχνές Ερωτήσεις</value>
   </data>
-  <data name="faster" xml:space="preserve">
-    <value>γρηγορότερα</value>
-  </data>
   <data name="Features" xml:space="preserve">
     <value>Λειτουργίες</value>
   </data>
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Διαθέτει ενσωματωμένο σύστημα διαχείρισης αρχείων με αυτόματη συμπίεση avatar.</value>
-  </data>
-  <data name="for any inquiries or to report issues." xml:space="preserve">
-    <value>για οποιαδήποτε ερώτηση ή για να αναφέρετε προβλήματα.</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>Δωρεάν</value>
@@ -116,6 +110,12 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Μετάβαση στον πίνακα ελέγχου</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>URL Κλωνοποίησης HTTP</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Γεια σου Κόσμε!</value>
@@ -131,12 +131,6 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Πώς μπορώ να αναπτύξω την εφαρμογή μου;</value>
-  </data>
-  <data name="HTML" xml:space="preserve">
-    <value>HTML</value>
-  </data>
-  <data name="HTTP Clone URL" xml:space="preserve">
-    <value>URL Κλωνοποίησης HTTP</value>
   </data>
   <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
     <value>Περιλαμβάνει εκτενή τεκμηρίωση και πρακτικά παραδείγματα για να ξεκινήσετε γρήγορα.</value>
@@ -156,6 +150,9 @@
   <data name="Loading preview..." xml:space="preserve">
     <value>Φόρτωση προεπισκόπησης...</value>
   </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>Άδεια MIT</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>Ώρες εργασίας</value>
   </data>
@@ -170,9 +167,6 @@
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown σε HTML</value>
-  </data>
-  <data name="MIT Licence" xml:space="preserve">
-    <value>Άδεια MIT</value>
   </data>
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Υποστήριξη Πολλαπλών Βάσεων Δεδομένων</value>
@@ -257,6 +251,12 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Θα χρειαστείτε το .NET 10 SDK, το npm και το αγαπημένο σας περιβάλλον ανάπτυξης (IDE), όπως το Visual Studio ή το JetBrains Rider. Μπορείτε να βρείτε τον πλήρη οδηγό ρύθμισης στην τεκμηρίωσή μας.</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>γρηγορότερα</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>για οποιαδήποτε ερώτηση ή για να αναφέρετε προβλήματα.</value>
   </data>
 
 </root>

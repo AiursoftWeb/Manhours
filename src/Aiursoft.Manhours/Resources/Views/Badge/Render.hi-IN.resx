@@ -45,9 +45,6 @@
   <data name="Next" xml:space="preserve">
     <value>अगला</value>
   </data>
-  <data name="of" xml:space="preserve">
-    <value>का</value>
-  </data>
   <data name="Previous" xml:space="preserve">
     <value>पिछला</value>
   </data>
@@ -68,6 +65,9 @@
   </data>
   <data name="Total Man Hours" xml:space="preserve">
     <value>कुल मानव-घंटे</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>का</value>
   </data>
 
 </root>

@@ -39,11 +39,11 @@
   <data name="Hours" xml:space="preserve">
     <value>ชั่วโมง</value>
   </data>
-  <data name="My top hard-working collaborated repositories" xml:space="preserve">
-    <value>คลังรหัสที่ฉันร่วมงานด้วยและขยันที่สุด</value>
-  </data>
   <data name="My Top Participated" xml:space="preserve">
     <value>รายการที่ฉันมีส่วนร่วมสูงสุด</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>คลังรหัสที่ฉันร่วมงานด้วยและขยันที่สุด</value>
   </data>
   <data name="My top repositories" xml:space="preserve">
     <value>คลังเก็บข้อมูลยอดนิยมของฉัน</value>
@@ -51,17 +51,11 @@
   <data name="Next" xml:space="preserve">
     <value>ถัดไป</value>
   </data>
-  <data name="of" xml:space="preserve">
-    <value>ของ</value>
-  </data>
   <data name="Previous" xml:space="preserve">
     <value>ก่อนหน้า</value>
   </data>
   <data name="Ranked by your estimated work hours" xml:space="preserve">
     <value>จัดอันดับตามชั่วโมงทำงานโดยประมาณของคุณ</value>
-  </data>
-  <data name="repositories" xml:space="preserve">
-    <value>ที่เก็บโค้ด</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>ยังไม่ได้ติดตาม Repository?</value>
@@ -83,6 +77,12 @@
   </data>
   <data name="Total Hours" xml:space="preserve">
     <value>ชั่วโมงรวม</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>ของ</value>
+  </data>
+  <data name="repositories" xml:space="preserve">
+    <value>ที่เก็บโค้ด</value>
   </data>
 
 </root>

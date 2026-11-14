@@ -30,11 +30,11 @@
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>Een moderne, functierijke en zeer uitbreidbare basis voor uw volgende webapplicatie.</value>
   </data>
-  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
-    <value>Bereik meer met Aiursoft Template</value>
-  </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>AI-aangedreven vertalingen</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>Bereik meer met Aiursoft Template</value>
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template is onze definitieve keuze voor enterprise projecten! Het is gebouwd voor ontwikkelaars en is lichtgewicht maar krachtig. We kunnen alle standaardcode voor authenticatie en gebruikersbeheer overslaan.</value>
@@ -93,17 +93,11 @@
   <data name="FAQ" xml:space="preserve">
     <value>Veelgestelde vragen</value>
   </data>
-  <data name="faster" xml:space="preserve">
-    <value>sneller</value>
-  </data>
   <data name="Features" xml:space="preserve">
     <value>Functies</value>
   </data>
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Beschikt over een ingebouwd bestandsbeheersysteem met automatische avatarcompressie.</value>
-  </data>
-  <data name="for any inquiries or to report issues." xml:space="preserve">
-    <value>voor vragen of om problemen te melden.</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>Gratis</value>
@@ -116,6 +110,12 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Ga naar dashboard</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>HTTP Clone-URL</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Hallo Wereld!</value>
@@ -131,12 +131,6 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Hoe implementeer ik mijn applicatie?</value>
-  </data>
-  <data name="HTML" xml:space="preserve">
-    <value>HTML</value>
-  </data>
-  <data name="HTTP Clone URL" xml:space="preserve">
-    <value>HTTP Clone-URL</value>
   </data>
   <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
     <value>Omvat uitgebreide documentatie en praktische voorbeelden om u snel op weg te helpen.</value>
@@ -156,6 +150,9 @@
   <data name="Loading preview..." xml:space="preserve">
     <value>Voorbeeld wordt geladen...</value>
   </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>MIT-licentie</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>Manuren</value>
   </data>
@@ -170,9 +167,6 @@
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown naar HTML</value>
-  </data>
-  <data name="MIT Licence" xml:space="preserve">
-    <value>MIT-licentie</value>
   </data>
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Ondersteuning voor meerdere databases</value>
@@ -257,6 +251,12 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Je hebt de .NET 10 SDK, npm en je favoriete IDE nodig, zoals Visual Studio of JetBrains Rider. Je kunt de volledige installatiehandleiding in onze documentatie vinden.</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>sneller</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>voor vragen of om problemen te melden.</value>
   </data>
 
 </root>

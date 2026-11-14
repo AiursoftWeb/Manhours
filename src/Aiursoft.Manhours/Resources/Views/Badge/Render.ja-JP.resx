@@ -33,9 +33,6 @@
   <data name="Contributors" xml:space="preserve">
     <value>貢献者</value>
   </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>貢献者</value>
-  </data>
   <data name="Details" xml:space="preserve">
     <value>詳細</value>
   </data>
@@ -47,9 +44,6 @@
   </data>
   <data name="Next" xml:space="preserve">
     <value>次へ</value>
-  </data>
-  <data name="of" xml:space="preserve">
-    <value>の</value>
   </data>
   <data name="Previous" xml:space="preserve">
     <value>前へ</value>
@@ -71,6 +65,12 @@
   </data>
   <data name="Total Man Hours" xml:space="preserve">
     <value>総作業時間</value>
+  </data>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>貢献者</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>の</value>
   </data>
 
 </root>

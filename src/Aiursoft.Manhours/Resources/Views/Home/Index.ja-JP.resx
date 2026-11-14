@@ -30,11 +30,11 @@
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>モダンで機能豊富、かつ高度に拡張可能な基盤を、あなたの次のWebアプリケーションに提供します。</value>
   </data>
-  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
-    <value>Aiursoft Templateでさらに多くのことを実現</value>
-  </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>AIによる翻訳</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft Templateでさらに多くのことを実現</value>
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Templateは、エンタープライズプロジェクトにおける私たちの確固たる選択です！開発者のために構築されており、軽量でありながら強力です。認証やユーザー管理に関する定型コードをすべて省略できます。</value>
@@ -93,17 +93,11 @@
   <data name="FAQ" xml:space="preserve">
     <value>よくある質問</value>
   </data>
-  <data name="faster" xml:space="preserve">
-    <value>より迅速に</value>
-  </data>
   <data name="Features" xml:space="preserve">
     <value>機能</value>
   </data>
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>自動アバター圧縮機能を備えた組み込みファイル管理システムを特徴としています。</value>
-  </data>
-  <data name="for any inquiries or to report issues." xml:space="preserve">
-    <value>お問い合わせや問題の報告はこちらへ。</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>無料</value>
@@ -116,6 +110,12 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>ダッシュボードへ</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>HTTPクローンURL</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>こんにちは、世界！</value>
@@ -131,12 +131,6 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>アプリケーションをデプロイするにはどうすればよいですか？</value>
-  </data>
-  <data name="HTML" xml:space="preserve">
-    <value>HTML</value>
-  </data>
-  <data name="HTTP Clone URL" xml:space="preserve">
-    <value>HTTPクローンURL</value>
   </data>
   <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
     <value>豊富なドキュメントと実用的な例を含んでいるため、すぐに使い始めることができます。</value>
@@ -156,6 +150,9 @@
   <data name="Loading preview..." xml:space="preserve">
     <value>プレビューを読み込み中...</value>
   </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>MITライセンス</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>工数</value>
   </data>
@@ -170,9 +167,6 @@
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>MarkdownからHTMLへ</value>
-  </data>
-  <data name="MIT Licence" xml:space="preserve">
-    <value>MITライセンス</value>
   </data>
   <data name="Multiple Database Support" xml:space="preserve">
     <value>複数データベースサポート</value>
@@ -257,6 +251,12 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>.NET 10 SDK、npm、そしてVisual StudioやJetBrains Riderのようなお好みのIDEが必要です。完全なセットアップガイドはドキュメントでご覧いただけます。</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>より迅速に</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>お問い合わせや問題の報告はこちらへ。</value>
   </data>
 
 </root>

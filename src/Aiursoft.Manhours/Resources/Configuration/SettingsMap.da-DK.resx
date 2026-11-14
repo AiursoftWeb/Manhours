@@ -48,23 +48,23 @@
   <data name="Repo Whitelist Domains" xml:space="preserve">
     <value>Whitelisted domæner for repos</value>
   </data>
+  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
+    <value>ICP-licensenr. for brugere i Kina. Lad stå tomt for at skjule.</value>
+  </data>
+  <data name="The URL of the company or project. E.g. https://www.aiursoft.com" xml:space="preserve">
+    <value>URL&apos;en for virksomheden eller projektet. F.eks. https://www.aiursoft.com</value>
+  </data>
   <data name="The banner image displayed on the dashboard." xml:space="preserve">
     <value>Bannerebilledet der vises på instrumentbrættet.</value>
   </data>
   <data name="The brand name of the company or project. E.g. Aiursoft." xml:space="preserve">
     <value>Det brandnavn, der hører til virksomheden eller projektet. F.eks. Aiursoft.</value>
   </data>
-  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
-    <value>ICP-licensenr. for brugere i Kina. Lad stå tomt for at skjule.</value>
-  </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>Det logo, der vises i navigationen og bunden. Støtter jpg, png, svg.</value>
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>Navnet på projektet, der vises i brugergrænsefladen.</value>
-  </data>
-  <data name="The URL of the company or project. E.g. https://www.aiursoft.com" xml:space="preserve">
-    <value>URL&apos;en for virksomheden eller projektet. F.eks. https://www.aiursoft.com</value>
   </data>
 
 </root>

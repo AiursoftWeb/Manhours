@@ -30,11 +30,11 @@
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>Сучасна, багатофункціональна та високо розширювана основа для вашої наступної веб-програми.</value>
   </data>
-  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
-    <value>Досягайте більшого з Aiursoft Template</value>
-  </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Переклади на основі ШІ</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>Досягайте більшого з Aiursoft Template</value>
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template — це наш остаточний вибір для корпоративних проектів! Він створений для розробників, легкий, але потужний. Ми можемо пропустити всю стандартну роботу з аутентифікації та управління користувачами.</value>
@@ -93,17 +93,11 @@
   <data name="FAQ" xml:space="preserve">
     <value>Часті питання</value>
   </data>
-  <data name="faster" xml:space="preserve">
-    <value>швидше</value>
-  </data>
   <data name="Features" xml:space="preserve">
     <value>Особливості</value>
   </data>
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Містить вбудовану систему керування файлами з автоматичним стисненням аватарів.</value>
-  </data>
-  <data name="for any inquiries or to report issues." xml:space="preserve">
-    <value>для будь-яких запитів або повідомлення про проблеми.</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>Безкоштовно</value>
@@ -116,6 +110,12 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Перейти до панелі керування</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>URL для клонування через HTTP</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Привіт, Світе!</value>
@@ -131,12 +131,6 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Як розгорнути мою програму?</value>
-  </data>
-  <data name="HTML" xml:space="preserve">
-    <value>HTML</value>
-  </data>
-  <data name="HTTP Clone URL" xml:space="preserve">
-    <value>URL для клонування через HTTP</value>
   </data>
   <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
     <value>Містить детальну документацію та практичні приклади, щоб ви могли швидко розпочати роботу.</value>
@@ -156,6 +150,9 @@
   <data name="Loading preview..." xml:space="preserve">
     <value>Завантаження попереднього перегляду...</value>
   </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>Ліцензія MIT</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>Людино-години</value>
   </data>
@@ -170,9 +167,6 @@
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown у HTML</value>
-  </data>
-  <data name="MIT Licence" xml:space="preserve">
-    <value>Ліцензія MIT</value>
   </data>
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Підтримка кількох баз даних</value>
@@ -257,6 +251,12 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Вам знадобиться .NET 10 SDK, npm та ваше улюблене середовище розробки, наприклад Visual Studio або JetBrains Rider. Повний посібник із налаштування ви знайдете в нашій документації.</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>швидше</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>для будь-яких запитів або повідомлення про проблеми.</value>
   </data>
 
 </root>

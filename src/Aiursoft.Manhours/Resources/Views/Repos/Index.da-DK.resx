@@ -39,11 +39,11 @@
   <data name="Hours" xml:space="preserve">
     <value>Timer</value>
   </data>
-  <data name="My top hard-working collaborated repositories" xml:space="preserve">
-    <value>Mine mest arbejdsomme samarbejdsrepositorier</value>
-  </data>
   <data name="My Top Participated" xml:space="preserve">
     <value>Mine Top Deltagelser</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Mine mest arbejdsomme samarbejdsrepositorier</value>
   </data>
   <data name="My top repositories" xml:space="preserve">
     <value>Mine top repositories</value>
@@ -51,17 +51,11 @@
   <data name="Next" xml:space="preserve">
     <value>Næste</value>
   </data>
-  <data name="of" xml:space="preserve">
-    <value>af</value>
-  </data>
   <data name="Previous" xml:space="preserve">
     <value>Forrige</value>
   </data>
   <data name="Ranked by your estimated work hours" xml:space="preserve">
     <value>Rangordnet efter dine estimerede arbejdstimer</value>
-  </data>
-  <data name="repositories" xml:space="preserve">
-    <value>depoter</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Repository ikke sporet?</value>
@@ -83,6 +77,12 @@
   </data>
   <data name="Total Hours" xml:space="preserve">
     <value>Samlede timer</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>af</value>
+  </data>
+  <data name="repositories" xml:space="preserve">
+    <value>depoter</value>
   </data>
 
 </root>

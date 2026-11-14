@@ -39,11 +39,11 @@
   <data name="Hours" xml:space="preserve">
     <value>ساعات</value>
   </data>
-  <data name="My top hard-working collaborated repositories" xml:space="preserve">
-    <value>مستودعاتي الأعلى تعاونًا في العمل الجاد</value>
-  </data>
   <data name="My Top Participated" xml:space="preserve">
     <value>أعلى مشاركاتي</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>مستودعاتي الأعلى تعاونًا في العمل الجاد</value>
   </data>
   <data name="My top repositories" xml:space="preserve">
     <value>مستودعاتي الأعلى</value>
@@ -51,17 +51,11 @@
   <data name="Next" xml:space="preserve">
     <value>التالي</value>
   </data>
-  <data name="of" xml:space="preserve">
-    <value>من</value>
-  </data>
   <data name="Previous" xml:space="preserve">
     <value>السابق</value>
   </data>
   <data name="Ranked by your estimated work hours" xml:space="preserve">
     <value>مرتبة حسب ساعات العمل المقدرة لديك</value>
-  </data>
-  <data name="repositories" xml:space="preserve">
-    <value>المستودعات</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>المستودع غير مُتتبع؟</value>
@@ -86,6 +80,12 @@
   </data>
   <data name="Total Hours" xml:space="preserve">
     <value>إجمالي الساعات</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>من</value>
+  </data>
+  <data name="repositories" xml:space="preserve">
+    <value>المستودعات</value>
   </data>
 
 </root>

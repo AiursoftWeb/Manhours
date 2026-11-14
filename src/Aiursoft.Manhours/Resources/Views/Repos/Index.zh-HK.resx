@@ -39,11 +39,11 @@
   <data name="Hours" xml:space="preserve">
     <value>小時</value>
   </data>
-  <data name="My top hard-working collaborated repositories" xml:space="preserve">
-    <value>我最勤力協作嘅儲存庫</value>
-  </data>
   <data name="My Top Participated" xml:space="preserve">
     <value>我最常參與的</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>我最勤力協作嘅儲存庫</value>
   </data>
   <data name="My top repositories" xml:space="preserve">
     <value>我的熱門儲存庫</value>
@@ -51,17 +51,11 @@
   <data name="Next" xml:space="preserve">
     <value>下一頁</value>
   </data>
-  <data name="of" xml:space="preserve">
-    <value>的</value>
-  </data>
   <data name="Previous" xml:space="preserve">
     <value>上一頁</value>
   </data>
   <data name="Ranked by your estimated work hours" xml:space="preserve">
     <value>按你嘅預計工時排序</value>
-  </data>
-  <data name="repositories" xml:space="preserve">
-    <value>儲存庫</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>未追蹤倉庫？</value>
@@ -83,6 +77,12 @@
   </data>
   <data name="Total Hours" xml:space="preserve">
     <value>總時數</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>的</value>
+  </data>
+  <data name="repositories" xml:space="preserve">
+    <value>儲存庫</value>
   </data>
 
 </root>

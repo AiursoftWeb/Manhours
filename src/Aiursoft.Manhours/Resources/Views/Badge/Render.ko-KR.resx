@@ -33,9 +33,6 @@
   <data name="Contributors" xml:space="preserve">
     <value>기여자</value>
   </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>기여자</value>
-  </data>
   <data name="Details" xml:space="preserve">
     <value>상세 정보</value>
   </data>
@@ -47,9 +44,6 @@
   </data>
   <data name="Next" xml:space="preserve">
     <value>다음</value>
-  </data>
-  <data name="of" xml:space="preserve">
-    <value>의</value>
   </data>
   <data name="Previous" xml:space="preserve">
     <value>이전</value>
@@ -71,6 +65,12 @@
   </data>
   <data name="Total Man Hours" xml:space="preserve">
     <value>총 작업 시간</value>
+  </data>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>기여자</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>의</value>
   </data>
 
 </root>

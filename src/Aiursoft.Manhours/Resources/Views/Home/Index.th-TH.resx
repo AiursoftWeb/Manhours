@@ -30,11 +30,11 @@
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>พื้นฐานที่ทันสมัย อุดมไปด้วยคุณสมบัติ และสามารถขยายได้สูงสำหรับเว็บแอปพลิเคชันถัดไปของคุณ</value>
   </data>
-  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
-    <value>บรรลุผลได้มากขึ้นด้วย Aiursoft Template</value>
-  </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>การแปลด้วยพลัง AI</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>บรรลุผลได้มากขึ้นด้วย Aiursoft Template</value>
   </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template คือตัวเลือกที่ดีที่สุดสำหรับโครงการระดับองค์กร! มันถูกสร้างขึ้นสำหรับนักพัฒนา มีน้ำหนักเบาแต่ทรงพลัง เราสามารถข้ามขั้นตอนพื้นฐานสำหรับการยืนยันตัวตนและการจัดการผู้ใช้ได้ทั้งหมด</value>
@@ -93,17 +93,11 @@
   <data name="FAQ" xml:space="preserve">
     <value>คำถามที่พบบ่อย</value>
   </data>
-  <data name="faster" xml:space="preserve">
-    <value>เร็วขึ้น</value>
-  </data>
   <data name="Features" xml:space="preserve">
     <value>คุณสมบัติ</value>
   </data>
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>มีระบบจัดการไฟล์ในตัวพร้อมการบีบอัดอวาตาร์อัตโนมัติ</value>
-  </data>
-  <data name="for any inquiries or to report issues." xml:space="preserve">
-    <value>สำหรับข้อสงสัยใดๆ หรือเพื่อรายงานปัญหา</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>ฟรี</value>
@@ -116,6 +110,12 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>ไปยังแดชบอร์ด</value>
+  </data>
+  <data name="HTML" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="HTTP Clone URL" xml:space="preserve">
+    <value>URL คลอน HTTP</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>สวัสดีชาวโลก!</value>
@@ -131,12 +131,6 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>ฉันจะปรับใช้แอปพลิเคชันของฉันได้อย่างไร?</value>
-  </data>
-  <data name="HTML" xml:space="preserve">
-    <value>HTML</value>
-  </data>
-  <data name="HTTP Clone URL" xml:space="preserve">
-    <value>URL คลอน HTTP</value>
   </data>
   <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
     <value>ประกอบด้วยเอกสารที่ครอบคลุมและตัวอย่างเชิงปฏิบัติเพื่อให้คุณเริ่มต้นได้อย่างรวดเร็ว</value>
@@ -156,6 +150,9 @@
   <data name="Loading preview..." xml:space="preserve">
     <value>กำลังโหลดตัวอย่าง...</value>
   </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>สัญญาอนุญาต MIT</value>
+  </data>
   <data name="Man hours" xml:space="preserve">
     <value>ชั่วโมงการทำงาน</value>
   </data>
@@ -170,9 +167,6 @@
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>มาร์กดาวน์เป็นเอชทีเอ็มแอล</value>
-  </data>
-  <data name="MIT Licence" xml:space="preserve">
-    <value>สัญญาอนุญาต MIT</value>
   </data>
   <data name="Multiple Database Support" xml:space="preserve">
     <value>รองรับหลายฐานข้อมูล</value>
@@ -257,6 +251,12 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>คุณจะต้องมี .NET 10 SDK, npm และ IDE ที่คุณชื่นชอบ เช่น Visual Studio หรือ JetBrains Rider คุณสามารถค้นหาแนวทางการติดตั้งแบบเต็มได้ในเอกสารประกอบของเรา</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>เร็วขึ้น</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>สำหรับข้อสงสัยใดๆ หรือเพื่อรายงานปัญหา</value>
   </data>
 
 </root>

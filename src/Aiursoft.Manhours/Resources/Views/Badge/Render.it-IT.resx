@@ -33,9 +33,6 @@
   <data name="Contributors" xml:space="preserve">
     <value>Collaboratori</value>
   </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>Collaboratori</value>
-  </data>
   <data name="Details" xml:space="preserve">
     <value>Dettagli</value>
   </data>
@@ -47,9 +44,6 @@
   </data>
   <data name="Next" xml:space="preserve">
     <value>Successivo</value>
-  </data>
-  <data name="of" xml:space="preserve">
-    <value>di</value>
   </data>
   <data name="Previous" xml:space="preserve">
     <value>Precedente</value>
@@ -71,6 +65,12 @@
   </data>
   <data name="Total Man Hours" xml:space="preserve">
     <value>Ore Uomo Totali</value>
+  </data>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>Collaboratori</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>di</value>
   </data>
 
 </root>

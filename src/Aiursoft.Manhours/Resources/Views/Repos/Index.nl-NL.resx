@@ -39,11 +39,11 @@
   <data name="Hours" xml:space="preserve">
     <value>Uren</value>
   </data>
-  <data name="My top hard-working collaborated repositories" xml:space="preserve">
-    <value>Mijn top hardwerkende samenwerkingsrepositories</value>
-  </data>
   <data name="My Top Participated" xml:space="preserve">
     <value>Mijn Top Deelnames</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Mijn top hardwerkende samenwerkingsrepositories</value>
   </data>
   <data name="My top repositories" xml:space="preserve">
     <value>Mijn toprepositories</value>
@@ -51,17 +51,11 @@
   <data name="Next" xml:space="preserve">
     <value>Volgende</value>
   </data>
-  <data name="of" xml:space="preserve">
-    <value>van</value>
-  </data>
   <data name="Previous" xml:space="preserve">
     <value>Vorige</value>
   </data>
   <data name="Ranked by your estimated work hours" xml:space="preserve">
     <value>Gerangschikt op basis van uw geschatte werktijd</value>
-  </data>
-  <data name="repositories" xml:space="preserve">
-    <value>repository&apos;s</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Repository niet gevolgd?</value>
@@ -86,6 +80,12 @@
   </data>
   <data name="Total Hours" xml:space="preserve">
     <value>Totaal aantal uren</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>van</value>
+  </data>
+  <data name="repositories" xml:space="preserve">
+    <value>repository&apos;s</value>
   </data>
 
 </root>

@@ -48,23 +48,23 @@
   <data name="Repo Whitelist Domains" xml:space="preserve">
     <value>Dominios de la lista blanca de repositorios</value>
   </data>
+  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
+    <value>El número de licencia ICP para usuarios de la región principal de China. Deje en blanco para ocultarlo.</value>
+  </data>
+  <data name="The URL of the company or project. E.g. https://www.aiursoft.com" xml:space="preserve">
+    <value>La URL de la empresa o proyecto. Por ejemplo: https://www.aiursoft.com</value>
+  </data>
   <data name="The banner image displayed on the dashboard." xml:space="preserve">
     <value>La imagen de banner mostrada en el panel de control.</value>
   </data>
   <data name="The brand name of the company or project. E.g. Aiursoft." xml:space="preserve">
     <value>El nombre de marca de la empresa o proyecto. Por ejemplo: Aiursoft.</value>
   </data>
-  <data name="The ICP license number for China mainland users. Leave empty to hide." xml:space="preserve">
-    <value>El número de licencia ICP para usuarios de la región principal de China. Deje en blanco para ocultarlo.</value>
-  </data>
   <data name="The logo of the project displayed in the navbar and footer. Support jpg, png, svg." xml:space="preserve">
     <value>El logotipo del proyecto mostrado en la barra de navegación y el pie de página. Se admiten formatos jpg, png y svg.</value>
   </data>
   <data name="The name of the project displayed in the frontend." xml:space="preserve">
     <value>El nombre del proyecto mostrado en la interfaz de usuario.</value>
-  </data>
-  <data name="The URL of the company or project. E.g. https://www.aiursoft.com" xml:space="preserve">
-    <value>La URL de la empresa o proyecto. Por ejemplo: https://www.aiursoft.com</value>
   </data>
 
 </root>

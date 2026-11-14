@@ -45,9 +45,6 @@
   <data name="Next" xml:space="preserve">
     <value>Seuraava</value>
   </data>
-  <data name="of" xml:space="preserve">
-    <value>of</value>
-  </data>
   <data name="Previous" xml:space="preserve">
     <value>Edellinen</value>
   </data>
@@ -68,6 +65,9 @@
   </data>
   <data name="Total Man Hours" xml:space="preserve">
     <value>Yhteensä työtunteja</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>of</value>
   </data>
 
 </root>

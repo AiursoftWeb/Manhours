@@ -33,9 +33,6 @@
   <data name="Contributors" xml:space="preserve">
     <value>Kontributor</value>
   </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>Kontributor</value>
-  </data>
   <data name="Details" xml:space="preserve">
     <value>Rincian</value>
   </data>
@@ -47,9 +44,6 @@
   </data>
   <data name="Next" xml:space="preserve">
     <value>Berikutnya</value>
-  </data>
-  <data name="of" xml:space="preserve">
-    <value>dari</value>
   </data>
   <data name="Previous" xml:space="preserve">
     <value>Sebelumnya</value>
@@ -71,6 +65,12 @@
   </data>
   <data name="Total Man Hours" xml:space="preserve">
     <value>Total Jam Kerja</value>
+  </data>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>Kontributor</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>dari</value>
   </data>
 
 </root>

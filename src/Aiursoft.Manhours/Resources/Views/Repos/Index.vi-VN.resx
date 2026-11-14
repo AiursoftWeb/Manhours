@@ -39,11 +39,11 @@
   <data name="Hours" xml:space="preserve">
     <value>Giờ</value>
   </data>
-  <data name="My top hard-working collaborated repositories" xml:space="preserve">
-    <value>Các kho lưu trữ tôi đã cộng tác chăm chỉ nhất</value>
-  </data>
   <data name="My Top Participated" xml:space="preserve">
     <value>Kho lưu trữ tôi tham gia nhiều nhất</value>
+  </data>
+  <data name="My top hard-working collaborated repositories" xml:space="preserve">
+    <value>Các kho lưu trữ tôi đã cộng tác chăm chỉ nhất</value>
   </data>
   <data name="My top repositories" xml:space="preserve">
     <value>Các kho lưu trữ hàng đầu của tôi</value>
@@ -51,17 +51,11 @@
   <data name="Next" xml:space="preserve">
     <value>Tiếp theo</value>
   </data>
-  <data name="of" xml:space="preserve">
-    <value>của</value>
-  </data>
   <data name="Previous" xml:space="preserve">
     <value>Trước</value>
   </data>
   <data name="Ranked by your estimated work hours" xml:space="preserve">
     <value>Xếp hạng theo số giờ làm việc ước tính của bạn</value>
-  </data>
-  <data name="repositories" xml:space="preserve">
-    <value>kho lưu trữ</value>
   </data>
   <data name="Repository not tracked?" xml:space="preserve">
     <value>Kho lưu trữ chưa được theo dõi?</value>
@@ -83,6 +77,12 @@
   </data>
   <data name="Total Hours" xml:space="preserve">
     <value>Tổng số giờ</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>của</value>
+  </data>
+  <data name="repositories" xml:space="preserve">
+    <value>kho lưu trữ</value>
   </data>
 
 </root>

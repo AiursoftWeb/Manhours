@@ -33,9 +33,6 @@
   <data name="Contributors" xml:space="preserve">
     <value>Учасники</value>
   </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>Учасники</value>
-  </data>
   <data name="Details" xml:space="preserve">
     <value>Деталі</value>
   </data>
@@ -47,9 +44,6 @@
   </data>
   <data name="Next" xml:space="preserve">
     <value>Наступна</value>
-  </data>
-  <data name="of" xml:space="preserve">
-    <value>з</value>
   </data>
   <data name="Previous" xml:space="preserve">
     <value>Попередня</value>
@@ -71,6 +65,12 @@
   </data>
   <data name="Total Man Hours" xml:space="preserve">
     <value>Загальна кількість людино-годин</value>
+  </data>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>Учасники</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>з</value>
   </data>
 
 </root>

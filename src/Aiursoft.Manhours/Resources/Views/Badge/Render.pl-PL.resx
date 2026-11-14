@@ -33,9 +33,6 @@
   <data name="Contributors" xml:space="preserve">
     <value>Współtwórcy</value>
   </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>Współtwórcy</value>
-  </data>
   <data name="Details" xml:space="preserve">
     <value>Szczegóły</value>
   </data>
@@ -47,9 +44,6 @@
   </data>
   <data name="Next" xml:space="preserve">
     <value>Następna</value>
-  </data>
-  <data name="of" xml:space="preserve">
-    <value>z</value>
   </data>
   <data name="Previous" xml:space="preserve">
     <value>Poprzednia</value>
@@ -71,6 +65,12 @@
   </data>
   <data name="Total Man Hours" xml:space="preserve">
     <value>Łączna liczba roboczogodzin</value>
+  </data>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>Współtwórcy</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>z</value>
   </data>
 
 </root>

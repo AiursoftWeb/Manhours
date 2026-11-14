@@ -33,9 +33,6 @@
   <data name="Contributors" xml:space="preserve">
     <value>Người đóng góp</value>
   </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>Người đóng góp</value>
-  </data>
   <data name="Details" xml:space="preserve">
     <value>Chi tiết</value>
   </data>
@@ -47,9 +44,6 @@
   </data>
   <data name="Next" xml:space="preserve">
     <value>Tiếp theo</value>
-  </data>
-  <data name="of" xml:space="preserve">
-    <value>trong số</value>
   </data>
   <data name="Previous" xml:space="preserve">
     <value>Trước</value>
@@ -71,6 +65,12 @@
   </data>
   <data name="Total Man Hours" xml:space="preserve">
     <value>Tổng Số Giờ Làm Việc</value>
+  </data>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>Người đóng góp</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>trong số</value>
   </data>
 
 </root>

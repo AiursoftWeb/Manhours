@@ -33,9 +33,6 @@
   <data name="Contributors" xml:space="preserve">
     <value>Katkıda Bulunanlar</value>
   </data>
-  <data name="contributors deleted" xml:space="preserve">
-    <value>Katkıda Bulunanlar</value>
-  </data>
   <data name="Details" xml:space="preserve">
     <value>Detaylar</value>
   </data>
@@ -47,9 +44,6 @@
   </data>
   <data name="Next" xml:space="preserve">
     <value>Sonraki</value>
-  </data>
-  <data name="of" xml:space="preserve">
-    <value>/</value>
   </data>
   <data name="Previous" xml:space="preserve">
     <value>Önceki</value>
@@ -71,6 +65,12 @@
   </data>
   <data name="Total Man Hours" xml:space="preserve">
     <value>Toplam İnsan Saati</value>
+  </data>
+  <data name="contributors deleted" xml:space="preserve">
+    <value>Katkıda Bulunanlar</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>/</value>
   </data>
 
 </root>

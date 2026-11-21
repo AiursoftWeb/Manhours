@@ -10,7 +10,6 @@ using Aiursoft.Manhours.Services.Authentication;
 using Aiursoft.Manhours.Services.Background;
 using Aiursoft.UiStack.Navigation;
 using Aiursoft.Manhours.Sqlite;
-using Aiursoft.UiStack;
 using Aiursoft.UiStack.Layout;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Aiursoft.ClickhouseLoggerProvider;
@@ -84,7 +83,6 @@ public class Startup : IWebStartup
     {
         app.UseExceptionHandler("/Error/Code500");
         app.UseStatusCodePagesWithReExecute("/Error/Code{0}");
-        app.UseUIStack();
         app.UseStaticFiles();
         app.UseRouting();
         app.UseAuthentication();

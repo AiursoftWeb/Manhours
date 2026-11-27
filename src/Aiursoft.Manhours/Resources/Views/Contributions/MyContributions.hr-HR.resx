@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="Active Days" xml:space="preserve">
+    <value>Aktivni dani</value>
+  </data>
+  <data name="Add repository now" xml:space="preserve">
+    <value>Dodaj repozitorij sada</value>
+  </data>
+  <data name="All Contributions" xml:space="preserve">
+    <value>Svi doprinosi</value>
+  </data>
+  <data name="Commits" xml:space="preserve">
+    <value>Commitovi</value>
+  </data>
+  <data name="Contributed Repositories" xml:space="preserve">
+    <value>Doprinjeli repozitoriji</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>Dana</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Sati</value>
+  </data>
+  <data name="No contributions found yet. Start coding!" xml:space="preserve">
+    <value>Još nema pronađenih doprinosa. Krenite s kodiranjem!</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Podaci profila</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>Repozitorij</value>
+  </data>
+  <data name="Repository not tracked?" xml:space="preserve">
+    <value>Repozitorij nije praćen?</value>
+  </data>
+  <data name="Total Commits" xml:space="preserve">
+    <value>Ukupno commita</value>
+  </data>
+  <data name="Total Work Hours" xml:space="preserve">
+    <value>Ukupno odrađenih radnih sati</value>
+  </data>
+  <data name="View Repo" xml:space="preserve">
+    <value>Pogledaj repozitorij</value>
+  </data>
+  <data name="Work Hours" xml:space="preserve">
+    <value>Radni sati</value>
+  </data>
+
+</root>
